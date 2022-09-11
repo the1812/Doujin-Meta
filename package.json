@@ -1,0 +1,9 @@
+{
+  "name": "doujin-meta",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A metadata database for doujin music.",
+  "keywords": ["metadata", "music", "database"],
+  "author": "Grant Howard",
+  "license": "MIT"
+}
