@@ -1,0 +1,31 @@
+[
+  {
+    "title": "Frisbeelove feat. Peko",
+    "artists": ["Peko", "cnsuslik"],
+    "composers": ["cnsuslik"],
+    "album": "Re:Cover Vol.1",
+    "albumOrder": "MLAB-004",
+    "albumArtists": ["Matthiola Records"],
+    "genres": ["Trap"],
+    "year": "2019"
+  },
+  {
+    "title": "Anohi (Joulez Remix)",
+    "artists": ["Joulez", "Sanaas"],
+    "composers": ["Sanaas"]
+  },
+  {
+    "title": "Waltz No.2 in F Minor, \"Yumemai no Alice\" feat. Nana",
+    "artists": ["Nana", "Polymath9"],
+    "composers": ["Polymath9"]
+  },
+  {
+    "title": "Dragon of Dragon (Hazecat Remix)",
+    "artists": ["CoreTania", "Hazecat", "cnsuslik"],
+    "composers": ["cnsuslik"]
+  },
+  {
+    "title": "Devil of Justice (Instrumental Version)",
+    "composers": ["cnsuslik"]
+  }
+]
