@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Storm of Petals",
+    "composers": ["Kolaa"],
+    "album": "Flowering City EP",
+    "albumOrder": "MLAB-003",
+    "albumArtists": ["Matthiola Records"],
+    "genres": ["Dubstep"],
+    "year": "2018"
+  },
+  {
+    "title": "Moonblast",
+    "composers": ["Kolaa"]
+  },
+  {
+    "title": "Snow Drive (VIP)",
+    "composers": ["Kolaa"]
+  },
+  {
+    "title": "Snow Drive ($u$lik Remix)",
+    "artists": ["cnsuslik", "Kolaa"],
+    "composers": ["Kolaa"]
+  }
+]
