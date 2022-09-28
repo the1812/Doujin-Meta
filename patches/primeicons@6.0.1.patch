@@ -1,0 +1,23 @@
+diff --git a/primeicons.css b/primeicons.css
+index 44eeee1211335d32f58a119791d67e0d1d4df5ad..f3ed9b64efd2f984c9a6847f5110a519211c83f7 100644
+--- a/primeicons.css
++++ b/primeicons.css
+@@ -1,8 +1,7 @@
+ @font-face {
+     font-family: 'primeicons';
+     font-display: block;
+-    src: url('./fonts/primeicons.eot');
+-    src: url('./fonts/primeicons.eot?#iefix') format('embedded-opentype'), url('./fonts/primeicons.woff2') format('woff2'), url('./fonts/primeicons.woff') format('woff'), url('./fonts/primeicons.ttf') format('truetype'), url('./fonts/primeicons.svg?#primeicons') format('svg');
++    src: url('./fonts/primeicons.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+ }
+@@ -868,7 +867,7 @@
+ .pi-refresh:before {
+     content: "\e938";
+ }
+-  
++
+ .pi-user:before {
+     content: "\e939";
+ }

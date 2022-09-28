@@ -31,6 +31,9 @@
       "allowedVersions": {
         "primeicons": "6"
       }
+    },
+    "patchedDependencies": {
+      "primeicons@6.0.1": "patches/primeicons@6.0.1.patch"
     }
   },
   "scripts": {
