@@ -12,6 +12,8 @@
   "author": "Grant Howard",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.27.2",
+    "fuse.js": "^6.6.2",
     "primeicons": "^6.0.1",
     "primevue": "^3.17.0",
     "vue": "^3.2.37",
