@@ -1,0 +1,50 @@
+[
+  {
+    "title": "晴",
+    "composers": [
+      "Joulez"
+    ],
+    "artists": [
+      "Odoriin",
+      "Joulez"
+    ],
+    "lyricists": [
+      "Odoriin"
+    ],
+    "album": "晴",
+    "albumOrder": "OUOD03",
+    "albumArtists": [
+      "Odoriin's Upanishad of Death"
+    ],
+    "genres": [
+      "Pop"
+    ],
+    "year": 2022
+  },
+  {
+    "title": "晴 (inst with no fade)",
+    "composers": [
+      "Joulez"
+    ],
+    "lyricists": [
+      "Odoriin"
+    ],
+    "artists": [
+      "Odoriin",
+      "Joulez"
+    ]
+  },
+  {
+    "title": "晴 (VL with no fade)",
+    "composers": [
+      "Joulez"
+    ],
+    "lyricists": [
+      "Odoriin"
+    ],
+    "artists": [
+      "Odoriin",
+      "Joulez"
+    ]
+  }
+]

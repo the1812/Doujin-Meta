@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Swallow's Lies -Chiptune Ver-",
+    "composers": [
+      "Joulez"
+    ],
+    "album": "Swallow's Lies",
+    "albumOrder": "OUOD04",
+    "albumArtists": [
+      "Odoriin's Upanishad of Death"
+    ],
+    "genres": [
+      "Chiptune"
+    ],
+    "year": 2022
+  },
+  {
+    "title": "Swallow's Lies ft. 起礼×起复",
+    "composers": [
+      "Joulez"
+    ],
+    "artists": [
+      "起礼",
+      "起复",
+      "Chr1sNotFound",
+      "Joulez"
+    ],
+    "lyricists": [
+      "Odoriin"
+    ],
+    "genres": [
+      "Rock"
+    ]
+  },
+  {
+    "title": "Swallow's Lies ft. Odoriin×Joulez",
+    "composers": [
+      "Joulez"
+    ],
+    "artists": [
+      "Odoriin",
+      "Chr1sNotFound",
+      "Joulez"
+    ],
+    "lyricists": [
+      "Odoriin"
+    ],
+    "genres": [
+      "Rock"
+    ]
+  },
+  {
+    "title": "Swallow's Lies -Instrumental-",
+    "composers": [
+      "Joulez"
+    ],
+    "artists": [
+      "Chr1sNotFound",
+      "Joulez"
+    ],
+    "genres": [
+      "Rock"
+    ]
+  }
+]

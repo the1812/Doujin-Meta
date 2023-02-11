@@ -1,0 +1,101 @@
+[
+  {
+    "title": "Four seasons",
+    "artists": [
+      "初代",
+      "lazyboi"
+    ],
+    "lyricists": [
+      "下马坊梅花糕",
+      "白阳大怪兽",
+      "东北老乡长"
+    ],
+    "album": "恋雨秋",
+    "albumArtists": [
+      "地狱超甜"
+    ],
+    "genres": [
+      "嘻哈"
+    ],
+    "year": 2022
+  },
+  {
+    "title": "寒江月",
+    "comments": "原曲: 砕月 (东方萃梦想　～ Immaterial and Missing Power.)",
+    "artists": [
+      "KNj",
+      "ICE fear",
+      "BAB1",
+      "jos10"
+    ],
+    "lyricists": [
+      "KNj",
+      "ICE fear",
+      "BAB1"
+    ]
+  },
+  {
+    "title": "恋雨秋",
+    "comments": "原曲: 神々が恋した幻想郷, 稲田姫様に叱られるから (东方风神录 ～ Mountain of Faith.)",
+    "artists": [
+      "ICE fear",
+      "KNj",
+      "Berry"
+    ],
+    "lyricists": [
+      "KNj",
+      "ICE fear"
+    ]
+  },
+  {
+    "title": "侠客下山 remix",
+    "comments": "原曲: 旧地獄街道を行く (东方地灵殿　～ Subterranean Animism.)",
+    "artists": [
+      "KNj",
+      "emma"
+    ],
+    "lyricists": [
+      "KNj",
+      "刈沢凉太",
+      "武藏"
+    ]
+  },
+  {
+    "title": "小试牛刀",
+    "comments": "原曲: 厄神様の通り道 ～ Dark Road (东方风神录 ～ Mountain of Faith.) , 佐渡の二ッ岩 (东方神灵庙 ～ Ten Desires.)",
+    "artists": [
+      "KNj",
+      "刈沢凉太",
+      "Redwood"
+    ],
+    "lyricists": [
+      "KNj",
+      "刈沢凉太"
+    ]
+  },
+  {
+    "title": "夜与海",
+    "comments": "原曲: 今宵は飄逸なエゴイスト(Live ver)　～ Egoistic Flowers. (东方凭依华　～ Antinomy of Common Flowers.)",
+    "artists": [
+      "Yuna",
+      "Jxman",
+      "KNj"
+    ],
+    "lyricists": [
+      "Yuna"
+    ]
+  },
+  {
+    "title": "无绪 2022",
+    "comments": "原曲: 明日ハレの日、ケの昨日 (东方风神录 ～ Mountain of Faith.)",
+    "artists": [
+      "KNj",
+      "Matreme Sound",
+      "VIKTHEVILLIN"
+    ],
+    "lyricists": [
+      "ICE fear",
+      "KNj"
+    ]
+  }
+]
