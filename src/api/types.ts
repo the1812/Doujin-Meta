@@ -10,6 +10,18 @@ export interface TreeResponse {
   url: string
   tree: GitTreeNode[]
 }
+export interface ContentsNode {
+  name: string
+  path: string
+  sha: string
+  size: number
+  url: string
+  html_url: string
+  git_url: string
+  download_url: string
+  type: string
+}
+export type ContentsResponse = ContentsNode[]
 export interface BlobResponse {
   sha: string
   url: string
