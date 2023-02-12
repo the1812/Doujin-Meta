@@ -14,7 +14,7 @@ export const githubApi = Axios.create({
 })
 export const inheritHeaders = (githubResponse: AxiosResponse, vercelResponse: VercelResponse) => {
   Object.entries(githubResponse.headers).forEach(([key, value]) => {
-    if (key.toLowerCase().startsWith('x-')) {
+    if (key.toLowerCase().startsWith('x-') && !vercelResponse.hasHeader(key)) {
       vercelResponse.setHeader(key, value)
     }
   })
@@ -54,7 +54,5 @@ export interface BlobResponse {
 }
 
 export default async function handler(request: VercelRequest, response: VercelResponse) {
-  response.status(404).json({
-    message: 'Not Found',
-  })
+  response.status(404).end()
 }
