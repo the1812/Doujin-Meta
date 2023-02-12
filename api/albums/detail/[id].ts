@@ -16,14 +16,14 @@ const findCover = async (nodes: GitTreeNode[]) => {
     allowedExtensions.some(extension => it.path === `cover${extension}`),
   )
   if (!result) {
-    return undefined
+    return ''
   }
   const { data: coverData } = await githubApi.get<BlobResponse>(result.url)
-  return Buffer.from(coverData.content, 'base64')
+  return coverData.content
 }
 
 export default async function handler(request: VercelRequest, response: VercelResponse) {
-  const { id, cover = false } = request.query
+  const { id, cover } = request.query
   if (!id) {
     response.status(400).json({
       message: 'id is required',
@@ -49,7 +49,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
     const { data: metadataTree } = await githubApi.get<BlobResponse>(metadataNode.url)
     const metadataJson = JSON.parse(Buffer.from(metadataTree.content, 'base64').toString('utf8'))
     const result = {
-      cover: cover ? await findCover(nodes) : '',
+      cover: cover === 'true' ? await findCover(nodes) : '',
       metadata: metadataJson,
     }
     response.status(200).json(result)
