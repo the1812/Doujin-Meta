@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { owner, repo, githubApi, ContentsResponse, TreeResponse } from '../index'
+import { owner, repo, githubApi, ContentsResponse, TreeResponse } from '../index.js'
 
 export default async function handler(request: VercelRequest, response: VercelResponse) {
   try {
