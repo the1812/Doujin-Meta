@@ -1,10 +1,10 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import Axios from 'axios'
+import Axios, { AxiosResponse } from 'axios'
 
 export const owner = 'the1812'
 export const repo = 'Doujin-Meta'
+export const githubHost = 'https://api.github.com'
 export const githubApi = Axios.create({
-  baseURL: 'https://api.github.com',
   headers: {
     Accept: 'application/vnd.github+json',
     Authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
@@ -12,6 +12,14 @@ export const githubApi = Axios.create({
   },
   responseType: 'json',
 })
+export const inheritHeaders = (githubResponse: AxiosResponse, vercelResponse: VercelResponse) => {
+  Object.entries(githubResponse.headers).forEach(([key, value]) => {
+    if (key.toLowerCase().startsWith('x-')) {
+      vercelResponse.setHeader(key, value)
+    }
+  })
+  return vercelResponse
+}
 
 export interface GitTreeNode {
   path: string
@@ -45,11 +53,8 @@ export interface BlobResponse {
   encoding: string
 }
 
-export default async function handler(
-  request: VercelRequest,
-  response: VercelResponse,
-) {
+export default async function handler(request: VercelRequest, response: VercelResponse) {
   response.status(404).json({
-    message: 'Not Found'
-  });
+    message: 'Not Found',
+  })
 }
