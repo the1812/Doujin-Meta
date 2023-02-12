@@ -1,4 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
+import { localJson } from 'touhou-tagger'
 import {
   owner,
   repo,
@@ -50,7 +51,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
     const metadataJson = JSON.parse(Buffer.from(metadataTree.content, 'base64').toString('utf8'))
     const result = {
       cover: cover === 'true' ? await findCover(nodes) : '',
-      metadata: metadataJson,
+      metadata: await localJson.normalizeWithoutCover(metadataJson),
     }
     response.status(200).json(result)
   } catch (error) {
