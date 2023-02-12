@@ -13,8 +13,8 @@ let searchResult = $ref([] as AlbumApiItem[])
 const handleSearch = async () => {
   try {
     busy = true
-    await new Promise(r => setTimeout(r, 1000))
-    // searchResult = await searchAlbums(keyword)
+    // await new Promise(r => setTimeout(r, 1000))
+    searchResult = await searchAlbums(keyword)
   } finally {
     busy = false
   }
@@ -24,7 +24,7 @@ const canSearch = computed(() => !busy && Boolean(keyword))
 </script>
 
 <template>
-  <div class="h-screen flex flex-col items-center justify-center gap-4 max-w-[1400px]">
+  <div class="h-screen flex flex-col items-center gap-4 max-w-[1400px]">
     <div class="text-2xl font-medium">Doujin Meta</div>
     <div class="flex items-center gap-3">
       <span class="p-input-icon-left">

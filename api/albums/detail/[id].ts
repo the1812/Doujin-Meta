@@ -7,24 +7,12 @@ import {
   TreeResponse,
   inheritHeaders,
   githubHost,
-  GitTreeNode,
   BlobResponse,
+  findCover,
 } from '../../index.js'
 
-const findCover = async (nodes: GitTreeNode[]) => {
-  const allowedExtensions = ['.jpg', '.png']
-  const result = nodes.find(it =>
-    allowedExtensions.some(extension => it.path === `cover${extension}`),
-  )
-  if (!result) {
-    return ''
-  }
-  const { data: coverData } = await githubApi.get<BlobResponse>(result.url)
-  return coverData.content
-}
-
 export default async function handler(request: VercelRequest, response: VercelResponse) {
-  const { id, cover } = request.query
+  const { id, normalize } = request.query
   if (!id) {
     response.status(400).json({
       message: 'id is required',
@@ -50,8 +38,9 @@ export default async function handler(request: VercelRequest, response: VercelRe
     const { data: metadataTree } = await githubApi.get<BlobResponse>(metadataNode.url)
     const metadataJson = JSON.parse(Buffer.from(metadataTree.content, 'base64').toString('utf8'))
     const result = {
-      cover: cover === 'true' ? await findCover(nodes) : '',
-      metadata: await localJson.normalizeWithoutCover(metadataJson),
+      coverUrl: findCover(nodes),
+      metadata:
+        normalize === 'false' ? metadataJson : await localJson.normalizeWithoutCover(metadataJson),
     }
     response.status(200).json(result)
   } catch (error) {
