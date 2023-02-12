@@ -4,8 +4,7 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div class="">
-    <div class="text-lg">Doujin Meta</div>
+  <div class="flex flex-col items-center">
     <RouterView />
   </div>
 </template>
