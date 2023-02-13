@@ -4,7 +4,7 @@ import Home from './pages/Home.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/', component: Home },
-  { path: '/albums/:id', component: Detail },
+  { path: '/albums/:name/:id', component: Detail },
 ]
 
 export const router = createRouter({

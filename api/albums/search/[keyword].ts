@@ -9,7 +9,7 @@ import {
   inheritHeaders,
   githubHost,
   findCover,
-} from '../index.js'
+} from '../../index.js'
 
 export default async function handler(request: VercelRequest, response: VercelResponse) {
   const { keyword } = request.query
@@ -53,7 +53,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
         return {
           name: item.path,
           coverUrl: `/data/${cover}`,
-          detailUrl: `/api/albums/detail/${item.sha}`,
+          detailUrl: `/api/albums/detail/${item.path}/${item.sha}`,
           id: item.sha,
         }
       }),
