@@ -9,10 +9,16 @@ import {
   githubHost,
   BlobResponse,
   findCover,
-} from '../../index.js'
+} from '../../../index.js'
 
 export default async function handler(request: VercelRequest, response: VercelResponse) {
-  const { id, normalize } = request.query
+  const { name, id, normalize } = request.query
+  if (!name) {
+    response.status(400).json({
+      message: 'name is required',
+    })
+    return
+  }
   if (!id) {
     response.status(400).json({
       message: 'id is required',
@@ -38,7 +44,9 @@ export default async function handler(request: VercelRequest, response: VercelRe
     const { data: metadataTree } = await githubApi.get<BlobResponse>(metadataNode.url)
     const metadataJson = JSON.parse(Buffer.from(metadataTree.content, 'base64').toString('utf8'))
     const result = {
-      coverUrl: findCover(nodes),
+      id,
+      name,
+      coverUrl: `/data/${name}/${findCover(nodes)}`,
       metadata:
         normalize === 'false' ? metadataJson : await localJson.normalizeWithoutCover(metadataJson),
     }
