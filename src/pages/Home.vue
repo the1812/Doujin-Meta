@@ -33,7 +33,9 @@ const canSearch = computed(() => !busy && Boolean(keyword))
       </div>
     </div>
     <div class="h-0 flex-grow overflow-auto self-stretch flex flex-col gap-1">
-      <AlbumSearchItem v-for="item of searchResult" :key="item.id" :item="item" />
+      <RouterLink v-for="item of searchResult" :key="item.id" :to="`/albums/${item.name}/${item.id}`">
+        <AlbumSearchItem :item="item" />
+      </RouterLink>
     </div>
   </div>
 </template>
