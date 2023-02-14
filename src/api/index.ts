@@ -15,3 +15,30 @@ export const getAlbumDetail = async (name: string, id: string) => {
   )
   return response.data
 }
+
+export const useApi = (onApiCall: () => Promise<unknown>) => {
+  let loaded = $ref(false)
+  let error = $ref(false)
+  const loading = $computed(() => !loaded && !error)
+
+  const loadApi = () => {
+    loaded = false
+    error = false
+    onApiCall()
+      .then(() => {
+        loaded = true
+      })
+      .catch(() => {
+        error = true
+      })
+  }
+
+  loadApi()
+
+  return {
+    loading,
+    loaded,
+    error,
+    reload: loadApi,
+  }
+}
