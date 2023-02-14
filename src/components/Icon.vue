@@ -5,5 +5,5 @@ const classTokens = name.split(' ').map(it => `pi-${it}`)
 </script>
 
 <template>
-  <i class="pi pi-search" :class="classTokens" />
+  <i class="pi" :class="classTokens" />
 </template>
