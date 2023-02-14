@@ -20,7 +20,7 @@ export const getAlbumDetail = async (name: string, id: string) => {
 export const useApi = (onApiCall: () => Promise<unknown>) => {
   const loaded = ref(false)
   const error = ref(false)
-  const loading = computed(() => !loaded && !error)
+  const loading = computed(() => !loaded.value && !error.value)
 
   const loadApi = () => {
     loaded.value = false

@@ -11,7 +11,7 @@ import ProgressSpinner from 'primevue/progressspinner'
 import DetailRow from '../components/DetailRow.vue'
 import DetailHeader from '../components/DetailHeader.vue'
 import { MetadataSeparator } from '../common'
-import { reactive, watch } from 'vue'
+import { reactive } from 'vue'
 import { getAlbumDetail, useApi } from '../api'
 
 const { params } = useRoute()
@@ -58,9 +58,9 @@ const showComposers = (track: TrackMetadata) => {
     <div v-if="loading" class="flex-grow flex items-center justify-center">
       <ProgressSpinner class="!w-8 !h-8" stroke-width="8" />
     </div>
-    <div v-if="error" class="flex-grow flex items-center justify-center">
-      <div class="">Failed to load.</div>
-      <Button @click="reload" label="Retry"></Button>
+    <div v-if="error" class="flex-grow flex flex-col items-center justify-center gap-4">
+      <div class="text-lg">Failed to load.</div>
+      <Button class="p-button-sm" icon="pi pi-refresh" @click="reload" label="Retry"></Button>
     </div>
 
     <template v-if="loaded">
