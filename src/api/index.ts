@@ -1,4 +1,5 @@
 import Axios from 'axios'
+import { computed, reactive, ref } from 'vue'
 import { AlbumApiItem, AlbumDetail } from './types'
 
 export const api = Axios.create({
@@ -17,28 +18,24 @@ export const getAlbumDetail = async (name: string, id: string) => {
 }
 
 export const useApi = (onApiCall: () => Promise<unknown>) => {
-  let loaded = $ref(false)
-  let error = $ref(false)
-  const loading = $computed(() => !loaded && !error)
+  const loaded = ref(false)
+  const error = ref(false)
+  const loading = computed(() => !loaded && !error)
 
   const loadApi = () => {
-    loaded = false
-    error = false
+    loaded.value = false
+    error.value = false
     onApiCall()
-      .then(() => {
-        loaded = true
-      })
-      .catch(() => {
-        error = true
-      })
+      .then(() => loaded.value = true)
+      .catch(() => error.value = true)
   }
 
   loadApi()
 
-  return {
+  return reactive({
     loading,
     loaded,
     error,
     reload: loadApi,
-  }
+  })
 }
