@@ -45,6 +45,9 @@ const { loading, error, loaded, reload } = $(useApi(() => getAlbumDetail(name as
 })))
 
 const showComposers = (track: TrackMetadata) => {
+  if (!track.composers) {
+    return false
+  }
   const equal = track.composers.every(item => track.artists.includes(item))
     && track.artists.every(item => track.composers.includes(item))
   return track.composers && !equal
