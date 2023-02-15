@@ -68,7 +68,7 @@ const showComposers = (track: TrackMetadata) => {
 
     <template v-if="loaded">
       <Image class="rounded-lg overflow-hidden z-10 shadow-[0_0_0_2px_rgba(0,0,0,0.05)]"
-        image-class="w-[90vw] max-w-[400px] object-contain" :src="albumDetail.coverUrl" />
+        image-class="w-[90vw] max-w-[400px] object-contain" preview :src="albumDetail.coverUrl" />
       <div v-if="albumMetadata" class="flex flex-col items-center gap-2">
         <div class="font-medium text-xl text-center">{{ albumMetadata.album }}</div>
         <div class="text-gray-500 text">
