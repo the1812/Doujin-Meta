@@ -3,8 +3,8 @@ import Detail from './pages/Detail.vue'
 import Home from './pages/Home.vue'
 
 const routes: RouteRecordRaw[] = [
-  { path: '/', component: Home, meta: { transition: 'slide-left' } },
-  { path: '/albums/:name/:id', component: Detail, meta: { transition: 'slide-right' } },
+  { path: '/', component: Home },
+  { path: '/albums/:name/:id', component: Detail },
 ]
 
 export const router = createRouter({

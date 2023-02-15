@@ -1,20 +1,15 @@
 <script setup lang="ts">
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
-import { computed, inject, Ref, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
 import { searchAlbums } from '../api'
 import { AlbumApiItem } from '../api/types'
 import AlbumSearchItem from '../components/AlbumSearchItem.vue'
 
 const { query } = useRoute()
-let injectKeyword = $(inject<Ref<string>>('keyword'))
 const defaultKeyword = (() => {
   if (query.keyword) {
     return query.keyword.toString()
-  }
-  if (injectKeyword) {
-    return injectKeyword
   }
   return ''
 })()
@@ -22,10 +17,6 @@ const defaultKeyword = (() => {
 let busy = $ref(false)
 let keyword = $ref(defaultKeyword)
 let searchResult = $ref([] as AlbumApiItem[])
-
-watchEffect(() => {
-  injectKeyword = keyword
-})
 
 const handleSearch = async () => {
   try {
@@ -36,7 +27,7 @@ const handleSearch = async () => {
     busy = false
   }
 }
-const canSearch = computed(() => !busy && Boolean(keyword))
+const canSearch = $computed(() => !busy && Boolean(keyword))
 
 </script>
 

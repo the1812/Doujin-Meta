@@ -67,15 +67,15 @@ const showComposers = (track: TrackMetadata) => {
     </div>
 
     <template v-if="loaded">
-      <Image class="rounded-lg overflow-hidden z-10" image-class="w-[90vw] max-w-[400px] object-contain"
-        :src="albumDetail.coverUrl" />
+      <Image class="rounded-lg overflow-hidden z-10 shadow-[0_0_0_2px_rgba(0,0,0,0.05)]"
+        image-class="w-[90vw] max-w-[400px] object-contain" :src="albumDetail.coverUrl" />
       <div v-if="albumMetadata" class="flex flex-col items-center gap-2">
         <div class="font-medium text-xl text-center">{{ albumMetadata.album }}</div>
         <div class="text-gray-500 text">
           <span>{{ albumMetadata.albumArtists?.join(MetadataSeparator) }}</span>
           <span v-if="albumMetadata.year"> · {{ albumMetadata.year }}</span>
         </div>
-        <div class="flex items-center flex-wrap gap-3" v-if="albumMetadata.genres">
+        <div class="flex items-center justify-center flex-wrap gap-2" v-if="albumMetadata.genres">
           <PrimaryChip v-if="albumMetadata.albumOrder">
             <Icon name="tag" class="!text-[12px] mr-1" />
             <span class="text-sm my-1">{{ albumMetadata.albumOrder }}</span>

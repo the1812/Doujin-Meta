@@ -7,4 +7,4 @@ import 'primeicons/primeicons.css'
 import App from './App.vue'
 import { router } from './routes'
 
-createApp(App).provide('keyword', ref('')).use(router).use(PrimeVue, { ripple: true }).mount('#app')
+createApp(App).use(router).use(PrimeVue, { ripple: true }).mount('#app')
