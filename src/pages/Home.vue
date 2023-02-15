@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
+import Image from 'primevue/image'
 import { useRoute } from 'vue-router'
 import { searchAlbums } from '../api'
 import { AlbumApiItem } from '../api/types'
@@ -34,7 +35,9 @@ const canSearch = $computed(() => !busy && Boolean(keyword))
 <template>
   <div class="h-screen flex flex-col pt-4 px-4 gap-4">
     <div class="flex flex-col gap-4 my-auto">
-      <div class="text-2xl font-medium self-center">Doujin Meta</div>
+      <div class="self-center">
+        <Image src="/images/Logo.Text.svg" image-class="w-full max-w-[600px]" />
+      </div>
       <div class="flex items-center justify-center gap-3">
         <InputText type="text" class="flex-grow min-w-0 max-w-[700px]" v-model="keyword" @keydown.enter="handleSearch" placeholder="Album name" />
         <Button class="shrink-0" :loading="busy" icon="pi pi-search" :disabled="!canSearch" @click="handleSearch" label="Search" />
