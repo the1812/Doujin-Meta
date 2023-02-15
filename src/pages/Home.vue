@@ -45,7 +45,7 @@ const canSearch = computed(() => !busy && Boolean(keyword))
     <div class="flex flex-col gap-4 my-auto">
       <div class="text-2xl font-medium self-center">Doujin Meta</div>
       <div class="flex items-center justify-center gap-3">
-        <InputText type="text" class="flex-grow max-w-screen-md" v-model="keyword" placeholder="Album name" />
+        <InputText type="text" class="flex-grow max-w-screen-md" v-model="keyword" @keydown.enter="handleSearch" placeholder="Album name" />
         <Button :loading="busy" icon="pi pi-search" :disabled="!canSearch" @click="handleSearch" label="Search" />
       </div>
     </div>
