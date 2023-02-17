@@ -44,6 +44,8 @@
     }
   },
   "scripts": {
+    "vercel:dev": "vercel dev",
+    "vercel:deploy": "vercel",
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
