@@ -23,9 +23,9 @@ let searchResult = $ref([] as AlbumApiItem[])
 const handleSearch = async () => {
   try {
     busy = true
-    searched = true
     // await new Promise(r => setTimeout(r, 1000))
     searchResult = await searchAlbums(keyword)
+    searched = true
   } finally {
     busy = false
   }

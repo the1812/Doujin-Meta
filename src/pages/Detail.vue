@@ -57,7 +57,8 @@ const showComposers = (track: TrackMetadata) => {
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col items-center p-4 gap-6">
+  <div
+    class="min-h-screen xl:h-screen flex flex-col xl:flex-row xl:justify-center items-center p-4 gap-6 xl:gap-[72px]">
     <div v-if="loading" class="flex-grow flex items-center justify-center">
       <ProgressSpinner class="!w-8 !h-8" stroke-width="8" />
     </div>
@@ -67,26 +68,32 @@ const showComposers = (track: TrackMetadata) => {
     </div>
 
     <template v-if="loaded">
-      <Image class="rounded-lg overflow-hidden z-10 shadow-[0_0_0_2px_rgba(0,0,0,0.05)]"
-        image-class="w-[90vw] max-w-[400px] object-contain" preview :src="albumDetail.coverUrl" />
-      <div v-if="albumMetadata" class="flex flex-col items-center gap-2">
-        <div class="font-medium text-xl text-center">{{ albumMetadata.album }}</div>
-        <div class="text-gray-500 text">
-          <span>{{ albumMetadata.albumArtists?.join(MetadataSeparator) }}</span>
-          <span v-if="albumMetadata.year"> · {{ albumMetadata.year }}</span>
-        </div>
-        <div class="flex items-center justify-center flex-wrap gap-2" v-if="albumMetadata.genres">
-          <PrimaryChip v-if="albumMetadata.albumOrder">
-            <Icon name="tag" class="!text-[12px] mr-1" />
-            <span class="text-sm my-1">{{ albumMetadata.albumOrder }}</span>
-          </PrimaryChip>
-          <Chip v-for="genre of albumMetadata.genres" :key="genre">
-            <span class="text-sm my-1">{{ genre }}</span>
-          </Chip>
+      <div class="flex flex-col gap-6 xl:justify-center">
+        <Image class="rounded-lg overflow-hidden z-10 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] self-center"
+          image-class="w-[90vw] max-w-[400px] object-contain" preview :src="albumDetail.coverUrl">
+          <template #indicator>
+            <Icon name="search-plus" />
+          </template>
+        </Image>
+        <div v-if="albumMetadata" class="flex flex-col items-center gap-2">
+          <div class="font-medium text-xl text-center">{{ albumMetadata.album }}</div>
+          <div class="text-gray-500 text">
+            <span>{{ albumMetadata.albumArtists?.join(MetadataSeparator) }}</span>
+            <span v-if="albumMetadata.year"> · {{ albumMetadata.year }}</span>
+          </div>
+          <div class="flex items-center justify-center flex-wrap gap-2 mt-2" v-if="albumMetadata.genres">
+            <PrimaryChip v-if="albumMetadata.albumOrder">
+              <Icon name="tag" class="!text-[12px] mr-1" />
+              <span class="text-sm my-1">{{ albumMetadata.albumOrder }}</span>
+            </PrimaryChip>
+            <Chip v-for="genre of albumMetadata.genres" :key="genre">
+              <span class="text-sm my-1">{{ genre }}</span>
+            </Chip>
+          </div>
         </div>
       </div>
 
-      <div class="flex flex-col gap-3">
+      <div class="flex flex-col gap-3 xl:my-auto xl:items-center xl:max-h-[calc(100vh-48px)] xl:overflow-auto">
         <div v-for="group of discGroups" :key="group.discNumber" class="flex flex-col gap-2">
           <div v-if="discGroups.length > 1" class="text-sm text-gray-500">Disc {{ group.discNumber }}</div>
           <div v-for="track of group.tracks" :key="`${track.discNumber}/${track.trackNumber}`" :class="[
