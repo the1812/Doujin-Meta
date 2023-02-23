@@ -30,25 +30,38 @@ const handleSearch = async () => {
     busy = false
   }
 }
+const reset = () => {
+  searchResult = []
+  keyword = ''
+  searched = false
+}
 const canSearch = $computed(() => !busy && Boolean(keyword))
 
 </script>
 
 <template>
-  <div class="h-screen flex flex-col pt-4 px-4 gap-4">
-    <div class="flex flex-col gap-4 my-auto">
+  <div class="h-screen flex flex-col overflow-auto">
+    <div v-if="!searched" class="flex flex-col gap-4 my-auto transform -translate-y-[15vh]">
       <div class="self-center">
         <Image src="/images/Logo.Text.svg" image-class="w-screen max-w-[600px]" />
       </div>
       <div class="flex items-center justify-center gap-3">
-        <InputText type="text" class="flex-grow min-w-0 max-w-[700px]" v-model="keyword" @keydown.enter="handleSearch" placeholder="Album name" />
-        <Button class="shrink-0" :loading="busy" icon="pi pi-search" :disabled="!canSearch" @click="handleSearch" label="Search" />
+        <InputText type="text" class="flex-grow min-w-0 max-w-[700px]" v-model="keyword" @keydown.enter="handleSearch"
+          placeholder="Album name" />
+        <Button class="shrink-0" :loading="busy" icon="pi pi-search" :disabled="!canSearch" @click="handleSearch"
+          label="Search" />
       </div>
     </div>
-    <div v-if="searched" class="h-0 w-full flex-grow overflow-auto flex flex-col gap-1 self-center max-w-[800px]">
-      <RouterLink v-for="item of searchResult" :key="item.id" :to="`/albums/${item.name}/${item.id}`">
-        <AlbumSearchItem :item="item" />
-      </RouterLink>
+    <div v-if="searched" class="flex flex-col gap-4 p-4 bg-white sticky top-0 border-b border-gray-200">
+      <div class="flex items-center justify-center gap-3">
+        <Image src="/images/Logo.svg" image-class="w-10 cursor-pointer" @click="reset" />
+        <InputText type="text" class="flex-grow min-w-0 max-w-[700px]" v-model="keyword" @keydown.enter="handleSearch"
+          placeholder="Album name" />
+        <Button class="shrink-0" :loading="busy" icon="pi pi-search" :disabled="!canSearch" @click="handleSearch" />
+      </div>
+    </div>
+    <div v-if="searched" class="flex flex-col gap-1 pb-4 pt-2 px-3">
+      <AlbumSearchItem v-for="item of searchResult" :key="item.id" :item="item" />
     </div>
   </div>
 </template>

@@ -69,7 +69,7 @@ const showComposers = (track: TrackMetadata) => {
 
     <template v-if="loaded">
       <div class="flex flex-col gap-6 xl:justify-center">
-        <Image class="rounded-lg overflow-hidden z-10 shadow-[0_0_0_2px_rgba(0,0,0,0.05)] self-center"
+        <Image class="rounded-lg overflow-hidden z-10 shadow-border-[2px] self-center"
           image-class="w-[90vw] max-w-[400px] object-contain" preview :src="albumDetail.coverUrl">
           <template #indicator>
             <Icon name="search-plus" />
