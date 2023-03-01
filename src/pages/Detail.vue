@@ -98,7 +98,7 @@ const showComposers = (track: TrackMetadata) => {
           </div>
         </div>
 
-        <div class="flex flex-col gap-3 xl:items-center xl:max-h-[calc(100vh-48px)] xl:overflow-auto">
+        <div class="flex flex-col gap-3 xl:items-center">
           <div v-for="group of discGroups" :key="group.discNumber" class="flex flex-col gap-2">
             <div v-if="discGroups.length > 1" class="text-sm text-gray-500">Disc {{ group.discNumber }}</div>
             <div v-for="track of group.tracks" :key="`${track.discNumber}/${track.trackNumber}`" :class="[
