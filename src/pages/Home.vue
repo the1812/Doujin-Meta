@@ -6,7 +6,7 @@ import { useRoute } from 'vue-router'
 import { searchAlbums } from '../api'
 import { AlbumApiItem } from '../api/types'
 import AlbumSearchItem from '../components/AlbumSearchItem.vue'
-import PageHeader from '../components/PageHeader.vue'
+import PageHeader from '../components/PageHeader/PageHeader.vue'
 
 const { query } = useRoute()
 const defaultKeyword = (() => {

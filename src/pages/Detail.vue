@@ -13,7 +13,10 @@ import DetailHeader from '../components/DetailHeader.vue'
 import { MetadataSeparator } from '../common'
 import { reactive } from 'vue'
 import { getAlbumDetail, useApi } from '../api'
+import PageHeader from '../components/PageHeader/PageHeader.vue'
+import { usePageHeader } from '../components/PageHeader'
 
+const { homeNavigate, keyword, search } = usePageHeader()
 const { params } = useRoute()
 const { name, id } = params
 
@@ -53,61 +56,65 @@ const showComposers = (track: TrackMetadata) => {
   return track.composers && !equal
 }
 
-
 </script>
 
 <template>
-  <div
-    class="min-h-screen xl:h-screen flex flex-col xl:flex-row xl:justify-center items-center p-4 gap-6 xl:gap-[72px]">
-    <div v-if="loading" class="flex-grow flex items-center justify-center">
-      <ProgressSpinner class="!w-8 !h-8" stroke-width="8" />
-    </div>
-    <div v-if="error" class="flex-grow flex flex-col items-center justify-center gap-4">
-      <div class="text-lg">Failed to load.</div>
-      <Button class="p-button-sm" icon="pi pi-refresh" @click="reload" label="Retry"></Button>
-    </div>
+  <div class="h-screen flex flex-col overflow-auto">
+    <PageHeader v-model="keyword" @home-navigate="homeNavigate" @search="search" />
 
-    <template v-if="loaded">
-      <div class="flex flex-col gap-6 xl:justify-center">
-        <Image class="rounded-lg overflow-hidden z-10 shadow-border-[2px] self-center"
-          image-class="w-[90vw] max-w-[400px] object-contain" preview :src="albumDetail.coverUrl">
-          <template #indicator>
-            <Icon name="search-plus" />
-          </template>
-        </Image>
-        <div v-if="albumMetadata" class="flex flex-col items-center gap-2">
-          <div class="font-medium text-xl text-center">{{ albumMetadata.album }}</div>
-          <div class="text-gray-500 text">
-            <span>{{ albumMetadata.albumArtists?.join(MetadataSeparator) }}</span>
-            <span v-if="albumMetadata.year"> · {{ albumMetadata.year }}</span>
-          </div>
-          <div class="flex items-center justify-center flex-wrap gap-2 mt-2" v-if="albumMetadata.genres">
-            <PrimaryChip v-if="albumMetadata.albumOrder">
-              <Icon name="tag" class="!text-[12px] mr-1" />
-              <span class="text-sm my-1">{{ albumMetadata.albumOrder }}</span>
-            </PrimaryChip>
-            <Chip v-for="genre of albumMetadata.genres" :key="genre">
-              <span class="text-sm my-1">{{ genre }}</span>
-            </Chip>
-          </div>
-        </div>
+    <div
+      class="flex flex-grow flex-col xl:flex-row xl:justify-center items-center xl:items-start p-6 gap-6">
+      <div v-if="loading" class="flex-grow flex items-center justify-center">
+        <ProgressSpinner class="!w-8 !h-8" stroke-width="8" />
+      </div>
+      <div v-if="error" class="flex-grow flex flex-col items-center justify-center gap-4">
+        <div class="text-lg">Failed to load.</div>
+        <Button class="p-button-sm" icon="pi pi-refresh" @click="reload" label="Retry"></Button>
       </div>
 
-      <div class="flex flex-col gap-3 xl:my-auto xl:items-center xl:max-h-[calc(100vh-48px)] xl:overflow-auto">
-        <div v-for="group of discGroups" :key="group.discNumber" class="flex flex-col gap-2">
-          <div v-if="discGroups.length > 1" class="text-sm text-gray-500">Disc {{ group.discNumber }}</div>
-          <div v-for="track of group.tracks" :key="`${track.discNumber}/${track.trackNumber}`" :class="[
-            'w-[90vw] md:max-w-[600px]',
-            'flex flex-col rounded-md border border-solid border-gray-200 overflow-hidden',
-            '[&>:not(:last-child)]:border-b [&>:not(:last-child)]:border-solid [&>:not(:last-child)]:border-gray-200',
-          ]">
-            <DetailHeader :label="`#${track.trackNumber}`" :value="track.title" />
-            <DetailRow label="Artists" :value="track.artists.join(MetadataSeparator)" />
-            <DetailRow v-if="showComposers(track)" label="Composers" :value="track.composers.join(MetadataSeparator)" />
-            <DetailRow v-if="track.comments" label="Comments" :value="track.comments" />
+      <template v-if="loaded">
+        <div class="flex flex-col gap-6 xl:justify-center">
+          <Image class="rounded-lg overflow-hidden z-10 shadow-border-[2px] self-center"
+            image-class="w-[90vw] max-w-[400px] object-contain" preview :src="albumDetail.coverUrl">
+            <template #indicator>
+              <Icon name="search-plus" />
+            </template>
+          </Image>
+          <div v-if="albumMetadata" class="flex flex-col items-center gap-2">
+            <div class="font-medium text-xl text-center">{{ albumMetadata.album }}</div>
+            <div class="text-gray-500 text">
+              <span>{{ albumMetadata.albumArtists?.join(MetadataSeparator) }}</span>
+              <span v-if="albumMetadata.year"> · {{ albumMetadata.year }}</span>
+            </div>
+            <div class="flex items-center justify-center flex-wrap gap-2 mt-2" v-if="albumMetadata.genres">
+              <PrimaryChip v-if="albumMetadata.albumOrder">
+                <Icon name="tag" class="!text-[12px] mr-1" />
+                <span class="text-sm my-1">{{ albumMetadata.albumOrder }}</span>
+              </PrimaryChip>
+              <Chip v-for="genre of albumMetadata.genres" :key="genre">
+                <span class="text-sm my-1">{{ genre }}</span>
+              </Chip>
+            </div>
           </div>
         </div>
-      </div>
-    </template>
+
+        <div class="flex flex-col gap-3 xl:items-center xl:max-h-[calc(100vh-48px)] xl:overflow-auto">
+          <div v-for="group of discGroups" :key="group.discNumber" class="flex flex-col gap-2">
+            <div v-if="discGroups.length > 1" class="text-sm text-gray-500">Disc {{ group.discNumber }}</div>
+            <div v-for="track of group.tracks" :key="`${track.discNumber}/${track.trackNumber}`" :class="[
+              'w-[90vw] md:max-w-[600px]',
+              'flex flex-col rounded-md border border-solid border-gray-200 overflow-hidden',
+              '[&>:not(:last-child)]:border-b [&>:not(:last-child)]:border-solid [&>:not(:last-child)]:border-gray-200',
+            ]">
+              <DetailHeader :label="`#${track.trackNumber}`" :value="track.title" />
+              <DetailRow label="Artists" :value="track.artists.join(MetadataSeparator)" />
+              <DetailRow v-if="showComposers(track)" label="Composers"
+                :value="track.composers.join(MetadataSeparator)" />
+              <DetailRow v-if="track.comments" label="Comments" :value="track.comments" />
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
   </div>
 </template>
