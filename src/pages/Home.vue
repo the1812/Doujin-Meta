@@ -7,9 +7,11 @@ import { searchAlbums } from '../api'
 import { AlbumApiItem } from '../api/types'
 import AlbumSearchItem from '../components/AlbumSearchItem.vue'
 import PageHeader from '../components/PageHeader/PageHeader.vue'
+import { watch } from 'vue'
 
-const { query } = useRoute()
+const route = useRoute()
 const defaultKeyword = (() => {
+  const { query } = route
   if (query.keyword) {
     return query.keyword.toString()
   }
@@ -24,6 +26,7 @@ let searchResult = $ref([] as AlbumApiItem[])
 const handleSearch = async () => {
   try {
     busy = true
+    searchResult = []
     // await new Promise(r => setTimeout(r, 1000))
     searchResult = await searchAlbums(keyword)
     searched = true
@@ -36,6 +39,18 @@ const reset = () => {
   keyword = ''
   searched = false
 }
+
+watch(
+  () => route.query.keyword,
+  (newKeyword: string) => {
+    if (!newKeyword || keyword === newKeyword) {
+      return
+    }
+    keyword = newKeyword
+    handleSearch()
+  }
+)
+
 const canSearch = $computed(() => !busy && Boolean(keyword))
 
 </script>

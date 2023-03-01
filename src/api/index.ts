@@ -7,6 +7,9 @@ export const api = Axios.create({
 })
 
 export const searchAlbums = async (keyword: string) => {
+  if (!keyword) {
+    return []
+  }
   const response = await api.get<AlbumApiItem[]>(`/api/albums/search/${encodeURIComponent(keyword)}`)
   return response.data
 }
