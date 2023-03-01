@@ -6,6 +6,7 @@ import { useRoute } from 'vue-router'
 import { searchAlbums } from '../api'
 import { AlbumApiItem } from '../api/types'
 import AlbumSearchItem from '../components/AlbumSearchItem.vue'
+import PageHeader from '../components/PageHeader.vue'
 
 const { query } = useRoute()
 const defaultKeyword = (() => {
@@ -52,14 +53,7 @@ const canSearch = $computed(() => !busy && Boolean(keyword))
           label="Search" />
       </div>
     </div>
-    <div v-if="searched" class="flex flex-col gap-4 p-4 bg-white sticky top-0 border-b border-gray-200">
-      <div class="flex items-center justify-center gap-3">
-        <Image src="/images/Logo.svg" image-class="w-10 cursor-pointer" @click="reset" />
-        <InputText type="text" class="flex-grow min-w-0 max-w-[700px]" v-model="keyword" @keydown.enter="handleSearch"
-          placeholder="Album name" />
-        <Button class="shrink-0" :loading="busy" icon="pi pi-search" :disabled="!canSearch" @click="handleSearch" />
-      </div>
-    </div>
+    <PageHeader v-if="searched" @home-navigate="reset" @search="handleSearch" v-model="keyword" :busy="busy" />
     <div v-if="searched" class="flex flex-col gap-1 pb-4 pt-2 px-3">
       <AlbumSearchItem v-for="item of searchResult" :key="item.id" :item="item" />
     </div>
