@@ -15,6 +15,7 @@ import { reactive } from 'vue'
 import { getAlbumDetail, useApi } from '../api'
 import PageHeader from '../components/PageHeader/PageHeader.vue'
 import { usePageHeader } from '../components/PageHeader'
+import CenterScreen from '../components/CenterScreen.vue'
 
 const { homeNavigate, keyword, search } = usePageHeader()
 const { params } = useRoute()
@@ -64,13 +65,13 @@ const showComposers = (track: TrackMetadata) => {
 
     <div
       class="flex flex-grow flex-col xl:flex-row xl:justify-center items-center xl:items-start p-6 gap-6">
-      <div v-if="loading" class="flex-grow flex items-center justify-center">
+      <CenterScreen v-if="loading">
         <ProgressSpinner class="!w-8 !h-8" stroke-width="8" />
-      </div>
-      <div v-if="error" class="flex-grow flex flex-col items-center justify-center gap-4">
+      </CenterScreen>
+      <CenterScreen v-if="error">
         <div class="text-lg">Failed to load.</div>
         <Button class="p-button-sm" icon="pi pi-refresh" @click="reload" label="Retry"></Button>
-      </div>
+      </CenterScreen>
 
       <template v-if="loaded">
         <div class="flex flex-col gap-6 xl:justify-center">
