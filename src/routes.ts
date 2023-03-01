@@ -1,10 +1,23 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
+import {
+  createRouter,
+  createWebHashHistory,
+  RouteLocationNormalized,
+  RouteRecordRaw,
+} from 'vue-router'
 import Detail from './pages/Detail.vue'
 import Home from './pages/Home.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/', component: Home },
-  { path: '/albums/:name/:id', component: Detail },
+  {
+    path: '/albums/:name/:id',
+    component: Detail,
+    meta: {
+      title: (route: RouteLocationNormalized) => {
+        return route.params.name
+      },
+    },
+  },
 ]
 
 export const router = createRouter({

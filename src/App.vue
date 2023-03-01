@@ -1,6 +1,14 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { RouterView, useRouter } from 'vue-router'
 
+const router = useRouter()
+router.afterEach((to) => {
+  if (to.meta.title instanceof Function) {
+    document.title = `${to.meta.title(to)} - Doujin Meta`
+  } else {
+    document.title = 'Doujin Meta'
+  }
+})
 </script>
 
 <template>
