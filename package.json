@@ -46,7 +46,7 @@
   "scripts": {
     "vercel:dev": "vercel dev",
     "vercel:deploy": "vercel",
-    "dev": "vite",
+    "dev": "vite --port 3000",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   }
