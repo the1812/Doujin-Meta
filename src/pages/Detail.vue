@@ -88,7 +88,8 @@ const showComposers = (track: TrackMetadata) => {
               <span>{{ albumMetadata.albumArtists?.join(MetadataSeparator) }}</span>
               <span v-if="albumMetadata.year"> · {{ albumMetadata.year }}</span>
             </div>
-            <div class="flex items-center justify-center flex-wrap gap-2 mt-2" v-if="albumMetadata.genres">
+            <div class="flex items-center justify-center flex-wrap gap-2 mt-2"
+              v-if="albumMetadata.genres || albumMetadata.albumOrder">
               <PrimaryChip v-if="albumMetadata.albumOrder">
                 <Icon name="tag" class="!text-[12px] mr-1" />
                 <span class="text-sm my-1">{{ albumMetadata.albumOrder }}</span>
