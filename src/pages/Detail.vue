@@ -63,14 +63,15 @@ const showComposers = (track: TrackMetadata) => {
   <div class="h-screen flex flex-col overflow-auto">
     <PageHeader v-model="keyword" @home-navigate="homeNavigate" @search="search" />
 
-    <div
-      class="flex flex-grow flex-col xl:flex-row xl:justify-center items-center xl:items-start p-6 gap-6">
+    <div class="flex flex-grow flex-col xl:flex-row xl:justify-center items-center xl:items-start p-6 gap-6">
       <CenterScreen v-if="loading">
         <ProgressSpinner class="!w-8 !h-8" stroke-width="8" />
       </CenterScreen>
       <CenterScreen v-if="error">
-        <div class="text-lg">Failed to load.</div>
-        <Button class="p-button-sm" icon="pi pi-refresh" @click="reload" label="Retry"></Button>
+        <div class="flex flex-col items-center gap-4">
+          <div class="text-lg">Failed to load.</div>
+          <Button class="p-button-sm" icon="pi pi-refresh" @click="reload" label="Retry"></Button>
+        </div>
       </CenterScreen>
 
       <template v-if="loaded">
