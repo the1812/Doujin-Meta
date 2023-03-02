@@ -9,7 +9,7 @@ import {
   inheritHeaders,
   githubHost,
   findCover,
-} from '../../index.js'
+} from '../../../api-support/index.js'
 
 export default async function handler(request: VercelRequest, response: VercelResponse) {
   const { keyword } = request.query

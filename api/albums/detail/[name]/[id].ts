@@ -9,7 +9,7 @@ import {
   githubHost,
   BlobResponse,
   findCover,
-} from '../../../index.js'
+} from '../../../../api-support/index.js'
 
 export default async function handler(request: VercelRequest, response: VercelResponse) {
   const { name, id, normalize } = request.query

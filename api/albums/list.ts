@@ -7,7 +7,7 @@ import {
   TreeResponse,
   inheritHeaders,
   githubHost,
-} from '../index.js'
+} from '../../api-support/index.js'
 
 export default async function handler(request: VercelRequest, response: VercelResponse) {
   try {

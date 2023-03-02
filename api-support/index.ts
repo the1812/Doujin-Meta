@@ -1,6 +1,7 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node'
+import type { VercelResponse } from '@vercel/node'
 import Axios, { AxiosResponse } from 'axios'
 import { basename } from 'path'
+import { GitTreeNode } from './types.js'
 
 export const owner = 'the1812'
 export const repo = 'Doujin-Meta'
@@ -32,38 +33,4 @@ export const findCover = (nodes: GitTreeNode[]) => {
   return result.path
 }
 
-export interface GitTreeNode {
-  path: string
-  mode: string
-  type: string
-  sha: string
-  url: string
-}
-export interface TreeResponse {
-  sha: string
-  url: string
-  tree: GitTreeNode[]
-}
-export interface ContentsNode {
-  name: string
-  path: string
-  sha: string
-  size: number
-  url: string
-  html_url: string
-  git_url: string
-  download_url: string
-  type: string
-}
-export type ContentsResponse = ContentsNode[]
-export interface BlobResponse {
-  sha: string
-  url: string
-  size: number
-  content: string
-  encoding: string
-}
-
-export default async function handler(request: VercelRequest, response: VercelResponse) {
-  response.status(404).end()
-}
+export * from './types.js'
