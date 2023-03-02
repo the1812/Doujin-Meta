@@ -45,16 +45,18 @@ export default async function handler(request: VercelRequest, response: VercelRe
     const fuse = new Fuse(treeNodes, {
       keys: ['path'],
       threshold: 0.4,
+      includeMatches: true,
     })
     const result = fuse.search(keyword)
     response.status(200).json(
-      result.map(({ item }) => {
+      result.map(({ item, matches }) => {
         const cover = findCover(blobNodes.filter(it => it.path.startsWith(item.path)))
         return {
+          id: item.sha,
           name: item.path,
           coverUrl: `/data/${cover}`,
           detailUrl: `/api/albums/detail/${item.path}/${item.sha}`,
-          id: item.sha,
+          matches: matches?.flatMap(it => it.indices)
         }
       }),
     )
