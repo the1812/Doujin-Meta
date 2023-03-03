@@ -2,44 +2,61 @@
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
 import Image from 'primevue/image'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { searchAlbums, useApi } from '../../api'
 import { AlbumApiItem } from '../../api/types'
 import AlbumSearchItem from './AlbumSearchItem.vue'
 import PageHeader from '../../components/PageHeader/PageHeader.vue'
-import { watch, watchEffect } from 'vue'
+import { watch } from 'vue'
 import Loading from '../../components/Loading.vue'
 import Error from '../../components/Error.vue'
 
 const route = useRoute()
+const router = useRouter()
 
 let searched = $ref(false)
 let keyword = $ref('')
 let searchResult = $ref([] as AlbumApiItem[])
 
 const { loading, error, sendRequest: handleSearch } = $(useApi(async () => {
-  searched = true
-  searchResult = []
   if (!keyword) {
     return
   }
+  searched = true
+  searchResult = []
+  const query = { keyword }
+  router.replace({ query })
   searchResult = await searchAlbums(keyword)
 }))
 
 const reset = () => {
+  searched = false
   searchResult = []
   keyword = ''
-  searched = false
 }
 
-watchEffect(
-  () => {
-    const newKeyword = route.query.keyword as string
+watch(
+  () => route.query.keyword,
+  (newKeyword: string) => {
     if (!newKeyword || keyword === newKeyword) {
       return
     }
     keyword = newKeyword
     handleSearch()
+  },
+  {
+    immediate: true,
+  }
+)
+
+watch(
+  () => route.query.home,
+  (home: string) => {
+    if (!home) {
+      return
+    }
+    reset()
+    router.replace({ query: {} })
   }
 )
 

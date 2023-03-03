@@ -14,11 +14,11 @@ router.afterEach((to) => {
 <template>
   <div class="flex flex-col">
     <RouterView v-slot="{ Component, route }">
-      <Transition :name="(route.meta.transition as string) || 'fade'">
+      <!-- <Transition :name="(route.meta.transition as string) || 'fade'"> -->
         <KeepAlive include="Home">
           <component :is="Component" />
         </KeepAlive>
-      </Transition>
+      <!-- </Transition> -->
     </RouterView>
   </div>
 </template>
