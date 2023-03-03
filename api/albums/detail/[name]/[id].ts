@@ -46,7 +46,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
     const result = {
       id,
       name,
-      coverUrl: `/data/${name}/${findCover(nodes)}`,
+      coverUrl: encodeURIComponent(`/data/${name}/${findCover(nodes)}`),
       metadata:
         normalize === 'false' ? metadataJson : await localJson.normalizeWithoutCover(metadataJson),
     }

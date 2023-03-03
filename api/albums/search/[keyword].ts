@@ -49,8 +49,8 @@ export default async function handler(request: VercelRequest, response: VercelRe
         return {
           id: item.sha,
           name: item.path,
-          coverUrl: `/data/${cover}`,
-          detailUrl: `/api/albums/detail/${item.path}/${item.sha}`,
+          coverUrl: encodeURIComponent(`/data/${cover}`),
+          detailUrl: encodeURIComponent(`/api/albums/detail/${item.path}/${item.sha}`),
           matches: matches?.flatMap(it => it.indices),
         }
       }),
