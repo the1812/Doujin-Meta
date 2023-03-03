@@ -16,7 +16,13 @@
     "genres": [
       "嘻哈"
     ],
-    "year": 2021
+    "year": 2021,
+    "extraData": {
+      "links": {
+        "dizzylab": "star-of-east",
+        "thbWiki": "东方之星"
+      }
+    }
   },
   {
     "title": "I·C·E F·E·A·R",
