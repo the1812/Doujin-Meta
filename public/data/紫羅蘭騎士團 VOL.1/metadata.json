@@ -9,7 +9,12 @@
     "albumArtists": [
       "Matthiola Records"
     ],
-    "year": "2019"
+    "year": "2019",
+    "extraData": {
+      "links": {
+        "dizzylab": "MTLR-009"
+      }
+    }
   },
   {
     "title": "Knight in Your Nightmares",
