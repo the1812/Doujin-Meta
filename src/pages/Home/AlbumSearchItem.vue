@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AlbumApiItem } from '../api/types'
+import { AlbumApiItem } from '../../api/types'
 
 const { item } = defineProps<{ item: AlbumApiItem }>()
 

@@ -4,8 +4,8 @@ import {
   RouteLocationNormalized,
   RouteRecordRaw,
 } from 'vue-router'
-import Detail from './pages/Detail.vue'
-import Home from './pages/Home.vue'
+import Detail from './pages/Detail/Detail.vue'
+import Home from './pages/Home/Home.vue'
 
 const routes: RouteRecordRaw[] = [
   { path: '/', component: Home },
