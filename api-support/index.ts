@@ -1,7 +1,8 @@
 import type { VercelResponse } from '@vercel/node'
 import Axios, { AxiosResponse } from 'axios'
 import { basename } from 'path'
-import { GitTreeNode } from './types.js'
+import { ContentsResponse, GitTreeNode } from './types.js'
+import childProcess from 'child_process'
 
 export const owner = 'the1812'
 export const repo = 'Doujin-Meta'
@@ -21,6 +22,16 @@ export const inheritHeaders = (githubResponse: AxiosResponse, vercelResponse: Ve
     }
   })
   return vercelResponse
+}
+
+const branch = childProcess.execSync('git branch --show').toString().trim() || 'main'
+export const getDataFolder = async () => {
+  const ref = branch
+  console.log('current ref:', ref)
+  const publicTreeApi = `${githubHost}/repos/${owner}/${repo}/contents/public?ref=${ref}`
+  const { data: publicContents } = await githubApi.get<ContentsResponse>(publicTreeApi)
+  const dataUrl = publicContents.find(it => it.name === 'data')?.git_url
+  return dataUrl
 }
 export const findCover = (nodes: GitTreeNode[]) => {
   const allowedExtensions = ['.jpg', '.png']

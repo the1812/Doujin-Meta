@@ -16,6 +16,9 @@ import { getAlbumDetail, useApi } from '../../api'
 import PageHeader from '../../components/PageHeader/PageHeader.vue'
 import { usePageHeader } from '../../components/PageHeader'
 import CenterScreen from '../../components/CenterScreen.vue'
+import DizzylabIcon from '../../assets/dizzylab.svg'
+import THBWikiIcon from '../../assets/thbWiki.png'
+import LinkChip from '../../components/LinkChip.vue'
 
 const { homeNavigate, keyword, search } = usePageHeader()
 const { params } = useRoute()
@@ -29,6 +32,11 @@ const albumDetail: AlbumDetail = reactive({
 })
 const tracks = $computed(() => albumDetail.metadata)
 const albumMetadata: AlbumMetadata = $computed(() => tracks[0])
+const links = $computed((): {
+  dizzylab?: string
+  thbWiki?: string
+} => albumMetadata.extraData?.links ?? {})
+
 type TrackMetadata = Omit<Metadata, keyof AlbumMetadata>
 type DiscGroup = { discNumber: string; tracks: TrackMetadata[] }
 const discGroups: DiscGroup[] = $computed(() => {
@@ -84,16 +92,23 @@ const showComposers = (track: TrackMetadata) => {
           </Image>
           <div v-if="albumMetadata" class="flex flex-col items-center gap-2">
             <div class="font-medium text-xl text-center">{{ albumMetadata.album }}</div>
-            <div class="text-gray-500 text">
+            <div class="text-gray-500 text mb-2">
               <span>{{ albumMetadata.albumArtists?.join(MetadataSeparator) }}</span>
               <span v-if="albumMetadata.year"> · {{ albumMetadata.year }}</span>
             </div>
-            <div class="flex items-center justify-center flex-wrap gap-2 mt-2"
-              v-if="albumMetadata.genres || albumMetadata.albumOrder">
+
+            <div v-if="albumMetadata.albumOrder || Object.values(links).length > 0"
+              class="flex items-center justify-center flex-wrap gap-2">
               <PrimaryChip v-if="albumMetadata.albumOrder">
                 <Icon name="tag" class="!text-[12px] mr-1" />
                 <span class="text-sm my-1">{{ albumMetadata.albumOrder }}</span>
               </PrimaryChip>
+              <LinkChip v-if="links.dizzylab" :href="`https://www.dizzylab.net/d/${links.dizzylab}`"
+                title="View on dizzylab" :src="DizzylabIcon" />
+              <LinkChip v-if="links.thbWiki" :href="`https://thwiki.cc/${links.thbWiki}`" title="View on THBWiki"
+                :src="THBWikiIcon" />
+            </div>
+            <div class="flex items-center justify-center flex-wrap gap-2" v-if="albumMetadata.genres">
               <Chip v-for="genre of albumMetadata.genres" :key="genre">
                 <span class="text-sm my-1">{{ genre }}</span>
               </Chip>

@@ -1,22 +1,12 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import {
-  owner,
-  repo,
-  githubApi,
-  ContentsResponse,
-  TreeResponse,
-  inheritHeaders,
-  githubHost,
-} from '../../api-support/index.js'
+import { githubApi, TreeResponse, inheritHeaders, getDataFolder } from '../../api-support/index.js'
 
 export default async function handler(request: VercelRequest, response: VercelResponse) {
   try {
-    const publicTreeApi = `${githubHost}/repos/${owner}/${repo}/contents/public`
-    const { data: publicContents } = await githubApi.get<ContentsResponse>(publicTreeApi)
-    const dataUrl = publicContents.find(it => it.name === 'data')?.git_url
+    const dataUrl = await getDataFolder()
     if (!dataUrl) {
       response.status(404).json({
-        message: 'public/data not found'
+        message: 'public/data not found',
       })
     }
     const githubResponse = await githubApi.get<TreeResponse>(dataUrl)

@@ -1,14 +1,11 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import Fuse from 'fuse.js'
 import {
-  owner,
-  repo,
   githubApi,
-  ContentsResponse,
   TreeResponse,
   inheritHeaders,
-  githubHost,
   findCover,
+  getDataFolder,
 } from '../../../api-support/index.js'
 
 export default async function handler(request: VercelRequest, response: VercelResponse) {
@@ -26,9 +23,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
     return
   }
   try {
-    const publicTreeApi = `${githubHost}/repos/${owner}/${repo}/contents/public`
-    const { data: publicContents } = await githubApi.get<ContentsResponse>(publicTreeApi)
-    const dataUrl = publicContents.find(it => it.name === 'data')?.git_url
+    const dataUrl = await getDataFolder()
     if (!dataUrl) {
       response.status(404).json({
         message: 'public/data not found',
@@ -56,7 +51,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
           name: item.path,
           coverUrl: `/data/${cover}`,
           detailUrl: `/api/albums/detail/${item.path}/${item.sha}`,
-          matches: matches?.flatMap(it => it.indices)
+          matches: matches?.flatMap(it => it.indices),
         }
       }),
     )
