@@ -10,7 +10,9 @@ export const searchAlbums = async (keyword: string) => {
   if (!keyword) {
     return []
   }
-  const response = await api.get<AlbumApiItem[]>(`/api/albums/search/${encodeURIComponent(keyword)}`)
+  const response = await api.get<AlbumApiItem[]>(
+    `/api/albums/search/${encodeURIComponent(keyword)}`,
+  )
   return response.data
 }
 export const getAlbumDetail = async (name: string, id: string) => {
@@ -21,24 +23,27 @@ export const getAlbumDetail = async (name: string, id: string) => {
 }
 
 export const useApi = (onApiCall: () => Promise<unknown>) => {
-  const loaded = ref(false)
+  const loading = ref(false)
   const error = ref(false)
-  const loading = computed(() => !loaded.value && !error.value)
+  const loaded = ref(false)
 
-  const loadApi = () => {
-    loaded.value = false
-    error.value = false
-    onApiCall()
-      .then(() => loaded.value = true)
-      .catch(() => error.value = true)
+  const sendRequest = async () => {
+    try {
+      loading.value = true
+      error.value = false
+      await onApiCall()
+      loaded.value = true
+    } catch (error) {
+      error.value = true
+    } finally {
+      loading.value = false
+    }
   }
-
-  loadApi()
 
   return reactive({
     loading,
-    loaded,
+    loaded: computed(() => loaded.value && !loading.value && !error.value),
     error,
-    reload: loadApi,
+    sendRequest,
   })
 }

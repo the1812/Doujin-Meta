@@ -6,8 +6,6 @@ import Icon from '../../components/Icon.vue'
 import Image from 'primevue/image'
 import Chip from 'primevue/chip'
 import PrimaryChip from '../../components/PrimaryChip.vue'
-import Button from 'primevue/button'
-import ProgressSpinner from 'primevue/progressspinner'
 import DetailRow from './DetailRow.vue'
 import DetailHeader from './DetailHeader.vue'
 import { MetadataSeparator } from '../../common'
@@ -15,10 +13,11 @@ import { reactive } from 'vue'
 import { getAlbumDetail, useApi } from '../../api'
 import PageHeader from '../../components/PageHeader/PageHeader.vue'
 import { usePageHeader } from '../../components/PageHeader'
-import CenterScreen from '../../components/CenterScreen.vue'
 import DizzylabIcon from '../../assets/dizzylab.svg'
 import THBWikiIcon from '../../assets/thbWiki.png'
 import LinkChip from '../../components/LinkChip.vue'
+import Loading from '../../components/Loading.vue'
+import Error from '../../components/Error.vue'
 
 const { homeNavigate, keyword, search } = usePageHeader()
 const { params } = useRoute()
@@ -52,9 +51,11 @@ const discGroups: DiscGroup[] = $computed(() => {
   return groups
 })
 
-const { loading, error, loaded, reload } = $(useApi(() => getAlbumDetail(name as string, id as string).then(detail => {
+const { loading, error, loaded, sendRequest } = $(useApi(async () => {
+  const detail = await getAlbumDetail(name as string, id as string)
   Object.assign(albumDetail, detail)
-})))
+}))
+sendRequest()
 
 const showComposers = (track: TrackMetadata) => {
   if (!track.composers) {
@@ -72,16 +73,6 @@ const showComposers = (track: TrackMetadata) => {
     <PageHeader v-model="keyword" @home-navigate="homeNavigate" @search="search" />
 
     <div class="flex flex-grow flex-col xl:flex-row xl:justify-center items-center xl:items-start p-6 gap-6">
-      <CenterScreen v-if="loading">
-        <ProgressSpinner class="!w-8 !h-8" stroke-width="8" />
-      </CenterScreen>
-      <CenterScreen v-if="error">
-        <div class="flex flex-col items-center gap-4">
-          <div class="text-lg">Failed to load.</div>
-          <Button class="p-button-sm" icon="pi pi-refresh" @click="reload" label="Retry"></Button>
-        </div>
-      </CenterScreen>
-
       <template v-if="loaded">
         <div class="flex flex-col gap-6 xl:justify-center">
           <Image class="rounded-lg overflow-hidden z-10 shadow-border-[2px] self-center"
@@ -134,5 +125,8 @@ const showComposers = (track: TrackMetadata) => {
         </div>
       </template>
     </div>
+
+    <Loading v-if="loading" />
+    <Error v-if="error" @retry="sendRequest" />
   </div>
 </template>

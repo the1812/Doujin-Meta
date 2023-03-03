@@ -8,7 +8,10 @@ import Detail from './pages/Detail/Detail.vue'
 import Home from './pages/Home/Home.vue'
 
 const routes: RouteRecordRaw[] = [
-  { path: '/', component: Home },
+  {
+    path: '/',
+    component: Home
+  },
   {
     path: '/albums/:name/:id',
     component: Detail,
