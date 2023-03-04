@@ -24,7 +24,12 @@ export const inheritHeaders = (githubResponse: AxiosResponse, vercelResponse: Ve
   return vercelResponse
 }
 
-const branch = childProcess.execSync('git branch --show').toString().trim() || 'main'
+const branch = (() => {
+  if (process.env.VERCEL_GIT_COMMIT_REF) {
+    return process.env.VERCEL_GIT_COMMIT_REF
+  }
+  return childProcess.execSync('git branch --show').toString().trim() || 'main'
+})()
 export const getDataFolder = async () => {
   const ref = branch
   console.log('current ref:', ref)
