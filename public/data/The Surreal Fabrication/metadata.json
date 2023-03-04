@@ -12,7 +12,12 @@
     "genres": [
       "Electronic"
     ],
-    "year": "2021"
+    "year": "2021",
+    "extraData": {
+      "links": {
+        "dizzylab": "MRNX1"
+      }
+    }
   },
   {
     "title": "Chronokinesia",

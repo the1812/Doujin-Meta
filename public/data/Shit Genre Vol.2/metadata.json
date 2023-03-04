@@ -9,7 +9,12 @@
     "albumArtists": [
       "Clip Sounds"
     ],
-    "year": "2019"
+    "year": "2019",
+    "extraData": {
+      "links": {
+        "dizzylab": "CLIP-003"
+      }
+    }
   },
   {
     "title": "Party Don't Stop",

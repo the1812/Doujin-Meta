@@ -1,48 +1,82 @@
 [
   {
     "title": "Waltz No.2 in F Minor, \"Yumemai no Alice\" feat. 狐妖Mikan",
-    "artists": ["狐妖Mikan", "Polymath9"],
-    "composers": ["Polymath9"],
+    "artists": [
+      "狐妖Mikan",
+      "Polymath9"
+    ],
+    "composers": [
+      "Polymath9"
+    ],
     "album": "Journey / Memories",
     "albumOrder": "MTLR-008",
-    "albumArtists": ["Matthiola Records", "NFA霓虹未来协会"],
-    "genres": ["Future Funk", "Synthwave"],
-    "year": "2019"
+    "albumArtists": [
+      "Matthiola Records",
+      "NFA霓虹未来协会"
+    ],
+    "genres": [
+      "Future Funk",
+      "Synthwave"
+    ],
+    "year": "2019",
+    "extraData": {
+      "links": {
+        "dizzylab": "MTLR-008"
+      }
+    }
   },
   {
     "title": "Streak of Light",
-    "composers": ["Joulez"]
+    "composers": [
+      "Joulez"
+    ]
   },
   {
     "title": "Celestial Glow",
-    "composers": ["Violet Delta"]
+    "composers": [
+      "Violet Delta"
+    ]
   },
   {
     "title": "c h e r r y j e l l y",
-    "composers": ["眠"]
+    "composers": [
+      "眠"
+    ]
   },
   {
     "title": "It's time to wake up",
-    "composers": ["Reguluz"]
+    "composers": [
+      "Reguluz"
+    ]
   },
   {
     "title": "Tokyo",
-    "composers": ["GOSU"]
+    "composers": [
+      "GOSU"
+    ]
   },
   {
     "title": "Thrive",
-    "composers": ["Cutie"]
+    "composers": [
+      "Cutie"
+    ]
   },
   {
     "title": "I've Never Walked Outside",
-    "composers": ["Supa7onyz"]
+    "composers": [
+      "Supa7onyz"
+    ]
   },
   {
     "title": "Swamp Moon (Alter Vision)",
-    "composers": ["Enritsu"]
+    "composers": [
+      "Enritsu"
+    ]
   },
   {
     "title": "inu inu",
-    "composers": ["cnsuslik"]
+    "composers": [
+      "cnsuslik"
+    ]
   }
 ]

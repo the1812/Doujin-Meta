@@ -20,7 +20,12 @@
     "genres": [
       "Pop"
     ],
-    "year": "2021"
+    "year": "2021",
+    "extraData": {
+      "links": {
+        "dizzylab": "YVEPN0006"
+      }
+    }
   },
   {
     "title": "アトリエ・エトワール",

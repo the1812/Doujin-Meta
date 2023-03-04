@@ -20,7 +20,12 @@
     "genres": [
       "Pop"
     ],
-    "year": "2017"
+    "year": "2017",
+    "extraData": {
+      "links": {
+        "dizzylab": "OUOD01"
+      }
+    }
   },
   {
     "title": "流浪狂想",

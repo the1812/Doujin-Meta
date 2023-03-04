@@ -13,7 +13,12 @@
       "Lofi-Hiphop",
       "Drum & Bass"
     ],
-    "year": 2022
+    "year": 2022,
+    "extraData": {
+      "links": {
+        "dizzylab": "GKCD-001"
+      }
+    }
   },
   {
     "title": "Rainseeker Pt.2 -Grayed-",

@@ -15,7 +15,12 @@
       "Hardcore",
       "Ambient"
     ],
-    "year": "2021"
+    "year": "2021",
+    "extraData": {
+      "links": {
+        "dizzylab": "HUI-A03"
+      }
+    }
   },
   {
     "title": "Nuke",

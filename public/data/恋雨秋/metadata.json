@@ -17,7 +17,12 @@
     "genres": [
       "嘻哈"
     ],
-    "year": 2022
+    "year": 2022,
+    "extraData": {
+      "links": {
+        "dizzylab": "lianyuqiu"
+      }
+    }
   },
   {
     "title": "寒江月",

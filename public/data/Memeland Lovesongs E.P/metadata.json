@@ -6,7 +6,12 @@
     "albumOrder": "MTLR-010",
     "albumArtists": ["Matthiola Records"],
     "genres": ["Electronic"],
-    "year": "2019"
+    "year": "2019",
+    "extraData": {
+      "links": {
+        "dizzylab": "MTLR-010"
+      }
+    }
   },
   {
     "title": "Swing 2 U",

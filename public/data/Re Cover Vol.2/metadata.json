@@ -1,26 +1,58 @@
 [
   {
     "title": "Devil of Justice (Hazecat's 80's Remix)",
-    "artists": ["狐妖Mikan", "Hazecat", "cnsuslik"],
+    "artists": [
+      "狐妖Mikan",
+      "Hazecat",
+      "cnsuslik"
+    ],
     "album": "Re:Cover Vol.2",
     "albumOrder": "MLAB-009",
-    "albumArtists": ["Matthiola Records"],
-    "genres": ["Hardcore"],
-    "year": "2019"
+    "albumArtists": [
+      "Matthiola Records"
+    ],
+    "genres": [
+      "Hardcore"
+    ],
+    "year": "2019",
+    "extraData": {
+      "links": {
+        "dizzylab": "MLAB-009"
+      }
+    }
   },
   {
     "title": "Dragon of Dragon (Hazecat Remix)",
-    "artists": ["CoreTania", "Hazecat", "cnsuslik"],
-    "composers": ["cnsuslik"]
+    "artists": [
+      "CoreTania",
+      "Hazecat",
+      "cnsuslik"
+    ],
+    "composers": [
+      "cnsuslik"
+    ]
   },
   {
     "title": "Spaca Esploristo (Hazecat Remix)",
-    "artists": ["CoreTania", "Hazecat", "cnsuslik"],
-    "composers": ["cnsuslik"]
+    "artists": [
+      "CoreTania",
+      "Hazecat",
+      "cnsuslik"
+    ],
+    "composers": [
+      "cnsuslik"
+    ]
   },
   {
     "title": "Universe Paradox (Hazecat's Eurobeat Remix)",
-    "artists": ["CoreTania", "acl91", "Hazecat", "BlueWind"],
-    "composers": ["BlueWind"]
+    "artists": [
+      "CoreTania",
+      "acl91",
+      "Hazecat",
+      "BlueWind"
+    ],
+    "composers": [
+      "BlueWind"
+    ]
   }
 ]

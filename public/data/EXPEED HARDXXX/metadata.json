@@ -1,50 +1,90 @@
 [
   {
     "title": "Hunt You Down",
-    "composers": ["Hazecat", "LUNARiUM"],
+    "composers": [
+      "Hazecat",
+      "LUNARiUM"
+    ],
     "album": "EXPEED HARDXXX",
     "albumOrder": "MTLR-006",
-    "albumArtists": ["Matthiola Records"],
-    "genres": ["Hardcore"],
-    "year": "2018"
+    "albumArtists": [
+      "Matthiola Records"
+    ],
+    "genres": [
+      "Hardcore"
+    ],
+    "year": "2018",
+    "extraData": {
+      "links": {
+        "dizzylab": "MTLR-006"
+      }
+    }
   },
   {
     "title": "Universe Paradox",
-    "composers": ["BlueWind"]
+    "composers": [
+      "BlueWind"
+    ]
   },
   {
     "title": "Reverse Life",
-    "composers": ["Behold"]
+    "composers": [
+      "Behold"
+    ]
   },
   {
     "title": "Welcome Home",
-    "composers": ["NoisiestLunatic"]
+    "composers": [
+      "NoisiestLunatic"
+    ]
   },
   {
     "title": "Madness Glyph",
-    "composers": ["僵尸不睡觉"]
+    "composers": [
+      "僵尸不睡觉"
+    ]
   },
   {
     "title": "Dragon of Dragon",
-    "artists": ["CoreTania", "cnsuslik"],
-    "composers": ["cnsuslik"]
+    "artists": [
+      "CoreTania",
+      "cnsuslik"
+    ],
+    "composers": [
+      "cnsuslik"
+    ]
   },
   {
     "title": "Take Me 2 The Sky",
-    "composers": ["Mrskey"]
+    "composers": [
+      "Mrskey"
+    ]
   },
   {
     "title": "Scherzo, Code Reincarnation",
-    "composers": ["Polymath9"]
+    "composers": [
+      "Polymath9"
+    ]
   },
   {
     "title": "Lunarin Toive (Hazecat Remix)",
-    "artists": ["Hazecat", "BlueWind"],
-    "composers": ["BlueWind"]
+    "artists": [
+      "Hazecat",
+      "BlueWind"
+    ],
+    "composers": [
+      "BlueWind"
+    ]
   },
   {
     "title": "Love Potion (2018 Update)",
-    "artists": ["Marxx", "缨缨Ei", "cnsuslik"],
-    "composers": ["cnsuslik"]
+    "artists": [
+      "Marxx",
+      "缨缨Ei",
+      "cnsuslik"
+    ],
+    "composers": [
+      "cnsuslik"
+    ]
   }
 ]

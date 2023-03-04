@@ -1,52 +1,88 @@
 [
   {
     "title": "Weigh Anchor",
-    "composers": ["Aginomoto"],
+    "composers": [
+      "Aginomoto"
+    ],
     "album": "Journey / The Space",
     "albumOrder": "MTLR-005",
-    "albumArtists": ["Matthiola Records"],
-    "genres": ["Electronic"],
-    "year": "2017"
+    "albumArtists": [
+      "Matthiola Records"
+    ],
+    "genres": [
+      "Electronic"
+    ],
+    "year": "2017",
+    "extraData": {
+      "links": {
+        "dizzylab": "MTLR-008"
+      }
+    }
   },
   {
     "title": "Spaca Esploristo",
-    "artists": ["CoreTania", "cnsuslik"],
-    "composers": ["cnsuslik"]
+    "artists": [
+      "CoreTania",
+      "cnsuslik"
+    ],
+    "composers": [
+      "cnsuslik"
+    ]
   },
   {
     "title": "#B9E5E8",
-    "composers": ["BlackLotus"]
+    "composers": [
+      "BlackLotus"
+    ]
   },
   {
     "title": "Lunarin Toive",
-    "composers": ["BlueWind"]
+    "composers": [
+      "BlueWind"
+    ]
   },
   {
     "title": "Rock the Mars",
-    "composers": ["Hazecat", "Sukimiko"]
+    "composers": [
+      "Hazecat",
+      "Sukimiko"
+    ]
   },
   {
     "title": "Fly with Your Tsubasa",
-    "composers": ["Hazecat", "Sukimiko"]
+    "composers": [
+      "Hazecat",
+      "Sukimiko"
+    ]
   },
   {
     "title": "4.22 Light Years",
-    "composers": ["Behold"]
+    "composers": [
+      "Behold"
+    ]
   },
   {
     "title": "Abyss (Original Mix)",
-    "composers": ["Sandwichii"]
+    "composers": [
+      "Sandwichii"
+    ]
   },
   {
     "title": "Star Pirates",
-    "composers": ["cnsuslik"]
+    "composers": [
+      "cnsuslik"
+    ]
   },
   {
     "title": "Space Junk",
-    "composers": ["Kolaa"]
+    "composers": [
+      "Kolaa"
+    ]
   },
   {
     "title": "Back To The Sun",
-    "composers": ["Reguluz"]
+    "composers": [
+      "Reguluz"
+    ]
   }
 ]

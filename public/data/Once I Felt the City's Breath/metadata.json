@@ -1,27 +1,46 @@
 [
   {
     "title": "Reed Marsh",
-    "composers": ["Reguluz"],
+    "composers": [
+      "Reguluz"
+    ],
     "album": "Once I Felt the City's Breath",
     "albumOrder": "OSR0019",
-    "albumArtists": ["Omniset Records"],
-    "genres": ["Chill-Hop"],
-    "year": "2022"
+    "albumArtists": [
+      "Omniset Records"
+    ],
+    "genres": [
+      "Chill-Hop"
+    ],
+    "year": "2022",
+    "extraData": {
+      "links": {
+        "dizzylab": "OSR0019"
+      }
+    }
   },
   {
     "title": "Sidewalk Toward the Sun",
-    "composers": ["Reguluz"]
+    "composers": [
+      "Reguluz"
+    ]
   },
   {
     "title": "Autumn Chilly",
-    "composers": ["Reguluz"]
+    "composers": [
+      "Reguluz"
+    ]
   },
   {
     "title": "Midnight Avenue",
-    "composers": ["Reguluz"]
+    "composers": [
+      "Reguluz"
+    ]
   },
   {
     "title": "Dawn Breaks the Cloud",
-    "composers": ["Reguluz"]
+    "composers": [
+      "Reguluz"
+    ]
   }
 ]

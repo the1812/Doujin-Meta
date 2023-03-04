@@ -12,6 +12,11 @@
     "genres": [
       "Trance"
     ],
-    "year": "2021"
+    "year": "2021",
+    "extraData": {
+      "links": {
+        "dizzylab": "OSR0013"
+      }
+    }
   }
 ]

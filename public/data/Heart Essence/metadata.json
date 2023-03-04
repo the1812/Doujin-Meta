@@ -12,7 +12,12 @@
     "genres": [
       "Hard Dance"
     ],
-    "year": "2021"
+    "year": "2021",
+    "extraData": {
+      "links": {
+        "dizzylab": "AOHCD-001"
+      }
+    }
   },
   {
     "title": "Alarm",

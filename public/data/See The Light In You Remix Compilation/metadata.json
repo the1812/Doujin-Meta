@@ -12,7 +12,12 @@
     "genres": [
       "Hard Dance"
     ],
-    "year": "2021"
+    "year": "2021",
+    "extraData": {
+      "links": {
+        "dizzylab": "AOHSP-002"
+      }
+    }
   },
   {
     "title": "See The Light In You (Black201 LightUP Trance Remix)",

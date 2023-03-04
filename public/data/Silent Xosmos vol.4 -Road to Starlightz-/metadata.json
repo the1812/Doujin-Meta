@@ -12,7 +12,12 @@
     "genres": [
       "Hardcore"
     ],
-    "year": "2021"
+    "year": "2021",
+    "extraData": {
+      "links": {
+        "dizzylab": "SLXD-005"
+      }
+    }
   },
   {
     "title": "Funky Generation",

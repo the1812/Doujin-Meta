@@ -14,7 +14,12 @@
       "Color Bass",
       "Ambient"
     ],
-    "year": "2022"
+    "year": "2022",
+    "extraData": {
+      "links": {
+        "dizzylab": "PREP-03"
+      }
+    }
   },
   {
     "title": "In My Heart",

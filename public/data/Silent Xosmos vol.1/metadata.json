@@ -12,7 +12,12 @@
     "genres": [
       "Hardcore"
     ],
-    "year": "2018"
+    "year": "2018",
+    "extraData": {
+      "links": {
+        "dizzylab": "SLXD-001"
+      }
+    }
   },
   {
     "title": "華彩",

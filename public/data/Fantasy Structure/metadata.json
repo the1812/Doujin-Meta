@@ -1,71 +1,113 @@
 [
   {
     "title": "still",
-    "composers": ["samzing"],
+    "composers": [
+      "samzing"
+    ],
     "album": "Fantasy Structure",
     "albumOrder": "STS-001",
-    "albumArtists": ["Structure Sound"],
-    "genres": ["Electronic"],
-    "year": "2020"
+    "albumArtists": [
+      "Structure Sound"
+    ],
+    "genres": [
+      "Electronic"
+    ],
+    "year": "2020",
+    "extraData": {
+      "links": {
+        "dizzylab": "STS-001"
+      }
+    }
   },
   {
     "title": "Highly Mechanized Factory",
-    "composers": ["rmk"]
+    "composers": [
+      "rmk"
+    ]
   },
   {
     "title": "sunshine paradise",
-    "composers": ["Joulez"]
+    "composers": [
+      "Joulez"
+    ]
   },
   {
     "title": "Virus SP",
-    "composers": ["Tonishkov"]
+    "composers": [
+      "Tonishkov"
+    ]
   },
   {
     "title": "giant as whole",
-    "composers": ["VeetaCrush"]
+    "composers": [
+      "VeetaCrush"
+    ]
   },
   {
     "title": "Strike Back",
-    "composers": ["Tadokoro"]
+    "composers": [
+      "Tadokoro"
+    ]
   },
   {
     "title": "enneaquest",
-    "composers": ["SEPHID"]
+    "composers": [
+      "SEPHID"
+    ]
   },
   {
     "title": "waves",
-    "composers": ["cnsouka"]
+    "composers": [
+      "cnsouka"
+    ]
   },
   {
     "title": "Fl_ux",
-    "composers": ["4_16☆"]
+    "composers": [
+      "4_16☆"
+    ]
   },
   {
     "title": "Eclipse",
-    "composers": ["Agoraphobia"]
+    "composers": [
+      "Agoraphobia"
+    ]
   },
   {
     "title": "Behind the Glory",
-    "composers": ["Roon_kun"]
+    "composers": [
+      "Roon_kun"
+    ]
   },
   {
     "title": "Laise",
-    "composers": ["Hachysu"]
+    "composers": [
+      "Hachysu"
+    ]
   },
   {
     "title": "Constant Flow",
-    "composers": ["Supa7onyz"]
+    "composers": [
+      "Supa7onyz"
+    ]
   },
   {
     "title": "Darkside",
-    "composers": ["浮云心丶"]
+    "composers": [
+      "浮云心丶"
+    ]
   },
   {
     "title": "Liquid Sewer",
-    "composers": ["咖啡兑茶Colftee"]
+    "composers": [
+      "咖啡兑茶Colftee"
+    ]
   },
   {
     "title": "Diffusion links",
-    "composers": ["Gayxe", "HJLL"]
+    "composers": [
+      "Gayxe",
+      "HJLL"
+    ]
   }
 ]

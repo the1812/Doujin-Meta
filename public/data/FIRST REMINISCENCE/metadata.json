@@ -13,7 +13,12 @@
     "genres": [
       "Electronic"
     ],
-    "year": "2023"
+    "year": "2023",
+    "extraData": {
+      "links": {
+        "dizzylab": "GKCD-004"
+      }
+    }
   },
   {
     "title": "Subzero Snowy Night",

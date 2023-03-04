@@ -20,7 +20,12 @@
     "genres": [
       "Rock"
     ],
-    "year": "2021"
+    "year": "2021",
+    "extraData": {
+      "links": {
+        "dizzylab": "YVPD-land"
+      }
+    }
   },
   {
     "title": "月西江·波間に揺れて (Short Ver.)",

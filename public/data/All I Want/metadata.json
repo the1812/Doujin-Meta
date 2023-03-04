@@ -13,6 +13,11 @@
       "Color Bass",
       "Trance"
     ],
-    "year": "2021"
+    "year": "2021",
+    "extraData": {
+      "links": {
+        "dizzylab": "PRUC-01"
+      }
+    }
   }
 ]

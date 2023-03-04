@@ -12,7 +12,12 @@
     "genres": [
       "Complextro"
     ],
-    "year": "2022"
+    "year": "2022",
+    "extraData": {
+      "links": {
+        "dizzylab": "HJAF-004"
+      }
+    }
   },
   {
     "title": "溟波-Rolling Seas",

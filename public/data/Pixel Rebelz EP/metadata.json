@@ -12,7 +12,12 @@
     "genres": [
       "HardStyle"
     ],
-    "year": "2018"
+    "year": "2018",
+    "extraData": {
+      "links": {
+        "dizzylab": "SXEP-001"
+      }
+    }
   },
   {
     "title": "L.M.F.Y.T.",

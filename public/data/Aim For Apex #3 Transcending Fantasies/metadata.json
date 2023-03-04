@@ -16,7 +16,12 @@
     "genres": [
       "HardStyle"
     ],
-    "year": "2023"
+    "year": "2023",
+    "extraData": {
+      "links": {
+        "dizzylab": "SLXD-008"
+      }
+    }
   },
   {
     "title": "Fantasize",

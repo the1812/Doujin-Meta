@@ -13,7 +13,12 @@
       "House",
       "Trance"
     ],
-    "year": "2022"
+    "year": "2022",
+    "extraData": {
+      "links": {
+        "dizzylab": "OSR0020"
+      }
+    }
   },
   {
     "title": "Cloud Observer (Project-G Remix)",

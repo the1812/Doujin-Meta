@@ -10,7 +10,12 @@
       "Structure Sound"
     ],
     "genres": ["Electronic"],
-    "year": "2021"
+    "year": "2021",
+    "extraData": {
+      "links": {
+        "dizzylab": "STS-004"
+      }
+    }
   },
   {
     "title": "Mellow Days",

@@ -12,7 +12,12 @@
     "genres": [
       "Trance"
     ],
-    "year": "2023"
+    "year": "2023",
+    "extraData": {
+      "links": {
+        "dizzylab": "COCD002"
+      }
+    }
   },
   {
     "title": "Crisis Defused",

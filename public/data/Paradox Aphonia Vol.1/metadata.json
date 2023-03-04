@@ -12,7 +12,12 @@
     "genres": [
       "Bass House"
     ],
-    "year": "2021"
+    "year": "2021",
+    "extraData": {
+      "links": {
+        "dizzylab": "PREP-01"
+      }
+    }
   },
   {
     "title": "Magic",

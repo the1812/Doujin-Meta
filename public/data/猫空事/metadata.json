@@ -10,7 +10,12 @@
       "Static World"
     ],
     "genres": [],
-    "year": "2018"
+    "year": "2018",
+    "extraData": {
+      "links": {
+        "dizzylab": "SW08"
+      }
+    }
   },
   {
     "title": "田舎の小道",

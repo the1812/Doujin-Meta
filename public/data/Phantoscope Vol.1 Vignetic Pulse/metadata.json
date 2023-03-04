@@ -1,65 +1,110 @@
 [
   {
     "title": "Intro",
-    "composers": ["AiSS"],
+    "composers": [
+      "AiSS"
+    ],
     "album": "Phantoscope Vol.1 Vignetic Pulse",
     "albumOrder": "EHPS-01",
-    "albumArtists": ["EIMSOUND"],
-    "genres": ["Trance"],
-    "year": "2021"
+    "albumArtists": [
+      "EIMSOUND"
+    ],
+    "genres": [
+      "Trance"
+    ],
+    "year": "2021",
+    "extraData": {
+      "links": {
+        "dizzylab": "EHPS-01"
+      }
+    }
   },
   {
     "title": "Autumn Rain",
-    "composers": ["Vantasy"]
+    "composers": [
+      "Vantasy"
+    ]
   },
   {
     "title": "燼 (Feat. ClanEver)",
-    "composers": ["Octonios", "ClanEver"]
+    "composers": [
+      "Octonios",
+      "ClanEver"
+    ]
   },
   {
     "title": "Not Found",
-    "composers": ["snxsn显示屏"]
+    "composers": [
+      "snxsn显示屏"
+    ]
   },
   {
     "title": "Lose Heart",
-    "composers": ["麻雀与雪"]
+    "composers": [
+      "麻雀与雪"
+    ]
   },
   {
     "title": "突発性石化症候群",
-    "composers": ["ちよもも"]
+    "composers": [
+      "ちよもも"
+    ]
   },
   {
     "title": "Not Found",
-    "composers": ["snxsn显示屏"]
+    "composers": [
+      "snxsn显示屏"
+    ]
   },
   {
     "title": "Farewell Pluto",
-    "composers": ["Nirotiy"]
+    "composers": [
+      "Nirotiy"
+    ]
   },
   {
     "title": "Aisling Sa Scáthán",
-    "composers": ["Lax1u57"]
+    "composers": [
+      "Lax1u57"
+    ]
   },
   {
     "title": "Maggie",
-    "composers": ["AiSS"]
+    "composers": [
+      "AiSS"
+    ]
   },
   {
     "title": "沈",
-    "composers": ["硝酸生菜Synzak"]
+    "composers": [
+      "硝酸生菜Synzak"
+    ]
   },
   {
     "title": "1.38Maze Dream (Lax1u57 & ClanEver Remix)",
-    "artists": ["Lax1u57", "ClanEver", "ILusMin"],
-    "composers": ["ILusMin"]
+    "artists": [
+      "Lax1u57",
+      "ClanEver",
+      "ILusMin"
+    ],
+    "composers": [
+      "ILusMin"
+    ]
   },
   {
     "title": "光と時雨 (ClanEver Remix)",
-    "artists": ["硝酸生菜Synzak", "ClanEver"],
-    "composers": ["硝酸生菜Synzak"]
+    "artists": [
+      "硝酸生菜Synzak",
+      "ClanEver"
+    ],
+    "composers": [
+      "硝酸生菜Synzak"
+    ]
   },
   {
     "title": "夏影 (Extended Bootleg)",
-    "composers": ["ClanEver"]
+    "composers": [
+      "ClanEver"
+    ]
   }
 ]

@@ -21,6 +21,11 @@
     "genres": [
       "Pop"
     ],
-    "year": "2020"
+    "year": "2020",
+    "extraData": {
+      "links": {
+        "dizzylab": "OUOD04"
+      }
+    }
   }
 ]

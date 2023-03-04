@@ -18,7 +18,12 @@
     "genres": [
       "嘻哈"
     ],
-    "year": 2023
+    "year": 2023,
+    "extraData": {
+      "links": {
+        "dizzylab": "Rashomon"
+      }
+    }
   },
   {
     "title": "妙恋",

@@ -13,7 +13,12 @@
     "genres": [
       "Hardcore"
     ],
-    "year": "2019"
+    "year": "2019",
+    "extraData": {
+      "links": {
+        "dizzylab": "SLXD-002"
+      }
+    }
   },
   {
     "title": "Ni-Hao!",

@@ -1,45 +1,78 @@
 [
   {
     "title": "Vapaad",
-    "composers": ["VeetaCrush"],
+    "composers": [
+      "VeetaCrush"
+    ],
     "album": "Cyber Generation",
     "albumOrder": "CLIP-001",
-    "albumArtists": ["Clip Sounds"],
-    "genres": ["Electronic"],
-    "year": "2018"
+    "albumArtists": [
+      "Clip Sounds"
+    ],
+    "genres": [
+      "Electronic"
+    ],
+    "year": "2018",
+    "extraData": {
+      "links": {
+        "dizzylab": "CLIP-001"
+      }
+    }
   },
   {
     "title": "IMAJIN YUUTOPIA",
-    "composers": ["NANO-FXXKYIG"]
+    "composers": [
+      "NANO-FXXKYIG"
+    ]
   },
   {
     "title": "Through The Rift",
-    "artists": ["狐妖Mikan", "iOM"],
-    "composers": ["iOM"]
+    "artists": [
+      "狐妖Mikan",
+      "iOM"
+    ],
+    "composers": [
+      "iOM"
+    ]
   },
   {
     "title": "Uzi_Ume",
-    "composers": ["潮音きつね"]
+    "composers": [
+      "潮音きつね"
+    ]
   },
   {
     "title": "The Untended Bar",
-    "composers": ["Polymath9"]
+    "composers": [
+      "Polymath9"
+    ]
   },
   {
     "title": "Ghost_Nerd_FanTa",
-    "composers": ["潮音きつね"]
+    "composers": [
+      "潮音きつね"
+    ]
   },
   {
     "title": "Eradication Catastrophe",
-    "composers": ["NceS"]
+    "composers": [
+      "NceS"
+    ]
   },
   {
     "title": "Electronic Warriors",
-    "artists": ["CoreTania", "NoisiestLunatic"],
-    "composers": ["NoisiestLunatic"]
+    "artists": [
+      "CoreTania",
+      "NoisiestLunatic"
+    ],
+    "composers": [
+      "NoisiestLunatic"
+    ]
   },
   {
     "title": "Lift",
-    "composers": ["COOK!E"]
+    "composers": [
+      "COOK!E"
+    ]
   }
 ]

@@ -16,7 +16,12 @@
     "genres": [
       "Hardcore"
     ],
-    "year": "2022"
+    "year": "2022",
+    "extraData": {
+      "links": {
+        "dizzylab": "SLXD-006"
+      }
+    }
   },
   {
     "title": "Disco Xchlampe",

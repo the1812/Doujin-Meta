@@ -13,7 +13,12 @@
     "genres": [
       "Color Bass"
     ],
-    "year": "2021"
+    "year": "2021",
+    "extraData": {
+      "links": {
+        "dizzylab": "PRHZEP-01"
+      }
+    }
   },
   {
     "title": "GLOAMING",

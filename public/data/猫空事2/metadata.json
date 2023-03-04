@@ -10,7 +10,12 @@
       "Static World"
     ],
     "genres": [],
-    "year": "2020"
+    "year": "2020",
+    "extraData": {
+      "links": {
+        "dizzylab": "SW13"
+      }
+    }
   },
   {
     "title": "小さな冒険家",
