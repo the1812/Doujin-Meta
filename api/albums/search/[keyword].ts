@@ -45,7 +45,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
     const result = fuse.search(keyword)
     response.status(200).json(
       result.map(({ item, matches }) => {
-        const cover = findCover(blobNodes.filter(it => it.path.startsWith(item.path)))
+        const cover = findCover(blobNodes.filter(it => it.path.startsWith(`${item.path}/`)))
         return {
           id: item.sha,
           name: item.path,
