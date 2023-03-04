@@ -74,7 +74,7 @@ const showComposers = (track: TrackMetadata) => {
 
     <div class="flex flex-grow flex-col xl:flex-row xl:justify-center items-center xl:items-start p-6 gap-6">
       <template v-if="loaded">
-        <div class="flex flex-col gap-6 xl:justify-center">
+        <div class="flex flex-col gap-6 xl:justify-center xl:sticky xl:top-[calc(80px+1.5rem)]">
           <Image class="rounded-lg overflow-hidden z-10 shadow-border-[2px] self-center"
             image-class="w-[90vw] max-w-[400px] object-contain" preview :src="albumDetail.coverUrl">
             <template #indicator>
