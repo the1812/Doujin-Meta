@@ -27,6 +27,10 @@ const { loading, error, loaded, sendRequest: handleSearch } = $(useApi(async () 
   const query = { keyword }
   router.replace({ query })
   searchResult = await searchAlbums(keyword)
+  const isFullMatch = searchResult.length === 1 && searchResult[0].name === keyword
+  if (isFullMatch) {
+    router.push({ path: `/albums/${encodeURIComponent(keyword)}/${searchResult[0].id}` })
+  }
 }))
 
 const reset = () => {
