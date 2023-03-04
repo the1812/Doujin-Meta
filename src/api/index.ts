@@ -30,6 +30,7 @@ export const useApi = (onApiCall: () => Promise<unknown>) => {
   const sendRequest = async () => {
     try {
       loading.value = true
+      loaded.value = false
       error.value = false
       await onApiCall()
       loaded.value = true

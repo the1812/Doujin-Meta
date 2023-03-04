@@ -18,7 +18,7 @@ let searched = $ref(false)
 let keyword = $ref('')
 let searchResult = $ref([] as AlbumApiItem[])
 
-const { loading, error, sendRequest: handleSearch } = $(useApi(async () => {
+const { loading, error, loaded, sendRequest: handleSearch } = $(useApi(async () => {
   if (!keyword) {
     return
   }
@@ -80,6 +80,7 @@ const canSearch = $computed(() => !loading && Boolean(keyword))
     <PageHeader v-if="searched" @home-navigate="reset" @search="handleSearch" v-model="keyword" :busy="loading" />
     <div v-if="searched" class="flex flex-col gap-1 pb-4 pt-2 px-3">
       <AlbumSearchItem v-for="item of searchResult" :key="item.id" :item="item" />
+      <div v-if="loaded && searchResult.length === 0" class="text-center p-4">No result</div>
     </div>
 
     <Loading v-if="loading" />
