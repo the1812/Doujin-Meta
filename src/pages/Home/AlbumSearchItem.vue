@@ -40,8 +40,9 @@ console.log(titleSlices)
   <div class="flex justify-center">
     <RouterLink :to="`/albums/${encodeURIComponent(item.name)}/${item.id}`"
       class="flex flex-grow items-center gap-3 p-2 cursor-pointer hover:bg-gray-100 rounded-md max-w-[830px]">
-      <img :src="item.coverUrl"
-        class="w-10 shadow-border-[1px] object-contain rounded-sm overflow-hidden shrink-0" />
+      <div class="w-10 h-10 flex items-center justify-center">
+        <img :src="item.coverUrl" class="w-10 shadow-border-[1px] object-contain rounded-sm overflow-hidden shrink-0" />
+      </div>
       <div class="flex-grow">
         <span v-for="slice of titleSlices" :key="slice.index" :class="{ 'text-violet-500': slice.isHighlight }">
           {{ slice.text }}
