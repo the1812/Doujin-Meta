@@ -81,7 +81,7 @@ const showComposers = (track: TrackMetadata) => {
               <Icon name="search-plus" />
             </template>
           </Image>
-          <div v-if="albumMetadata" class="flex flex-col items-center gap-2">
+          <div v-if="albumMetadata" class="flex flex-col items-center gap-2 max-w-[400px]">
             <div class="font-medium text-xl text-center">{{ albumMetadata.album }}</div>
             <div class="text-gray-500 text mb-2">
               <span>{{ albumMetadata.albumArtists?.join(MetadataSeparator) }}</span>
