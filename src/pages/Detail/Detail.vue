@@ -13,11 +13,11 @@ import { reactive } from 'vue'
 import { getAlbumDetail, useApi } from '../../api'
 import PageHeader from '../../components/PageHeader/PageHeader.vue'
 import { usePageHeader } from '../../components/PageHeader'
-import DizzylabIcon from '../../assets/dizzylab.svg'
-import THBWikiIcon from '../../assets/thbWiki.png'
 import LinkChip from '../../components/LinkChip.vue'
 import Loading from '../../components/Loading.vue'
 import Error from '../../components/Error.vue'
+import DizzylabButton from '../../components/Buttons/DizzylabButton.vue'
+import ThbWikiButton from '../../components/Buttons/ThbWikiButton.vue'
 
 const { homeNavigate, keyword, search } = usePageHeader()
 const { params } = useRoute()
@@ -88,21 +88,18 @@ const showComposers = (track: TrackMetadata) => {
               <span v-if="albumMetadata.year"> · {{ albumMetadata.year }}</span>
             </div>
 
-            <div v-if="albumMetadata.albumOrder || Object.values(links).length > 0"
-              class="flex items-center justify-center flex-wrap gap-2">
-              <PrimaryChip v-if="albumMetadata.albumOrder">
-                <Icon name="tag" class="!text-[12px] mr-1" />
-                <span class="text-sm my-1">{{ albumMetadata.albumOrder }}</span>
-              </PrimaryChip>
-              <LinkChip v-if="links.dizzylab" :href="`https://www.dizzylab.net/d/${links.dizzylab}`"
-                title="View on dizzylab" :src="DizzylabIcon" />
-              <LinkChip v-if="links.thbWiki" :href="`https://thwiki.cc/${links.thbWiki}`" title="View on THBWiki"
-                :src="THBWikiIcon" />
-            </div>
+            <PrimaryChip v-if="albumMetadata.albumOrder">
+              <Icon name="tag" class="!text-[12px] mr-1" />
+              <span class="text-sm my-1">{{ albumMetadata.albumOrder }}</span>
+            </PrimaryChip>
             <div class="flex items-center justify-center flex-wrap gap-2" v-if="albumMetadata.genres">
               <Chip v-for="genre of albumMetadata.genres" :key="genre">
                 <span class="text-sm my-1">{{ genre }}</span>
               </Chip>
+            </div>
+            <div v-if="Object.values(links).length > 0" class="mt-8 flex flex-col gap-2">
+              <DizzylabButton v-if="links.dizzylab" :id="links.dizzylab" />
+              <ThbWikiButton v-if="links.thbWiki" :id="links.thbWiki" />
             </div>
           </div>
         </div>
@@ -117,8 +114,7 @@ const showComposers = (track: TrackMetadata) => {
             ]">
               <DetailHeader :label="`#${track.trackNumber}`" :value="track.title" />
               <DetailRow label="Artists" :value="track.artists.join(MetadataSeparator)" />
-              <DetailRow v-if="showComposers(track)" label="Composers"
-                :value="track.composers.join(MetadataSeparator)" />
+              <DetailRow v-if="showComposers(track)" label="Composers" :value="track.composers.join(MetadataSeparator)" />
               <DetailRow v-if="track.comments" label="Comments" :value="track.comments" />
             </div>
           </div>
