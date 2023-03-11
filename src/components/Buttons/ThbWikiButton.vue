@@ -7,7 +7,7 @@ const { id } = defineProps<{ id: string }>()
 </script>
 
 <template>
-  <a :href="`https://www.dizzylab.net/d/${id}`" target="_blank" class="relative flex">
+  <a :href="`https://thwiki.cc/${id}`" target="_blank" class="relative flex">
     <div class="relative group flex-grow">
       <div :class="[
         'pointer-events-none opacity-0 group-focus-within:opacity-100',

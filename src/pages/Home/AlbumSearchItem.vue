@@ -31,14 +31,11 @@ const titleSlices = (() => {
   })
   return result.filter(it => it.text)
 })()
-
-console.log(titleSlices)
-
 </script>
 
 <template>
   <div class="flex justify-center">
-    <RouterLink :to="`/albums/${encodeURIComponent(item.name)}/${item.id}`"
+    <RouterLink :to="`/albums/${encodeURIComponent(item.name)}`"
       class="flex flex-grow items-center gap-3 p-2 cursor-pointer hover:bg-gray-100 rounded-md max-w-[830px]">
       <div class="w-10 h-10 flex items-center justify-center">
         <img :src="item.coverUrl" class="w-10 shadow-border-[1px] object-contain rounded-sm overflow-hidden shrink-0" />

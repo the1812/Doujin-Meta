@@ -25,6 +25,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
         }),
       )
   } catch (error) {
+    console.error(error)
     response.status(500).end()
   }
 }

@@ -38,15 +38,15 @@ export const getDataFolder = async () => {
   const dataUrl = publicContents.find(it => it.name === 'data')?.git_url
   return dataUrl
 }
-export const findCover = (nodes: GitTreeNode[]) => {
+export const findCover = <T>(nodes: T[], getPath: (node: T) => string) => {
   const allowedExtensions = ['.jpg', '.png']
   const result = nodes.find(it =>
-    allowedExtensions.some(extension => basename(it.path) === `cover${extension}`),
+    allowedExtensions.some(extension => basename(getPath(it)) === `cover${extension}`),
   )
   if (!result) {
     return ''
   }
-  return result.path
+  return basename(getPath(result))
 }
 
 export * from './types.js'

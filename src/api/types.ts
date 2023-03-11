@@ -8,7 +8,6 @@ export interface AlbumApiItem {
   matches: [number, number][]
 }
 export interface AlbumDetail {
-  id: string
   name: string
   coverUrl: string
   metadataUrl: string

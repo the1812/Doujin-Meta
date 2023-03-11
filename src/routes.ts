@@ -13,7 +13,7 @@ const routes: RouteRecordRaw[] = [
     component: Home
   },
   {
-    path: '/albums/:name/:id',
+    path: '/albums/:name',
     component: Detail,
     meta: {
       title: (route: RouteLocationNormalized) => {

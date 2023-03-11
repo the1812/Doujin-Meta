@@ -15,9 +15,9 @@ export const searchAlbums = async (keyword: string) => {
   )
   return response.data
 }
-export const getAlbumDetail = async (name: string, id: string) => {
+export const getAlbumDetail = async (name: string) => {
   const response = await api.get<AlbumDetail>(
-    `/api/albums/detail/${encodeURIComponent(name)}/${id}`,
+    `/api/albums/detail/${encodeURIComponent(name)}`,
   )
   return response.data
 }

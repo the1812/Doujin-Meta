@@ -13,7 +13,6 @@ import { reactive } from 'vue'
 import { getAlbumDetail, useApi } from '../../api'
 import PageHeader from '../../components/PageHeader/PageHeader.vue'
 import { usePageHeader } from '../../components/PageHeader'
-import LinkChip from '../../components/LinkChip.vue'
 import Loading from '../../components/Loading.vue'
 import Error from '../../components/Error.vue'
 import DizzylabButton from '../../components/Buttons/DizzylabButton.vue'
@@ -22,10 +21,9 @@ import GitHubButton from '../../components/Buttons/GitHubButton.vue'
 
 const { homeNavigate, keyword, search } = usePageHeader()
 const { params } = useRoute()
-const { name, id } = params
+const { name } = params
 
 const albumDetail: AlbumDetail = reactive({
-  id: '',
   coverUrl: '',
   name: '',
   metadataUrl: '',
@@ -54,7 +52,7 @@ const discGroups: DiscGroup[] = $computed(() => {
 })
 
 const { loading, error, loaded, sendRequest } = $(useApi(async () => {
-  const detail = await getAlbumDetail(name as string, id as string)
+  const detail = await getAlbumDetail(name as string)
   Object.assign(albumDetail, detail)
 }))
 sendRequest()
@@ -99,7 +97,7 @@ const showComposers = (track: TrackMetadata) => {
                 <span class="text-sm my-1">{{ genre }}</span>
               </Chip>
             </div>
-            <div v-if="Object.values(links).length > 0" class="mt-8 flex flex-col gap-2">
+            <div class="mt-8 flex flex-col gap-2">
               <DizzylabButton v-if="links.dizzylab" :id="links.dizzylab" />
               <ThbWikiButton v-if="links.thbWiki" :id="links.thbWiki" />
               <GitHubButton v-if="albumDetail.metadataUrl" :link="albumDetail.metadataUrl" />
