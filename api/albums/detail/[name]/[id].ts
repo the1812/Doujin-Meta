@@ -9,6 +9,7 @@ import {
   githubHost,
   BlobResponse,
   findCover,
+branch,
 } from '../../../../api-support/index.js'
 
 export default async function handler(request: VercelRequest, response: VercelResponse) {
@@ -46,7 +47,8 @@ export default async function handler(request: VercelRequest, response: VercelRe
     const result = {
       id,
       name,
-      coverUrl: encodeURIComponent(`/data/${name}/${findCover(nodes)}`),
+      coverUrl: `/data/${encodeURIComponent(name as string)}/${findCover(nodes)}`,
+      metadataUrl: `https://github.com/${owner}/${repo}/blob/${branch}/public/data/${name}/metadata.json`,
       metadata:
         normalize === 'false' ? metadataJson : await localJson.normalizeWithoutCover(metadataJson),
     }

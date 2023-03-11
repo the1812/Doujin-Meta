@@ -24,7 +24,7 @@ const { id } = defineProps<{ id: string }>()
         'focus:!shadow-none',
         'hover:from-thb-wiki-orange-light hover:to-thb-wiki-pink-light',
       ]" label="" size="large">
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2 justify-center flex-grow">
           <img class="w-6" :src="THBWikiIcon" />
           <div class="text-4 font-medium">View on THBWiki</div>
         </div>

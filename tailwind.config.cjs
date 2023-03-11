@@ -1,4 +1,5 @@
 const plugin = require('tailwindcss/plugin')
+const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenColorPalette')
 
 const getColor = (value) => {
   return typeof value === 'string' ? value : value.DEFAULT
@@ -22,6 +23,10 @@ module.exports = {
           light: '#Ff723e',
           DEFAULT: '#ff601c',
         },
+        'github-black': {
+          light: '#31363c',
+          DEFAULT: '#24292e',
+        }
       },
     },
   },
@@ -40,11 +45,11 @@ module.exports = {
       matchUtilities(
         {
           'button-border': value => ({
-            boxShadow: `0 0 0 2px #ffffff, 0 0 0 4px ${getColor(value)}, 0 1px 2px 0 rgba(0, 0, 0, 0)`,
+            boxShadow: `0 0 0 2px #ffffff, 0 0 0 4px ${getColor(value)}`,
           }),
         },
         {
-          values: theme('backgroundColor'),
+          values: flattenColorPalette(theme('colors')),
         },
       )
     }),

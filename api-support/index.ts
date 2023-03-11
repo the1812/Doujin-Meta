@@ -24,7 +24,7 @@ export const inheritHeaders = (githubResponse: AxiosResponse, vercelResponse: Ve
   return vercelResponse
 }
 
-const branch = (() => {
+export const branch = (() => {
   if (process.env.VERCEL_GIT_COMMIT_REF) {
     return process.env.VERCEL_GIT_COMMIT_REF
   }

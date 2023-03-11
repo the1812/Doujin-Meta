@@ -9,7 +9,7 @@ const { id } = defineProps<{ id: string }>()
 <template>
   <a :href="`https://www.dizzylab.net/d/${id}`" target="_blank" class="flex">
     <Button :class="[
-      '!bg-dizzylab-orange !border-0 flex-grow',
+      '!bg-dizzylab-orange !border-0 flex-grow justify-center',
       'hover:!bg-dizzylab-orange-light focus:!button-border-dizzylab-orange'
     ]" label="" size="large" >
     <div class="flex items-center gap-2">

@@ -18,6 +18,7 @@ import Loading from '../../components/Loading.vue'
 import Error from '../../components/Error.vue'
 import DizzylabButton from '../../components/Buttons/DizzylabButton.vue'
 import ThbWikiButton from '../../components/Buttons/ThbWikiButton.vue'
+import GitHubButton from '../../components/Buttons/GitHubButton.vue'
 
 const { homeNavigate, keyword, search } = usePageHeader()
 const { params } = useRoute()
@@ -27,6 +28,7 @@ const albumDetail: AlbumDetail = reactive({
   id: '',
   coverUrl: '',
   name: '',
+  metadataUrl: '',
   metadata: []
 })
 const tracks = $computed(() => albumDetail.metadata)
@@ -100,6 +102,7 @@ const showComposers = (track: TrackMetadata) => {
             <div v-if="Object.values(links).length > 0" class="mt-8 flex flex-col gap-2">
               <DizzylabButton v-if="links.dizzylab" :id="links.dizzylab" />
               <ThbWikiButton v-if="links.thbWiki" :id="links.thbWiki" />
+              <GitHubButton v-if="albumDetail.metadataUrl" :link="albumDetail.metadataUrl" />
             </div>
           </div>
         </div>
