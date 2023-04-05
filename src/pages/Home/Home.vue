@@ -37,6 +37,7 @@ const reset = () => {
   searched = false
   searchResult = []
   keyword = ''
+  router.replace({ query: {} })
 }
 
 watch(
