@@ -83,7 +83,7 @@ const showComposers = (track: TrackMetadata) => {
           </Image>
           <div v-if="albumMetadata" class="flex flex-col items-center gap-2 max-w-[400px]">
             <div class="font-medium text-xl text-center">{{ albumMetadata.album }}</div>
-            <div class="text-gray-500 text mb-2">
+            <div class="text-gray-500 text mb-2 text-center">
               <span>{{ albumMetadata.albumArtists?.join(MetadataSeparator) }}</span>
               <span v-if="albumMetadata.year"> · {{ albumMetadata.year }}</span>
             </div>
