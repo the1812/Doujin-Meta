@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
-import Image from 'primevue/image'
 import { useRoute, useRouter } from 'vue-router'
 import { searchAlbums, useApi } from '../../api'
 import { AlbumApiItem } from '../../api/types'
@@ -71,15 +70,14 @@ const canSearch = $computed(() => !loading && Boolean(keyword))
 
 <template>
   <div class="h-screen flex flex-col overflow-auto">
-    <div v-if="!searched" class="flex flex-col gap-4 my-auto transform -translate-y-[15vh]">
+    <div v-if="!searched" class="flex flex-col gap-4 px-4 my-auto transform -translate-y-[10vh]">
       <div class="self-center">
-        <Image src="/images/Logo.Text.svg" image-class="w-screen max-w-[600px]" />
+        <img src="/images/Logo.Text.svg" height="160" class="w-screen max-h-[160px]" />
       </div>
       <div class="flex items-center justify-center gap-3">
         <InputText type="text" class="flex-grow min-w-0 max-w-[700px]" v-model="keyword" @keydown.enter="handleSearch"
           placeholder="Album name" />
-        <Button class="shrink-0" :loading="loading" icon="pi pi-search" :disabled="!canSearch" @click="handleSearch"
-          label="Search" />
+        <Button class="shrink-0" :loading="loading" icon="pi pi-search" :disabled="!canSearch" @click="handleSearch" />
       </div>
     </div>
     <PageHeader v-if="searched" @home-navigate="reset" @search="handleSearch" v-model="keyword" :busy="loading" />
