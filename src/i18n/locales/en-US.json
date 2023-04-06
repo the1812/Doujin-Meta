@@ -2,5 +2,11 @@
   "search": {
     "placeholder": "Album name",
     "buttonTitle": "Search"
+  },
+  "linkButtons": {
+    "dizzylab": "View on dizzylab",
+    "GitHub": "View Source",
+    "THBWiki": "View on THBWiki",
+    "raw": "View Raw"
   }
 }

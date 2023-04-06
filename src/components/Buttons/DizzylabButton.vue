@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import Button from 'primevue/button'
 import DizzylabIcon from '../../assets/dizzylab.svg'
+import { useI18n } from '../../i18n'
 
 const { id } = defineProps<{ id: string }>()
+const { t } = useI18n()
 
 </script>
 
@@ -14,7 +16,7 @@ const { id } = defineProps<{ id: string }>()
     ]" label="" size="large" >
     <div class="flex items-center gap-2">
       <img class="w-6" :src="DizzylabIcon" />
-      <div class="font-semibold">View on dizzylab</div>
+      <div class="font-semibold">{{ t('linkButtons.dizzylab') }}</div>
     </div>
   </Button>
   </a>

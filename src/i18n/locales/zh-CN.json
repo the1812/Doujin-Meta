@@ -2,5 +2,11 @@
   "search": {
     "placeholder": "输入专辑名称",
     "buttonTitle": "搜索"
+  },
+  "linkButtons": {
+    "dizzylab": "在 dizzylab 上查看",
+    "GitHub": "查看源代码",
+    "THBWiki": "在 THBWiki 上查看",
+    "raw": "查看纯文本"
   }
 }

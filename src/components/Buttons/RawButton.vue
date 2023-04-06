@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import Button from 'primevue/button'
+import { useI18n } from '../../i18n'
 
 const { link } = defineProps<{ link: string; }>()
+const { t } = useI18n()
 
 </script>
 
@@ -12,8 +14,10 @@ const { link } = defineProps<{ link: string; }>()
       'hover:!bg-slate-700 focus:!button-border-slate-800'
     ]" label="" size="large" >
     <div class="flex items-center gap-2 justify-center flex-grow">
-      <i class="!text-[18px] pi pi-file" />
-      <div class="font-semibold">View Raw</div>
+      <div class="flex items-center justify-center p-[3px]">
+        <i class="!text-[18px] pi pi-file" />
+      </div>
+      <div class="font-semibold">{{ t('linkButtons.raw') }}</div>
     </div>
   </Button>
   </a>
