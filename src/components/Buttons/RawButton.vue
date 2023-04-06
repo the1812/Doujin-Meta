@@ -8,8 +8,8 @@ const { link } = defineProps<{ link: string; }>()
 <template>
   <a :href="link" target="_blank" class="flex">
     <Button :class="[
-      '!bg-sky-500 !border-0 flex-grow',
-      'hover:!bg-sky-400 focus:!button-border-sky-500'
+      '!bg-slate-800 !border-0 flex-grow',
+      'hover:!bg-slate-700 focus:!button-border-slate-800'
     ]" label="" size="large" >
     <div class="flex items-center gap-2 justify-center flex-grow">
       <i class="!text-[18px] pi pi-file" />
