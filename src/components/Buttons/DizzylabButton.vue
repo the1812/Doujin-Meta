@@ -14,7 +14,7 @@ const { id } = defineProps<{ id: string }>()
     ]" label="" size="large" >
     <div class="flex items-center gap-2">
       <img class="w-6" :src="DizzylabIcon" />
-      <div class="text-4 font-medium">View on dizzylab</div>
+      <div class="font-semibold">View on dizzylab</div>
     </div>
   </Button>
   </a>

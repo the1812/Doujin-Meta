@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Button from 'primevue/button'
-import GitHubIcon from '../../assets/gitHub.svg'
 
 const { link } = defineProps<{ link: string; }>()
 
@@ -9,12 +8,12 @@ const { link } = defineProps<{ link: string; }>()
 <template>
   <a :href="link" target="_blank" class="flex">
     <Button :class="[
-      '!bg-github-black !border-0 flex-grow',
-      'hover:!bg-github-black-light focus:!button-border-github-black'
+      '!bg-sky-500 !border-0 flex-grow',
+      'hover:!bg-sky-400 focus:!button-border-sky-500'
     ]" label="" size="large" >
     <div class="flex items-center gap-2 justify-center flex-grow">
-      <img class="w-6" :src="GitHubIcon" />
-      <div class="font-semibold">View Source</div>
+      <i class="!text-[18px] pi pi-file" />
+      <div class="font-semibold">View Raw</div>
     </div>
   </Button>
   </a>

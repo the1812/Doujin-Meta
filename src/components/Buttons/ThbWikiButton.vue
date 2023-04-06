@@ -26,7 +26,7 @@ const { id } = defineProps<{ id: string }>()
       ]" label="" size="large">
         <div class="flex items-center gap-2 justify-center flex-grow">
           <img class="w-6" :src="THBWikiIcon" />
-          <div class="text-4 font-medium">View on THBWiki</div>
+          <div class="font-semibold">View on THBWiki</div>
         </div>
       </Button>
     </div>

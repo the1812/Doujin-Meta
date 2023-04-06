@@ -11,5 +11,6 @@ export interface AlbumDetail {
   name: string
   coverUrl: string
   metadataUrl: string
+  rawUrl: string
   metadata: Metadata[]
 }

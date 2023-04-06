@@ -43,6 +43,7 @@ export default async function handler(request: VercelRequest, response: VercelRe
       name,
       coverUrl: `/data/${encodedName}/${findCover(nodes, it => it.name)}`,
       metadataUrl: `https://github.com/${owner}/${repo}/blob/${branch}/public/data/${encodedName}/metadata.json`,
+      rawUrl: `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/public/data/${encodedName}/metadata.json`,
       metadata:
         normalize === 'false' ? metadataJson : await localJson.normalizeWithoutCover(metadataJson),
     }
