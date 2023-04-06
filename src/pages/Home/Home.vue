@@ -9,9 +9,11 @@ import PageHeader from '../../components/PageHeader/PageHeader.vue'
 import { watch } from 'vue'
 import Loading from '../../components/Loading.vue'
 import Error from '../../components/Error.vue'
+import { useI18n } from '../../i18n'
 
 const route = useRoute()
 const router = useRouter()
+const { t } = useI18n()
 
 let searched = $ref(false)
 let keyword = $ref('')
@@ -76,8 +78,9 @@ const canSearch = $computed(() => !loading && Boolean(keyword))
       </div>
       <div class="flex items-center justify-center gap-3">
         <InputText type="text" class="flex-grow min-w-0 max-w-[700px]" v-model="keyword" @keydown.enter="handleSearch"
-          placeholder="Album name" />
-        <Button class="shrink-0" :loading="loading" icon="pi pi-search" :disabled="!canSearch" @click="handleSearch" />
+          :placeholder="t('search.placeholder')" />
+        <Button class="shrink-0" :title="t('search.buttonTitle')" :loading="loading" icon="pi pi-search"
+          :disabled="!canSearch" @click="handleSearch" />
       </div>
     </div>
     <PageHeader v-if="searched" @home-navigate="reset" @search="handleSearch" v-model="keyword" :busy="loading" />
