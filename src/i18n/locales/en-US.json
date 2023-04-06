@@ -8,5 +8,12 @@
     "GitHub": "View Source",
     "THBWiki": "View on THBWiki",
     "raw": "View Raw"
+  },
+  "detail": {
+    "label": {
+      "artists": "Artists",
+      "composers": "Composers",
+      "comments": "Comments"
+    }
   }
 }

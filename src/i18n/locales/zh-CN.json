@@ -8,5 +8,12 @@
     "GitHub": "查看源代码",
     "THBWiki": "在 THBWiki 上查看",
     "raw": "查看纯文本"
+  },
+  "detail": {
+    "label": {
+      "artists": "艺术家",
+      "composers": "作曲",
+      "comments": "注释"
+    }
   }
 }

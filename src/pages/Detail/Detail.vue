@@ -19,10 +19,12 @@ import DizzylabButton from '../../components/Buttons/DizzylabButton.vue'
 import ThbWikiButton from '../../components/Buttons/ThbWikiButton.vue'
 import GitHubButton from '../../components/Buttons/GitHubButton.vue'
 import RawButton from '../../components/Buttons/RawButton.vue'
+import { useI18n } from '../../i18n'
 
 const { homeNavigate, keyword, search } = usePageHeader()
 const { params } = useRoute()
 const { name } = params
+const { t } = useI18n()
 
 const albumDetail: AlbumDetail = reactive({
   coverUrl: '',
@@ -117,9 +119,10 @@ const showComposers = (track: TrackMetadata) => {
               '[&>:not(:last-child)]:border-b [&>:not(:last-child)]:border-solid [&>:not(:last-child)]:border-gray-200',
             ]">
               <DetailHeader :label="`#${track.trackNumber}`" :value="track.title" />
-              <DetailRow label="Artists" :value="track.artists.join(MetadataSeparator)" />
-              <DetailRow v-if="showComposers(track)" label="Composers" :value="track.composers.join(MetadataSeparator)" />
-              <DetailRow v-if="track.comments" label="Comments" :value="track.comments" />
+              <DetailRow :label="t('detail.label.artists')" :value="track.artists.join(MetadataSeparator)" />
+              <DetailRow v-if="showComposers(track)" :label="t('detail.label.composers')"
+                :value="track.composers.join(MetadataSeparator)" />
+              <DetailRow v-if="track.comments" :label="t('detail.label.comments')" :value="track.comments" />
             </div>
           </div>
         </div>
