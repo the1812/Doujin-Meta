@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
-import Image from 'primevue/image'
 import { useI18n } from '../../i18n'
+import ClsImage from '../ClsImage.vue'
 
 const { modelValue, busy } = defineProps<{
   modelValue?: string
@@ -35,7 +35,11 @@ const handleSearch = async () => {
     'border-b border-[#d4d4d8] shadow-[0_1px_2px_0_rgb(0_0_0_/_5%)]',
   ]">
     <div class="flex items-center justify-center gap-3">
-      <Image src="/images/Logo.svg" image-class="w-10 cursor-pointer" @click="emit('homeNavigate')" />
+      <div class="w-10 h-10">
+        <ClsImage aspect-ratio="100%" class="cursor-pointer" @click="emit('homeNavigate')">
+          <img src="/images/Logo.svg" />
+        </ClsImage>
+      </div>
       <InputText type="text" class="p-inputtext-sm flex-grow min-w-0 max-w-[700px]" v-model="keyword"
         @keydown.enter="handleSearch" :placeholder="t('search.placeholder')" />
       <Button class="shrink-0 p-button-sm" :loading="busy" icon="pi pi-search" :disabled="!keyword" @click="handleSearch"

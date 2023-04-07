@@ -20,6 +20,7 @@ import ThbWikiButton from '../../components/Buttons/ThbWikiButton.vue'
 import GitHubButton from '../../components/Buttons/GitHubButton.vue'
 import RawButton from '../../components/Buttons/RawButton.vue'
 import { useI18n } from '../../i18n'
+import ClsImage from '../../components/ClsImage.vue'
 
 const { homeNavigate, keyword, search } = usePageHeader()
 const { params } = useRoute()
@@ -79,12 +80,14 @@ const showComposers = (track: TrackMetadata) => {
     <div class="flex flex-grow flex-col xl:flex-row xl:justify-center items-center xl:items-start p-6 gap-6">
       <template v-if="loaded">
         <div class="flex flex-col gap-6 xl:justify-center xl:sticky xl:top-[calc(80px+1.5rem)]">
-          <Image class="rounded-lg overflow-hidden z-10 shadow-border-[2px] self-center"
-            image-class="w-[90vw] max-w-[400px] object-contain" preview :src="albumDetail.coverUrl">
-            <template #indicator>
-              <Icon name="search-plus" />
-            </template>
-          </Image>
+          <ClsImage aspect-ratio="100%" class="w-[90vw] max-w-[400px]">
+            <Image class="rounded-lg overflow-hidden z-10 shadow-border-[2px] self-center"
+              image-class="object-contain" preview :src="albumDetail.coverUrl">
+              <template #indicator>
+                <Icon name="search-plus" />
+              </template>
+            </Image>
+          </ClsImage>
           <div v-if="albumMetadata" class="flex flex-col items-center gap-2 max-w-[400px]">
             <div class="font-semibold text-xl text-center">{{ albumMetadata.album }}</div>
             <div class="text-gray-500 text mb-2 text-center">

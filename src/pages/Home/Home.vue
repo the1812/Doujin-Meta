@@ -10,6 +10,7 @@ import { watch } from 'vue'
 import Loading from '../../components/Loading.vue'
 import Error from '../../components/Error.vue'
 import { useI18n } from '../../i18n'
+import ClsImage from '../../components/ClsImage.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -73,8 +74,10 @@ const canSearch = $computed(() => !loading && Boolean(keyword))
 <template>
   <div class="h-screen flex flex-col overflow-auto">
     <div v-if="!searched" class="flex flex-col gap-4 px-4 my-auto transform -translate-y-[10vh]">
-      <div class="self-center">
-        <img src="/images/Logo.Text.svg" height="160" class="w-screen max-h-[160px]" />
+      <div class="self-center w-full max-w-[600px]">
+        <ClsImage aspect-ratio="26.4%">
+          <img src="/images/Logo.Text.svg" />
+        </ClsImage>
       </div>
       <div class="flex items-center justify-center gap-3">
         <InputText type="text" class="flex-grow min-w-0 max-w-[700px]" v-model="keyword" @keydown.enter="handleSearch"
