@@ -6,7 +6,6 @@ defineEmits<{
 }>()
 </script>
 <template>
-
   <CenterScreen>
     <div class="flex flex-col items-center gap-4">
       <div class="text-lg">Failed to load.</div>
