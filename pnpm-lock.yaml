@@ -7,6 +7,9 @@ patchedDependencies:
   primeicons@6.0.1:
     hash: 462wbkvxwud5wqhxblc43jsqiq
     path: patches/primeicons@6.0.1.patch
+  primevue@3.17.0:
+    hash: s3p4tfppdqltnnkarn2k3x6wem
+    path: patches/primevue@3.17.0.patch
 
 dependencies:
   axios:
@@ -20,7 +23,7 @@ dependencies:
     version: registry.npmmirror.com/primeicons@6.0.1(patch_hash=462wbkvxwud5wqhxblc43jsqiq)
   primevue:
     specifier: ^3.17.0
-    version: registry.npmmirror.com/primevue@3.17.0(primeicons@6.0.1)(vue@3.2.39)
+    version: registry.npmmirror.com/primevue@3.17.0(patch_hash=s3p4tfppdqltnnkarn2k3x6wem)(primeicons@6.0.1)(vue@3.2.39)
   touhou-tagger:
     specifier: 1.7.0-beta.0
     version: registry.npmmirror.com/touhou-tagger@1.7.0-beta.0
@@ -3112,7 +3115,7 @@ packages:
     dev: false
     patched: true
 
-  registry.npmmirror.com/primevue@3.17.0(primeicons@6.0.1)(vue@3.2.39):
+  registry.npmmirror.com/primevue@3.17.0(patch_hash=s3p4tfppdqltnnkarn2k3x6wem)(primeicons@6.0.1)(vue@3.2.39):
     resolution: {integrity: sha512-z7ZCHk4kgkHJ29hg0izN1M8Xst2MOObimq62waE2TDE8ztH9mp2sAdGGsQu1shMa4/23dZ+fcN4t+KpYNICRyQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/primevue/-/primevue-3.17.0.tgz}
     id: registry.npmmirror.com/primevue/3.17.0
     name: primevue
@@ -3124,6 +3127,7 @@ packages:
       primeicons: registry.npmmirror.com/primeicons@6.0.1(patch_hash=462wbkvxwud5wqhxblc43jsqiq)
       vue: registry.npmmirror.com/vue@3.2.39
     dev: false
+    patched: true
 
   registry.npmmirror.com/psl@1.9.0:
     resolution: {integrity: sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/psl/-/psl-1.9.0.tgz}

@@ -42,7 +42,8 @@
     },
     "patchedDependencies": {
       "primeicons@6.0.1": "patches/primeicons@6.0.1.patch",
-      "@vercel/node@2.9.3": "patches/@vercel__node@2.9.3.patch"
+      "@vercel/node@2.9.3": "patches/@vercel__node@2.9.3.patch",
+      "primevue@3.17.0": "patches/primevue@3.17.0.patch"
     }
   },
   "scripts": {
