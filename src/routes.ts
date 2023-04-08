@@ -10,7 +10,7 @@ import Home from './pages/Home/Home.vue'
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: Home
+    component: Home,
   },
   {
     path: '/albums/:name',

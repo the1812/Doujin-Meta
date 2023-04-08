@@ -2,7 +2,7 @@
 import { RouterView, useRouter } from 'vue-router'
 
 const router = useRouter()
-router.afterEach((to) => {
+router.afterEach(to => {
   if (to.meta.title instanceof Function) {
     document.title = `${to.meta.title(to)} - Doujin Meta`
   } else {
@@ -13,11 +13,11 @@ router.afterEach((to) => {
 
 <template>
   <div class="flex flex-col">
-    <RouterView v-slot="{ Component, route }">
+    <RouterView v-slot="{ Component }">
       <!-- <Transition :name="(route.meta.transition as string) || 'fade'"> -->
-        <KeepAlive include="Home">
-          <component :is="Component" />
-        </KeepAlive>
+      <KeepAlive include="Home">
+        <component :is="Component" />
+      </KeepAlive>
       <!-- </Transition> -->
     </RouterView>
   </div>

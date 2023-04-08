@@ -9,7 +9,7 @@ defineEmits<{
   <CenterScreen>
     <div class="flex flex-col items-center gap-4">
       <div class="text-lg">Failed to load.</div>
-      <Button class="p-button-sm" icon="pi pi-refresh" @click="$emit('retry')" label="Retry"></Button>
+      <Button class="p-button-sm" icon="pi pi-refresh" label="Retry" @click="$emit('retry')" />
     </div>
   </CenterScreen>
 </template>

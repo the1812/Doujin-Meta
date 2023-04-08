@@ -8,7 +8,7 @@ const withDarkMode = (updater: (isDarkMode: boolean) => void | Promise<void>) =>
   }
 }
 
-export const initAppIcon = withDarkMode((isDarkMode) => {
+export const initAppIcon = withDarkMode(isDarkMode => {
   const iconLink = document.querySelector('link[rel="icon"]') as HTMLLinkElement
   iconLink.href = `/images/Logo${isDarkMode ? '.White' : ''}.svg`
 })

@@ -1,8 +1,8 @@
 import type { VercelResponse } from '@vercel/node'
 import Axios, { AxiosResponse } from 'axios'
 import { basename } from 'path'
-import { ContentsResponse, GitTreeNode } from './types.js'
 import childProcess from 'child_process'
+import { ContentsResponse } from './types.js'
 
 export const owner = 'the1812'
 export const repo = 'Doujin-Meta'

@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import type { AlbumMetadata, Metadata } from 'touhou-tagger'
-import { AlbumDetail } from '../../api/types'
-import Icon from '../../components/Icon.vue'
 import Image from 'primevue/image'
 import Chip from 'primevue/chip'
+import { reactive } from 'vue'
+import { AlbumDetail } from '../../api/types'
+import Icon from '../../components/Icon.vue'
 import PrimaryChip from '../../components/PrimaryChip.vue'
 import DetailRow from './DetailRow.vue'
 import DetailHeader from './DetailHeader.vue'
 import { MetadataSeparator } from '../../common'
-import { reactive } from 'vue'
 import { getAlbumDetail, useApi } from '../../api'
 import PageHeader from '../../components/PageHeader/PageHeader.vue'
 import { usePageHeader } from '../../components/PageHeader'
@@ -32,14 +32,16 @@ const albumDetail: AlbumDetail = reactive({
   name: '',
   metadataUrl: '',
   rawUrl: '',
-  metadata: []
+  metadata: [],
 })
 const tracks = $computed(() => albumDetail.metadata)
 const albumMetadata: AlbumMetadata = $computed(() => tracks[0])
-const links = $computed((): {
-  dizzylab?: string
-  thbWiki?: string
-} => albumMetadata.extraData?.links ?? {})
+const links = $computed(
+  (): {
+    dizzylab?: string
+    thbWiki?: string
+  } => albumMetadata.extraData?.links ?? {},
+)
 
 type TrackMetadata = Omit<Metadata, keyof AlbumMetadata>
 type DiscGroup = { discNumber: string; tracks: TrackMetadata[] }
@@ -56,33 +58,41 @@ const discGroups: DiscGroup[] = $computed(() => {
   return groups
 })
 
-const { loading, error, loaded, sendRequest } = $(useApi(async () => {
-  const detail = await getAlbumDetail(name as string)
-  Object.assign(albumDetail, detail)
-}))
+const { loading, error, loaded, sendRequest } = $(
+  useApi(async () => {
+    const detail = await getAlbumDetail(name as string)
+    Object.assign(albumDetail, detail)
+  }),
+)
 sendRequest()
 
 const showComposers = (track: TrackMetadata) => {
   if (!track.composers) {
     return false
   }
-  const equal = track.composers.every(item => track.artists.includes(item))
-    && track.artists.every(item => track.composers.includes(item))
+  const equal =
+    track.composers.every(item => track.artists.includes(item)) &&
+    track.artists.every(item => track.composers?.includes(item))
   return track.composers && !equal
 }
-
 </script>
 
 <template>
   <div class="h-screen flex flex-col overflow-auto">
     <PageHeader v-model="keyword" @home-navigate="homeNavigate" @search="search" />
 
-    <div class="flex flex-grow flex-col xl:flex-row xl:justify-center items-center xl:items-start p-6 gap-6">
+    <div
+      class="flex flex-grow flex-col xl:flex-row xl:justify-center items-center xl:items-start p-6 gap-6"
+    >
       <template v-if="loaded">
         <div class="flex flex-col gap-6 xl:justify-center xl:sticky xl:top-[calc(80px+1.5rem)]">
           <ClsImage aspect-ratio="100%" class="w-[90vw] max-w-[400px]">
-            <Image class="rounded-lg overflow-hidden z-10 shadow-border-[2px] self-center"
-              image-class="object-contain" preview :src="albumDetail.coverUrl">
+            <Image
+              class="rounded-lg overflow-hidden z-10 shadow-border-[2px] self-center"
+              image-class="object-contain"
+              preview
+              :src="albumDetail.coverUrl"
+            >
               <template #indicator>
                 <Icon name="search-plus" />
               </template>
@@ -99,7 +109,10 @@ const showComposers = (track: TrackMetadata) => {
               <Icon name="tag" class="!text-[12px] mr-1" />
               <span class="text-sm my-1">{{ albumMetadata.albumOrder }}</span>
             </PrimaryChip>
-            <div class="flex items-center justify-center flex-wrap gap-2" v-if="albumMetadata.genres">
+            <div
+              v-if="albumMetadata.genres"
+              class="flex items-center justify-center flex-wrap gap-2"
+            >
               <Chip v-for="genre of albumMetadata.genres" :key="genre">
                 <span class="text-sm my-1">{{ genre }}</span>
               </Chip>
@@ -115,17 +128,33 @@ const showComposers = (track: TrackMetadata) => {
 
         <div class="flex flex-col gap-3 xl:items-center">
           <div v-for="group of discGroups" :key="group.discNumber" class="flex flex-col gap-2">
-            <div v-if="discGroups.length > 1" class="text-sm text-gray-500">Disc {{ group.discNumber }}</div>
-            <div v-for="track of group.tracks" :key="`${track.discNumber}/${track.trackNumber}`" :class="[
-              'w-[90vw] md:max-w-[600px]',
-              'flex flex-col rounded-md border border-solid border-gray-200 overflow-hidden',
-              '[&>:not(:last-child)]:border-b [&>:not(:last-child)]:border-solid [&>:not(:last-child)]:border-gray-200',
-            ]">
+            <div v-if="discGroups.length > 1" class="text-sm text-gray-500">
+              Disc {{ group.discNumber }}
+            </div>
+            <div
+              v-for="track of group.tracks"
+              :key="`${track.discNumber}/${track.trackNumber}`"
+              :class="[
+                'w-[90vw] md:max-w-[600px]',
+                'flex flex-col rounded-md border border-solid border-gray-200 overflow-hidden',
+                '[&>:not(:last-child)]:border-b [&>:not(:last-child)]:border-solid [&>:not(:last-child)]:border-gray-200',
+              ]"
+            >
               <DetailHeader :label="`#${track.trackNumber}`" :value="track.title" />
-              <DetailRow :label="t('detail.label.artists')" :value="track.artists.join(MetadataSeparator)" />
-              <DetailRow v-if="showComposers(track)" :label="t('detail.label.composers')"
-                :value="track.composers.join(MetadataSeparator)" />
-              <DetailRow v-if="track.comments" :label="t('detail.label.comments')" :value="track.comments" />
+              <DetailRow
+                :label="t('detail.label.artists')"
+                :value="track.artists.join(MetadataSeparator)"
+              />
+              <DetailRow
+                v-if="showComposers(track)"
+                :label="t('detail.label.composers')"
+                :value="track.composers?.join(MetadataSeparator) ?? ''"
+              />
+              <DetailRow
+                v-if="track.comments"
+                :label="t('detail.label.comments')"
+                :value="track.comments"
+              />
             </div>
           </div>
         </div>

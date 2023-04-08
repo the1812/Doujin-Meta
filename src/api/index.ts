@@ -16,9 +16,7 @@ export const searchAlbums = async (keyword: string) => {
   return response.data
 }
 export const getAlbumDetail = async (name: string) => {
-  const response = await api.get<AlbumDetail>(
-    `/api/albums/detail/${encodeURIComponent(name)}`,
-  )
+  const response = await api.get<AlbumDetail>(`/api/albums/detail/${encodeURIComponent(name)}`)
   return response.data
 }
 
@@ -34,7 +32,8 @@ export const useApi = (onApiCall: () => Promise<unknown>) => {
       error.value = false
       await onApiCall()
       loaded.value = true
-    } catch (error) {
+    } catch (e) {
+      console.error('request failed', e)
       error.value = true
     } finally {
       loading.value = false

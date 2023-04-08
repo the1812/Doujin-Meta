@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import ProgressSpinner from 'primevue/progressspinner'
 import CenterScreen from './CenterScreen.vue'
-
 </script>
 <template>
   <CenterScreen>

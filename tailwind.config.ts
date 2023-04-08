@@ -1,12 +1,12 @@
-const plugin = require('tailwindcss/plugin')
-const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenColorPalette')
+import type { Config } from 'tailwindcss'
+import plugin from 'tailwindcss/plugin'
+import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette'
 
-const getColor = (value) => {
+const getColor = (value: string | { DEFAULT: string }) => {
   return typeof value === 'string' ? value : value.DEFAULT
 }
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export const config: Config = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -26,7 +26,7 @@ module.exports = {
         'github-black': {
           light: '#31363c',
           DEFAULT: '#24292e',
-        }
+        },
       },
     },
   },
@@ -55,3 +55,4 @@ module.exports = {
     }),
   ],
 }
+export default config

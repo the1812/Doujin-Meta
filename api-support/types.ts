@@ -1,4 +1,3 @@
-
 export interface GitTreeNode {
   path: string
   mode: string
@@ -17,8 +16,11 @@ export interface ContentsNode {
   sha: string
   size: number
   url: string
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   html_url: string
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   git_url: string
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   download_url: string
   type: string
 }
