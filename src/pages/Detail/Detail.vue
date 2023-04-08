@@ -78,17 +78,17 @@ const showComposers = (track: TrackMetadata) => {
 </script>
 
 <template>
-  <div class="h-screen flex flex-col overflow-auto">
+  <div class="flex h-screen flex-col overflow-auto">
     <PageHeader v-model="keyword" @home-navigate="homeNavigate" @search="search" />
 
     <div
-      class="flex flex-grow flex-col xl:flex-row xl:justify-center items-center xl:items-start p-6 gap-6"
+      class="flex flex-grow flex-col items-center gap-6 p-6 xl:flex-row xl:items-start xl:justify-center"
     >
       <template v-if="loaded">
-        <div class="flex flex-col gap-6 xl:justify-center xl:sticky xl:top-[calc(80px+1.5rem)]">
+        <div class="flex flex-col gap-6 xl:sticky xl:top-[calc(80px+1.5rem)] xl:justify-center">
           <ClsImage aspect-ratio="100%" class="w-[90vw] max-w-[400px]">
             <Image
-              class="rounded-lg overflow-hidden z-10 shadow-border-[2px] self-center"
+              class="z-10 self-center overflow-hidden rounded-lg shadow-border-[2px]"
               image-class="object-contain"
               preview
               :src="albumDetail.coverUrl"
@@ -98,23 +98,23 @@ const showComposers = (track: TrackMetadata) => {
               </template>
             </Image>
           </ClsImage>
-          <div v-if="albumMetadata" class="flex flex-col items-center gap-2 max-w-[400px]">
-            <div class="font-semibold text-xl text-center">{{ albumMetadata.album }}</div>
-            <div class="text-gray-500 text mb-2 text-center">
+          <div v-if="albumMetadata" class="flex max-w-[400px] flex-col items-center gap-2">
+            <div class="text-center text-xl font-semibold">{{ albumMetadata.album }}</div>
+            <div class="text mb-2 text-center text-gray-500">
               <span>{{ albumMetadata.albumArtists?.join(MetadataSeparator) }}</span>
               <span v-if="albumMetadata.year"> · {{ albumMetadata.year }}</span>
             </div>
 
             <PrimaryChip v-if="albumMetadata.albumOrder">
-              <Icon name="tag" class="!text-[12px] mr-1" />
-              <span class="text-sm my-1">{{ albumMetadata.albumOrder }}</span>
+              <Icon name="tag" class="mr-1 !text-[12px]" />
+              <span class="my-1 text-sm">{{ albumMetadata.albumOrder }}</span>
             </PrimaryChip>
             <div
               v-if="albumMetadata.genres"
-              class="flex items-center justify-center flex-wrap gap-2"
+              class="flex flex-wrap items-center justify-center gap-2"
             >
               <Chip v-for="genre of albumMetadata.genres" :key="genre">
-                <span class="text-sm my-1">{{ genre }}</span>
+                <span class="my-1 text-sm">{{ genre }}</span>
               </Chip>
             </div>
             <div class="mt-8 flex flex-col gap-2">
@@ -136,7 +136,7 @@ const showComposers = (track: TrackMetadata) => {
               :key="`${track.discNumber}/${track.trackNumber}`"
               :class="[
                 'w-[90vw] md:max-w-[600px]',
-                'flex flex-col rounded-md border border-solid border-gray-200 overflow-hidden',
+                'flex flex-col overflow-hidden rounded-md border border-solid border-gray-200',
                 '[&>:not(:last-child)]:border-b [&>:not(:last-child)]:border-solid [&>:not(:last-child)]:border-gray-200',
               ]"
             >

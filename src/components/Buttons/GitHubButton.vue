@@ -11,13 +11,13 @@ const { t } = useI18n()
   <a :href="link" target="_blank" class="flex">
     <Button
       :class="[
-        '!bg-github-black !border-0 flex-grow',
+        'flex-grow !border-0 !bg-github-black',
         'hover:!bg-github-black-light focus:!button-border-github-black',
       ]"
       label=""
       size="large"
     >
-      <div class="flex items-center gap-2 justify-center flex-grow">
+      <div class="flex flex-grow items-center justify-center gap-2">
         <img class="w-6" :src="GitHubIcon" />
         <div class="font-semibold">{{ t('linkButtons.GitHub') }}</div>
       </div>

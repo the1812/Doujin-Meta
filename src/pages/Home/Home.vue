@@ -78,9 +78,9 @@ const canSearch = $computed(() => !loading && Boolean(keyword))
 </script>
 
 <template>
-  <div class="h-screen flex flex-col overflow-auto">
-    <div v-if="!searched" class="flex flex-col gap-4 px-4 my-auto transform -translate-y-[10vh]">
-      <div class="self-center w-full max-w-[600px]">
+  <div class="flex h-screen flex-col overflow-auto">
+    <div v-if="!searched" class="my-auto flex -translate-y-[10vh] transform flex-col gap-4 px-4">
+      <div class="w-full max-w-[600px] self-center">
         <ClsImage aspect-ratio="26.4%">
           <img src="/images/Logo.Text.svg" />
         </ClsImage>
@@ -89,7 +89,7 @@ const canSearch = $computed(() => !loading && Boolean(keyword))
         <InputText
           v-model="keyword"
           type="text"
-          class="flex-grow min-w-0 max-w-[700px]"
+          class="min-w-0 max-w-[700px] flex-grow"
           :placeholder="t('search.placeholder')"
           @keydown.enter="handleSearch"
         />
@@ -110,9 +110,9 @@ const canSearch = $computed(() => !loading && Boolean(keyword))
       @home-navigate="reset"
       @search="handleSearch"
     />
-    <div v-if="searched" class="flex flex-col gap-1 pb-4 pt-2 px-3">
+    <div v-if="searched" class="flex flex-col gap-1 px-3 pb-4 pt-2">
       <AlbumSearchItem v-for="item of searchResult" :key="item.id" :item="item" />
-      <div v-if="loaded && searchResult.length === 0" class="text-center p-4">No result</div>
+      <div v-if="loaded && searchResult.length === 0" class="p-4 text-center">No result</div>
     </div>
 
     <Loading v-if="loading" />

@@ -11,7 +11,7 @@ const { t } = useI18n()
   <a :href="`https://www.dizzylab.net/d/${id}`" target="_blank" class="flex">
     <Button
       :class="[
-        '!bg-dizzylab-orange !border-0 flex-grow justify-center',
+        'flex-grow justify-center !border-0 !bg-dizzylab-orange',
         'hover:!bg-dizzylab-orange-light focus:!button-border-dizzylab-orange',
       ]"
       label=""

@@ -4,6 +4,6 @@ import CenterScreen from './CenterScreen.vue'
 </script>
 <template>
   <CenterScreen>
-    <ProgressSpinner class="!w-8 !h-8" stroke-width="8" />
+    <ProgressSpinner class="!h-8 !w-8" stroke-width="8" />
   </CenterScreen>
 </template>

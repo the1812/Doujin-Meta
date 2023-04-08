@@ -5,11 +5,11 @@ const { label, value } = defineProps<{ label: string; value: string }>()
 <template>
   <div class="flex bg-gray-100 text-sm">
     <div
-      class="flex items-center py-1 px-2 justify-end w-[100px] shrink-0 font-semibold border-r border-solid border-gray-200"
+      class="flex w-[100px] shrink-0 items-center justify-end border-r border-solid border-gray-200 px-2 py-1 font-semibold"
     >
       {{ label }}
     </div>
-    <div class="flex items-center py-1 px-2 flex-grow font-semibold">
+    <div class="flex flex-grow items-center px-2 py-1 font-semibold">
       {{ value }}
     </div>
   </div>

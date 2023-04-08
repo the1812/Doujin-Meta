@@ -37,12 +37,12 @@ const titleSlices = (() => {
   <div class="flex justify-center">
     <RouterLink
       :to="`/albums/${encodeURIComponent(item.name)}`"
-      class="flex flex-grow items-center gap-3 p-2 cursor-pointer hover:bg-gray-100 rounded-md max-w-[830px]"
+      class="flex max-w-[830px] flex-grow cursor-pointer items-center gap-3 rounded-md p-2 hover:bg-gray-100"
     >
-      <div class="w-10 h-10 flex items-center justify-center">
+      <div class="flex h-10 w-10 items-center justify-center">
         <img
           :src="item.coverUrl"
-          class="w-10 shadow-border-[1px] object-contain rounded-sm overflow-hidden shrink-0"
+          class="w-10 shrink-0 overflow-hidden rounded-sm object-contain shadow-border-[1px]"
         />
       </div>
       <div class="flex-grow">
