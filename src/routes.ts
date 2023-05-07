@@ -1,7 +1,7 @@
 import {
   createRouter,
   createWebHashHistory,
-  RouteLocationNormalized,
+  // RouteLocationNormalized,
   RouteRecordRaw,
 } from 'vue-router'
 import Detail from './pages/Detail/Detail.vue'
@@ -15,11 +15,11 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/albums/:name',
     component: Detail,
-    meta: {
-      title: (route: RouteLocationNormalized) => {
-        return route.params.name
-      },
-    },
+    // meta: {
+    //   title: (route: RouteLocationNormalized) => {
+    //     return route.params.name
+    //   },
+    // },
   },
 ]
 

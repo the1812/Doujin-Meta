@@ -62,6 +62,10 @@ const { loading, error, loaded, sendRequest } = $(
   useApi(async () => {
     const detail = await getAlbumDetail(name as string)
     Object.assign(albumDetail, detail)
+    const album = detail.metadata?.[0]?.album
+    if (album) {
+      document.title = `${album} - Doujin Meta`
+    }
   }),
 )
 sendRequest()
