@@ -1,0 +1,95 @@
+[
+  {
+    "title": "風の頌",
+    "artists": [
+      "atoroeato",
+      "Darkxixin",
+      "梦音"
+    ],
+    "lyricists": [
+      "atoroeato"
+    ],
+    "composers": [
+      "atoroeato"
+    ],
+    "album": "Ode alla vita",
+    "albumOrder": "OAV0129",
+    "albumArtists": [
+      "Harmonia Godness"
+    ],
+    "genres": [
+      "Fantasia"
+    ],
+    "year": "2023",
+    "extraData": {
+      "links": {
+        "dizzylab": "OAV0129"
+      }
+    }
+  },
+  {
+    "title": "ランカラムの呼び声",
+    "artists": [
+      "atoroeato",
+      "黑铱Blacklris"
+    ],
+    "lyricists": [
+      "atoroeato"
+    ],
+    "composers": [
+      "黑铱Blacklris"
+    ]
+  },
+  {
+    "title": "創世の恵音",
+    "artists": [
+      "atoroeato",
+      "Hagali"
+    ],
+    "lyricists": [
+      "atoroeato"
+    ],
+    "composers": [
+      "Hagali"
+    ]
+  },
+  {
+    "title": "春日降临",
+    "artists": [
+      "atoroeato",
+      "Darkxixin",
+      "黑铱Blacklris"
+    ],
+    "lyricists": [
+      "atoroeato",
+      "黑铱Blacklris"
+    ],
+    "composers": [
+      "黑铱Blacklris"
+    ]
+  },
+  {
+    "title": "Suono-自然の鼓动",
+    "composers": [
+      "Tonishkov"
+    ]
+  },
+  {
+    "title": "ランカラムの呼び声 Instrumental",
+    "composers": [
+      "黑铱Blacklris"
+    ]
+  },
+  {
+    "title": "創世の恵音 Instrumental",
+    "composers": [
+      "Hagali"
+    ]
+  },
+  {
+    "title": "春日降临 Instrumental",
+    "composers": [
+      "黑铱Blacklris"
+    ]
+  }
+]

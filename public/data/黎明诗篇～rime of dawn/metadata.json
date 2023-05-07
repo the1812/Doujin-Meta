@@ -1,0 +1,142 @@
+[
+  {
+    "title": "黎明诗篇～rime of dawn",
+    "artists": [
+      "atoroeato",
+      "Darkxixin",
+      "猫巾卷"
+    ],
+    "composers": [
+      "猫巾卷"
+    ],
+    "lyricists": [
+      "atoroeato",
+      "solanil"
+    ],
+    "album": "黎明诗篇～rime of dawn",
+    "albumOrder": "RIME01",
+    "albumArtists": [
+      "悠久诗篇"
+    ],
+    "genres": [
+      "Fantasia"
+    ],
+    "year": "2023",
+    "extraData": {
+      "links": {
+        "dizzylab": "RIME01"
+      }
+    }
+  },
+  {
+    "title": "忘却之城",
+    "artists": [
+      "Darkxixin",
+      "ivesoundxcy"
+    ],
+    "composers": [
+      "ivesoundxcy"
+    ],
+    "lyricists": [
+      "solanil"
+    ]
+  },
+  {
+    "title": "永远的歌姬",
+    "artists": [
+      "atoroeato",
+      "梦音"
+    ],
+    "composers": [
+      "atoroeato",
+      "梦音"
+    ],
+    "lyricists": [
+      "atoroeato",
+      "solanil"
+    ]
+  },
+  {
+    "title": "废弃机械",
+    "artists": [
+      "Darkxixin",
+      "黑铱BlackIris"
+    ],
+    "composers": [
+      "黑铱BlackIris"
+    ],
+    "lyricists": [
+      "atoroeato",
+      "黑铱BlackIris",
+      "solanil"
+    ]
+  },
+  {
+    "title": "希望演算",
+    "artists": [
+      "atoroeato",
+      "Ryuu"
+    ],
+    "composers": [
+      "Ryuu"
+    ],
+    "lyricists": [
+      "atoroeato",
+      "Ryuu",
+      "solanil"
+    ]
+  },
+  {
+    "title": "雪之挽歌～beyond time and sky",
+    "artists": [
+      "atoroeato",
+      "Darkxixin",
+      "黑铱BlackIris"
+    ],
+    "composers": [
+      "黑铱BlackIris"
+    ],
+    "lyricists": [
+      "atoroeato",
+      "黑铱BlackIris",
+      "solanil"
+    ]
+  },
+  {
+    "title": "黎明诗篇 Instrumental",
+    "composers": [
+      "猫巾卷"
+    ]
+  },
+  {
+    "title": "忘却之城 Instrumental",
+    "composers": [
+      "ivesoundxcy"
+    ]
+  },
+  {
+    "title": "永远的歌姬 Instrumental",
+    "composers": [
+      "atoroeato",
+      "梦音"
+    ]
+  },
+  {
+    "title": "废弃机械 Instrumental",
+    "composers": [
+      "黑铱BlackIris"
+    ]
+  },
+  {
+    "title": "希望演算 Instrumental",
+    "composers": [
+      "Ryuu"
+    ]
+  },
+  {
+    "title": "雪之挽歌 Instrumental",
+    "composers": [
+      "黑铱BlackIris"
+    ]
+  }
+]

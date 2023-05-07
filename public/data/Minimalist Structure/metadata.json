@@ -1,0 +1,131 @@
+[
+  {
+    "title": "Nebula",
+    "composers": [
+      "JING"
+    ],
+    "album": "Minimalist Structure",
+    "albumOrder": "STS-006",
+    "albumArtists": [
+      "Structure Sound"
+    ],
+    "genres": [
+      "Ambient"
+    ],
+    "year": "2023",
+    "extraData": {
+      "links": {
+        "dizzylab": "STS-006"
+      }
+    }
+  },
+  {
+    "title": "My mind",
+    "composers": [
+      "4_16☆"
+    ],
+    "genres": [
+      "Speed Garage"
+    ]
+  },
+  {
+    "title": "Pleione",
+    "composers": [
+      "nirΞ"
+    ],
+    "genres": [
+      "Proglifting Trance"
+    ]
+  },
+  {
+    "title": "You",
+    "composers": [
+      "4_16☆"
+    ],
+    "genres": [
+      "Speed Garage"
+    ]
+  },
+  {
+    "title": "醒めた夢",
+    "composers": [
+      "MATCHA"
+    ],
+    "genres": [
+      "Future Bass"
+    ]
+  },
+  {
+    "title": "Patina",
+    "composers": [
+      "Kolaa"
+    ],
+    "genres": [
+      "Past Bass"
+    ]
+  },
+  {
+    "title": "Reversal",
+    "composers": [
+      "HJLL"
+    ],
+    "genres": [
+      "Hitech"
+    ]
+  },
+  {
+    "title": "CHROMA",
+    "composers": [
+      "硝酸生菜"
+    ],
+    "genres": [
+      "Glitch Hop"
+    ]
+  },
+  {
+    "title": "Net-Trippin",
+    "composers": [
+      "Tonishkov"
+    ],
+    "genres": [
+      "Breakbeat"
+    ]
+  },
+  {
+    "title": "Polarization",
+    "composers": [
+      "UraniumW",
+      "Mestie"
+    ],
+    "genres": [
+      "Melodic Dubstep"
+    ]
+  },
+  {
+    "title": "Pumppkin-pie",
+    "composers": [
+      "Cyan Lpegd"
+    ],
+    "genres": [
+      "Electro House"
+    ]
+  },
+  {
+    "title": "Metamorphosis",
+    "composers": [
+      "Arentis"
+    ],
+    "genres": [
+      "Deep House"
+    ]
+  },
+  {
+    "title": "No Dream No Life",
+    "composers": [
+      "JING"
+    ],
+    "genres": [
+      "Funk"
+    ]
+  }
+]
