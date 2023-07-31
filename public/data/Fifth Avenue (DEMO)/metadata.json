@@ -1,0 +1,56 @@
+[
+  {
+    "title": "流遁",
+    "artists": [
+      "牧野流 ~ Prozirno",
+      "东北老乡长",
+      "Kirisame Calhoun"
+    ],
+    "comments": "原曲: 輝く針の小人族 ～ Little Princess (东方辉针城 ～ Double Dealing Character.)",
+    "album": "Fifth Avenue (DEMO)",
+    "albumOrder": "NYCD0003",
+    "albumArtists": [
+      "纽约花残月"
+    ],
+    "genres": [
+      "Progressive Rock"
+    ],
+    "year": "2023",
+    "extraData": {
+      "links": {
+        "dizzylab": "NYCD0003"
+      }
+    }
+  },
+  {
+    "title": "息声森林 第一乐章",
+    "comments": "原曲: シンデレラケージ ～ Kagome-Kagome (东方永夜抄 ～ Imperishable Night.)",
+    "genres": [
+      "Progressive Rock",
+      "Psychedelic Rock"
+    ],
+    "artists": [
+      "Kirisame Calhoun"
+    ]
+  },
+  {
+    "title": "兔子们的爵士舞会",
+    "comments": "原曲: 狂気の瞳 ～ Invisible Full Moon (东方永夜抄 ～ Imperishable Night.)",
+    "genres": [
+      "Fusion Jazz"
+    ],
+    "artists": [
+      "Kirisame Calhoun"
+    ]
+  },
+  {
+    "title": "亡语",
+    "comments": "原曲: 恋色マスタースパーク (东方永夜抄 ～ Imperishable Night.)",
+    "genres": [
+      "Doom Metal"
+    ],
+    "artists": [
+      "Kirisame Calhoun"
+    ]
+  }
+]

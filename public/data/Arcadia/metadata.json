@@ -1,0 +1,101 @@
+[
+  {
+    "title": "Orgen",
+    "artists": [
+      "atoroeato",
+      "梦音"
+    ],
+    "lyricists": [
+      "atoroeato"
+    ],
+    "composers": [
+      "atoroeato"
+    ],
+    "album": "Arcadia",
+    "albumOrder": "ATO334",
+    "albumArtists": "Harmonia Godness",
+    "genres": [
+      "Fantasia"
+    ],
+    "year": "2022",
+    "extraData": {
+      "links": {
+        "dizzylab": "ATO334"
+      }
+    }
+  },
+  {
+    "title": "υγρή-水沢の仙女-",
+    "artists": [
+      "atoroeato",
+      "乙妮"
+    ],
+    "lyricists": [
+      "atoroeato"
+    ],
+    "composers": [
+      "乙妮"
+    ]
+  },
+  {
+    "title": "カササギの歌-Pierides",
+    "artists": [
+      "atoroeato",
+      "黑铱Blacklris"
+    ],
+    "lyricists": [
+      "atoroeato"
+    ],
+    "composers": [
+      "黑铱Blacklris"
+    ]
+  },
+  {
+    "title": "E-yela-te",
+    "artists": [
+      "atoroeato",
+      "梦音"
+    ],
+    "lyricists": [
+      "atoroeato"
+    ],
+    "composers": [
+      "atoroeato"
+    ]
+  },
+  {
+    "title": "吟 共鳴の音",
+    "artists": [
+      "atoroeato",
+      "Darkxixin",
+      "乙妮"
+    ],
+    "composers": [
+      "乙妮"
+    ]
+  },
+  {
+    "title": "Orgen Instrumental",
+    "artists": [
+      "梦音"
+    ],
+    "composers": [
+      "atoroeato"
+    ]
+  },
+  {
+    "title": "E-yela-te Instrumental",
+    "artists": [
+      "梦音"
+    ],
+    "composers": [
+      "atoroeato"
+    ]
+  },
+  {
+    "title": "カササギの歌 Instrumental",
+    "artists": [
+      "黑铱Blacklris"
+    ]
+  }
+]
