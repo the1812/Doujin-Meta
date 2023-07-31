@@ -13,7 +13,9 @@
     ],
     "album": "Arcadia",
     "albumOrder": "ATO334",
-    "albumArtists": "Harmonia Godness",
+    "albumArtists": [
+      "Harmonia Godness"
+    ],
     "genres": [
       "Fantasia"
     ],
