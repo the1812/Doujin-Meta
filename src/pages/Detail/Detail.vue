@@ -18,9 +18,9 @@ import Error from '../../components/Error.vue'
 import DizzylabButton from '../../components/Buttons/DizzylabButton.vue'
 import ThbWikiButton from '../../components/Buttons/ThbWikiButton.vue'
 import GitHubButton from '../../components/Buttons/GitHubButton.vue'
-import RawButton from '../../components/Buttons/RawButton.vue'
-import { useI18n } from '../../i18n'
+import MoreActionsButton from '../../components/Buttons/MoreActionsButton.vue'
 import ClsImage from '../../components/ClsImage.vue'
+import { useI18n } from '../../i18n'
 
 const { homeNavigate, keyword, search } = usePageHeader()
 const { params } = useRoute()
@@ -120,8 +120,14 @@ const showComposers = (track: TrackMetadata) => {
             <div class="mt-8 flex flex-col gap-2">
               <DizzylabButton v-if="links.dizzylab" :id="links.dizzylab" />
               <ThbWikiButton v-if="links.thbWiki" :id="links.thbWiki" />
-              <GitHubButton v-if="albumDetail.metadataUrl" :link="albumDetail.metadataUrl" />
-              <RawButton v-if="albumDetail.rawUrl" :link="albumDetail.rawUrl" />
+              <div class="flex gap-2">
+                <GitHubButton
+                  v-if="albumDetail.metadataUrl"
+                  class="flex-grow"
+                  :link="albumDetail.metadataUrl"
+                />
+                <MoreActionsButton :raw-link="albumDetail.rawUrl" />
+              </div>
             </div>
           </div>
         </div>
