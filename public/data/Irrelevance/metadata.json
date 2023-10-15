@@ -1,0 +1,67 @@
+[
+  {
+    "title": "Irrelevance",
+    "composers": [
+      "Project-G"
+    ],
+    "album": "Irrelevance",
+    "albumOrder": "OSR0022",
+    "albumArtists": [
+      "Omniset Records"
+    ],
+    "genres": [
+      "Progressive House"
+    ],
+    "year": "2023",
+    "extraData": {
+      "links": {
+        "dizzylab": "OSR0022"
+      }
+    }
+  },
+  {
+    "title": "Early Snow",
+    "composers": [
+      "Project-G"
+    ],
+    "genres": [
+      "Progressive House"
+    ]
+  },
+  {
+    "title": "Celadon",
+    "composers": [
+      "Project-G"
+    ],
+    "genres": [
+      "Melodic House",
+      "Techno"
+    ]
+  },
+  {
+    "title": "Irrelevance (Nyolfen Remix)",
+    "composers": [
+      "Project-G"
+    ],
+    "artists": [
+      "Nyolfen",
+      "Project-G"
+    ],
+    "genres": [
+      "House"
+    ]
+  },
+  {
+    "title": "Irrelevance (Ninelo Remodel)",
+    "composers": [
+      "Project-G"
+    ],
+    "artists": [
+      "Ninelo",
+      "Project-G"
+    ],
+    "genres": [
+      "House"
+    ]
+  }
+]
