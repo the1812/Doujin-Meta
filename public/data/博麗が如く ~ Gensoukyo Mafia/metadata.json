@@ -13,7 +13,12 @@
     "albumArtists": [
       "Clip Sounds"
     ],
-    "comments": "原曲: メイガスナイト (妖精大战争 ～ 东方三月精)"
+    "comments": "原曲: メイガスナイト (妖精大战争 ～ 东方三月精)",
+    "extraData": {
+      "links": {
+        "dizzylab": "CLIP-002"
+      }
+    }
   },
   {
     "title": "5ANK41!",

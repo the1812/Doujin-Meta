@@ -25,9 +25,7 @@
       "CoreTania",
       "cnsuslik"
     ],
-    "composers": [
-      "cnsuslik"
-    ]
+    "comments": "原曲: 少女綺想曲 ～ Capriccio (东方幻想乡 ～ Lotus Land Story.)"
   },
   {
     "title": "#B9E5E8",
@@ -37,16 +35,18 @@
   },
   {
     "title": "Lunarin Toive",
-    "composers": [
+    "artists": [
       "BlueWind"
-    ]
+    ],
+    "comments": "原曲: 綿月のスペルカード ～ Lunatic Blue (东方儚月抄 ～ Silent Sinner in Blue. 附属CD)"
   },
   {
     "title": "Rock the Mars",
-    "composers": [
+    "artists": [
       "Hazecat",
       "Sukimiko"
-    ]
+    ],
+    "comments": "原曲: Tabula rasa ～空白少女 (东方梦时空 ～ Phantasmagoria of Dim. Dream.)"
   },
   {
     "title": "Fly with Your Tsubasa",
@@ -69,9 +69,10 @@
   },
   {
     "title": "Star Pirates",
-    "composers": [
+    "artists": [
       "cnsuslik"
-    ]
+    ],
+    "comments": "原曲: ヴォヤージュ1970 (东方永夜抄 ～ Imperishable Night.)"
   },
   {
     "title": "Space Junk",
@@ -81,8 +82,9 @@
   },
   {
     "title": "Back To The Sun",
-    "composers": [
+    "artists":  [
       "Reguluz"
-    ]
+    ],
+    "comments": "原曲: 不思議なお祓い棒 (东方辉针城 ～ Double Dealing Character.)"
   }
 ]
