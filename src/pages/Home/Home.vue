@@ -2,7 +2,7 @@
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
 import { useRoute, useRouter } from 'vue-router'
-import { watch } from 'vue'
+import { watch, ref, computed } from 'vue'
 import { searchAlbums, useApi } from '../../api'
 import { AlbumApiItem } from '../../api/types'
 import AlbumSearchItem from './AlbumSearchItem.vue'
@@ -16,46 +16,41 @@ const route = useRoute()
 const router = useRouter()
 const { t } = useI18n()
 
-let searched = $ref(false)
-let keyword = $ref('')
-let searchResult = $ref([] as AlbumApiItem[])
+const searched = ref(false)
+const keyword = ref('')
+const searchResult = ref([] as AlbumApiItem[])
 
-const {
-  loading,
-  error,
-  loaded,
-  sendRequest: handleSearch,
-} = $(
-  useApi(async () => {
-    if (!keyword) {
-      return
-    }
-    searched = true
-    searchResult = []
-    const query = { keyword }
-    router.replace({ query })
-    searchResult = await searchAlbums(keyword)
-    const isFullMatch = searchResult.length === 1 && searchResult[0].name === keyword
-    if (isFullMatch) {
-      router.push({ path: `/albums/${encodeURIComponent(keyword)}` })
-    }
-  }),
-)
+const api = useApi(async () => {
+  if (!keyword.value) {
+    return
+  }
+  searched.value = true
+  searchResult.value = []
+  const query = { keyword: keyword.value }
+  router.replace({ query })
+  searchResult.value = await searchAlbums(keyword.value)
+  const isFullMatch =
+    searchResult.value.length === 1 && searchResult.value[0].name === keyword.value
+  if (isFullMatch) {
+    router.push({ path: `/albums/${encodeURIComponent(keyword.value)}` })
+  }
+})
+const handleSearch = () => api.sendRequest()
 
 const reset = () => {
-  searched = false
-  searchResult = []
-  keyword = ''
+  searched.value = false
+  searchResult.value = []
+  keyword.value = ''
   router.replace({ query: {} })
 }
 
 watch(
   () => route.query.keyword,
   newKeyword => {
-    if (!newKeyword || Array.isArray(newKeyword) || keyword === newKeyword) {
+    if (!newKeyword || Array.isArray(newKeyword) || keyword.value === newKeyword) {
       return
     }
-    keyword = newKeyword
+    keyword.value = newKeyword
     handleSearch()
   },
   {
@@ -74,7 +69,7 @@ watch(
   },
 )
 
-const canSearch = $computed(() => !loading && Boolean(keyword))
+const canSearch = computed(() => !api.loading && Boolean(keyword))
 </script>
 
 <template>
@@ -96,7 +91,7 @@ const canSearch = $computed(() => !loading && Boolean(keyword))
         <Button
           class="shrink-0"
           :title="t('search.buttonTitle')"
-          :loading="loading"
+          :loading="api.loading"
           icon="pi pi-search"
           :disabled="!canSearch"
           @click="handleSearch"
@@ -106,16 +101,16 @@ const canSearch = $computed(() => !loading && Boolean(keyword))
     <PageHeader
       v-if="searched"
       v-model="keyword"
-      :busy="loading"
+      :busy="api.loading"
       @home-navigate="reset"
       @search="handleSearch"
     />
     <div v-if="searched" class="flex flex-col gap-1 px-3 pb-4 pt-2">
       <AlbumSearchItem v-for="item of searchResult" :key="item.id" :item="item" />
-      <div v-if="loaded && searchResult.length === 0" class="p-4 text-center">No result</div>
+      <div v-if="api.loaded && searchResult.length === 0" class="p-4 text-center">No result</div>
     </div>
 
-    <Loading v-if="loading" />
-    <Error v-if="error" @retry="handleSearch" />
+    <Loading v-if="api.loading" />
+    <Error v-if="api.error" @retry="handleSearch" />
   </div>
 </template>

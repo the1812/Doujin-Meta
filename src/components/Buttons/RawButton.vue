@@ -2,7 +2,7 @@
 import Button from 'primevue/button'
 import { useI18n } from '../../i18n'
 
-const { link } = defineProps<{ link: string }>()
+defineProps<{ link: string }>()
 const { t } = useI18n()
 </script>
 

@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router'
 import type { AlbumMetadata, Metadata } from 'touhou-tagger'
 import Image from 'primevue/image'
 import Chip from 'primevue/chip'
-import { reactive } from 'vue'
+import { reactive, computed } from 'vue'
 import { AlbumDetail } from '../../api/types'
 import Icon from '../../components/Icon.vue'
 import PrimaryChip from '../../components/PrimaryChip.vue'
@@ -34,20 +34,20 @@ const albumDetail: AlbumDetail = reactive({
   rawUrl: '',
   metadata: [],
 })
-const tracks = $computed(() => albumDetail.metadata)
-const albumMetadata: AlbumMetadata = $computed(() => tracks[0])
-const links = $computed(
+const tracks = computed(() => albumDetail.metadata)
+const albumMetadata = computed(() => tracks.value[0] as AlbumMetadata)
+const links = computed(
   (): {
     dizzylab?: string
     thbWiki?: string
-  } => albumMetadata.extraData?.links ?? {},
+  } => albumMetadata.value.extraData?.links ?? {},
 )
 
 type TrackMetadata = Omit<Metadata, keyof AlbumMetadata>
 type DiscGroup = { discNumber: string; tracks: TrackMetadata[] }
-const discGroups: DiscGroup[] = $computed(() => {
+const discGroups = computed(() => {
   const groups: DiscGroup[] = []
-  tracks.forEach(track => {
+  tracks.value.forEach(track => {
     const discEntry = groups.find(it => it.discNumber === track.discNumber)
     if (!discEntry) {
       groups.push({ discNumber: track.discNumber, tracks: [track] })
@@ -58,13 +58,12 @@ const discGroups: DiscGroup[] = $computed(() => {
   return groups
 })
 
-const { loading, error, loaded, sendRequest } = $(
-  useApi(async () => {
-    const detail = await getAlbumDetail(name as string)
-    Object.assign(albumDetail, detail)
-  }),
-)
-sendRequest()
+const api = useApi(async () => {
+  const detail = await getAlbumDetail(name as string)
+  Object.assign(albumDetail, detail)
+})
+
+api.sendRequest()
 
 const showComposers = (track: TrackMetadata) => {
   if (!track.composers) {
@@ -84,7 +83,7 @@ const showComposers = (track: TrackMetadata) => {
     <div
       class="flex flex-grow flex-col items-center gap-6 p-6 xl:flex-row xl:items-start xl:justify-center"
     >
-      <template v-if="loaded">
+      <template v-if="api.loaded">
         <div class="flex flex-col gap-6 xl:sticky xl:top-[calc(80px+1.5rem)] xl:justify-center">
           <ClsImage aspect-ratio="100%" class="w-[90vw] max-w-[400px]">
             <Image
@@ -167,7 +166,7 @@ const showComposers = (track: TrackMetadata) => {
       </template>
     </div>
 
-    <Loading v-if="loading" />
-    <Error v-if="error" @retry="sendRequest" />
+    <Loading v-if="api.loading" />
+    <Error v-if="api.error" @retry="api.sendRequest" />
   </div>
 </template>

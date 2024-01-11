@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const { name } = defineProps<{ name: string }>()
+const props = defineProps<{ name: string }>()
 
-const classTokens = name.split(' ').map(it => `pi-${it}`)
+const classTokens = props.name.split(' ').map(it => `pi-${it}`)
 </script>
 
 <template>
