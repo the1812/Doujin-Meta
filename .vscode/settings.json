@@ -1,9 +1,11 @@
 {
   "cSpell.words": [
     "doujin",
+    "intlify",
     "primeicons",
     "primevue",
-    "Touhou"
+    "Touhou",
+    "unplugin"
   ],
   "cSpell.ignorePaths": [
     "package-lock.json",
