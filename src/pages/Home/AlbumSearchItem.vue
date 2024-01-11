@@ -42,7 +42,7 @@ const titleSlices = (() => {
       <div class="flex h-10 w-10 items-center justify-center">
         <img
           :src="item.coverUrl"
-          class="w-10 shrink-0 overflow-hidden rounded-sm object-contain shadow-border-[1px]"
+          class="w-10 shrink-0 overflow-hidden rounded-sm object-contain shadow-sm"
         />
       </div>
       <div class="flex-grow">
