@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Button from 'primevue/button'
-import THBWikiIcon from '../../assets/thbWiki.png'
+import ThbWikiIcon from '../../assets/thbWiki.png'
 import { useI18n } from '../../i18n'
 
 const { id } = defineProps<{ id: string }>()
@@ -34,7 +34,7 @@ const { t } = useI18n()
         size="large"
       >
         <div class="flex flex-grow items-center justify-center gap-2">
-          <img class="w-6" :src="THBWikiIcon" />
+          <img class="w-6" :src="ThbWikiIcon" />
           <div class="font-semibold">{{ t('linkButtons.THBWiki') }}</div>
         </div>
       </Button>
