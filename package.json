@@ -17,9 +17,9 @@
     "primeicons": "^6.0.1",
     "primevue": "^3.17.0",
     "touhou-tagger": "1.11.2",
-    "vue": "^3.2.37",
+    "vue": "^3.4.18",
     "vue-i18n": "^9.9.1",
-    "vue-router": "^4.1.5"
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^2.0.0",
@@ -28,7 +28,7 @@
     "@typescript-eslint/eslint-plugin": "^6.13.0",
     "@typescript-eslint/parser": "^6.13.0",
     "@vercel/node": "^2.9.3",
-    "@vitejs/plugin-vue": "^4.1.0",
+    "@vitejs/plugin-vue": "^4.6.2",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.54.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -39,11 +39,11 @@
     "postcss": "^8.4.21",
     "prettier": "3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.11",
-    "tailwindcss": "^3.3.1",
+    "tailwindcss": "^3.4.1",
     "typescript": "^5.0.3",
     "vercel": "^28.15.4",
     "vite": "^4.2.1",
-    "vue-tsc": "^1.2.0"
+    "vue-tsc": "^1.8.27"
   },
   "pnpm": {
     "overrides": {

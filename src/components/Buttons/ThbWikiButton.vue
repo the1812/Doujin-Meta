@@ -3,7 +3,7 @@ import Button from 'primevue/button'
 import ThbWikiIcon from '../../assets/thbWiki.png'
 import { useI18n } from '../../i18n'
 
-const { id } = defineProps<{ id: string }>()
+defineProps<{ id: string }>()
 const { t } = useI18n()
 </script>
 

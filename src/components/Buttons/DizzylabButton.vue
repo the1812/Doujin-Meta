@@ -3,7 +3,7 @@ import Button from 'primevue/button'
 import DizzylabIcon from '../../assets/dizzylab.svg'
 import { useI18n } from '../../i18n'
 
-const { id } = defineProps<{ id: string }>()
+defineProps<{ id: string }>()
 const { t } = useI18n()
 </script>
 

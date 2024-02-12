@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { AlbumApiItem } from '../../api/types'
 
-const { item } = defineProps<{ item: AlbumApiItem }>()
+const props = defineProps<{ item: AlbumApiItem }>()
 
 type TitleSlice = {
   text: string
@@ -11,21 +11,21 @@ type TitleSlice = {
 const titleSlices = (() => {
   const result: TitleSlice[] = []
   let currentIndex = 0
-  for (const [start, end] of item.matches) {
+  for (const [start, end] of props.item.matches) {
     result.push({
-      text: item.name.substring(currentIndex, start),
+      text: props.item.name.substring(currentIndex, start),
       isHighlight: false,
       index: currentIndex,
     })
     result.push({
-      text: item.name.substring(start, end + 1),
+      text: props.item.name.substring(start, end + 1),
       isHighlight: true,
       index: start,
     })
     currentIndex = end + 1
   }
   result.push({
-    text: item.name.substring(currentIndex),
+    text: props.item.name.substring(currentIndex),
     isHighlight: false,
     index: currentIndex,
   })

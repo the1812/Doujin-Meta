@@ -1,10 +1,11 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import Button from 'primevue/button'
 import InputText from 'primevue/inputtext'
 import { useI18n } from '../../i18n'
 import ClsImage from '../ClsImage.vue'
 
-const { modelValue, busy } = defineProps<{
+const props = defineProps<{
   modelValue?: string
   busy?: boolean
 }>()
@@ -15,16 +16,16 @@ const emit = defineEmits<{
 }>()
 
 const { t } = useI18n()
-const keyword = $computed({
+const keyword = computed({
   get() {
-    return modelValue ?? ''
+    return props.modelValue ?? ''
   },
   set(value: string) {
     emit('update:modelValue', value)
   },
 })
 const handleSearch = async () => {
-  emit('search', keyword)
+  emit('search', keyword.value)
 }
 </script>
 
