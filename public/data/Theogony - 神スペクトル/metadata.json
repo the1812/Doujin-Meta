@@ -1,0 +1,107 @@
+[
+  {
+    "title": "昼と夜の神話",
+    "artists": [
+      "atoroeato",
+      "Darkxixin",
+      "ruha"
+    ],
+    "composers": [
+      "ruha"
+    ],
+    "lyricists": [
+      "atoroeato"
+    ],
+    "album": "Theogony - 神スペクトル",
+    "albumOrder": "THEO04",
+    "albumArtists": [
+      "Harmonia Godness"
+    ],
+    "year": "2024",
+    "extraData": {
+      "links": {
+        "dizzylab": "THEO04"
+      }
+    }
+  },
+  {
+    "title": "史詩の響き",
+    "artists": [
+      "atoroeato",
+      "Darkxixin",
+      "梦音"
+    ],
+    "composers": [
+      "atoroeato"
+    ],
+    "lyricists": [
+      "atoroeato"
+    ]
+  },
+  {
+    "title": "息音",
+    "artists": [
+      "atoroeato",
+      "Darkxixin",
+      "MiraGevot"
+    ],
+    "composers": [
+      "MiraGevot"
+    ],
+    "lyricists": [
+      "atoroeato"
+    ]
+  },
+  {
+    "title": "Samsara-悠久のため息",
+    "artists": [
+      "atoroeato",
+      "Darkxixin",
+      "rujou"
+    ],
+    "composers": [
+      "rujou"
+    ],
+    "lyricists": [
+      "atoroeato"
+    ]
+  },
+  {
+    "title": "Elegia-日月吟",
+    "artists": [
+      "atoroeato",
+      "Darkxixin",
+      "Hagali"
+    ],
+    "composers": [
+      "Hagali"
+    ],
+    "lyricists": [
+      "atoroeato"
+    ]
+  },
+  {
+    "title": "昼と夜の神話 Instrumental",
+    "composers": [
+      "ruha"
+    ]
+  },
+  {
+    "title": "史詩の響き Instrumental",
+    "composers": [
+      "atoroeato"
+    ]
+  },
+  {
+    "title": "息音 Instrumental",
+    "composers": [
+      "MiraGevot"
+    ]
+  },
+  {
+    "title": "Elegia-日月吟 Instrumental",
+    "composers": [
+      "Hagali"
+    ]
+  }
+]
