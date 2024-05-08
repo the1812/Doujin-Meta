@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Button from 'primevue/button'
 import CenterScreen from './CenterScreen.vue'
 
 defineEmits<{
