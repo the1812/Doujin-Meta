@@ -1,3 +1,5 @@
+import type { Metadata } from 'touhou-tagger'
+
 export interface GitTreeNode {
   path: string
   mode: string
@@ -31,4 +33,18 @@ export interface BlobResponse {
   size: number
   content: string
   encoding: string
+}
+export interface AlbumApiItem {
+  id: string
+  name: string
+  coverUrl: string
+  detailUrl: string
+  matches: [number, number][]
+}
+export interface AlbumDetail {
+  name: string
+  coverUrl: string
+  metadataUrl: string
+  rawUrl: string
+  metadata: Metadata[]
 }
