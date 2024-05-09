@@ -1,0 +1,54 @@
+[
+  {
+    "title": "Kleshas",
+    "composers": [
+      "Project-G"
+    ],
+    "album": "Mauve",
+    "albumOrder": "OSR-0023",
+    "albumArtists": [
+      "Omniset Records"
+    ],
+    "genres": [
+      "Psy-Trance"
+    ],
+    "year": "2024",
+    "extraData": {
+      "links": {
+        "dizzylab": "OSR0023"
+      }
+    }
+  },
+  {
+    "title": "Mauve",
+    "composers": [
+      "Project-G"
+    ],
+    "genres": [
+      "Progressive House"
+    ]
+  },
+  {
+    "title": "It never happens",
+    "composers": [
+      "Project-G"
+    ],
+    "genres": [
+      "Drum & Bass"
+    ]
+  },
+  {
+    "title": "Signals From A Distant Star (Project-G Remix)",
+    "artists": [
+      "Minghua",
+      "Project-G",
+      "Nyolfen"
+    ],
+    "composers": [
+      "Nyolfen"
+    ],
+    "genres": [
+      "Future Bass"
+    ]
+  }
+]

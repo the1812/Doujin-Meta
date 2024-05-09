@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Movin' In!",
+    "composers": [
+      "Violet Delta"
+    ],
+    "album": "Neon Capital",
+    "albumOrder": "STS-VD-001",
+    "albumArtists": [
+      "Structure Sound"
+    ],
+    "genres": [
+      "Synthwave"
+    ],
+    "year": "2024",
+    "extraData": {
+      "links": {
+        "dizzylab": "STS-VD-001"
+      }
+    }
+  },
+  {
+    "title": "The Girl Next Door",
+    "composers": [
+      "Violet Delta"
+    ]
+  },
+  {
+    "title": "Console Party Wars",
+    "composers": [
+      "Violet Delta"
+    ]
+  },
+  {
+    "title": "A Busy Neighborhood",
+    "composers": [
+      "Violet Delta"
+    ]
+  },
+  {
+    "title": "Beachside Stroll '86",
+    "composers": [
+      "Violet Delta"
+    ]
+  },
+  {
+    "title": "Ruby Red Rain",
+    "composers": [
+      "Violet Delta"
+    ]
+  }
+]
