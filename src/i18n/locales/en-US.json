@@ -13,6 +13,7 @@
     "label": {
       "artists": "Artists",
       "composers": "Composers",
+      "genres": "Genres",
       "comments": "Comments"
     }
   }

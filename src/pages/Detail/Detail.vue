@@ -36,6 +36,24 @@ const albumDetail: AlbumDetail = reactive({
 })
 const tracks = computed(() => albumDetail.metadata)
 const albumMetadata = computed(() => tracks.value[0] as AlbumMetadata)
+const albumGenres = computed(() => {
+  const genresMap: Record<string, number> = {}
+  tracks.value.forEach(track => {
+    const key = track.genres?.join(MetadataSeparator)
+    if (key === undefined) {
+      return
+    }
+    if (genresMap[key] === undefined) {
+      genresMap[key] = 1
+      return
+    }
+    genresMap[key] += 1
+  })
+  return Object.entries(genresMap)
+    .sort((a, b) => b[1] - a[1])
+    .at(0)
+    ?.at(0) as string | undefined
+})
 const links = computed(
   (): {
     dizzylab?: string
@@ -43,7 +61,7 @@ const links = computed(
   } => albumMetadata.value.extraData?.links ?? {},
 )
 
-type TrackMetadata = Omit<Metadata, keyof AlbumMetadata>
+type TrackMetadata = Omit<Metadata, keyof Omit<AlbumMetadata, 'genres'>>
 type DiscGroup = { discNumber: string; tracks: TrackMetadata[] }
 const discGroups = computed(() => {
   const groups: DiscGroup[] = []
@@ -72,6 +90,24 @@ const showComposers = (track: TrackMetadata) => {
     track.composers.every(item => track.artists.includes(item)) &&
     track.artists.every(item => track.composers?.includes(item))
   return track.composers && !equal
+}
+
+const showGenres = (track: TrackMetadata) => {
+  if (!track.genres) {
+    return false
+  }
+  const isGenresEqual = (a: TrackMetadata, b: TrackMetadata) =>
+    a.genres?.every((item, index) => item === b.genres?.[index])
+  const firstTrack = tracks.value[0]
+  const isFirstTrack = firstTrack === track
+  const showFirstTrackGenres = !tracks.value
+    .slice(1)
+    .every(otherTrack => isGenresEqual(otherTrack, firstTrack))
+  if (isFirstTrack) {
+    return showFirstTrackGenres
+  }
+  const showTrackGenres = showFirstTrackGenres || !isGenresEqual(firstTrack, track)
+  return showTrackGenres
 }
 </script>
 
@@ -111,8 +147,8 @@ const showComposers = (track: TrackMetadata) => {
               v-if="albumMetadata.genres"
               class="flex flex-wrap items-center justify-center gap-2"
             >
-              <Chip v-for="genre of albumMetadata.genres" :key="genre">
-                <span class="my-1 text-sm">{{ genre }}</span>
+              <Chip>
+                <span class="my-1 text-sm">{{ albumGenres }}</span>
               </Chip>
             </div>
             <div class="mt-8 flex flex-col gap-2">
@@ -153,6 +189,11 @@ const showComposers = (track: TrackMetadata) => {
                 v-if="showComposers(track)"
                 :label="t('detail.label.composers')"
                 :value="track.composers?.join(MetadataSeparator) ?? ''"
+              />
+              <DetailRow
+                v-if="showGenres(track)"
+                :label="t('detail.label.genres')"
+                :value="track.genres?.join(MetadataSeparator) ?? ''"
               />
               <DetailRow
                 v-if="track.comments"
