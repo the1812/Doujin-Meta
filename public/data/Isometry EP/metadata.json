@@ -1,8 +1,9 @@
 [
   {
-    "title": "Mikazuki w/ Tsukie Yamina",
+    "title": "Mikazuki",
     "composers": [
-      "Joulez"
+      "Joulez",
+      "Tsukie Yamina"
     ],
     "album": "Isometry EP",
     "albumOrder": "MLAB-011",
@@ -20,25 +21,25 @@
     }
   },
   {
-    "title": "Isometry",
-    "composers": [
-      "Joulez"
-    ]
-  },
-  {
-    "title": "Isometry",
-    "composers": [
-      "Joulez"
-    ]
-  },
-  {
     "title": "Green Heart",
     "composers": [
       "Joulez"
     ]
   },
   {
-    "title": "Green Heart",
+    "title": "Isometry",
+    "composers": [
+      "Joulez"
+    ]
+  },
+  {
+    "title": "Miseria",
+    "composers": [
+      "Joulez"
+    ]
+  },
+  {
+    "title": "Introspective",
     "composers": [
       "Joulez"
     ]
