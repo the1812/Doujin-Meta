@@ -1,9 +1,9 @@
 const withDarkMode = (updater: (isDarkMode: boolean) => void | Promise<void>) => {
   return () => {
     const query = window.matchMedia('(prefers-color-scheme: dark)')
-    updater(query.matches)
+    void updater(query.matches)
     query.addEventListener('change', e => {
-      updater(e.matches)
+      void updater(e.matches)
     })
   }
 }

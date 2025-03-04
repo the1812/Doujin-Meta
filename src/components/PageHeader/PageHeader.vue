@@ -24,7 +24,7 @@ const keyword = computed({
     emit('update:modelValue', value)
   },
 })
-const handleSearch = async () => {
+const handleSearch = () => {
   emit('search', keyword.value)
 }
 </script>

@@ -5,10 +5,10 @@ export const usePageHeader = () => {
   const router = useRouter()
   const keyword = ref('')
   const homeNavigate = () => {
-    router.push({ path: '/', query: { home: 'true' } })
+    void router.push({ path: '/', query: { home: 'true' } })
   }
   const search = (newKeyword: string) => {
-    router.push({ path: '/', query: { keyword: newKeyword } })
+    void router.push({ path: '/', query: { keyword: newKeyword } })
   }
 
   return {

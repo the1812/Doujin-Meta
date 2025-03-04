@@ -19,6 +19,9 @@
     ".vscode-insiders",
     "metadata.json"
   ],
+  "eslint.validate": [
+    "vue"
+  ],
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },

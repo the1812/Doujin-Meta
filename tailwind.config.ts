@@ -34,7 +34,7 @@ export const config: Config = {
     plugin(({ matchUtilities, theme }) => {
       matchUtilities(
         {
-          'shadow-border': value => ({
+          'shadow-border': (value: string) => ({
             boxShadow: `0 0 0 ${getColor(value)} rgba(0,0,0,0.05)`,
           }),
         },

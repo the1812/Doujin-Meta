@@ -80,7 +80,7 @@ const detailApi = useApi(async () => {
   const detail = await getAlbumDetail(name as string)
   Object.assign(albumDetail, detail)
 })
-detailApi.sendRequest()
+void detailApi.sendRequest()
 
 const showComposers = (track: TrackMetadata) => {
   if (!track.composers) {
@@ -89,15 +89,15 @@ const showComposers = (track: TrackMetadata) => {
   const equal =
     track.composers.every(item => track.artists.includes(item)) &&
     track.artists.every(item => track.composers?.includes(item))
-  return track.composers && !equal
+  return !equal
 }
 
 const showGenres = (track: TrackMetadata) => {
   if (!track.genres) {
     return false
   }
-  const isGenresEqual = (a: TrackMetadata, b: TrackMetadata) =>
-    a.genres?.every((item, index) => item === b.genres?.[index])
+  const isGenresEqual = (a: TrackMetadata | undefined, b: TrackMetadata | undefined) =>
+    a?.genres?.every((item, index) => item === b?.genres?.[index])
   const firstTrack = tracks.value[0]
   const isFirstTrack = firstTrack === track
   const showFirstTrackGenres = !tracks.value

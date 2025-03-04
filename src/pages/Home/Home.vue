@@ -26,12 +26,12 @@ const searchApi = useApi(async () => {
   }
   searched.value = true
   searchResult.value = []
-  router.replace({ query: { keyword: keyword.value } })
+  void router.replace({ query: { keyword: keyword.value } })
   searchResult.value = await searchAlbums(keyword.value)
   const isFullMatch =
-    searchResult.value.length === 1 && searchResult.value[0].name === keyword.value
+    searchResult.value.length === 1 && searchResult.value[0]?.name === keyword.value
   if (isFullMatch) {
-    router.push({ path: `/albums/${encodeURIComponent(keyword.value)}` })
+    void router.push({ path: `/albums/${encodeURIComponent(keyword.value)}` })
   }
 })
 
@@ -39,7 +39,7 @@ const reset = () => {
   searched.value = false
   searchResult.value = []
   keyword.value = ''
-  router.replace({ query: {} })
+  void router.replace({ query: {} })
 }
 
 watch(
@@ -49,7 +49,7 @@ watch(
       return
     }
     keyword.value = newKeyword
-    searchApi.sendRequest()
+    void searchApi.sendRequest()
   },
   {
     immediate: true,
@@ -63,7 +63,7 @@ watch(
       return
     }
     reset()
-    router.replace({ query: {} })
+    void router.replace({ query: {} })
   },
 )
 

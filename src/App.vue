@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { RouterView, useRouter } from 'vue-router'
+import { RouteLocationNormalized, RouterView, useRouter } from 'vue-router'
 
 const router = useRouter()
 router.afterEach(to => {
   if (to.meta.title instanceof Function) {
-    document.title = `${to.meta.title(to)} - Doujin Meta`
+    const titleFunc = to.meta.title as (route: RouteLocationNormalized) => string
+    document.title = `${titleFunc(to)} - Doujin Meta`
   } else {
     document.title = 'Doujin Meta'
   }
