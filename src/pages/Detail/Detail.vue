@@ -127,7 +127,7 @@ const showGenres = (track: TrackMetadata) => {
               preview
               :src="albumDetail.coverUrl"
             >
-              <template #indicator>
+              <template #previewicon>
                 <Icon name="search-plus" />
               </template>
             </Image>
@@ -139,16 +139,16 @@ const showGenres = (track: TrackMetadata) => {
               <span v-if="albumMetadata.year"> · {{ albumMetadata.year }}</span>
             </div>
 
-            <PrimaryChip v-if="albumMetadata.albumOrder">
-              <Icon name="tag" class="mr-1 !text-[12px]" />
-              <span class="my-1 text-sm">{{ albumMetadata.albumOrder }}</span>
+            <PrimaryChip v-if="albumMetadata.albumOrder" class="!py-2">
+              <Icon name="tag" class="!text-[12px]" />
+              <span class="text-sm">{{ albumMetadata.albumOrder }}</span>
             </PrimaryChip>
             <div
               v-if="albumMetadata.genres"
               class="flex flex-wrap items-center justify-center gap-2"
             >
-              <Chip>
-                <span class="my-1 text-sm">{{ albumGenres }}</span>
+              <Chip class="!py-2">
+                <span class="text-sm">{{ albumGenres }}</span>
               </Chip>
             </div>
             <div class="mt-8 flex flex-col gap-2">

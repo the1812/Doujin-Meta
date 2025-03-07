@@ -78,16 +78,18 @@ const canSearch = computed(() => !searchApi.loading && Boolean(keyword))
           <img src="/images/Logo.Text.svg" />
         </ClsImage>
       </div>
-      <div class="flex items-center justify-center gap-3">
+      <div class="flex items-stretch justify-center gap-3">
         <InputText
           v-model="keyword"
           type="text"
+          size="large"
           class="min-w-0 max-w-[700px] flex-grow"
           :placeholder="t('search.placeholder')"
           @keydown.enter="searchApi.sendRequest"
         />
         <Button
           class="shrink-0"
+          size="large"
           :title="t('search.buttonTitle')"
           :loading="searchApi.loading"
           icon="pi pi-search"

@@ -36,8 +36,8 @@ const handleSearch = () => {
       'border-b border-[#d4d4d8] shadow-[0_1px_2px_0_rgb(0_0_0_/_5%)]',
     ]"
   >
-    <div class="flex items-center justify-center gap-3">
-      <div class="h-10 w-10">
+    <div class="flex items-stretch justify-center gap-3">
+      <div class="h-10 w-10 self-center">
         <ClsImage aspect-ratio="100%" class="cursor-pointer" @click="emit('homeNavigate')">
           <img src="/images/Logo.svg" />
         </ClsImage>
@@ -45,12 +45,13 @@ const handleSearch = () => {
       <InputText
         v-model="keyword"
         type="text"
-        class="p-inputtext-sm min-w-0 max-w-[700px] flex-grow"
+        size="small"
+        class="min-w-0 max-w-[700px] flex-grow"
         :placeholder="t('search.placeholder')"
         @keydown.enter="handleSearch"
       />
       <Button
-        class="p-button-sm shrink-0"
+        class="shrink-0"
         :loading="busy"
         icon="pi pi-search"
         :disabled="!keyword"
