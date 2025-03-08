@@ -1,4 +1,4 @@
-import { localJson } from 'touhou-tagger'
+import { localJson, Metadata } from 'touhou-tagger'
 import Axios, { AxiosResponse } from 'axios'
 import Fuse from 'fuse.js'
 import { ApiHandler } from './base.js'
@@ -10,7 +10,7 @@ export class GitHubApiHandler extends ApiHandler {
   private githubApi = Axios.create({
     headers: {
       Accept: 'application/vnd.github+json',
-      Authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
+      Authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN ?? ''}`,
       'X-GitHub-Api-Version': '2022-11-28',
     },
     responseType: 'json',
@@ -27,7 +27,7 @@ export class GitHubApiHandler extends ApiHandler {
   private inheritHeaders(githubResponse: AxiosResponse) {
     Object.entries(githubResponse.headers).forEach(([key, value]) => {
       if (key.toLowerCase().startsWith('x-') && !this.response.hasHeader(key)) {
-        this.response.setHeader(key, value)
+        this.response.setHeader(key, value as string)
       }
     })
   }
@@ -51,7 +51,9 @@ export class GitHubApiHandler extends ApiHandler {
       return
     }
     const { data: metadataTree } = await this.githubApi.get<BlobResponse>(metadataNode.git_url)
-    const metadataJson = JSON.parse(Buffer.from(metadataTree.content, 'base64').toString('utf8'))
+    const metadataJson = JSON.parse(
+      Buffer.from(metadataTree.content, 'base64').toString('utf8'),
+    ) as Metadata[]
     const result = {
       name,
       coverUrl: `/data/${encodeURI(name as string)}/${findCover(nodes, it => it.name)}`,

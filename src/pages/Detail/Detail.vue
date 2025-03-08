@@ -80,7 +80,7 @@ const detailApi = useApi(async () => {
   const detail = await getAlbumDetail(name as string)
   Object.assign(albumDetail, detail)
 })
-detailApi.sendRequest()
+void detailApi.sendRequest()
 
 const showComposers = (track: TrackMetadata) => {
   if (!track.composers) {
@@ -89,15 +89,15 @@ const showComposers = (track: TrackMetadata) => {
   const equal =
     track.composers.every(item => track.artists.includes(item)) &&
     track.artists.every(item => track.composers?.includes(item))
-  return track.composers && !equal
+  return !equal
 }
 
 const showGenres = (track: TrackMetadata) => {
   if (!track.genres) {
     return false
   }
-  const isGenresEqual = (a: TrackMetadata, b: TrackMetadata) =>
-    a.genres?.every((item, index) => item === b.genres?.[index])
+  const isGenresEqual = (a: TrackMetadata | undefined, b: TrackMetadata | undefined) =>
+    a?.genres?.every((item, index) => item === b?.genres?.[index])
   const firstTrack = tracks.value[0]
   const isFirstTrack = firstTrack === track
   const showFirstTrackGenres = !tracks.value
@@ -127,7 +127,7 @@ const showGenres = (track: TrackMetadata) => {
               preview
               :src="albumDetail.coverUrl"
             >
-              <template #indicator>
+              <template #previewicon>
                 <Icon name="search-plus" />
               </template>
             </Image>
@@ -139,16 +139,16 @@ const showGenres = (track: TrackMetadata) => {
               <span v-if="albumMetadata.year"> · {{ albumMetadata.year }}</span>
             </div>
 
-            <PrimaryChip v-if="albumMetadata.albumOrder">
-              <Icon name="tag" class="mr-1 !text-[12px]" />
-              <span class="my-1 text-sm">{{ albumMetadata.albumOrder }}</span>
+            <PrimaryChip v-if="albumMetadata.albumOrder" class="!py-2">
+              <Icon name="tag" class="!text-[12px]" />
+              <span class="text-sm">{{ albumMetadata.albumOrder }}</span>
             </PrimaryChip>
             <div
               v-if="albumMetadata.genres"
               class="flex flex-wrap items-center justify-center gap-2"
             >
-              <Chip>
-                <span class="my-1 text-sm">{{ albumGenres }}</span>
+              <Chip class="!py-2">
+                <span class="text-sm">{{ albumGenres }}</span>
               </Chip>
             </div>
             <div class="mt-8 flex flex-col gap-2">

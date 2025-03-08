@@ -23,7 +23,9 @@ export class LocalApiHandler extends ApiHandler {
       })
       return
     }
-    const metadataJson: Metadata[] = JSON.parse(await readFile(metadataPath, { encoding: 'utf-8' }))
+    const metadataJson = JSON.parse(
+      await readFile(metadataPath, { encoding: 'utf-8' }),
+    ) as Metadata[]
     const nodes = await readdir(LocalApiHandler.getPublicDataPath(name as string))
     const result = {
       name,

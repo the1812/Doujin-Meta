@@ -1,6 +1,8 @@
 import { createI18n, useI18n as useVueI18n } from 'vue-i18n'
+/* eslint-disable @typescript-eslint/naming-convention */
 import zhCN from './locales/zh-CN.json'
 import enUS from './locales/en-US.json'
+/* eslint-enable @typescript-eslint/naming-convention */
 
 export type MessageSchema = typeof zhCN
 const messages = {

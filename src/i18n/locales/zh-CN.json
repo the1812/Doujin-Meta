@@ -1,4 +1,8 @@
 {
+  "loadFailed": {
+    "description": "加载失败",
+    "retry": "重试"
+  },
   "search": {
     "placeholder": "输入专辑名称",
     "buttonTitle": "搜索"

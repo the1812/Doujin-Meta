@@ -1,4 +1,8 @@
 {
+  "loadFailed": {
+    "description": "Failed to load",
+    "retry": "Retry"
+  },
   "search": {
     "placeholder": "Album name",
     "buttonTitle": "Search"

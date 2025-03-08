@@ -1,6 +1,6 @@
 import { basename } from 'path'
 
-export const isDevelopment = process.env.VERCEL_ENV === 'development'
+export const useLocalApiHandler = process.env.USE_LOCAL_API_HANDLER === '1'
 
 export const findCover = <T>(nodes: T[], getPath: (node: T) => string) => {
   const allowedExtensions = ['.jpg', '.png']

@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import Button from 'primevue/button'
-import Menu from 'primevue/menu'
+import Menu, { MenuMethods } from 'primevue/menu'
 import { ref } from 'vue'
 import { useI18n } from '../../i18n'
 
 const props = defineProps<{ rawLink: string }>()
 
 const { t } = useI18n()
-const menu = ref<Menu>()
+const menu = ref<MenuMethods>()
 const menuItems = [
   {
     label: t('linkButtons.raw'),
