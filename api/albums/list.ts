@@ -1,11 +1,27 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { getApiHandler } from '../../api-support/handlers/index.js'
+import { db } from '../../api-support/database/db.js'
 
-export default async function handler(request: VercelRequest, response: VercelResponse) {
-  try {
-    await getApiHandler(request, response).listAlbums()
-  } catch (error) {
-    console.error(error)
-    response.status(500).end()
-  }
+export async function GET() {
+  const results = await db
+    .selectFrom('album')
+    .innerJoin('album_circle', 'album.id', 'album_circle.album')
+    .innerJoin('circle', 'album_circle.circle', 'circle.id')
+    .groupBy('album.id')
+    .selectAll('album')
+    .select(eb => eb.fn.agg<string[]>('array_agg', ['circle.name']).as('albumArtists'))
+    .execute()
+
+  return Response.json(
+    results.map(result => {
+      return {
+        id: result.id,
+        album: result.name,
+        albumOrder: result.order,
+        albumArtists: result.albumArtists,
+        genres: result.genres,
+        year: result.year,
+        coverUrl: result.cover_url,
+        extraData: result.extra_data,
+      }
+    }),
+  )
 }
