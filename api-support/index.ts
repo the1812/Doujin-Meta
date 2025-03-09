@@ -1,6 +1,6 @@
 import { basename } from 'path'
 
-export const useLocalApiHandler = process.env.USE_LOCAL_API_HANDLER === '1'
+export const useLocalApiHandler = process.env.IS_LOCAL === '1'
 
 export const findCover = <T>(nodes: T[], getPath: (node: T) => string) => {
   const allowedExtensions = ['.jpg', '.png']
