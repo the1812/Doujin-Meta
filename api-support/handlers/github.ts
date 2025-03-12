@@ -3,7 +3,7 @@ import Axios, { AxiosResponse } from 'axios'
 import Fuse from 'fuse.js'
 import { ApiHandler } from './base.js'
 import { findCover } from '../index.js'
-import { BlobResponse, ContentsNode, ContentsResponse, TreeResponse } from '../types'
+import { BlobResponse, ContentsNode, ContentsResponse, TreeResponse } from '../types.js'
 
 export class GitHubApiHandler extends ApiHandler {
   private githubHost = 'https://api.github.com'
