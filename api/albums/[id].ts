@@ -1,6 +1,7 @@
 import { RawBuilder, sql } from 'kysely'
 import { db } from '../../api-support/database/db.js'
 import { TrackArtistType } from '../../api-support/database/types.js'
+import { checkMutationAllowed } from '../../api-support/database/checks.js'
 
 export async function GET(request: Request) {
   const url = new URL(request.url)
@@ -67,4 +68,22 @@ export async function GET(request: Request) {
       }
     }),
   })
+}
+
+export async function DELETE(request: Request) {
+  if (!checkMutationAllowed()) {
+    return new Response(null, { status: 404 })
+  }
+
+  const url = new URL(request.url)
+  const id = url.pathname.match(/albums\/(.+)$/)?.[1]
+  if (id === undefined) {
+    return new Response(null, { status: 400 })
+  }
+
+  const result = await db.deleteFrom('album').where('album.id', '=', BigInt(id)).executeTakeFirst()
+  if (result.numDeletedRows === 0n) {
+    return new Response(null, { status: 404 })
+  }
+  return new Response(null, { status: 200 })
 }
