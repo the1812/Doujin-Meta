@@ -111,17 +111,46 @@ export async function POST(request: Request) {
         })
         .with('new_track_artist', transactionDb => {
           const trackId = transactionDb.selectFrom('new_track').select('id')
-          const artistsRelations = row.artists.map(name => {
+          const shouldSkipArtists =
+            Array.isArray(row.artists) &&
+            Array.isArray(row.composers) &&
+            row.artists.every((item, index) => item === row.composers?.[index])
+
+          const getArtistId = (name: string) => {
             const artistId = artists.find(a => a.name === name)?.id
             if (artistId === undefined) {
               throw new Error(`artist "${name}" not found`)
             }
-            return {
-              track: trackId,
-              artist: artistId,
-              artist_type: TrackArtistType.Artist,
-            }
-          })
+            return artistId
+          }
+
+          const artistsRelations = [
+            ...(row.lyricists?.map(name => {
+              return {
+                track: trackId,
+                artist: getArtistId(name),
+                artist_type: TrackArtistType.Lyricist,
+              }
+            }) ?? []),
+            ...(row.composers?.map(name => {
+              return {
+                track: trackId,
+                artist: getArtistId(name),
+                artist_type: TrackArtistType.Composer,
+              }
+            }) ?? []),
+          ]
+          if (!shouldSkipArtists) {
+            artistsRelations.push(
+              ...row.artists.map(name => {
+                return {
+                  track: trackId,
+                  artist: getArtistId(name),
+                  artist_type: TrackArtistType.Artist,
+                }
+              }),
+            )
+          }
 
           return transactionDb.insertInto('track_artist').values(artistsRelations)
         })
