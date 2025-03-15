@@ -19,7 +19,7 @@ export const generateMetadataUrls = (
 
   return {
     coverUrl: `${albumDetail.static_path}/${albumDetail.cover_filename}`,
-    metadataUrl: `https://github.com/${githubOwner}/${githubRepo}/blob/${gitBranch}${albumDetail.static_path}/metadata.json`,
-    rawUrl: `https://raw.githubusercontent.com/${githubOwner}/${githubRepo}/refs/heads/${gitBranch}${albumDetail.static_path}/metadata.json`,
+    metadataUrl: `https://github.com/${githubOwner}/${githubRepo}/blob/${gitBranch}/public${albumDetail.static_path}/metadata.json`,
+    rawUrl: `https://raw.githubusercontent.com/${githubOwner}/${githubRepo}/refs/heads/${gitBranch}/public${albumDetail.static_path}/metadata.json`,
   }
 }

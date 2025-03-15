@@ -32,20 +32,23 @@ export async function POST(request: Request) {
     return new Response(null, { status: 404 })
   }
   const payload = (await request.json()) as {
-    id?: bigint
-    metadata: Metadata[]
-    coverFilename: string
-    staticPath: string
+    readonly id?: bigint
+    readonly metadata: Metadata[]
+    readonly coverFilename: string
+    readonly staticPath: string
   }
   const rows = await localJson.normalizeWithoutCover(payload.metadata)
   const firstRow = rows.at(0)
   if (firstRow === undefined) {
     return new Response(null, { status: 400 })
   }
+
+  const isUpdateMode = payload.id !== undefined
+
   const result = await db.transaction().execute(async transaction => {
     const albumData = getAlbumData(firstRow, payload.staticPath, payload.coverFilename)
     const album = await (() => {
-      if (payload.id !== undefined) {
+      if (isUpdateMode) {
         return transaction
           .updateTable('album')
           .set(albumData)
@@ -105,6 +108,10 @@ export async function POST(request: Request) {
       .returning(['id', 'name'])
       .execute()
 
+    if (isUpdateMode) {
+      await transaction.deleteFrom('track').where('track.album', '=', album.id).execute()
+    }
+
     for (const row of rows) {
       const trackData = getTrackData(row, album.id)
       await transaction
@@ -113,10 +120,6 @@ export async function POST(request: Request) {
         })
         .with('new_track_artist', transactionDb => {
           const trackId = transactionDb.selectFrom('new_track').select('id')
-          const shouldSkipArtists =
-            Array.isArray(row.artists) &&
-            Array.isArray(row.composers) &&
-            row.artists.every((item, index) => item === row.composers?.[index])
 
           const getArtistId = (name: string) => {
             const artistId = artists.find(a => a.name === name)?.id
@@ -127,13 +130,13 @@ export async function POST(request: Request) {
           }
 
           const artistsRelations = [
-            ...(row.lyricists?.map(name => {
+            ...row.artists.map(name => {
               return {
                 track: trackId,
                 artist: getArtistId(name),
-                artist_type: TrackArtistType.Lyricist,
+                artist_type: TrackArtistType.Artist,
               }
-            }) ?? []),
+            }),
             ...(row.composers?.map(name => {
               return {
                 track: trackId,
@@ -141,18 +144,14 @@ export async function POST(request: Request) {
                 artist_type: TrackArtistType.Composer,
               }
             }) ?? []),
+            ...(row.lyricists?.map(name => {
+              return {
+                track: trackId,
+                artist: getArtistId(name),
+                artist_type: TrackArtistType.Lyricist,
+              }
+            }) ?? []),
           ]
-          if (!shouldSkipArtists) {
-            artistsRelations.push(
-              ...row.artists.map(name => {
-                return {
-                  track: trackId,
-                  artist: getArtistId(name),
-                  artist_type: TrackArtistType.Artist,
-                }
-              }),
-            )
-          }
 
           return transactionDb.insertInto('track_artist').values(artistsRelations)
         })
