@@ -2,6 +2,7 @@ import { RawBuilder, sql } from 'kysely'
 import { db } from '../../api-support/database/db.js'
 import { TrackArtistType } from '../../api-support/database/types.js'
 import { checkMutationAllowed } from '../../api-support/database/checks.js'
+import { generateMetadataUrls } from '../../api-support/helpers.js'
 
 export async function GET(request: Request) {
   const url = new URL(request.url)
@@ -47,8 +48,8 @@ export async function GET(request: Request) {
     albumArtists: result.albumArtists,
     genres: result.genres,
     year: result.year,
-    coverUrl: result.cover_url,
     extraData: result.extra_data,
+    ...generateMetadataUrls(result),
     tracks: tracks.map(track => {
       return {
         title: track.title,
@@ -60,6 +61,7 @@ export async function GET(request: Request) {
         composers: track.artists
           .filter(it => it.artistType === TrackArtistType.Composer)
           .map(it => it.name),
+        genres: track.genres,
         comments: track.comments,
         lyricLanguage: track.lyric_language,
         lyricists: track.artists

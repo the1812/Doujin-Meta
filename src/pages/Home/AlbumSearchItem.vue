@@ -1,42 +1,13 @@
 <script setup lang="ts">
-import { AlbumApiItem } from '../../api/types'
+import { AlbumItem } from '../../api/types'
 
-const props = defineProps<{ item: AlbumApiItem }>()
-
-type TitleSlice = {
-  text: string
-  isHighlight: boolean
-  index: number
-}
-const titleSlices = (() => {
-  const result: TitleSlice[] = []
-  let currentIndex = 0
-  for (const [start, end] of props.item.matches) {
-    result.push({
-      text: props.item.name.substring(currentIndex, start),
-      isHighlight: false,
-      index: currentIndex,
-    })
-    result.push({
-      text: props.item.name.substring(start, end + 1),
-      isHighlight: true,
-      index: start,
-    })
-    currentIndex = end + 1
-  }
-  result.push({
-    text: props.item.name.substring(currentIndex),
-    isHighlight: false,
-    index: currentIndex,
-  })
-  return result.filter(it => it.text)
-})()
+defineProps<{ item: AlbumItem }>()
 </script>
 
 <template>
   <div class="flex justify-center">
     <RouterLink
-      :to="`/albums/${encodeURIComponent(item.name)}`"
+      :to="`/albums/${item.id}`"
       class="flex max-w-[830px] flex-grow cursor-pointer items-center gap-3 rounded-md p-2 hover:bg-gray-100"
     >
       <div class="flex h-10 w-10 items-center justify-center">
@@ -46,13 +17,14 @@ const titleSlices = (() => {
         />
       </div>
       <div class="flex-grow">
-        <span
+        <!-- <span
           v-for="slice of titleSlices"
           :key="slice.index"
           :class="{ 'text-violet-500': slice.isHighlight }"
         >
           {{ slice.text }}
-        </span>
+        </span> -->
+        {{ item.album }}
       </div>
     </RouterLink>
   </div>

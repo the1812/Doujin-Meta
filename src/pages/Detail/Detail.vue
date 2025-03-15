@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import type { AlbumMetadata, Metadata } from 'touhou-tagger'
 import Image from 'primevue/image'
 import Chip from 'primevue/chip'
 import { computed, reactive } from 'vue'
-import { AlbumDetail } from '../../api/types'
+import { AlbumDetail, AlbumTrackItem } from '../../api/types'
 import Icon from '../../components/Icon.vue'
 import PrimaryChip from '../../components/PrimaryChip.vue'
 import DetailRow from './DetailRow.vue'
@@ -24,25 +23,28 @@ import { useI18n } from '../../i18n'
 
 const { homeNavigate, keyword, search } = usePageHeader()
 const { params } = useRoute()
-const { name } = params
+const { id } = params
 const { t } = useI18n()
 
 const albumDetail: AlbumDetail = reactive({
+  id: '',
+  album: '',
+  albumOrder: '',
+  albumArtists: [],
+  genres: [],
+  year: null,
   coverUrl: '',
-  name: '',
   metadataUrl: '',
   rawUrl: '',
-  metadata: [],
+  extraData: {},
+  tracks: [],
 })
-const tracks = computed(() => albumDetail.metadata)
-const albumMetadata = computed(() => tracks.value[0] as AlbumMetadata)
+
+const tracks = computed(() => albumDetail.tracks)
 const albumGenres = computed(() => {
   const genresMap: Record<string, number> = {}
   tracks.value.forEach(track => {
-    const key = track.genres?.join(MetadataSeparator)
-    if (key === undefined) {
-      return
-    }
+    const key = track.genres.join(MetadataSeparator)
     if (genresMap[key] === undefined) {
       genresMap[key] = 1
       return
@@ -54,15 +56,9 @@ const albumGenres = computed(() => {
     .at(0)
     ?.at(0) as string | undefined
 })
-const links = computed(
-  (): {
-    dizzylab?: string
-    thbWiki?: string
-  } => albumMetadata.value.extraData?.links ?? {},
-)
+const links = computed(() => albumDetail.extraData?.links ?? {})
 
-type TrackMetadata = Omit<Metadata, keyof Omit<AlbumMetadata, 'genres'>>
-type DiscGroup = { discNumber: string; tracks: TrackMetadata[] }
+type DiscGroup = { discNumber: string; tracks: AlbumTrackItem[] }
 const discGroups = computed(() => {
   const groups: DiscGroup[] = []
   tracks.value.forEach(track => {
@@ -77,27 +73,21 @@ const discGroups = computed(() => {
 })
 
 const detailApi = useApi(async () => {
-  const detail = await getAlbumDetail(name as string)
+  const detail = await getAlbumDetail(id as string)
   Object.assign(albumDetail, detail)
 })
 void detailApi.sendRequest()
 
-const showComposers = (track: TrackMetadata) => {
-  if (!track.composers) {
-    return false
-  }
+const showComposers = (track: AlbumTrackItem) => {
   const equal =
     track.composers.every(item => track.artists.includes(item)) &&
-    track.artists.every(item => track.composers?.includes(item))
+    track.artists.every(item => track.composers.includes(item))
   return !equal
 }
 
-const showGenres = (track: TrackMetadata) => {
-  if (!track.genres) {
-    return false
-  }
-  const isGenresEqual = (a: TrackMetadata | undefined, b: TrackMetadata | undefined) =>
-    a?.genres?.every((item, index) => item === b?.genres?.[index])
+const showGenres = (track: AlbumTrackItem) => {
+  const isGenresEqual = (a: AlbumTrackItem | undefined, b: AlbumTrackItem | undefined) =>
+    a?.genres.every((item, index) => item === b?.genres[index])
   const firstTrack = tracks.value[0]
   const isFirstTrack = firstTrack === track
   const showFirstTrackGenres = !tracks.value
@@ -132,21 +122,18 @@ const showGenres = (track: TrackMetadata) => {
               </template>
             </Image>
           </ClsImage>
-          <div v-if="albumMetadata" class="flex max-w-[400px] flex-col items-center gap-2">
-            <div class="text-center text-xl font-semibold">{{ albumMetadata.album }}</div>
+          <div class="flex max-w-[400px] flex-col items-center gap-2">
+            <div class="text-center text-xl font-semibold">{{ albumDetail.album }}</div>
             <div class="text mb-2 text-center text-gray-500">
-              <span>{{ albumMetadata.albumArtists?.join(MetadataSeparator) }}</span>
-              <span v-if="albumMetadata.year"> · {{ albumMetadata.year }}</span>
+              <span>{{ albumDetail.albumArtists?.join(MetadataSeparator) }}</span>
+              <span v-if="albumDetail.year"> · {{ albumDetail.year }}</span>
             </div>
 
-            <PrimaryChip v-if="albumMetadata.albumOrder" class="!py-2">
+            <PrimaryChip v-if="albumDetail.albumOrder" class="!py-2">
               <Icon name="tag" class="!text-[12px]" />
-              <span class="text-sm">{{ albumMetadata.albumOrder }}</span>
+              <span class="text-sm">{{ albumDetail.albumOrder }}</span>
             </PrimaryChip>
-            <div
-              v-if="albumMetadata.genres"
-              class="flex flex-wrap items-center justify-center gap-2"
-            >
+            <div v-if="albumDetail.genres" class="flex flex-wrap items-center justify-center gap-2">
               <Chip class="!py-2">
                 <span class="text-sm">{{ albumGenres }}</span>
               </Chip>

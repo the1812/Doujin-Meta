@@ -4,7 +4,7 @@ import InputText from 'primevue/inputtext'
 import { useRoute, useRouter } from 'vue-router'
 import { computed, ref, watch } from 'vue'
 import { searchAlbums, useApi } from '../../api'
-import { AlbumApiItem } from '../../api/types'
+import { AlbumItem } from '../../api/types'
 import AlbumSearchItem from './AlbumSearchItem.vue'
 import PageHeader from '../../components/PageHeader/PageHeader.vue'
 import Loading from '../../components/Loading.vue'
@@ -18,7 +18,7 @@ const { t } = useI18n()
 
 const searched = ref(false)
 const keyword = ref('')
-const searchResult = ref([] as AlbumApiItem[])
+const searchResult = ref([] as AlbumItem[])
 
 const searchApi = useApi(async () => {
   if (!keyword.value) {
@@ -28,10 +28,13 @@ const searchApi = useApi(async () => {
   searchResult.value = []
   void router.replace({ query: { keyword: keyword.value } })
   searchResult.value = await searchAlbums(keyword.value)
+  const firstResult = searchResult.value[0]
   const isFullMatch =
-    searchResult.value.length === 1 && searchResult.value[0]?.name === keyword.value
+    searchResult.value.length === 1 &&
+    firstResult !== undefined &&
+    firstResult.album === keyword.value
   if (isFullMatch) {
-    void router.push({ path: `/albums/${encodeURIComponent(keyword.value)}` })
+    void router.push({ path: `/albums/${firstResult.id}` })
   }
 })
 

@@ -1,4 +1,5 @@
 import { db } from '../../api-support/database/db.js'
+import { generateMetadataUrls } from '../../api-support/helpers.js'
 
 export async function GET(request: Request) {
   const urlParams = new URL(request.url).searchParams
@@ -27,7 +28,7 @@ export async function GET(request: Request) {
         albumArtists: result.albumArtists,
         genres: result.genres,
         year: result.year,
-        coverUrl: result.cover_url,
+        ...generateMetadataUrls(result),
         extraData: result.extra_data,
       }
     }),

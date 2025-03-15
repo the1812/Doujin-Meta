@@ -3,11 +3,12 @@ import { checkMutationAllowed } from '../../api-support/database/checks.js'
 import { Metadata, localJson } from 'touhou-tagger'
 import { TrackArtistType } from '../../api-support/database/types.js'
 
-const getAlbumData = (metadata: Metadata, coverUrl: string) => {
+const getAlbumData = (metadata: Metadata, staticPath: string, coverFilename: string) => {
   return {
     name: metadata.album,
     order: metadata.albumOrder,
-    cover_url: coverUrl,
+    static_path: staticPath,
+    cover_filename: coverFilename,
     year: metadata.year,
     genres: metadata.genres ?? [],
     extra_data: metadata.extraData === undefined ? undefined : JSON.stringify(metadata.extraData),
@@ -33,7 +34,8 @@ export async function POST(request: Request) {
   const payload = (await request.json()) as {
     id?: bigint
     metadata: Metadata[]
-    coverUrl: string
+    coverFilename: string
+    staticPath: string
   }
   const rows = await localJson.normalizeWithoutCover(payload.metadata)
   const firstRow = rows.at(0)
@@ -41,7 +43,7 @@ export async function POST(request: Request) {
     return new Response(null, { status: 400 })
   }
   const result = await db.transaction().execute(async transaction => {
-    const albumData = getAlbumData(firstRow, payload.coverUrl)
+    const albumData = getAlbumData(firstRow, payload.staticPath, payload.coverFilename)
     const album = await (() => {
       if (payload.id !== undefined) {
         return transaction

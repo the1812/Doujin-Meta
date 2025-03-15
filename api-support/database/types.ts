@@ -5,8 +5,9 @@ export interface AlbumTable {
   name: string
   order: string
   genres: string[]
+  static_path: string
+  cover_filename: string
   year: string | null
-  cover_url: string | null
   extra_data: JSONColumnType<Record<string, unknown>> | null
 }
 
