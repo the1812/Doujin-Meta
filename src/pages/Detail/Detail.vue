@@ -78,7 +78,14 @@ const detailApi = useApi(async () => {
 })
 void detailApi.sendRequest()
 
+const showArtists = (track: AlbumTrackItem) => {
+  return track.artists.length > 0
+}
+
 const showComposers = (track: AlbumTrackItem) => {
+  if (track.composers.length === 0) {
+    return false
+  }
   const equal =
     track.composers.every(item => track.artists.includes(item)) &&
     track.artists.every(item => track.composers.includes(item))
@@ -169,6 +176,7 @@ const showGenres = (track: AlbumTrackItem) => {
             >
               <DetailHeader :label="`#${track.trackNumber}`" :value="track.title" />
               <DetailRow
+                v-if="showArtists(track)"
                 :label="t('detail.label.artists')"
                 :value="track.artists.join(MetadataSeparator)"
               />
