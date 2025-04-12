@@ -1,3 +1,4 @@
+import { sql } from 'kysely'
 import { db } from '../../api-support/database/db.js'
 import { generateMetadataUrls } from '../../api-support/helpers.js'
 
@@ -10,13 +11,15 @@ export async function GET(request: Request) {
 
   const results = await db
     .selectFrom('album')
-    .where('album.name', 'ilike', `%${keyword}%`)
+    .where(eb =>
+      eb.or([sql<boolean>`album.name % ${keyword}`, eb('album.name', 'ilike', `%${keyword}%`)]),
+    )
     .limit(20)
     .innerJoin('album_circle', 'album.id', 'album_circle.album')
     .innerJoin('circle', 'album_circle.circle', 'circle.id')
     .groupBy('album.id')
     .selectAll('album')
-    .select(eb => eb.fn.agg<string[]>('array_agg', ['circle.name']).as('albumArtists'))
+    .select(eb => eb.fn.agg<string[]>('array_agg', ['circle.name']).as('album_artists'))
     .execute()
 
   return Response.json(
@@ -25,7 +28,7 @@ export async function GET(request: Request) {
         id: result.id,
         album: result.name,
         albumOrder: result.order,
-        albumArtists: result.albumArtists,
+        albumArtists: result.album_artists,
         genres: result.genres,
         year: result.year,
         ...generateMetadataUrls(result),

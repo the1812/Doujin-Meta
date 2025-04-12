@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { AlbumItem } from '../../api/types'
+import { AlbumSearchItem } from '../../api/types'
 
-defineProps<{ item: AlbumItem }>()
+defineProps<{ item: AlbumSearchItem }>()
 </script>
 
 <template>
@@ -16,14 +16,7 @@ defineProps<{ item: AlbumItem }>()
           class="w-10 shrink-0 overflow-hidden rounded-sm object-contain shadow-sm"
         />
       </div>
-      <div class="flex-grow">
-        <!-- <span
-          v-for="slice of titleSlices"
-          :key="slice.index"
-          :class="{ 'text-violet-500': slice.isHighlight }"
-        >
-          {{ slice.text }}
-        </span> -->
+      <div class="flex-grow [&>b]:font-medium [&>b]:text-violet-500">
         {{ item.album }}
       </div>
     </RouterLink>

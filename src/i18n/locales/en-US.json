@@ -5,7 +5,8 @@
   },
   "search": {
     "placeholder": "Album name",
-    "buttonTitle": "Search"
+    "buttonTitle": "Search",
+    "noResult": "No result"
   },
   "linkButtons": {
     "dizzylab": "View on dizzylab",

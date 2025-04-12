@@ -13,7 +13,10 @@ const getRequiredEnv = (key: string) => {
 }
 
 const getDatabaseUrl = () => {
-  if (process.env.IS_LOCAL === '1' || process.env.IS_PREVIEW === '1') {
+  if (process.env.IS_LOCAL === '1') {
+    return getRequiredEnv('POSTGRES_LOCAL_URL')
+  }
+  if (process.env.IS_PREVIEW === '1') {
     return getRequiredEnv('POSTGRES_DEVELOPMENT_URL')
   }
   return getRequiredEnv('POSTGRES_URL')
@@ -22,6 +25,7 @@ const getDatabaseUrl = () => {
 const dialect = new PostgresDialect({
   pool: new Pool({
     connectionString: getDatabaseUrl(),
+    ssl: process.env.IS_LOCAL === undefined,
   }),
 })
 

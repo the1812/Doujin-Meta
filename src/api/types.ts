@@ -18,6 +18,10 @@ export interface AlbumItem {
   extraData?: AlbumExtraData
 }
 
+export interface AlbumSearchItem extends AlbumItem {
+  albumMatch: never
+}
+
 export interface AlbumTrackItem {
   title: string
   artists: string[]

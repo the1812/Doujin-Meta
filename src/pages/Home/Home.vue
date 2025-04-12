@@ -4,8 +4,8 @@ import InputText from 'primevue/inputtext'
 import { useRoute, useRouter } from 'vue-router'
 import { computed, ref, watch } from 'vue'
 import { searchAlbums, useApi } from '../../api'
-import { AlbumItem } from '../../api/types'
-import AlbumSearchItem from './AlbumSearchItem.vue'
+import { AlbumSearchItem } from '../../api/types'
+import AlbumSearchItemComponent from './AlbumSearchItem.vue'
 import PageHeader from '../../components/PageHeader/PageHeader.vue'
 import Loading from '../../components/Loading.vue'
 import Error from '../../components/Error.vue'
@@ -18,7 +18,7 @@ const { t } = useI18n()
 
 const searched = ref(false)
 const keyword = ref('')
-const searchResult = ref([] as AlbumItem[])
+const searchResult = ref([] as AlbumSearchItem[])
 
 const searchApi = useApi(async () => {
   if (!keyword.value) {
@@ -109,9 +109,9 @@ const canSearch = computed(() => !searchApi.loading && Boolean(keyword))
       @search="searchApi.sendRequest"
     />
     <div v-if="searched" class="flex flex-col gap-1 px-3 pb-4 pt-2">
-      <AlbumSearchItem v-for="item of searchResult" :key="item.id" :item="item" />
+      <AlbumSearchItemComponent v-for="item of searchResult" :key="item.id" :item="item" />
       <div v-if="searchApi.loaded && searchResult.length === 0" class="p-4 text-center">
-        No result
+        {{ t('search.noResult') }}
       </div>
     </div>
 

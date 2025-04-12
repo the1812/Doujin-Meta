@@ -1,18 +1,23 @@
 {
   "cSpell.words": [
     "caniuse",
+    "dompurify",
     "doujin",
     "ilike",
     "inputtext",
     "intlify",
     "kysely",
+    "plainto",
     "previewicon",
     "primeicons",
     "primeuix",
     "primevue",
     "progressspinner",
     "Touhou",
-    "unplugin"
+    "tsquery",
+    "tsvector",
+    "unplugin",
+    "websearch"
   ],
   "cSpell.ignorePaths": [
     "package-lock.json",
