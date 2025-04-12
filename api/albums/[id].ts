@@ -39,6 +39,7 @@ export async function GET(request: Request) {
         >(sql`jsonb_build_object('name', artist.name, 'artistType', track_artist.artist_type)`)
         .as('artists'),
     ])
+    .orderBy(sql`track.track_number::INTEGER`)
     .execute()
 
   return Response.json({

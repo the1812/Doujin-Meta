@@ -9,6 +9,7 @@ export async function GET() {
     .groupBy('album.id')
     .selectAll('album')
     .select(eb => eb.fn.agg<string[]>('array_agg', ['circle.name']).as('albumArtists'))
+    .orderBy('id')
     .execute()
 
   return Response.json(
