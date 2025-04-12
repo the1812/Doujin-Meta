@@ -1,7 +1,7 @@
 import { RawBuilder, sql } from 'kysely'
 import { db } from '../../api-support/database/db.js'
 import { TrackArtistType } from '../../api-support/database/types.js'
-import { checkMutationAllowed } from '../../api-support/database/checks.js'
+import { isLocal } from '../../api-support/database/checks.js'
 import { generateMetadataUrls } from '../../api-support/helpers.js'
 
 export async function GET(request: Request) {
@@ -74,7 +74,7 @@ export async function GET(request: Request) {
 }
 
 export async function DELETE(request: Request) {
-  if (!checkMutationAllowed()) {
+  if (!isLocal()) {
     return new Response(null, { status: 404 })
   }
 

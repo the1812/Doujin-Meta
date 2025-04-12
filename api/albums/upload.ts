@@ -1,5 +1,5 @@
 import { db } from '../../api-support/database/db.js'
-import { checkMutationAllowed } from '../../api-support/database/checks.js'
+import { isLocal } from '../../api-support/database/checks.js'
 import { Metadata, localJson } from 'touhou-tagger'
 import { TrackArtistType } from '../../api-support/database/types.js'
 
@@ -28,7 +28,7 @@ const getTrackData = (metadata: Metadata, albumId: bigint) => {
 }
 
 export async function POST(request: Request) {
-  if (!checkMutationAllowed()) {
+  if (!isLocal()) {
     return new Response(null, { status: 404 })
   }
   const payload = (await request.json()) as {

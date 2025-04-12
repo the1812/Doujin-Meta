@@ -1,7 +1,12 @@
 import { db } from '../../api-support/database/db.js'
+import { isLocal } from '../../api-support/database/checks.js'
 import { generateMetadataUrls } from '../../api-support/helpers.js'
 
 export async function GET() {
+  if (!isLocal()) {
+    return new Response(null, { status: 404 })
+  }
+
   const results = await db
     .selectFrom('album')
     .innerJoin('album_circle', 'album.id', 'album_circle.album')
