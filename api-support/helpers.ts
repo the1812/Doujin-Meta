@@ -17,9 +17,11 @@ export const generateMetadataUrls = (
     throw new Error('github info not found')
   }
 
+  const encodedPath = encodeURIComponent(albumDetail.static_path)
+
   return {
-    coverUrl: `${albumDetail.static_path}/${albumDetail.cover_filename}`,
-    metadataUrl: `https://github.com/${githubOwner}/${githubRepo}/blob/${gitBranch}/public${albumDetail.static_path}/metadata.json`,
-    rawUrl: `https://raw.githubusercontent.com/${githubOwner}/${githubRepo}/refs/heads/${gitBranch}/public${albumDetail.static_path}/metadata.json`,
+    coverUrl: `/data/${encodedPath}/${albumDetail.cover_filename}`,
+    metadataUrl: `https://github.com/${githubOwner}/${githubRepo}/blob/${gitBranch}/public/data/${encodedPath}/metadata.json`,
+    rawUrl: `https://raw.githubusercontent.com/${githubOwner}/${githubRepo}/refs/heads/${gitBranch}/public/data/${encodedPath}/metadata.json`,
   }
 }
