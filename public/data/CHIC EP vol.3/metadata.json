@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Faded",
+    "composers": [
+      "DJ UMEKAWA"
+    ],
+    "album": "CHIC EP vol.3",
+    "albumOrder": "EMCD03",
+    "albumArtists": [
+      "食堂大学电子音乐同好部"
+    ],
+    "genres": [
+      "Trance",
+      "House",
+      "Chill"
+    ],
+    "year": "2025",
+    "extraData": {
+      "links": {
+        "dizzylab": "EMCD03"
+      }
+    }
+  },
+  {
+    "title": "Fall into Memories",
+    "composers": [
+      "DJ UMEKAWA"
+    ]
+  },
+  {
+    "title": "In the Endless Days",
+    "composers": [
+      "DJ UMEKAWA"
+    ]
+  },
+  {
+    "title": "Miss You",
+    "composers": [
+      "DJ UMEKAWA"
+    ]
+  }
+]

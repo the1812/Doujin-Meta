@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Found You",
+    "composers": [
+      "Akamasumi."
+    ],
+    "album": "Found You - EP",
+    "albumOrder": "AKM-004",
+    "albumArtists": [
+      "もふ学園"
+    ],
+    "genres": [
+      "Happy Hardcore"
+    ],
+    "year": "2025",
+    "extraData": {
+      "links": {
+        "dizzylab": "AKM-004"
+      }
+    }
+  },
+  {
+    "title": "Wonderland (Remaster)",
+    "composers": [
+      "Akamasumi."
+    ]
+  },
+  {
+    "title": "Another Day",
+    "composers": [
+      "Akamasumi."
+    ]
+  },
+  {
+    "title": "Mon Panache (Remaster)",
+    "composers": [
+      "Akamasumi."
+    ]
+  },
+  {
+    "title": "Guiding Star",
+    "composers": [
+      "Akamasumi."
+    ]
+  },
+  {
+    "title": "Guiding Star (Altermis Remix)",
+    "artists": [
+      "Altermis",
+      "Akamasumi."
+    ],
+    "composers": [
+      "Akamasumi."
+    ]
+  }
+]
