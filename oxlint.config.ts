@@ -10,7 +10,7 @@ export default defineConfig({
     typeAware: true,
     typeCheck: true,
   },
-  ignorePatterns: ['dist/', '.output/', 'server-dist/', 'node_modules/', 'public/data/'],
+  ignorePatterns: ['.output/', 'node_modules/', 'public/data/'],
   overrides: [
     {
       files: ['server/routes/**/*.ts'],
