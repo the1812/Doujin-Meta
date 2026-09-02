@@ -2,10 +2,12 @@ import { readdirSync, readFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import fmtConfig from '@the1812/oxc-config/oxfmt'
+import lintConfig from '@the1812/oxc-config/oxlint'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { nitro } from 'nitro/vite'
 import * as v from 'valibot'
-import { defineConfig } from 'vite'
+import { defineConfig, lazyPlugins } from 'vite-plus'
 
 const projectRoot = dirname(fileURLToPath(import.meta.url))
 const dataRoot = resolve(projectRoot, 'public/data')
@@ -36,7 +38,29 @@ const buildAlbumDataModule = () => {
 }
 
 export default defineConfig({
-  plugins: [
+  fmt: {
+    ...fmtConfig,
+    ignorePatterns: [...(fmtConfig.ignorePatterns ?? []), '.output/', 'public/data/'],
+  },
+  lint: {
+    extends: [lintConfig],
+    categories: {
+      correctness: 'off',
+    },
+    jsPlugins: [{ name: 'vite-plus', specifier: 'vite-plus/oxlint-plugin' }],
+    rules: { 'vite-plus/prefer-vite-plus-imports': 'error' },
+    options: { typeAware: true, typeCheck: true },
+    ignorePatterns: ['.output/', 'node_modules/', 'public/data/'],
+    overrides: [
+      {
+        files: ['server/routes/**/*.ts'],
+        rules: {
+          'import/no-default-export': 'off',
+        },
+      },
+    ],
+  },
+  plugins: lazyPlugins(() => [
     vueJsx(),
     nitro({
       compatibilityDate: '2026-09-02',
@@ -70,5 +94,5 @@ export default defineConfig({
         watch: ['public/data'],
       },
     }),
-  ],
+  ]),
 })

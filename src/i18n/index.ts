@@ -13,6 +13,7 @@ export const useI18n = () => {
   return useVueI18n<{ message: MessageSchema }>()
 }
 export const i18n = createI18n<[MessageSchema], 'zh-CN' | 'en-US'>({
+  // oxlint-disable-next-line typescript/no-deprecated -- Required for Composition API mode in vue-i18n 11.
   legacy: false,
   locale: 'zh-CN',
   fallbackLocale: 'zh-CN',
