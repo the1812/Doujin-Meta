@@ -1,5 +1,6 @@
 import Axios from 'axios'
 import { computed, reactive, ref } from 'vue'
+
 import type { AlbumDetail, AlbumSearchResponse } from '../../shared/api'
 
 export const api = Axios.create({

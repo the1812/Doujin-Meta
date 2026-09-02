@@ -1,10 +1,10 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
-import { nitro } from 'nitro/vite'
 import { readdirSync, readFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
+
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import { nitro } from 'nitro/vite'
+import { defineConfig } from 'vite'
 
 const projectRoot = dirname(fileURLToPath(import.meta.url))
 const dataRoot = resolve(projectRoot, 'public/data')
@@ -31,10 +31,7 @@ const buildAlbumDataModule = () => {
 
 export default defineConfig({
   plugins: [
-    vue(),
-    VueI18nPlugin({
-      include: resolve(projectRoot, 'src/i18n/locales/**'),
-    }),
+    vueJsx(),
     nitro({
       compatibilityDate: '2026-09-02',
       serverDir: './server',

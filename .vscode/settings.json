@@ -16,6 +16,8 @@
     "Touhou",
     "tsquery",
     "tsvector",
+    "oxfmt",
+    "oxlint",
     "unplugin",
     "websearch"
   ],
@@ -28,16 +30,19 @@
     ".vscode-insiders",
     "metadata.json"
   ],
-  "eslint.validate": [
-    "vue"
-  ],
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.oxc": "explicit"
+  },
+  "oxc.typeAware": true,
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "oxc.oxc-vscode"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "oxc.oxc-vscode"
   },
-  "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
   }
 }

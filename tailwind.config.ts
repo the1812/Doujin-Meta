@@ -1,13 +1,13 @@
 import type { Config } from 'tailwindcss'
-import plugin from 'tailwindcss/plugin'
 import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette'
+import plugin from 'tailwindcss/plugin'
 
 const getColor = (value: string | { DEFAULT: string }) => {
   return typeof value === 'string' ? value : value.DEFAULT
 }
 
 export const config: Config = {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {

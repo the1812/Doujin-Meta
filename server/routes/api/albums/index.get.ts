@@ -1,6 +1,7 @@
 import { defineHandler } from 'nitro'
 import { getValidatedQuery } from 'nitro/h3'
 import * as v from 'valibot'
+
 import { useAlbumCatalog } from '../../../catalog-instance.js'
 
 const integerParam = v.pipe(v.string(), v.regex(/^\d+$/u), v.transform(Number), v.integer())

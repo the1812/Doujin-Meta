@@ -1,6 +1,7 @@
 import { defineHandler } from 'nitro'
 import { getValidatedRouterParams } from 'nitro/h3'
 import * as v from 'valibot'
+
 import { useAlbumCatalog } from '../../../catalog-instance.js'
 
 const albumParamsSchema = v.strictObject({

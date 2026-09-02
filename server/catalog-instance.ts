@@ -1,5 +1,7 @@
-import albumSources from '#album-data'
 import { useRuntimeConfig } from 'nitro/runtime-config'
+
+import albumSources from '#album-data'
+
 import { AlbumCatalog } from './catalog.js'
 
 interface RepositoryConfig {

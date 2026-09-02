@@ -1,4 +1,4 @@
 interface:
-  display_name: "Add Doujin Album Data"
-  short_description: "Add verified album metadata and covers to Doujin-Meta."
-  default_prompt: "Add album metadata to this Doujin-Meta repository from an external release page, following existing public/data conventions."
+  display_name: 'Add Doujin Album Data'
+  short_description: 'Add verified album metadata and covers to Doujin-Meta.'
+  default_prompt: 'Add album metadata to this Doujin-Meta repository from an external release page, following existing public/data conventions.'
