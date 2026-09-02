@@ -16,6 +16,7 @@
     "build": "pnpm check && vite build",
     "start": "node .output/server/index.mjs",
     "preview": "vite preview",
+    "album:id": "node scripts/generate-album-id.mjs",
     "check": "pnpm format:check && pnpm lint",
     "format": "oxfmt .",
     "format:check": "oxfmt --check .",

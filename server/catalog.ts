@@ -32,13 +32,14 @@ interface CatalogOptions {
 }
 
 export interface AlbumSource {
+  id: string
   folderName: string
   coverFilename?: string
   rows: MetadataRow[]
 }
 
 export interface AlbumFilters {
-  query?: string
+  keyword?: string
   album?: string
   albumArtist?: string
   artist?: string
@@ -60,6 +61,25 @@ const normalizeSearchValue = (value: string) => value.normalize('NFKC').toLowerC
 
 const includes = (values: string[], keyword: string) =>
   values.some(value => value.includes(keyword))
+
+const getKeywordRank = (search: CatalogEntry['search'], keyword: string) => {
+  if (search.album === keyword) {
+    return 0
+  }
+  if (search.album.startsWith(keyword)) {
+    return 1
+  }
+  if (search.album.includes(keyword)) {
+    return 2
+  }
+  if (includes(search.albumArtists, keyword)) {
+    return 3
+  }
+  if (includes(search.artists, keyword)) {
+    return 4
+  }
+  return undefined
+}
 
 const encodePathSegment = (value: string) => encodeURI(value).replaceAll('#', '%23')
 
@@ -94,7 +114,7 @@ const normalizeTracks = (rows: MetadataRow[], albumGenres: string[]): AlbumTrack
 }
 
 const createAlbum = (source: AlbumSource, options: CatalogOptions): CatalogEntry => {
-  const { folderName, coverFilename, rows } = source
+  const { id, folderName, coverFilename, rows } = source
   const firstRow = rows[0]
   if (firstRow === undefined) {
     throw new Error(`Album metadata is empty: ${folderName}`)
@@ -104,7 +124,7 @@ const createAlbum = (source: AlbumSource, options: CatalogOptions): CatalogEntry
   const albumGenres = firstRow.genres ?? []
   const tracks = normalizeTracks(rows, albumGenres)
   const summary: AlbumSummary = {
-    id: folderName,
+    id,
     album: firstRow.album ?? folderName,
     albumOrder: firstRow.albumOrder ?? null,
     albumArtists: firstRow.albumArtists ?? [],
@@ -138,7 +158,13 @@ export class AlbumCatalog {
 
   private constructor(entries: CatalogEntry[]) {
     this.#entries = entries
-    this.#entriesById = new Map(entries.map(entry => [entry.detail.id, entry]))
+    this.#entriesById = new Map()
+    for (const entry of entries) {
+      if (this.#entriesById.has(entry.detail.id)) {
+        throw new Error(`Duplicate album ID: ${entry.detail.id}`)
+      }
+      this.#entriesById.set(entry.detail.id, entry)
+    }
   }
 
   static fromSources(sources: AlbumSource[], options: CatalogOptions) {
@@ -146,30 +172,32 @@ export class AlbumCatalog {
   }
 
   search(filters: AlbumFilters): AlbumSearchResponse {
-    const query = filters.query === undefined ? undefined : normalizeSearchValue(filters.query)
+    const keyword =
+      filters.keyword === undefined ? undefined : normalizeSearchValue(filters.keyword)
     const album = filters.album === undefined ? undefined : normalizeSearchValue(filters.album)
     const albumArtist =
       filters.albumArtist === undefined ? undefined : normalizeSearchValue(filters.albumArtist)
     const artist = filters.artist === undefined ? undefined : normalizeSearchValue(filters.artist)
 
-    const matches = this.#entries.filter(entry => {
-      const matchesQuery =
-        query === undefined ||
-        entry.search.album.includes(query) ||
-        includes(entry.search.albumArtists, query) ||
-        includes(entry.search.artists, query)
-      return (
-        matchesQuery &&
-        (album === undefined || entry.search.album.includes(album)) &&
-        (albumArtist === undefined || includes(entry.search.albumArtists, albumArtist)) &&
-        (artist === undefined || includes(entry.search.artists, artist))
-      )
-    })
+    const matches = this.#entries
+      .flatMap(entry => {
+        if (
+          (album !== undefined && !entry.search.album.includes(album)) ||
+          (albumArtist !== undefined && !includes(entry.search.albumArtists, albumArtist)) ||
+          (artist !== undefined && !includes(entry.search.artists, artist))
+        ) {
+          return []
+        }
+
+        const rank = keyword === undefined ? 0 : getKeywordRank(entry.search, keyword)
+        return rank === undefined ? [] : [{ entry, rank }]
+      })
+      .sort((a, b) => a.rank - b.rank)
 
     return {
       items: matches
         .slice(filters.offset, filters.offset + filters.limit)
-        .map(entry => entry.summary),
+        .map(({ entry }) => entry.summary),
       total: matches.length,
       limit: filters.limit,
       offset: filters.offset,

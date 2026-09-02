@@ -12,7 +12,7 @@ export const searchAlbums = async (keyword: string) => {
     return []
   }
   const response = await api.get<AlbumSearchResponse>('/api/albums', {
-    params: { q: keyword },
+    params: { keyword },
   })
   return response.data.items
 }

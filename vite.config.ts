@@ -4,10 +4,14 @@ import { fileURLToPath } from 'node:url'
 
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import { nitro } from 'nitro/vite'
+import * as v from 'valibot'
 import { defineConfig } from 'vite'
 
 const projectRoot = dirname(fileURLToPath(import.meta.url))
 const dataRoot = resolve(projectRoot, 'public/data')
+const albumManifestSchema = v.strictObject({
+  id: v.pipe(v.string(), v.regex(/^[0-7][0-9a-hjkmnp-tv-z]{25}$/u)),
+})
 
 const buildAlbumDataModule = () => {
   const albums = readdirSync(dataRoot, { withFileTypes: true })
@@ -15,7 +19,12 @@ const buildAlbumDataModule = () => {
     .map(entry => {
       const albumRoot = resolve(dataRoot, entry.name)
       const coverFilename = readdirSync(albumRoot).find(filename => /^cover\./iu.test(filename))
+      const manifest = v.parse(
+        albumManifestSchema,
+        JSON.parse(readFileSync(resolve(albumRoot, 'album.json'), 'utf8')),
+      )
       return {
+        id: manifest.id,
         folderName: entry.name,
         coverFilename,
         rows: JSON.parse(readFileSync(resolve(albumRoot, 'metadata.json'), 'utf8')) as unknown,

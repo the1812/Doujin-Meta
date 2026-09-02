@@ -7,7 +7,7 @@ description: Add or update album entries in this Doujin-Meta repository from ext
 
 ## Goal
 
-Create a new `public/data/<album name>/` entry that matches this repository's existing local-json metadata style, uses verified source-page information, and includes a usable `cover.jpg` or `cover.png`.
+Create a new `public/data/<album name>/` entry that matches this repository's existing local-json metadata style, uses verified source-page information, has a stable album ULID, and includes a usable `cover.jpg` or `cover.png`.
 
 ## Workflow
 
@@ -24,7 +24,8 @@ Create a new `public/data/<album name>/` entry that matches this repository's ex
 3. Create the data folder.
    - Use the exact album title as the folder name unless Windows-forbidden characters must be removed.
    - Put files under `public/data/<album title>/`.
-   - Add `metadata.json` and `cover.jpg` or `cover.png`.
+   - Add `album.json`, `metadata.json`, and `cover.jpg` or `cover.png`.
+   - Run `pnpm album:id` and store the resulting unprefixed lowercase ULID in `album.json` as `{ "id": "..." }`. Generate it once and never derive it from or change it with the album or folder name.
 
 4. Write `metadata.json`.
    - Use JSON array syntax.
@@ -51,6 +52,7 @@ Create a new `public/data/<album name>/` entry that matches this repository's ex
      ```powershell
      Get-Content 'public\data\<album>\metadata.json' | ConvertFrom-Json
      ```
+   - Run `pnpm build` to validate the `album.json` ULID format and uniqueness across the catalog.
    - Confirm cover file exists and has nonzero size.
    - Run `pnpm run type-check` when practical. If sandboxed Corepack/pnpm access fails with `EPERM`, rerun with normal permissions.
    - Validate this skill with UTF-8 mode on Windows if any skill file contains Chinese or other non-ASCII text:
