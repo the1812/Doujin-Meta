@@ -9,6 +9,7 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/albums/:id',
+    name: 'album',
     component: Detail,
   },
 ]

@@ -3,7 +3,7 @@ import { useRoute } from 'vue-router'
 import Image from 'primevue/image'
 import Chip from 'primevue/chip'
 import { computed, reactive } from 'vue'
-import { AlbumDetail, AlbumTrackItem } from '../../api/types'
+import type { AlbumDetail, AlbumTrack } from '../../../shared/api'
 import Icon from '../../components/Icon.vue'
 import PrimaryChip from '../../components/PrimaryChip.vue'
 import DetailRow from './DetailRow.vue'
@@ -33,10 +33,12 @@ const albumDetail: AlbumDetail = reactive({
   albumArtists: [],
   genres: [],
   year: null,
-  coverUrl: '',
-  metadataUrl: '',
-  rawUrl: '',
-  extraData: {},
+  links: {
+    cover: '',
+    metadata: '',
+    source: '',
+  },
+  extraData: null,
   tracks: [],
 })
 
@@ -58,7 +60,7 @@ const albumGenres = computed(() => {
 })
 const links = computed(() => albumDetail.extraData?.links ?? {})
 
-type DiscGroup = { discNumber: string; tracks: AlbumTrackItem[] }
+type DiscGroup = { discNumber: string; tracks: AlbumTrack[] }
 const discGroups = computed(() => {
   const groups: DiscGroup[] = []
   tracks.value.forEach(track => {
@@ -78,11 +80,11 @@ const detailApi = useApi(async () => {
 })
 void detailApi.sendRequest()
 
-const showArtists = (track: AlbumTrackItem) => {
+const showArtists = (track: AlbumTrack) => {
   return track.artists.length > 0
 }
 
-const showComposers = (track: AlbumTrackItem) => {
+const showComposers = (track: AlbumTrack) => {
   if (track.composers.length === 0) {
     return false
   }
@@ -92,8 +94,8 @@ const showComposers = (track: AlbumTrackItem) => {
   return !equal
 }
 
-const showGenres = (track: AlbumTrackItem) => {
-  const isGenresEqual = (a: AlbumTrackItem | undefined, b: AlbumTrackItem | undefined) =>
+const showGenres = (track: AlbumTrack) => {
+  const isGenresEqual = (a: AlbumTrack | undefined, b: AlbumTrack | undefined) =>
     a?.genres.every((item, index) => item === b?.genres[index])
   const firstTrack = tracks.value[0]
   const isFirstTrack = firstTrack === track
@@ -122,7 +124,7 @@ const showGenres = (track: AlbumTrackItem) => {
               class="z-10 self-center overflow-hidden rounded-lg shadow-border-[2px]"
               image-class="object-contain"
               preview
-              :src="albumDetail.coverUrl"
+              :src="albumDetail.links.cover"
             >
               <template #previewicon>
                 <Icon name="search-plus" />
@@ -150,11 +152,11 @@ const showGenres = (track: AlbumTrackItem) => {
               <ThbWikiButton v-if="links.thbWiki" :id="links.thbWiki" />
               <div class="flex gap-2">
                 <GitHubButton
-                  v-if="albumDetail.metadataUrl"
+                  v-if="albumDetail.links.source"
                   class="flex-grow"
-                  :link="albumDetail.metadataUrl"
+                  :link="albumDetail.links.source"
                 />
-                <MoreActionsButton :raw-link="albumDetail.rawUrl" />
+                <MoreActionsButton :raw-link="albumDetail.links.metadata" />
               </div>
             </div>
           </div>

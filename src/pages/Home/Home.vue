@@ -4,7 +4,7 @@ import InputText from 'primevue/inputtext'
 import { useRoute, useRouter } from 'vue-router'
 import { computed, ref, watch } from 'vue'
 import { searchAlbums, useApi } from '../../api'
-import { AlbumSearchItem } from '../../api/types'
+import type { AlbumSummary } from '../../../shared/api'
 import AlbumSearchItemComponent from './AlbumSearchItem.vue'
 import PageHeader from '../../components/PageHeader/PageHeader.vue'
 import Loading from '../../components/Loading.vue'
@@ -18,7 +18,7 @@ const { t } = useI18n()
 
 const searched = ref(false)
 const keyword = ref('')
-const searchResult = ref([] as AlbumSearchItem[])
+const searchResult = ref<AlbumSummary[]>([])
 
 const searchApi = useApi(async () => {
   if (!keyword.value) {

@@ -4,7 +4,7 @@
     "retry": "Retry"
   },
   "search": {
-    "placeholder": "Album name",
+    "placeholder": "Search",
     "buttonTitle": "Search",
     "noResult": "No result"
   },

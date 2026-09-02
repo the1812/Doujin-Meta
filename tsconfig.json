@@ -16,5 +16,6 @@
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
     "skipLibCheck": true
-  }
+  },
+  "exclude": ["node_modules", ".output", ".vercel", "dist", "server-dist"]
 }

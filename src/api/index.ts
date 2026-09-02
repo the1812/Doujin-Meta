@@ -1,6 +1,6 @@
 import Axios from 'axios'
 import { computed, reactive, ref } from 'vue'
-import { AlbumDetail, AlbumSearchItem } from './types'
+import type { AlbumDetail, AlbumSearchResponse } from '../../shared/api'
 
 export const api = Axios.create({
   responseType: 'json',
@@ -10,13 +10,13 @@ export const searchAlbums = async (keyword: string) => {
   if (!keyword) {
     return []
   }
-  const response = await api.get<AlbumSearchItem[]>(
-    `/api/albums/search/?keyword=${encodeURIComponent(keyword)}`,
-  )
-  return response.data
+  const response = await api.get<AlbumSearchResponse>('/api/albums', {
+    params: { q: keyword },
+  })
+  return response.data.items
 }
 export const getAlbumDetail = async (id: string) => {
-  const response = await api.get<AlbumDetail>(`/api/albums/${id}`)
+  const response = await api.get<AlbumDetail>(`/api/albums/${encodeURIComponent(id)}`)
   return response.data
 }
 

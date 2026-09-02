@@ -11,16 +11,17 @@
   ],
   "author": "Grant Howard",
   "license": "MIT",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "dependencies": {
     "@primeuix/themes": "1.0.0",
     "axios": "1.8.2",
     "dompurify": "3.2.4",
-    "fuse.js": "7.1.0",
-    "kysely": "0.27.6",
-    "pg": "8.13.3",
+    "nitro": "3.0.260610-beta",
     "primeicons": "7.0.0",
     "primevue": "4.3.1",
-    "touhou-tagger": "2.0.0",
+    "valibot": "1.4.2",
     "vue": "3.5.13",
     "vue-i18n": "11.1.2",
     "vue-router": "4.5.0"
@@ -29,9 +30,7 @@
     "@intlify/unplugin-vue-i18n": "6.0.3",
     "@the1812/eslint-config": "2.0.0",
     "@types/node": "22.13.9",
-    "@types/pg": "8.11.11",
-    "@vercel/node": "5.1.12",
-    "@vitejs/plugin-vue": "5.2.1",
+    "@vitejs/plugin-vue": "6.0.8",
     "autoprefixer": "10.4.20",
     "eslint": "9.21.0",
     "postcss": "8.5.3",
@@ -39,8 +38,7 @@
     "prettier-plugin-tailwindcss": "0.6.11",
     "tailwindcss": "3",
     "typescript": "5.8.2",
-    "vercel": "41.3.2",
-    "vite": "6.2.1",
+    "vite": "7.3.6",
     "vue-tsc": "2.2.8"
   },
   "pnpm": {
@@ -48,20 +46,18 @@
       "caniuse-lite": "1.0.30001702"
     },
     "onlyBuiltDependencies": [
-      "esbuild",
-      "vercel"
+      "esbuild"
     ]
   },
   "scripts": {
-    "vercel:dev": "vercel dev",
-    "vercel:deploy": "vercel",
-    "dev": "vite --port 3000",
-    "build": "vue-tsc --noEmit && vite build",
+    "dev": "vite",
+    "build": "pnpm type-check && vite build",
+    "start": "node .output/server/index.mjs",
     "preview": "vite preview",
     "type-check": "vue-tsc --noEmit",
     "eslint-check": "eslint .",
     "eslint-fix": "eslint . --fix",
-    "lint": "vue-tsc --noEmit && eslint . --fix"
+    "lint": "pnpm type-check && eslint . --fix"
   },
   "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
 }
