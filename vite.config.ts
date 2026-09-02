@@ -15,9 +15,6 @@ const buildAlbumDataModule = () => {
     .map(entry => {
       const albumRoot = resolve(dataRoot, entry.name)
       const coverFilename = readdirSync(albumRoot).find(filename => /^cover\./iu.test(filename))
-      if (coverFilename === undefined) {
-        throw new Error(`Album cover is missing: ${entry.name}`)
-      }
       return {
         folderName: entry.name,
         coverFilename,

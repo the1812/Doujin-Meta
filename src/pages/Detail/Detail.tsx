@@ -38,7 +38,6 @@ export const Detail = defineComponent({
       genres: [],
       year: null,
       links: {
-        cover: '',
         metadata: '',
         source: '',
       },
@@ -113,15 +112,17 @@ export const Detail = defineComponent({
           {detailApi.loaded && (
             <>
               <div class="flex flex-col gap-6 xl:sticky xl:top-[calc(80px+1.5rem)] xl:justify-center">
-                <ClsImage aspectRatio="100%" class="w-[90vw] max-w-[400px]">
-                  <Image
-                    class="z-10 self-center overflow-hidden rounded-lg shadow-border-[2px]"
-                    imageClass="object-contain"
-                    preview
-                    src={albumDetail.links.cover}
-                    v-slots={{ previewicon: () => <Icon name="search-plus" /> }}
-                  />
-                </ClsImage>
+                {albumDetail.links.cover && (
+                  <ClsImage aspectRatio="100%" class="w-[90vw] max-w-[400px]">
+                    <Image
+                      class="z-10 self-center overflow-hidden rounded-lg shadow-border-[2px]"
+                      imageClass="object-contain"
+                      preview
+                      src={albumDetail.links.cover}
+                      v-slots={{ previewicon: () => <Icon name="search-plus" /> }}
+                    />
+                  </ClsImage>
+                )}
                 <div class="flex max-w-[400px] flex-col items-center gap-2">
                   <div class="text-center text-xl font-semibold">{albumDetail.album}</div>
                   <div class="text mb-2 text-center text-gray-500">

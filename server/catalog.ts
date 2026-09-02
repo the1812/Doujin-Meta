@@ -33,7 +33,7 @@ interface CatalogOptions {
 
 export interface AlbumSource {
   folderName: string
-  coverFilename: string
+  coverFilename?: string
   rows: MetadataRow[]
 }
 
@@ -112,7 +112,9 @@ const createAlbum = (source: AlbumSource, options: CatalogOptions): CatalogEntry
     year: firstRow.year ?? null,
     extraData: firstRow.extraData ?? null,
     links: {
-      cover: `/data/${encodedFolder}/${encodePathSegment(coverFilename)}`,
+      ...(coverFilename === undefined
+        ? {}
+        : { cover: `/data/${encodedFolder}/${encodePathSegment(coverFilename)}` }),
       metadata: `/data/${encodedFolder}/metadata.json`,
       source: `${options.repositoryUrl}/blob/${encodePathSegment(options.repositoryBranch)}/public/data/${encodedFolder}/metadata.json`,
     },

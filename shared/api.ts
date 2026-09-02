@@ -6,7 +6,7 @@ export interface AlbumExtraData extends Record<string, unknown> {
 }
 
 export interface AlbumLinks {
-  cover: string
+  cover?: string
   metadata: string
   source: string
 }

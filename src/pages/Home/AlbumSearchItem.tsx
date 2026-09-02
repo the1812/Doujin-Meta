@@ -19,10 +19,12 @@ export const AlbumSearchItem = defineComponent({
           class="flex max-w-[830px] flex-grow cursor-pointer items-center gap-3 rounded-md p-2 hover:bg-gray-100"
         >
           <div class="flex h-10 w-10 items-center justify-center">
-            <img
-              src={props.item.links.cover}
-              class="w-10 shrink-0 overflow-hidden rounded-sm object-contain shadow-sm"
-            />
+            {props.item.links.cover && (
+              <img
+                src={props.item.links.cover}
+                class="w-10 shrink-0 overflow-hidden rounded-sm object-contain shadow-sm"
+              />
+            )}
           </div>
           <div class="flex-grow [&>b]:font-medium [&>b]:text-violet-500">{props.item.album}</div>
         </RouterLink>
