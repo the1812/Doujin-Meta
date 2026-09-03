@@ -1,0 +1,54 @@
+[
+  {
+    "title": "dontworry’boutme",
+    "composers": [
+      "Koiflower"
+    ],
+    "album": "Rhythm Composer 808",
+    "albumOrder": "DLCD09",
+    "albumArtists": [
+      "dizzylab"
+    ],
+    "genres": [
+      "Electronic"
+    ],
+    "year": "2026",
+    "extraData": {
+      "links": {
+        "dizzylab": "DLCD09"
+      }
+    }
+  },
+  {
+    "title": "IHDU (feat.诗岸)",
+    "artists": [
+      "诗岸",
+      "小野道ono"
+    ],
+    "composers": [
+      "小野道ono"
+    ]
+  },
+  {
+    "title": "Terminus (feat. 音街ウナ)",
+    "artists": [
+      "音街ウナ",
+      "FN1U"
+    ],
+    "composers": [
+      "FN1U"
+    ]
+  },
+  {
+    "title": "RIMSHOT",
+    "composers": [
+      "cnsouka"
+    ]
+  },
+  {
+    "title": "旧闻联播",
+    "composers": [
+      "TN163"
+    ]
+  }
+]
