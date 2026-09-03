@@ -1,20 +1,11 @@
 [
   {
     "title": "出会う",
-    "composers": [
-      "Kapok Owl",
-      "AiSS"
-    ],
+    "composers": ["Kapok Owl", "AiSS"],
     "album": "Babysbreath",
     "albumOrder": "HUI-A02",
-    "albumArtists": [
-      "卉HUI-Works"
-    ],
-    "genres": [
-      "House",
-      "Trance",
-      "Drum & Bass"
-    ],
+    "albumArtists": ["卉HUI-Works"],
+    "genres": ["House", "Trance", "Drum & Bass"],
     "year": "2020",
     "extraData": {
       "links": {
@@ -25,69 +16,46 @@
   },
   {
     "title": "Deluge",
-    "composers": [
-      "SQRY01"
-    ]
+    "composers": ["SQRY01"]
   },
   {
     "title": "摇-篮",
-    "composers": [
-      "Woomix"
-    ]
+    "composers": ["Woomix"]
   },
   {
     "title": "Uncharted Path",
-    "composers": [
-      "Dizc1485"
-    ]
+    "composers": ["Dizc1485"]
   },
   {
     "title": "Agnostics",
-    "composers": [
-      "AiSS"
-    ]
+    "composers": ["AiSS"]
   },
   {
     "title": "Starry Sky",
-    "composers": [
-      "kaokao"
-    ]
+    "composers": ["kaokao"]
   },
   {
     "title": "Bael",
-    "composers": [
-      "K-Sz",
-      "AiSS"
-    ]
+    "composers": ["K-Sz", "AiSS"]
   },
   {
     "title": "Diffusion",
-    "composers": [
-      "Gray-LAN"
-    ]
+    "composers": ["Gray-LAN"]
   },
   {
     "title": "古灵精怪，原木树屋。",
-    "composers": [
-      "Kapok Owl"
-    ]
+    "composers": ["Kapok Owl"]
   },
   {
     "title": "Nakunaru",
-    "composers": [
-      "P3T"
-    ]
+    "composers": ["P3T"]
   },
   {
     "title": "Atmosphere",
-    "composers": [
-      "SQRY01"
-    ]
+    "composers": ["SQRY01"]
   },
   {
     "title": "The Moment",
-    "composers": [
-      "Phat Sau"
-    ]
+    "composers": ["Phat Sau"]
   }
 ]

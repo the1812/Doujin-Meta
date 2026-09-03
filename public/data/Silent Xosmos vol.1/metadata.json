@@ -1,17 +1,11 @@
 [
   {
     "title": "Gate To Another Lifeline",
-    "artists": [
-      "Hazecat"
-    ],
+    "artists": ["Hazecat"],
     "album": "Silent Xosmos vol.1",
     "albumOrder": "SLXD-001",
-    "albumArtists": [
-      "Silent Xords"
-    ],
-    "genres": [
-      "Hardcore"
-    ],
+    "albumArtists": ["Silent Xords"],
+    "genres": ["Hardcore"],
     "year": "2018",
     "extraData": {
       "links": {
@@ -22,63 +16,42 @@
   },
   {
     "title": "華彩",
-    "artists": [
-      "Hazecat",
-      "Sukimiko"
-    ]
+    "artists": ["Hazecat", "Sukimiko"]
   },
   {
     "title": "Silenteria",
-    "artists": [
-      "VeetaCrush"
-    ]
+    "artists": ["VeetaCrush"]
   },
   {
     "title": "Paranoia",
-    "artists": [
-      "BlueWind"
-    ]
+    "artists": ["BlueWind"]
   },
   {
     "title": "Non-Melodic Ragez",
-    "artists": [
-      "Normal1zer"
-    ]
+    "artists": ["Normal1zer"]
   },
   {
     "title": "Legacy",
-    "artists": [
-      "Sukimiko"
-    ]
+    "artists": ["Sukimiko"]
   },
   {
     "title": "Nothing's Galaxiez",
-    "artists": [
-      "Normal1zer"
-    ]
+    "artists": ["Normal1zer"]
   },
   {
     "title": "AlieX (Silent Xosmos Edit)",
-    "artists": [
-      "LUNARiUM"
-    ]
+    "artists": ["LUNARiUM"]
   },
   {
     "title": "In Forest",
-    "artists": [
-      "IXDrone"
-    ]
+    "artists": ["IXDrone"]
   },
   {
     "title": "Kandi Kid",
-    "artists": [
-      "Zaiga"
-    ]
+    "artists": ["Zaiga"]
   },
   {
     "title": "Dark Soulz",
-    "artists": [
-      "JurokuNeta."
-    ]
+    "artists": ["JurokuNeta."]
   }
 ]

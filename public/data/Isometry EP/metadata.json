@@ -1,18 +1,11 @@
 [
   {
     "title": "Mikazuki",
-    "composers": [
-      "Joulez",
-      "Tsukie Yamina"
-    ],
+    "composers": ["Joulez", "Tsukie Yamina"],
     "album": "Isometry EP",
     "albumOrder": "MLAB-011",
-    "albumArtists": [
-      "Matthiola Records"
-    ],
-    "genres": [
-      "Trance"
-    ],
+    "albumArtists": ["Matthiola Records"],
+    "genres": ["Trance"],
     "year": "2020",
     "extraData": {
       "links": {
@@ -22,26 +15,18 @@
   },
   {
     "title": "Green Heart",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "Isometry",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "Miseria",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "Introspective",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   }
 ]

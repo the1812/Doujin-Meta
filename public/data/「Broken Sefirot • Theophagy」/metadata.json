@@ -1,16 +1,10 @@
 [
   {
     "title": "Eat",
-    "composers": [
-      "Ophidian"
-    ],
+    "composers": ["Ophidian"],
     "album": "Broken Sefirot • Theophagy",
-    "albumArtists": [
-      "Sephiroth & Qliphoth"
-    ],
-    "genres": [
-      "Gothic"
-    ],
+    "albumArtists": ["Sephiroth & Qliphoth"],
+    "genres": ["Gothic"],
     "year": "2026",
     "extraData": {
       "links": {
@@ -20,43 +14,27 @@
   },
   {
     "title": "Belladonna",
-    "composers": [
-      "CPSQUQI"
-    ]
+    "composers": ["CPSQUQI"]
   },
   {
     "title": "The Dissonant Heart",
-    "composers": [
-      "Rainword"
-    ]
+    "composers": ["Rainword"]
   },
   {
     "title": "Reborn",
-    "artists": [
-      "Hibiki Koto",
-      "UraniumW"
-    ],
-    "composers": [
-      "UraniumW"
-    ]
+    "artists": ["Hibiki Koto", "UraniumW"],
+    "composers": ["UraniumW"]
   },
   {
     "title": "Wind and Frost",
-    "composers": [
-      "DTK"
-    ]
+    "composers": ["DTK"]
   },
   {
     "title": "SIGIL OF BLOOD",
-    "composers": [
-      "Nirotiy"
-    ]
+    "composers": ["Nirotiy"]
   },
   {
     "title": "Deivore [the Fallen]",
-    "composers": [
-      "Smile Demon",
-      "Nanostorm"
-    ]
+    "composers": ["Smile Demon", "Nanostorm"]
   }
 ]

@@ -1,17 +1,11 @@
 [
   {
     "title": "Alcohol rain",
-    "composers": [
-      "NANO-FXXKYIG"
-    ],
+    "composers": ["NANO-FXXKYIG"],
     "album": "天気偽報",
     "albumOrder": "CLIP-007",
-    "albumArtists": [
-      "Clip Sounds"
-    ],
-    "genres": [
-      "Electronic"
-    ],
+    "albumArtists": ["Clip Sounds"],
+    "genres": ["Electronic"],
     "year": "2023",
     "extraData": {
       "links": {
@@ -21,63 +15,42 @@
   },
   {
     "title": "Gorimchu",
-    "composers": [
-      "Laxeno57",
-      "硝酸生菜Synzak"
-    ]
+    "composers": ["Laxeno57", "硝酸生菜Synzak"]
   },
   {
     "title": "Frosted Lucy",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "embrace",
-    "composers": [
-      "VeetaCrush"
-    ]
+    "composers": ["VeetaCrush"]
   },
   {
     "title": "Auroflex",
-    "composers": [
-      "硝酸生菜Synzak"
-    ]
+    "composers": ["硝酸生菜Synzak"]
   },
   {
     "title": "Elden Frog",
-    "composers": [
-      "Hachysu"
-    ]
+    "composers": ["Hachysu"]
   },
   {
     "title": "Kepler_Stormy_Night",
-    "composers": [
-      "潮音きつね"
-    ]
+    "composers": ["潮音きつね"]
   },
   {
     "title": "Colorless Rainbow",
-    "composers": [
-      "Zuxin"
-    ]
+    "composers": ["Zuxin"]
   },
   {
     "title": "Tropical monsoon",
-    "composers": [
-      "Miokio米欧"
-    ]
+    "composers": ["Miokio米欧"]
   },
   {
     "title": "Sunny Break Time",
-    "composers": [
-      "Masiko"
-    ]
+    "composers": ["Masiko"]
   },
   {
     "title": "Colorful Wind",
-    "composers": [
-      "Blucat"
-    ]
+    "composers": ["Blucat"]
   }
 ]

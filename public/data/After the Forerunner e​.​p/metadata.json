@@ -1,17 +1,11 @@
 [
   {
     "title": "rotfeldzestroerer",
-    "composers": [
-      "Joulez"
-    ],
+    "composers": ["Joulez"],
     "album": "After the Forerunner e​.​p.",
     "albumOrder": "TGEP-001",
-    "albumArtists": [
-      "Thoughost"
-    ],
-    "genres": [
-      "Trance"
-    ],
+    "albumArtists": ["Thoughost"],
+    "genres": ["Trance"],
     "year": "2023",
     "extraData": {
       "links": {
@@ -22,47 +16,27 @@
   },
   {
     "title": "Lumos",
-    "composers": [
-      "Laxeno57"
-    ],
-    "genres": [
-      "Trance"
-    ]
+    "composers": ["Laxeno57"],
+    "genres": ["Trance"]
   },
   {
     "title": "zentrifugale",
-    "composers": [
-      "Nirotiy"
-    ],
-    "genres": [
-      "Big Beat"
-    ]
+    "composers": ["Nirotiy"],
+    "genres": ["Big Beat"]
   },
   {
     "title": "No Excuse",
-    "composers": [
-      "DJ Momo"
-    ],
-    "genres": [
-      "Hardcore"
-    ]
+    "composers": ["DJ Momo"],
+    "genres": ["Hardcore"]
   },
   {
     "title": "You Are The One",
-    "composers": [
-      "Irish Kappa"
-    ],
-    "genres": [
-      "Hardcore"
-    ]
+    "composers": ["Irish Kappa"],
+    "genres": ["Hardcore"]
   },
   {
     "title": "白华",
-    "composers": [
-      "AiSS"
-    ],
-    "genres": [
-      "Folk"
-    ]
+    "composers": ["AiSS"],
+    "genres": ["Folk"]
   }
 ]

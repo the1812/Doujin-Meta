@@ -1,17 +1,11 @@
 [
   {
     "title": "The Message",
-    "composers": [
-      "Shoggy"
-    ],
+    "composers": ["Shoggy"],
     "album": "COMPLEXA(C)TION",
     "albumOrder": "KZWV-003",
-    "albumArtists": [
-      "Kreuzwave"
-    ],
-    "genres": [
-      "Laboratory"
-    ],
+    "albumArtists": ["Kreuzwave"],
+    "genres": ["Laboratory"],
     "year": "2023",
     "extraData": {
       "links": {
@@ -22,45 +16,30 @@
   },
   {
     "title": "_device_0x2f_",
-    "composers": [
-      "wheatfox"
-    ]
+    "composers": ["wheatfox"]
   },
   {
     "title": "Ruineded NET'{{Cyber City}'#0F1B1F DE+UN3",
-    "composers": [
-      "METROPOLiTAN TECHNiQUE",
-      "Nosgel"
-    ]
+    "composers": ["METROPOLiTAN TECHNiQUE", "Nosgel"]
   },
   {
     "title": "Machine N",
-    "composers": [
-      "555âme"
-    ]
+    "composers": ["555âme"]
   },
   {
     "title": "public class ContainerPurple {}",
-    "composers": [
-      "AiSS"
-    ]
+    "composers": ["AiSS"]
   },
   {
     "title": "Metamaterial",
-    "composers": [
-      "SmileDemon"
-    ]
+    "composers": ["SmileDemon"]
   },
   {
     "title": "EXPANDER (￣▽￣) (Album Extended Mix)",
-    "composers": [
-      "ElousΛ.-FZ"
-    ]
+    "composers": ["ElousΛ.-FZ"]
   },
   {
     "title": "雨降りの夜 ~Rainy Extended~",
-    "composers": [
-      "月見静華"
-    ]
+    "composers": ["月見静華"]
   }
 ]

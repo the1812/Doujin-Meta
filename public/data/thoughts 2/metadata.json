@@ -1,17 +1,11 @@
 [
   {
     "title": "Fading Echoes",
-    "composers": [
-      "ARMYTOM"
-    ],
+    "composers": ["ARMYTOM"],
     "album": "thoughts 2",
     "albumOrder": "THGO-0011",
-    "albumArtists": [
-      "Thoughost"
-    ],
-    "genres": [
-      "Electronic"
-    ],
+    "albumArtists": ["Thoughost"],
+    "genres": ["Electronic"],
     "year": "2026",
     "extraData": {
       "links": {
@@ -22,81 +16,54 @@
   },
   {
     "title": "Fluorescent",
-    "composers": [
-      "wheatfox"
-    ]
+    "composers": ["wheatfox"]
   },
   {
     "title": "landingfailure.orz",
-    "composers": [
-      "nova+z"
-    ]
+    "composers": ["nova+z"]
   },
   {
     "title": "winding stairs",
-    "composers": [
-      "Aki Sz"
-    ]
+    "composers": ["Aki Sz"]
   },
   {
     "title": "stutter and dissolve",
-    "composers": [
-      "イベライEmelia"
-    ]
+    "composers": ["イベライEmelia"]
   },
   {
     "title": "Seven...",
-    "composers": [
-      "sanmal"
-    ]
+    "composers": ["sanmal"]
   },
   {
     "title": "Valkyrie",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "循環の果てにて、",
-    "composers": [
-      "潮音きつね"
-    ]
+    "composers": ["潮音きつね"]
   },
   {
     "title": "DEPICT CODE",
-    "composers": [
-      "Nirotiy"
-    ]
+    "composers": ["Nirotiy"]
   },
   {
     "title": "間",
-    "composers": [
-      "四度夜 靈"
-    ]
+    "composers": ["四度夜 靈"]
   },
   {
     "title": "Drown...",
-    "composers": [
-      "望月真白"
-    ]
+    "composers": ["望月真白"]
   },
   {
     "title": "Southern Barbarian in Oversized Clothes",
-    "composers": [
-      "Kolaa",
-      "Money Master"
-    ]
+    "composers": ["Kolaa", "Money Master"]
   },
   {
     "title": "Don't Leave Me",
-    "composers": [
-      "Irish Kappa"
-    ]
+    "composers": ["Irish Kappa"]
   },
   {
     "title": "ending",
-    "composers": [
-      "VeetaCrush"
-    ]
+    "composers": ["VeetaCrush"]
   }
 ]

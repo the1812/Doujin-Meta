@@ -1,19 +1,11 @@
 [
   {
     "title": "forget.bat",
-    "composers": [
-      "Joulez"
-    ],
+    "composers": ["Joulez"],
     "album": "The Windows",
     "albumOrder": "HUI-E21",
-    "albumArtists": [
-      "卉HUI-Works"
-    ],
-    "genres": [
-      "House",
-      "Trance",
-      "Ambient"
-    ],
+    "albumArtists": ["卉HUI-Works"],
+    "genres": ["House", "Trance", "Ambient"],
     "year": "2022",
     "extraData": {
       "links": {
@@ -24,26 +16,18 @@
   },
   {
     "title": "East World",
-    "composers": [
-      "KAIRCI"
-    ]
+    "composers": ["KAIRCI"]
   },
   {
     "title": "t-0ur",
-    "composers": [
-      "AiSS"
-    ]
+    "composers": ["AiSS"]
   },
   {
     "title": "合欢树",
-    "composers": [
-      "BKER"
-    ]
+    "composers": ["BKER"]
   },
   {
     "title": "Levitation",
-    "composers": [
-      "SQRY01"
-    ]
+    "composers": ["SQRY01"]
   }
 ]

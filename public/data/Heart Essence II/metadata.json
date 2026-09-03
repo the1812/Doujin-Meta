@@ -1,17 +1,11 @@
 [
   {
     "title": "1's",
-    "composers": [
-      "v0v"
-    ],
+    "composers": ["v0v"],
     "album": "Heart Essence II",
     "albumOrder": "AOHCD-003",
-    "albumArtists": [
-      "Art of Heart"
-    ],
-    "genres": [
-      "Hard Dance"
-    ],
+    "albumArtists": ["Art of Heart"],
+    "genres": ["Hard Dance"],
     "year": "2022",
     "extraData": {
       "links": {
@@ -22,64 +16,42 @@
   },
   {
     "title": "Heartbeat",
-    "composers": [
-      "X-Eliminator"
-    ]
+    "composers": ["X-Eliminator"]
   },
   {
     "title": "All Back Out",
-    "composers": [
-      "F.BING.KAI",
-      "SoundKillerZ"
-    ]
+    "composers": ["F.BING.KAI", "SoundKillerZ"]
   },
   {
     "title": "Fire, Ice and Mist",
-    "composers": [
-      "Project Nirvana"
-    ]
+    "composers": ["Project Nirvana"]
   },
   {
     "title": "Farewell B-Flat ～You Are Alone No More～",
-    "composers": [
-      "Joulez",
-      "BlueWind"
-    ]
+    "composers": ["Joulez", "BlueWind"]
   },
   {
     "title": "Sap",
-    "composers": [
-      "_"
-    ]
+    "composers": ["_"]
   },
   {
     "title": "Lost World",
-    "composers": [
-      "Noizenecio"
-    ]
+    "composers": ["Noizenecio"]
   },
   {
     "title": "Sound! Hard Kick",
-    "composers": [
-      "EuphoriA"
-    ]
+    "composers": ["EuphoriA"]
   },
   {
     "title": "The Last Fantasy",
-    "composers": [
-      "Cabälaa"
-    ]
+    "composers": ["Cabälaa"]
   },
   {
     "title": "The Dead Hands System",
-    "composers": [
-      "SmileDemon"
-    ]
+    "composers": ["SmileDemon"]
   },
   {
     "title": "1000BPM Execution",
-    "composers": [
-      "Irish Kappa"
-    ]
+    "composers": ["Irish Kappa"]
   }
 ]

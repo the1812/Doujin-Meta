@@ -1,17 +1,11 @@
 [
   {
     "title": "Weigh Anchor",
-    "composers": [
-      "Aginomoto"
-    ],
+    "composers": ["Aginomoto"],
     "album": "Journey / The Space",
     "albumOrder": "MTLR-005",
-    "albumArtists": [
-      "Matthiola Records"
-    ],
-    "genres": [
-      "Electronic"
-    ],
+    "albumArtists": ["Matthiola Records"],
+    "genres": ["Electronic"],
     "year": "2017",
     "extraData": {
       "links": {
@@ -21,70 +15,47 @@
   },
   {
     "title": "Spaca Esploristo",
-    "artists": [
-      "CoreTania",
-      "cnsuslik"
-    ],
+    "artists": ["CoreTania", "cnsuslik"],
     "comments": "原曲: 少女綺想曲 ～ Capriccio (东方幻想乡 ～ Lotus Land Story.)"
   },
   {
     "title": "#B9E5E8",
-    "composers": [
-      "BlackLotus"
-    ]
+    "composers": ["BlackLotus"]
   },
   {
     "title": "Lunarin Toive",
-    "artists": [
-      "BlueWind"
-    ],
+    "artists": ["BlueWind"],
     "comments": "原曲: 綿月のスペルカード ～ Lunatic Blue (东方儚月抄 ～ Silent Sinner in Blue. 附属CD)"
   },
   {
     "title": "Rock the Mars",
-    "artists": [
-      "Hazecat",
-      "Sukimiko"
-    ],
+    "artists": ["Hazecat", "Sukimiko"],
     "comments": "原曲: Tabula rasa ～空白少女 (东方梦时空 ～ Phantasmagoria of Dim. Dream.)"
   },
   {
     "title": "Fly with Your Tsubasa",
-    "composers": [
-      "Hazecat",
-      "Sukimiko"
-    ]
+    "composers": ["Hazecat", "Sukimiko"]
   },
   {
     "title": "4.22 Light Years",
-    "composers": [
-      "Behold"
-    ]
+    "composers": ["Behold"]
   },
   {
     "title": "Abyss (Original Mix)",
-    "composers": [
-      "Sandwichii"
-    ]
+    "composers": ["Sandwichii"]
   },
   {
     "title": "Star Pirates",
-    "artists": [
-      "cnsuslik"
-    ],
+    "artists": ["cnsuslik"],
     "comments": "原曲: ヴォヤージュ1970 (东方永夜抄 ～ Imperishable Night.)"
   },
   {
     "title": "Space Junk",
-    "composers": [
-      "Kolaa"
-    ]
+    "composers": ["Kolaa"]
   },
   {
     "title": "Back To The Sun",
-    "artists":  [
-      "Reguluz"
-    ],
+    "artists": ["Reguluz"],
     "comments": "原曲: 不思議なお祓い棒 (东方辉针城 ～ Double Dealing Character.)"
   }
 ]

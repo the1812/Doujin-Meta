@@ -1,17 +1,11 @@
 [
   {
     "title": "Introduction -Phant Solo-",
-    "composers": [
-      "Taishi"
-    ],
+    "composers": ["Taishi"],
     "album": "Phant Solo",
     "albumOrder": "COCD-0020",
-    "albumArtists": [
-      "compllege"
-    ],
-    "genres": [
-      "Trance"
-    ],
+    "albumArtists": ["compllege"],
+    "genres": ["Trance"],
     "year": "2017",
     "extraData": {
       "links": {
@@ -21,8 +15,6 @@
   },
   {
     "title": "Imitation of Our History",
-    "composers": [
-      "Taishi"
-    ]
+    "composers": ["Taishi"]
   }
 ]

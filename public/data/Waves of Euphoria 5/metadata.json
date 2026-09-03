@@ -1,17 +1,11 @@
 [
   {
     "title": "Matter of Time",
-    "composers": [
-      "REMO-CON"
-    ],
+    "composers": ["REMO-CON"],
     "album": "Waves of Euphoria 5",
     "albumOrder": "WAV-052 + WAV-053",
-    "albumArtists": [
-      "wavforme"
-    ],
-    "genres": [
-      "Trance"
-    ],
+    "albumArtists": ["wavforme"],
+    "genres": ["Trance"],
     "year": "2025",
     "extraData": {
       "links": {
@@ -21,116 +15,76 @@
   },
   {
     "title": "Amagoi",
-    "artists": [
-      "Kanae Asaba",
-      "MK"
-    ],
-    "composers": [
-      "MK"
-    ]
+    "artists": ["Kanae Asaba", "MK"],
+    "composers": ["MK"]
   },
   {
     "title": "It's Time To Go",
-    "composers": [
-      "Nhato"
-    ]
+    "composers": ["Nhato"]
   },
   {
     "title": "The Hidden Spring",
-    "composers": [
-      "BEC8723"
-    ]
+    "composers": ["BEC8723"]
   },
   {
     "title": "Solar Energy",
-    "composers": [
-      "N-sKing"
-    ]
+    "composers": ["N-sKing"]
   },
   {
     "title": "veyrä",
-    "composers": [
-      "crayvxn"
-    ]
+    "composers": ["crayvxn"]
   },
   {
     "title": "Always Within",
-    "composers": [
-      "Sou Enomoto"
-    ]
+    "composers": ["Sou Enomoto"]
   },
   {
     "title": "S.P.N.V.",
-    "composers": [
-      "Tomohiko Togashi"
-    ]
+    "composers": ["Tomohiko Togashi"]
   },
   {
     "title": "Velvet Dusk",
-    "composers": [
-      "Spawn"
-    ]
+    "composers": ["Spawn"]
   },
   {
     "title": "Oravium",
-    "composers": [
-      "Taishi"
-    ]
+    "composers": ["Taishi"]
   },
   {
     "title": "Fournoble",
-    "composers": [
-      "KaNa"
-    ],
+    "composers": ["KaNa"],
     "discNumber": "2"
   },
   {
     "title": "Ray",
-    "composers": [
-      "Ren Tanahashi"
-    ]
+    "composers": ["Ren Tanahashi"]
   },
   {
     "title": "Miyabi",
-    "composers": [
-      "Radianth"
-    ]
+    "composers": ["Radianth"]
   },
   {
     "title": "Distant Glow",
-    "composers": [
-      "Ryo Nakamura"
-    ]
+    "composers": ["Ryo Nakamura"]
   },
   {
     "title": "Glimmer",
-    "composers": [
-      "Nago",
-      "Bernis"
-    ]
+    "composers": ["Nago", "Bernis"]
   },
   {
     "title": "The Surface of Mars",
-    "composers": [
-      "Kohta Imafuku"
-    ]
+    "composers": ["Kohta Imafuku"]
   },
   {
     "title": "Murasame",
-    "composers": [
-      "Shouya Namai"
-    ]
+    "composers": ["Shouya Namai"]
   },
   {
     "title": "Reincarnation",
-    "composers": [
-      "Ishiro"
-    ]
+    "composers": ["Ishiro"]
   },
   {
     "title": "Felicity",
-    "composers": [
-      "Tomoya Tachibana"
-    ]
+    "composers": ["Tomoya Tachibana"]
   }
 ]

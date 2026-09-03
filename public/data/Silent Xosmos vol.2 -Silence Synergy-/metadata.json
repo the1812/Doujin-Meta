@@ -1,18 +1,11 @@
 [
   {
     "title": "Silence Synergy",
-    "composers": [
-      "Hazecat",
-      "Normal1zer"
-    ],
+    "composers": ["Hazecat", "Normal1zer"],
     "album": "Silent Xosmos vol.2 -Silence Synergy-",
     "albumOrder": "SLXD-002",
-    "albumArtists": [
-      "Silent Xords"
-    ],
-    "genres": [
-      "Hardcore"
-    ],
+    "albumArtists": ["Silent Xords"],
+    "genres": ["Hardcore"],
     "year": "2019",
     "extraData": {
       "links": {
@@ -23,69 +16,46 @@
   },
   {
     "title": "Ni-Hao!",
-    "composers": [
-      "4gRe"
-    ]
+    "composers": ["4gRe"]
   },
   {
     "title": "NIN-NIN-POWER",
-    "composers": [
-      "Tanchiky"
-    ]
+    "composers": ["Tanchiky"]
   },
   {
     "title": "Falling Dust",
-    "composers": [
-      "VeetaCrush",
-      "BlueWind"
-    ]
+    "composers": ["VeetaCrush", "BlueWind"]
   },
   {
     "title": "Be Faithful",
-    "composers": [
-      "Sukimiko"
-    ]
+    "composers": ["Sukimiko"]
   },
   {
     "title": "Distant Flower",
-    "composers": [
-      "月見 静華"
-    ]
+    "composers": ["月見 静華"]
   },
   {
     "title": "Unreachable Line",
-    "composers": [
-      "Roon_kun"
-    ]
+    "composers": ["Roon_kun"]
   },
   {
     "title": "Parallel Retrogression",
-    "composers": [
-      "Tetrajectory"
-    ]
+    "composers": ["Tetrajectory"]
   },
   {
     "title": "Massive Evil",
-    "composers": [
-      "Irish Kappa"
-    ]
+    "composers": ["Irish Kappa"]
   },
   {
     "title": "I Got Silence",
-    "composers": [
-      "BlueWind"
-    ]
+    "composers": ["BlueWind"]
   },
   {
     "title": "I Pray for Noiz",
-    "composers": [
-      "Normal1zer"
-    ]
+    "composers": ["Normal1zer"]
   },
   {
     "title": "Splitted Book Pieces Floating",
-    "composers": [
-      "Nirotiy"
-    ]
+    "composers": ["Nirotiy"]
   }
 ]

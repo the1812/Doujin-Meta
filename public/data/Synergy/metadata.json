@@ -1,18 +1,11 @@
 [
   {
     "title": "Antagonist",
-    "composers": [
-      "aran"
-    ],
+    "composers": ["aran"],
     "album": "Synergy",
     "albumOrder": "UTRP-001",
-    "albumArtists": [
-      "Unitone",
-      "Riparia Records"
-    ],
-    "genres": [
-      "Trance"
-    ],
+    "albumArtists": ["Unitone", "Riparia Records"],
+    "genres": ["Trance"],
     "year": "2019",
     "extraData": {
       "links": {
@@ -22,56 +15,32 @@
   },
   {
     "title": "Glowing",
-    "composers": [
-      "Shion Hinano"
-    ],
-    "genres": [
-      "House"
-    ]
+    "composers": ["Shion Hinano"],
+    "genres": ["House"]
   },
   {
     "title": "Dream, Watch, Rearm.",
-    "composers": [
-      "Ryunosuke Kudo"
-    ],
-    "genres": [
-      "House"
-    ]
+    "composers": ["Ryunosuke Kudo"],
+    "genres": ["House"]
   },
   {
     "title": "Wakaba",
-    "composers": [
-      "Tanchiky"
-    ],
-    "genres": [
-      "Trance"
-    ]
+    "composers": ["Tanchiky"],
+    "genres": ["Trance"]
   },
   {
     "title": "Brand New World",
-    "composers": [
-      "Lawy"
-    ],
-    "genres": [
-      "Trance"
-    ]
+    "composers": ["Lawy"],
+    "genres": ["Trance"]
   },
   {
     "title": "Vernal Moments",
-    "composers": [
-      "satella"
-    ],
-    "genres": [
-      "Dance"
-    ]
+    "composers": ["satella"],
+    "genres": ["Dance"]
   },
   {
     "title": "Reflexion",
-    "composers": [
-      "Noshi"
-    ],
-    "genres": [
-      "Trance"
-    ]
+    "composers": ["Noshi"],
+    "genres": ["Trance"]
   }
 ]

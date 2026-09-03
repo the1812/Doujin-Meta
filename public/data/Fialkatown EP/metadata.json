@@ -1,18 +1,11 @@
 [
   {
     "title": "Prelude",
-    "composers": [
-      "cnsuslik"
-    ],
+    "composers": ["cnsuslik"],
     "album": "Fialkatown EP",
     "albumOrder": "MLAB-005",
-    "albumArtists": [
-      "Matthiola Records"
-    ],
-    "genres": [
-      "Jazz HipHop",
-      "Trap"
-    ],
+    "albumArtists": ["Matthiola Records"],
+    "genres": ["Jazz HipHop", "Trap"],
     "year": "2018",
     "extraData": {
       "links": {
@@ -22,32 +15,22 @@
   },
   {
     "title": "Midnight Uberman",
-    "composers": [
-      "cnsuslik"
-    ]
+    "composers": ["cnsuslik"]
   },
   {
     "title": "Weibo Beauty Pt.1",
-    "composers": [
-      "cnsuslik"
-    ]
+    "composers": ["cnsuslik"]
   },
   {
     "title": "Shanghai Pyramid",
-    "composers": [
-      "cnsuslik"
-    ]
+    "composers": ["cnsuslik"]
   },
   {
     "title": "The Rounin",
-    "composers": [
-      "cnsuslik"
-    ]
+    "composers": ["cnsuslik"]
   },
   {
     "title": "Opatrovat",
-    "composers": [
-      "cnsuslik"
-    ]
+    "composers": ["cnsuslik"]
   }
 ]

@@ -1,17 +1,11 @@
 [
   {
     "title": "Celestial Voyager ('Levitate to Sky' Edit)",
-    "composers": [
-      "SQRY01"
-    ],
+    "composers": ["SQRY01"],
     "album": "Twin Lotus",
     "albumOrder": "HUI-R03",
-    "albumArtists": [
-      "卉HUI-Works"
-    ],
-    "genres": [
-      "Ambient"
-    ],
+    "albumArtists": ["卉HUI-Works"],
+    "genres": ["Ambient"],
     "year": "2024",
     "extraData": {
       "links": {
@@ -22,41 +16,20 @@
   },
   {
     "title": "Another Earth (P3T's 'The Planet of Flowers and Our 64bit Adolescence' Remix)",
-    "artists": [
-      "P3T",
-      "Vantasy"
-    ],
-    "composers": [
-      "Vantasy"
-    ],
-    "genres": [
-      "Drumstep"
-    ]
+    "artists": ["P3T", "Vantasy"],
+    "composers": ["Vantasy"],
+    "genres": ["Drumstep"]
   },
   {
     "title": "Celestial Voyager (Forged Reigns Remix)",
-    "artists": [
-      "Forged Reigns",
-      "SQRY01"
-    ],
-    "composers": [
-      "SQRY01"
-    ],
-    "genres": [
-      "Drum & Bass"
-    ]
+    "artists": ["Forged Reigns", "SQRY01"],
+    "composers": ["SQRY01"],
+    "genres": ["Drum & Bass"]
   },
   {
     "title": "我 (SQRY01 Remix)",
-    "artists": [
-      "SQRY01",
-      "JouderMin"
-    ],
-    "composers": [
-      "JouderMin"
-    ],
-    "genres": [
-      "Ambient"
-    ]
+    "artists": ["SQRY01", "JouderMin"],
+    "composers": ["JouderMin"],
+    "genres": ["Ambient"]
   }
 ]

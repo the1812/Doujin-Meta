@@ -1,16 +1,12 @@
 [
   {
     "title": "Gensokyo Sonata No.1",
-    "artists": [
-      "Iridia"
-    ],
+    "artists": ["Iridia"],
     "album": "萬千幻夢 ~ Myriad Dream",
     "albumOrder": "ESM-TH-002",
     "discNumber": "1",
     "year": "2026",
-    "albumArtists": [
-      "蜂幽音声"
-    ],
+    "albumArtists": ["蜂幽音声"],
     "extraData": {
       "links": {
         "dizzylab": "ESM-TH-002"
@@ -21,65 +17,49 @@
   },
   {
     "title": "Re_Eternalized",
-    "artists": [
-      "IVLiVS"
-    ],
+    "artists": ["IVLiVS"],
     "comments": "原曲: Eternal Dream ～ 幽玄の槭樹 (东方永夜抄 ～ Imperishable Night.)",
     "genres": ["FTP Trance", "Psy Trance", "Uplifting Trance"]
   },
   {
     "title": "Pale Petals",
-    "artists": [
-      "NOVASTAR-T"
-    ],
+    "artists": ["NOVASTAR-T"],
     "comments": "原曲: 東方妖々夢 ～ Ancient Temple (东方妖妖梦 ～ Perfect Cherry Blossom.)",
     "genres": ["Uplifting Trance"]
   },
   {
     "title": "夢雀鳴～Oneiro-chrip",
-    "artists": [
-      "miudox"
-    ],
+    "artists": ["miudox"],
     "comments": "原曲: 夜雀の歌声 ～ Night Bird (东方永夜抄 ～ Imperishable Night.)",
     "genres": ["Uplifting Trance"]
   },
   {
     "title": "堕溯永梦~€o｜LαΡsε",
-    "artists": [
-      "Tiuro逍遥"
-    ],
+    "artists": ["Tiuro逍遥"],
     "comments": "原曲: 永遠の春夢 (秘封噩梦日记 ～ Violet Detector.)",
     "genres": ["Synthwave", "Dark Glitch Hop", "Future Bounce"]
   },
   {
     "title": "破砕する運命~Shattered Prism",
-    "artists": [
-      "纸船"
-    ],
+    "artists": ["纸船"],
     "comments": "原曲: 運命のダークサイド (东方风神录 ～ Mountain of Faith.)",
     "genres": ["Hi-Tech", "Color Bass"]
   },
   {
     "title": "A&A Lie of Dream",
-    "artists": [
-      "AviF"
-    ],
+    "artists": ["AviF"],
     "comments": "原曲: 少女綺想曲 ～ Dream Battle (东方永夜抄 ～ Imperishable Night.)",
     "genres": ["Hi-Tech"]
   },
   {
     "title": "幻夢之果～The FANTASY FRUIT",
-    "artists": [
-      "尺春"
-    ],
+    "artists": ["尺春"],
     "comments": "原曲: Bad Apple!! (东方幻想乡 ～ Lotus Land Story.)",
     "genres": ["Full Flavor"]
   },
   {
     "title": "無邪気弾 ～ Out of Innocence",
-    "artists": [
-      "tRee"
-    ],
+    "artists": ["tRee"],
     "comments": "原曲: 童祭 ～ Innocent Treasures (梦违科学世纪 ～ Changeability of Strange Dream)",
     "genres": ["Hypercore"]
   }

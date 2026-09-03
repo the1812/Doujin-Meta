@@ -1,17 +1,11 @@
 [
   {
     "title": "KICK & SWITCH",
-    "composers": [
-      "Art Of Kickz"
-    ],
+    "composers": ["Art Of Kickz"],
     "album": "KICK & SWITCH EP",
     "albumOrder": "SXEP-004",
-    "albumArtists": [
-      "Silent Xords"
-    ],
-    "genres": [
-      "RawStyle"
-    ],
+    "albumArtists": ["Silent Xords"],
+    "genres": ["RawStyle"],
     "year": "2025",
     "extraData": {
       "links": {
@@ -22,26 +16,18 @@
   },
   {
     "title": "#G1MMEF4TB3A7",
-    "composers": [
-      "The Operation"
-    ]
+    "composers": ["The Operation"]
   },
   {
     "title": "Hold You Now",
-    "composers": [
-      "Valtrax"
-    ]
+    "composers": ["Valtrax"]
   },
   {
     "title": "Basic Instinct",
-    "composers": [
-      "Vcoreibez"
-    ]
+    "composers": ["Vcoreibez"]
   },
   {
     "title": "My Sole Bliss",
-    "composers": [
-      "Fly with Ease"
-    ]
+    "composers": ["Fly with Ease"]
   }
 ]

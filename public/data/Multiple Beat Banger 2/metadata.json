@@ -1,17 +1,11 @@
 [
   {
     "title": "One Kiss",
-    "composers": [
-      "KO3"
-    ],
+    "composers": ["KO3"],
     "album": "Multiple Beat Banger 2",
     "albumOrder": "WAV-029",
-    "albumArtists": [
-      "wavforme"
-    ],
-    "genres": [
-      "French House"
-    ],
+    "albumArtists": ["wavforme"],
+    "genres": ["French House"],
     "year": "2020",
     "extraData": {
       "links": {
@@ -21,56 +15,38 @@
   },
   {
     "title": "Binary Honey",
-    "composers": [
-      "t+pazolite"
-    ]
+    "composers": ["t+pazolite"]
   },
   {
     "title": "My Greed",
-    "composers": [
-      "Nhato"
-    ]
+    "composers": ["Nhato"]
   },
   {
     "title": "Rewind",
-    "composers": [
-      "Relect"
-    ]
+    "composers": ["Relect"]
   },
   {
     "title": "Your Love",
-    "composers": [
-      "Canta Bille"
-    ]
+    "composers": ["Canta Bille"]
   },
   {
     "title": "Every Day",
-    "composers": [
-      "Betcon"
-    ]
+    "composers": ["Betcon"]
   },
   {
     "title": "That Time",
-    "composers": [
-      "Musicarus"
-    ]
+    "composers": ["Musicarus"]
   },
   {
     "title": "Just in Love",
-    "composers": [
-      "MK"
-    ]
+    "composers": ["MK"]
   },
   {
     "title": "Listen",
-    "composers": [
-      "Tsuyoshi A."
-    ]
+    "composers": ["Tsuyoshi A."]
   },
   {
     "title": "Goodbye My Friends",
-    "composers": [
-      "Zekk"
-    ]
+    "composers": ["Zekk"]
   }
 ]

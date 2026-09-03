@@ -1,231 +1,139 @@
 [
   {
     "title": "Life Style (Kenji Sekiguchi Remix)",
-    "artists": [
-      "Kenji Sekiguchi",
-      "KIWAMU"
-    ],
-    "composers": [
-      "KIWAMU"
-    ],
+    "artists": ["Kenji Sekiguchi", "KIWAMU"],
+    "composers": ["KIWAMU"],
     "key": "D",
     "bpm": "121",
-    "genres": [
-      "Organic House"
-    ],
+    "genres": ["Organic House"],
     "album": "Otographies 2",
     "albumOrder": "OTOC-008",
     "discNumber": "1",
     "year": "2025",
-    "albumArtists": [
-      "Otographic Music"
-    ]
+    "albumArtists": ["Otographic Music"]
   },
   {
     "title": "Ajisai (2025 Remode)",
-    "composers": [
-      "Masanori Yasuda"
-    ],
+    "composers": ["Masanori Yasuda"],
     "key": "Gbm",
     "bpm": "120",
-    "genres": [
-      "Progressive House"
-    ]
+    "genres": ["Progressive House"]
   },
   {
     "title": "Yozora (Dominant Space Remix)",
-    "artists": [
-      "Dominant Space",
-      "Hiroyuki ODA"
-    ],
-    "composers": [
-      "Hiroyuki ODA"
-    ],
+    "artists": ["Dominant Space", "Hiroyuki ODA"],
+    "composers": ["Hiroyuki ODA"],
     "key": "Gm",
     "bpm": "117",
-    "genres": [
-      "Progressive House"
-    ]
+    "genres": ["Progressive House"]
   },
   {
     "title": "Tsurugi (Kazusa Hakusan Flow Rework)",
-    "composers": [
-      "Kazusa Hakusan"
-    ],
+    "composers": ["Kazusa Hakusan"],
     "key": "A",
     "bpm": "122",
-    "genres": [
-      "Progressive House"
-    ]
+    "genres": ["Progressive House"]
   },
   {
     "title": "Snow Crescent (Ryo Oono Remix)",
-    "artists": [
-      "Ryo Oono",
-      "Shingo Nakamura",
-      "Kenji Sekiguchi"
-    ],
-    "composers": [
-      "Shingo Nakamura",
-      "Kenji Sekiguchi"
-    ],
+    "artists": ["Ryo Oono", "Shingo Nakamura", "Kenji Sekiguchi"],
+    "composers": ["Shingo Nakamura", "Kenji Sekiguchi"],
     "key": "Am",
     "bpm": "123",
-    "genres": [
-      "Organic House"
-    ]
+    "genres": ["Organic House"]
   },
   {
     "title": "Behind The Sunset (Deep Mix)",
-    "composers": [
-      "Shingo Nakamura"
-    ],
+    "composers": ["Shingo Nakamura"],
     "key": "Cm",
     "bpm": "123",
-    "genres": [
-      "Progressive House"
-    ]
+    "genres": ["Progressive House"]
   },
   {
     "title": "Etude (Kazusa 2025 Remix)",
-    "artists": [
-      "Kazusa",
-      "Nhato"
-    ],
-    "composers": [
-      "Nhato"
-    ],
+    "artists": ["Kazusa", "Nhato"],
+    "composers": ["Nhato"],
     "key": "B",
     "bpm": "124",
-    "genres": [
-      "Progressive House"
-    ]
+    "genres": ["Progressive House"]
   },
   {
     "title": "Jougen no Tsuki",
-    "composers": [
-      "Kyohei Akagawa",
-      "Kenji Sekiguchi"
-    ],
+    "composers": ["Kyohei Akagawa", "Kenji Sekiguchi"],
     "key": "Bbm",
     "bpm": "124",
-    "genres": [
-      "Progressive House"
-    ]
+    "genres": ["Progressive House"]
   },
   {
     "title": "Clear Blue Autumn Sky",
-    "composers": [
-      "Ryo Oono"
-    ],
+    "composers": ["Ryo Oono"],
     "key": "Gm",
     "bpm": "123",
-    "genres": [
-      "Organic House"
-    ]
+    "genres": ["Organic House"]
   },
   {
     "title": "Into The Dawn (OCOT Remix)",
-    "artists": [
-      "OCOT",
-      "Kenji Sekiguchi"
-    ],
-    "composers": [
-      "Kenji Sekiguchi"
-    ],
+    "artists": ["OCOT", "Kenji Sekiguchi"],
+    "composers": ["Kenji Sekiguchi"],
     "key": "Dm",
     "bpm": "135",
-    "genres": [
-      "Trance"
-    ],
+    "genres": ["Trance"],
     "discNumber": "2"
   },
   {
     "title": "Amaoto to Kimi (Reimagined)",
-    "composers": [
-      "Kyohei Akagawa"
-    ],
+    "composers": ["Kyohei Akagawa"],
     "key": "Dm",
     "bpm": "132",
-    "genres": [
-      "Trance"
-    ]
+    "genres": ["Trance"]
   },
   {
     "title": "Alpha Dust",
-    "composers": [
-      "OCOT"
-    ],
+    "composers": ["OCOT"],
     "key": "Am",
     "bpm": "134",
-    "genres": [
-      "Trance"
-    ]
+    "genres": ["Trance"]
   },
   {
     "title": "Cytisus (2025 Mix)",
-    "composers": [
-      "aran"
-    ],
+    "composers": ["aran"],
     "key": "Bbm",
     "bpm": "135",
-    "genres": [
-      "Trance"
-    ]
+    "genres": ["Trance"]
   },
   {
     "title": "Asuka (2025 Rework)",
-    "composers": [
-      "Nhato"
-    ],
+    "composers": ["Nhato"],
     "key": "Am",
     "bpm": "112",
-    "genres": [
-      "Tech Trance"
-    ]
+    "genres": ["Tech Trance"]
   },
   {
     "title": "Ligamentaura",
-    "composers": [
-      "Taishi"
-    ],
+    "composers": ["Taishi"],
     "key": "Abm",
     "bpm": "138",
-    "genres": [
-      "Uplifting Trance"
-    ]
+    "genres": ["Uplifting Trance"]
   },
   {
     "title": "The Shore",
-    "composers": [
-      "Nhato"
-    ],
+    "composers": ["Nhato"],
     "key": "Bb",
     "bpm": "140",
-    "genres": [
-      "Uplifting Trance"
-    ]
+    "genres": ["Uplifting Trance"]
   },
   {
     "title": "MiMage (Two Decades 2025 Rework)",
-    "composers": [
-      "KaNa"
-    ],
+    "composers": ["KaNa"],
     "key": "E",
     "bpm": "140",
-    "genres": [
-      "Uplifting Trance"
-    ]
+    "genres": ["Uplifting Trance"]
   },
   {
     "title": "Vega",
-    "composers": [
-      "Hiroyuki ODA"
-    ],
+    "composers": ["Hiroyuki ODA"],
     "key": "Ab",
     "bpm": "138",
-    "genres": [
-      "Uplifting Trance"
-    ]
+    "genres": ["Uplifting Trance"]
   }
 ]

@@ -1,17 +1,11 @@
 [
   {
     "title": "Something",
-    "composers": [
-      "橘澄汐"
-    ],
+    "composers": ["橘澄汐"],
     "album": "Paradox Aphonia Vol.1",
     "albumOrder": "PREP-01",
-    "albumArtists": [
-      "悖论声像"
-    ],
-    "genres": [
-      "Bass House"
-    ],
+    "albumArtists": ["悖论声像"],
+    "genres": ["Bass House"],
     "year": "2021",
     "extraData": {
       "links": {
@@ -21,51 +15,34 @@
   },
   {
     "title": "Magic",
-    "composers": [
-      "H1M233"
-    ]
+    "composers": ["H1M233"]
   },
   {
     "title": "It's a Joke",
-    "composers": [
-      "Colftee",
-      "MARment"
-    ]
+    "composers": ["Colftee", "MARment"]
   },
   {
     "title": "Broken Plan",
-    "composers": [
-      "Zken"
-    ]
+    "composers": ["Zken"]
   },
   {
     "title": "Defeat Me",
-    "composers": [
-      "BloadFailed"
-    ]
+    "composers": ["BloadFailed"]
   },
   {
     "title": "Floating in the Wind",
-    "composers": [
-      "白汐"
-    ]
+    "composers": ["白汐"]
   },
   {
     "title": "Lollipop",
-    "composers": [
-      "Fluffy^"
-    ]
+    "composers": ["Fluffy^"]
   },
   {
     "title": "Blame",
-    "composers": [
-      "MarsReverb"
-    ]
+    "composers": ["MarsReverb"]
   },
   {
     "title": "Chant",
-    "composers": [
-      "Ale9aME"
-    ]
+    "composers": ["Ale9aME"]
   }
 ]

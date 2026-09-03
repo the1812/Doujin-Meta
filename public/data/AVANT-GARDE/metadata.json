@@ -1,19 +1,11 @@
 [
   {
     "title": "Agency-X",
-    "composers": [
-      "MossyStone",
-      "Noir-D"
-    ],
+    "composers": ["MossyStone", "Noir-D"],
     "album": "AVANT-GARDE",
     "albumOrder": "KZWV-007",
-    "albumArtists": [
-      "Kreuzwave"
-    ],
-    "genres": [
-      "Electronic",
-      "Experimental"
-    ],
+    "albumArtists": ["Kreuzwave"],
+    "genres": ["Electronic", "Experimental"],
     "year": "2026",
     "extraData": {
       "links": {
@@ -24,106 +16,71 @@
   },
   {
     "title": "This Day",
-    "composers": [
-      "DySkyLan"
-    ]
+    "composers": ["DySkyLan"]
   },
   {
     "title": "module",
-    "composers": [
-      "wheatfox"
-    ]
+    "composers": ["wheatfox"]
   },
   {
     "title": "Banish Vanish",
-    "composers": [
-      "Abit"
-    ]
+    "composers": ["Abit"]
   },
   {
     "title": "Albedo Fragment",
-    "composers": [
-      "Lamanya"
-    ]
+    "composers": ["Lamanya"]
   },
   {
     "title": "k-ε",
-    "composers": [
-      "Supa7onyz"
-    ]
+    "composers": ["Supa7onyz"]
   },
   {
     "title": "Rational existence",
-    "composers": [
-      "4_16☆"
-    ]
+    "composers": ["4_16☆"]
   },
   {
     "title": "Flashback Chaos",
-    "composers": [
-      "Reguluz"
-    ]
+    "composers": ["Reguluz"]
   },
   {
     "title": "Paranoia-imbued",
-    "composers": [
-      "Smile Demon"
-    ]
+    "composers": ["Smile Demon"]
   },
   {
     "title": "Cortisol",
-    "composers": [
-      "Nirotiy"
-    ],
+    "composers": ["Nirotiy"],
     "discNumber": "2"
   },
   {
     "title": "COGNITO吓ZARD",
-    "composers": [
-      "Forged Reigns"
-    ]
+    "composers": ["Forged Reigns"]
   },
   {
     "title": "Fetish",
-    "composers": [
-      "VeetaCrush"
-    ]
+    "composers": ["VeetaCrush"]
   },
   {
     "title": "Dark Matter",
-    "composers": [
-      "望月真白"
-    ]
+    "composers": ["望月真白"]
   },
   {
     "title": "Starrytales",
-    "composers": [
-      "月見静華"
-    ]
+    "composers": ["月見静華"]
   },
   {
     "title": "Voidchild",
-    "composers": [
-      "yusi."
-    ]
+    "composers": ["yusi."]
   },
   {
     "title": "0316",
-    "composers": [
-      "Valtrax"
-    ]
+    "composers": ["Valtrax"]
   },
   {
     "title": "Close",
-    "composers": [
-      "Xeno",
-      "reeload"
-    ]
+    "composers": ["Xeno", "reeload"]
   },
   {
     "title": "Neurokinesis",
-    "composers": [
-      "crash909☆"
-    ]
+    "composers": ["crash909☆"]
   }
 ]

@@ -1,17 +1,11 @@
 [
   {
     "title": "Ancient Galaxy",
-    "composers": [
-      "ASXX"
-    ],
+    "composers": ["ASXX"],
     "album": "Heart Essence III",
     "albumOrder": "AOHCD-005",
-    "albumArtists": [
-      "Art of Heart"
-    ],
-    "genres": [
-      "Hard Dance"
-    ],
+    "albumArtists": ["Art of Heart"],
+    "genres": ["Hard Dance"],
     "year": "2023",
     "extraData": {
       "links": {
@@ -21,122 +15,79 @@
   },
   {
     "title": "Apocalypse Cathedral",
-    "composers": [
-      "Bicente Hole",
-      "The Oil Mazter",
-      "KOYMA"
-    ]
+    "composers": ["Bicente Hole", "The Oil Mazter", "KOYMA"]
   },
   {
     "title": "Synthetic Universe",
-    "composers": [
-      "NceS"
-    ]
+    "composers": ["NceS"]
   },
   {
     "title": "Behind",
-    "composers": [
-      "Paco",
-      "F.BING.KAI",
-      "GasBomb"
-    ]
+    "composers": ["Paco", "F.BING.KAI", "GasBomb"]
   },
   {
     "title": "Time Stood Still",
-    "composers": [
-      "Valtrax"
-    ]
+    "composers": ["Valtrax"]
   },
   {
     "title": "Overnight",
-    "composers": [
-      "X-Eliminator"
-    ]
+    "composers": ["X-Eliminator"]
   },
   {
     "title": "No Sleep",
-    "composers": [
-      "Veezdom"
-    ]
+    "composers": ["Veezdom"]
   },
   {
     "title": "Shimmer",
-    "composers": [
-      "DJ ZED"
-    ]
+    "composers": ["DJ ZED"]
   },
   {
     "title": "Starlight★Shinning",
-    "composers": [
-      "Irish Kappa"
-    ]
+    "composers": ["Irish Kappa"]
   },
   {
     "title": "Until We Meet",
-    "composers": [
-      "DJ Momo"
-    ]
+    "composers": ["DJ Momo"]
   },
   {
     "title": "Cog",
-    "composers": [
-      "_"
-    ],
+    "composers": ["_"],
     "discNumber": "2"
   },
   {
     "title": "Lonely Ray",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "F#ckin Rave Machine",
-    "composers": [
-      "Normal1zer"
-    ]
+    "composers": ["Normal1zer"]
   },
   {
     "title": "The Legion of Northen Hardcore Blaxterz",
-    "composers": [
-      "Buxket_BlaxterZ"
-    ]
+    "composers": ["Buxket_BlaxterZ"]
   },
   {
     "title": "HAZE",
-    "composers": [
-      "VoV"
-    ]
+    "composers": ["VoV"]
   },
   {
     "title": "The Era of Degeneracy",
-    "composers": [
-      "SmileDemon"
-    ]
+    "composers": ["SmileDemon"]
   },
   {
     "title": "械音戮灭",
-    "composers": [
-      "Nirotiy"
-    ]
+    "composers": ["Nirotiy"]
   },
   {
     "title": "the DUB",
-    "composers": [
-      "潮音きつね_H",
-      "jakka"
-    ]
+    "composers": ["潮音きつね_H", "jakka"]
   },
   {
     "title": "Prototypes for a Crying Chimera (It's Suffocating...)",
-    "composers": [
-      "望月真白"
-    ]
+    "composers": ["望月真白"]
   },
   {
     "title": "Per aspera ad paradisum",
-    "composers": [
-      "EuphoriA"
-    ]
+    "composers": ["EuphoriA"]
   }
 ]

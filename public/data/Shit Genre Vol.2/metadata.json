@@ -1,14 +1,10 @@
 [
   {
     "title": "Try not to shake",
-    "composers": [
-      "Synths Machine "
-    ],
+    "composers": ["Synths Machine "],
     "album": "S**t Genre Vol.2",
     "albumOrder": "CLIP-003",
-    "albumArtists": [
-      "Clip Sounds"
-    ],
+    "albumArtists": ["Clip Sounds"],
     "year": "2019",
     "extraData": {
       "links": {
@@ -18,105 +14,70 @@
   },
   {
     "title": "Party Don't Stop",
-    "composers": [
-      "DiESi"
-    ]
+    "composers": ["DiESi"]
   },
   {
     "title": "Graffiti",
-    "composers": [
-      "Nascent Nova"
-    ]
+    "composers": ["Nascent Nova"]
   },
   {
     "title": "FIRST",
-    "composers": [
-      "NANO-FXXKYIG"
-    ]
+    "composers": ["NANO-FXXKYIG"]
   },
   {
     "title": "FXXKANGA",
-    "composers": [
-      "NANO-FXXKYIG"
-    ]
+    "composers": ["NANO-FXXKYIG"]
   },
   {
     "title": "Idiotic Bounce",
-    "composers": [
-      "Supa7onyz"
-    ]
+    "composers": ["Supa7onyz"]
   },
   {
     "title": "Dark City",
-    "composers": [
-      "Miokio米欧"
-    ]
+    "composers": ["Miokio米欧"]
   },
   {
     "title": "Midnight Swing",
-    "composers": [
-      "VeetaCrush"
-    ]
+    "composers": ["VeetaCrush"]
   },
   {
     "title": "Deda Dash",
-    "composers": [
-      "Roon_kun"
-    ]
+    "composers": ["Roon_kun"]
   },
   {
     "title": "Do it for love",
-    "composers": [
-      "NoisiestLunatic",
-      "Animozity"
-    ]
+    "composers": ["NoisiestLunatic", "Animozity"]
   },
   {
     "title": "Rust",
-    "composers": [
-      "_"
-    ]
+    "composers": ["_"]
   },
   {
     "title": "Expression of Thought",
-    "composers": [
-      "Agoraphobia"
-    ]
+    "composers": ["Agoraphobia"]
   },
   {
     "title": "Write Special To",
-    "composers": [
-      "NceS"
-    ]
+    "composers": ["NceS"]
   },
   {
     "title": "Get Ready for Pursuits",
-    "composers": [
-      "True Marina"
-    ]
+    "composers": ["True Marina"]
   },
   {
     "title": "Flower City",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "Prologue: Hello world",
-    "composers": [
-      "Mioplus+?/Aoi"
-    ]
+    "composers": ["Mioplus+?/Aoi"]
   },
   {
     "title": "Double blossom",
-    "composers": [
-      "Zuxin"
-    ]
+    "composers": ["Zuxin"]
   },
   {
     "title": "Cyber World",
-    "composers": [
-      "Miokio米欧"
-    ]
+    "composers": ["Miokio米欧"]
   }
 ]

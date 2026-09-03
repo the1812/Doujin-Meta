@@ -1,17 +1,11 @@
 [
   {
     "title": "Hypercoaster (Extended Mix)",
-    "composers": [
-      "Hausman"
-    ],
+    "composers": ["Hausman"],
     "album": "Hypercoaster / Holding On",
     "albumOrder": "OSR-0024",
-    "albumArtists": [
-      "Omniset Records"
-    ],
-    "genres": [
-      "Trance"
-    ],
+    "albumArtists": ["Omniset Records"],
+    "genres": ["Trance"],
     "year": "2024",
     "extraData": {
       "links": {
@@ -22,20 +16,14 @@
   },
   {
     "title": "Hypercoaster (Radio Edit)",
-    "composers": [
-      "Hausman"
-    ]
+    "composers": ["Hausman"]
   },
   {
     "title": "Holding On (Extended Mix)",
-    "composers": [
-      "Hausman"
-    ]
+    "composers": ["Hausman"]
   },
   {
     "title": "Holding On (Radio Edit)",
-    "composers": [
-      "Hausman"
-    ]
+    "composers": ["Hausman"]
   }
 ]

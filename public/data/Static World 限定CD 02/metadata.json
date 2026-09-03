@@ -1,28 +1,18 @@
 [
   {
     "title": "Midday Rest",
-    "composers": [
-      "MiraGevot"
-    ],
+    "composers": ["MiraGevot"],
     "album": "Static World 限定CD 02",
-    "albumArtists": [
-      "Static World"
-    ],
-    "genres": [
-      "民族"
-    ],
+    "albumArtists": ["Static World"],
+    "genres": ["民族"],
     "year": "2022"
   },
   {
     "title": "Starry Sky",
-    "composers": [
-      "MiraGevot"
-    ]
+    "composers": ["MiraGevot"]
   },
   {
     "title": "Dreamland",
-    "composers": [
-      "MiraGevot"
-    ]
+    "composers": ["MiraGevot"]
   }
 ]

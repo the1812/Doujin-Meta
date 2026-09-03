@@ -1,17 +1,11 @@
 [
   {
     "title": "Rose Courtyard",
-    "composers": [
-      "Rien"
-    ],
+    "composers": ["Rien"],
     "album": "蔷薇梦园 ~ Rose Courtyard",
-    "albumArtists": [
-      "Mescaline's Wings"
-    ],
+    "albumArtists": ["Mescaline's Wings"],
     "comments": "原曲: ハルトマンの妖怪少女 (东方地灵殿　～ Subterranean Animism.)",
-    "genres": [
-      "Jazz"
-    ],
+    "genres": ["Jazz"],
     "year": "2023"
   }
 ]

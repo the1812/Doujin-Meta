@@ -1,17 +1,11 @@
 [
   {
     "title": "神様から祝福の雨",
-    "composers": [
-      "觀測員"
-    ],
+    "composers": ["觀測員"],
     "album": "After Virus",
     "albumOrder": "KZWV-004",
-    "albumArtists": [
-      "Kreuzwave"
-    ],
-    "genres": [
-      "Laboratory"
-    ],
+    "albumArtists": ["Kreuzwave"],
+    "genres": ["Laboratory"],
     "year": "2024",
     "extraData": {
       "links": {
@@ -22,74 +16,50 @@
   },
   {
     "title": "_aftermath",
-    "composers": [
-      "wheatfox"
-    ]
+    "composers": ["wheatfox"]
   },
   {
     "title": "Malevolence",
-    "composers": [
-      "4_16☆"
-    ]
+    "composers": ["4_16☆"]
   },
   {
     "title": "Meet Me Next Thursday",
-    "composers": [
-      "AiSS"
-    ]
+    "composers": ["AiSS"]
   },
   {
     "title": "Slient Foam",
-    "composers": [
-      "UraniumW"
-    ]
+    "composers": ["UraniumW"]
   },
   {
     "title": "Zombie Virus",
-    "composers": [
-      "Miokio米欧"
-    ]
+    "composers": ["Miokio米欧"]
   },
   {
     "title": "LIVING ROOM",
-    "composers": [
-      "DySkyLan"
-    ]
+    "composers": ["DySkyLan"]
   },
   {
     "title": "Khrycher",
-    "composers": [
-      "硝酸生菜Synzak"
-    ]
+    "composers": ["硝酸生菜Synzak"]
   },
   {
     "title": "Gestalt, the Continuum of Sentient",
-    "composers": [
-      "ElousΛ.-FZ"
-    ]
+    "composers": ["ElousΛ.-FZ"]
   },
   {
     "title": "World of Depravity",
-    "composers": [
-      "Smile Demon"
-    ]
+    "composers": ["Smile Demon"]
   },
   {
     "title": "Elk Cloner",
-    "composers": [
-      "oперація 27"
-    ]
+    "composers": ["oперація 27"]
   },
   {
     "title": "Cobra Strike",
-    "composers": [
-      "Forged Reigns"
-    ]
+    "composers": ["Forged Reigns"]
   },
   {
     "title": "Utophilia",
-    "composers": [
-      "SQRY01"
-    ]
+    "composers": ["SQRY01"]
   }
 ]

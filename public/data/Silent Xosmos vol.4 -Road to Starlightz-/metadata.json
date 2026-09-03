@@ -1,17 +1,11 @@
 [
   {
     "title": "On You",
-    "composers": [
-      "BlueWind"
-    ],
+    "composers": ["BlueWind"],
     "album": "Silent Xosmos vol.4 -Road to Starlightz-",
     "albumOrder": "SLXD-005",
-    "albumArtists": [
-      "Silent Xords"
-    ],
-    "genres": [
-      "Hardcore"
-    ],
+    "albumArtists": ["Silent Xords"],
+    "genres": ["Hardcore"],
     "year": "2021",
     "extraData": {
       "links": {
@@ -22,83 +16,52 @@
   },
   {
     "title": "Funky Generation",
-    "composers": [
-      "Irish Kappa"
-    ]
+    "composers": ["Irish Kappa"]
   },
   {
     "title": "月下繚乱 (Extended Mix)",
-    "composers": [
-      "LUNARiUM",
-      "月見 静華"
-    ]
+    "composers": ["LUNARiUM", "月見 静華"]
   },
   {
     "title": "Overtake",
-    "composers": [
-      "KzCraziL"
-    ]
+    "composers": ["KzCraziL"]
   },
   {
     "title": "I'm Gonna Fly High",
-    "composers": [
-      "Axya"
-    ]
+    "composers": ["Axya"]
   },
   {
     "title": "What Is Music? (BlueWind Remix)",
-    "artists": [
-      "BlueWind",
-      "Normal1zer"
-    ],
-    "composers": [
-      "Normal1zer"
-    ]
+    "artists": ["BlueWind", "Normal1zer"],
+    "composers": ["Normal1zer"]
   },
   {
     "title": "Soar Under Your Starlight",
-    "composers": [
-      "Koregroo"
-    ]
+    "composers": ["Koregroo"]
   },
   {
     "title": "Niehku (Dreams)",
-    "composers": [
-      "Nirotiy"
-    ]
+    "composers": ["Nirotiy"]
   },
   {
     "title": "Access Granted",
-    "composers": [
-      "LUNARiUM"
-    ]
+    "composers": ["LUNARiUM"]
   },
   {
     "title": "Fantasy Load",
-    "composers": [
-      "NceS"
-    ]
+    "composers": ["NceS"]
   },
   {
     "title": "Empty Arcade",
-    "composers": [
-      "KzCraziL"
-    ]
+    "composers": ["KzCraziL"]
   },
   {
     "title": "Frozen",
-    "composers": [
-      "BlueWind"
-    ]
+    "composers": ["BlueWind"]
   },
   {
     "title": "Road to Starlightz",
-    "artists": [
-      "ninnikuu",
-      "Normal1zer"
-    ],
-    "composers": [
-      "Normal1zer"
-    ]
+    "artists": ["ninnikuu", "Normal1zer"],
+    "composers": ["Normal1zer"]
   }
 ]

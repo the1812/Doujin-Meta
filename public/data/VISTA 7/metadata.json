@@ -1,17 +1,11 @@
 [
   {
     "title": "When Light Returns",
-    "composers": [
-      "Lawy"
-    ],
+    "composers": ["Lawy"],
     "album": "VISTA 7",
     "albumOrder": "UTCD-040",
-    "albumArtists": [
-      "Unitone"
-    ],
-    "genres": [
-      "Uplifting Trance"
-    ],
+    "albumArtists": ["Unitone"],
+    "genres": ["Uplifting Trance"],
     "year": "2025",
     "extraData": {
       "links": {
@@ -21,38 +15,26 @@
   },
   {
     "title": "Virtus",
-    "composers": [
-      "Crisy"
-    ]
+    "composers": ["Crisy"]
   },
   {
     "title": "Particle World",
-    "composers": [
-      "MYTK"
-    ]
+    "composers": ["MYTK"]
   },
   {
     "title": "Elynas",
-    "composers": [
-      "Radianth"
-    ]
+    "composers": ["Radianth"]
   },
   {
     "title": "Sedona",
-    "composers": [
-      "Sou Enomoto"
-    ]
+    "composers": ["Sou Enomoto"]
   },
   {
     "title": "Benediction",
-    "composers": [
-      "Plutian"
-    ]
+    "composers": ["Plutian"]
   },
   {
     "title": "El Dorado",
-    "composers": [
-      "Nhato"
-    ]
+    "composers": ["Nhato"]
   }
 ]

@@ -1,17 +1,11 @@
 [
   {
     "title": "Spark (Intro)",
-    "composers": [
-      "Project-G"
-    ],
+    "composers": ["Project-G"],
     "album": "Loneliness and Desire",
     "albumOrder": "OSR-0028",
-    "albumArtists": [
-      "Omniset Records"
-    ],
-    "genres": [
-      "Electronic"
-    ],
+    "albumArtists": ["Omniset Records"],
+    "genres": ["Electronic"],
     "year": "2025",
     "extraData": {
       "links": {
@@ -22,44 +16,30 @@
   },
   {
     "title": "Bornite",
-    "composers": [
-      "Project-G"
-    ]
+    "composers": ["Project-G"]
   },
   {
     "title": "For No Reason",
-    "composers": [
-      "Project-G"
-    ]
+    "composers": ["Project-G"]
   },
   {
     "title": "Lemma",
-    "composers": [
-      "Project-G"
-    ]
+    "composers": ["Project-G"]
   },
   {
     "title": "Awareness",
-    "composers": [
-      "Project-G"
-    ]
+    "composers": ["Project-G"]
   },
   {
     "title": "Humid Days",
-    "composers": [
-      "Project-G"
-    ]
+    "composers": ["Project-G"]
   },
   {
     "title": "Loneliness and Desire",
-    "composers": [
-      "Project-G"
-    ]
+    "composers": ["Project-G"]
   },
   {
     "title": "Underlined",
-    "composers": [
-      "Project-G"
-    ]
+    "composers": ["Project-G"]
   }
 ]

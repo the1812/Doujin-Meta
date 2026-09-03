@@ -1,17 +1,11 @@
 [
   {
     "title": "#Take It Slow",
-    "composers": [
-      "LESSISLESS"
-    ],
+    "composers": ["LESSISLESS"],
     "album": "Aqualink",
     "albumOrder": "KZWV-008",
-    "albumArtists": [
-      "Kreuzwave"
-    ],
-    "genres": [
-      "Trance"
-    ],
+    "albumArtists": ["Kreuzwave"],
+    "genres": ["Trance"],
     "year": "2026",
     "extraData": {
       "links": {
@@ -22,26 +16,18 @@
   },
   {
     "title": "#Solstice",
-    "composers": [
-      "Ishiro"
-    ]
+    "composers": ["Ishiro"]
   },
   {
     "title": "#Hakuun",
-    "composers": [
-      "Dreamira"
-    ]
+    "composers": ["Dreamira"]
   },
   {
     "title": "#Motions That Stayed Behind (Back to 2016)",
-    "composers": [
-      "ElousΛ.-FZ"
-    ]
+    "composers": ["ElousΛ.-FZ"]
   },
   {
     "title": "#Ideal Storyteller",
-    "composers": [
-      "minus7LUFS"
-    ]
+    "composers": ["minus7LUFS"]
   }
 ]

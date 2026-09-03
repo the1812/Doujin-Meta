@@ -1,17 +1,11 @@
 [
   {
     "title": "Dark God",
-    "composers": [
-      "Spoog"
-    ],
+    "composers": ["Spoog"],
     "album": "Dark God",
     "albumOrder": "MLAB-007",
-    "albumArtists": [
-      "Matthiola Records"
-    ],
-    "genres": [
-      "Hardcore"
-    ],
+    "albumArtists": ["Matthiola Records"],
+    "genres": ["Hardcore"],
     "year": "2019",
     "extraData": {
       "links": {

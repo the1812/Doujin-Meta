@@ -1,18 +1,12 @@
 [
   {
     "title": "Revive From Silence",
-    "composers": [
-      "NMBW"
-    ],
+    "composers": ["NMBW"],
     "comments": "Normal1zer x BlueWind",
     "album": "Aim For Apex #1: Revive From Silence",
     "albumOrder": "SLXD-004",
-    "albumArtists": [
-      "Silent Xords"
-    ],
-    "genres": [
-      "Hardstyle"
-    ],
+    "albumArtists": ["Silent Xords"],
+    "genres": ["Hardstyle"],
     "year": "2020",
     "extraData": {
       "links": {
@@ -23,62 +17,41 @@
   },
   {
     "title": "Old Techniques",
-    "composers": [
-      "EuphoriA"
-    ]
+    "composers": ["EuphoriA"]
   },
   {
     "title": "Life",
-    "composers": [
-      "NceS"
-    ]
+    "composers": ["NceS"]
   },
   {
     "title": "Warrior Impacts",
-    "composers": [
-      "D.WarriorZ"
-    ],
+    "composers": ["D.WarriorZ"],
     "comments": "LUNARiUM x BlueWind"
   },
   {
     "title": "The Oscillation",
-    "composers": [
-      "Normal1zer"
-    ]
+    "composers": ["Normal1zer"]
   },
   {
     "title": "Trapped Inside",
-    "composers": [
-      "BlueWind"
-    ]
+    "composers": ["BlueWind"]
   },
   {
     "title": "Intrapsychic",
-    "composers": [
-      "Vcoreibez"
-    ]
+    "composers": ["Vcoreibez"]
   },
   {
     "title": "Varra (Blood)",
-    "composers": [
-      "Nirotiy"
-    ]
+    "composers": ["Nirotiy"]
   },
   {
     "title": "Artificial Fear",
-    "composers": [
-      "Vcoreibez"
-    ]
+    "composers": ["Vcoreibez"]
   },
   {
     "title": "Revive From Silence (Project Nirvana Remix)",
-    "artists": [
-      "Project Nirvana",
-      "NMBW"
-    ],
-    "composers": [
-      "NMBW"
-    ],
+    "artists": ["Project Nirvana", "NMBW"],
+    "composers": ["NMBW"],
     "comments": "Normal1zer x BlueWind"
   }
 ]

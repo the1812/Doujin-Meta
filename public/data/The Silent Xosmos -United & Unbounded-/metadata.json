@@ -1,17 +1,11 @@
 [
   {
     "title": "Get Away",
-    "composers": [
-      "Sh0wtime"
-    ],
+    "composers": ["Sh0wtime"],
     "album": "The Silent Xosmos -United & Unbounded-",
     "albumOrder": "SLXD-009",
-    "albumArtists": [
-      "Silent Xords"
-    ],
-    "genres": [
-      "Hardcore"
-    ],
+    "albumArtists": ["Silent Xords"],
+    "genres": ["Hardcore"],
     "year": "2024",
     "extraData": {
       "links": {
@@ -22,216 +16,129 @@
   },
   {
     "title": "Pixel Rebelz (The Operation Remix)",
-    "artists": [
-      "The Operation",
-      "Normal1zer"
-    ],
-    "composers": [
-      "Normal1zer"
-    ]
+    "artists": ["The Operation", "Normal1zer"],
+    "composers": ["Normal1zer"]
   },
   {
     "title": "We can fly",
-    "composers": [
-      "botnok"
-    ]
+    "composers": ["botnok"]
   },
   {
     "title": "Brighter Day (Redux)",
-    "composers": [
-      "Axya"
-    ]
+    "composers": ["Axya"]
   },
   {
     "title": "FREE FREAK",
-    "composers": [
-      "KzCraziL"
-    ]
+    "composers": ["KzCraziL"]
   },
   {
     "title": "Fabulous Action",
-    "composers": [
-      "Irish Kappa"
-    ]
+    "composers": ["Irish Kappa"]
   },
   {
     "title": "Burnout",
-    "composers": [
-      "Forged Reigns"
-    ]
+    "composers": ["Forged Reigns"]
   },
   {
     "title": "Senbon Zako",
-    "composers": [
-      "DJ Momo"
-    ]
+    "composers": ["DJ Momo"]
   },
   {
     "title": "End of Blasphemers",
-    "composers": [
-      "Fly with Ease"
-    ]
+    "composers": ["Fly with Ease"]
   },
   {
     "title": "Never Ending Home",
-    "composers": [
-      "Veezdom",
-      "AiSS"
-    ],
+    "composers": ["Veezdom", "AiSS"],
     "comments": "The Silent Xosmos Anthem 1"
   },
   {
     "title": "The Kid's World",
     "discNumber": "2",
-    "composers": [
-      "Zephaniah"
-    ]
+    "composers": ["Zephaniah"]
   },
   {
     "title": "Insomnia (Can't Sleep Another Night) (Vcoreibez Remix)",
-    "artists": [
-      "Vcoreibez",
-      "BlueWind"
-    ],
-    "composers": [
-      "BlueWind"
-    ]
+    "artists": ["Vcoreibez", "BlueWind"],
+    "composers": ["BlueWind"]
   },
   {
     "title": "What Is Music (Axya's What Is Makina Remix)",
-    "artists": [
-      "Axya",
-      "Normal1zer"
-    ],
-    "composers": [
-      "Normal1zer"
-    ]
+    "artists": ["Axya", "Normal1zer"],
+    "composers": ["Normal1zer"]
   },
   {
     "title": "BLAST RUSH",
-    "composers": [
-      "KzCraziL"
-    ]
+    "composers": ["KzCraziL"]
   },
   {
     "title": "Terminal Station",
-    "artists": [
-      "马猴烧",
-      "F411εν",
-      "watch"
-    ],
-    "composers": [
-      "F411εν",
-      "watch"
-    ]
+    "artists": ["马猴烧", "F411εν", "watch"],
+    "composers": ["F411εν", "watch"]
   },
   {
     "title": "Recall",
-    "composers": [
-      "Valtrax"
-    ]
+    "composers": ["Valtrax"]
   },
   {
     "title": "惡使",
-    "composers": [
-      "Axya"
-    ]
+    "composers": ["Axya"]
   },
   {
     "title": "Unleash My Rage",
-    "composers": [
-      "minus7LUFS"
-    ]
+    "composers": ["minus7LUFS"]
   },
   {
     "title": "Nuclear Testing",
-    "composers": [
-      "Invasion Of Chaos"
-    ]
+    "composers": ["Invasion Of Chaos"]
   },
   {
     "title": "Unity and Rave",
-    "artists": [
-      "星尘Infinity",
-      "Axya",
-      "DJ Momo",
-      "system 【Σ】"
-    ],
-    "composers": [
-      "Axya",
-      "DJ Momo",
-      "system 【Σ】"
-    ],
+    "artists": ["星尘Infinity", "Axya", "DJ Momo", "system 【Σ】"],
+    "composers": ["Axya", "DJ Momo", "system 【Σ】"],
     "comments": "The Silent Xosmos Anthem 2"
   },
   {
     "title": "Trapped Inside (Normal1zer as Art Of Kickz Remix)",
     "discNumber": "3",
-    "artists": [
-      "Normal1zer",
-      "BlueWind"
-    ],
-    "composers": [
-      "BlueWind"
-    ]
+    "artists": ["Normal1zer", "BlueWind"],
+    "composers": ["BlueWind"]
   },
   {
     "title": "Heaven On Earth",
-    "composers": [
-      "Vcoreibez"
-    ]
+    "composers": ["Vcoreibez"]
   },
   {
     "title": "Undercover",
-    "composers": [
-      "Jiuwenzi"
-    ]
+    "composers": ["Jiuwenzi"]
   },
   {
     "title": "Power Is My Remedy",
-    "composers": [
-      "Normal1zer"
-    ]
+    "composers": ["Normal1zer"]
   },
   {
     "title": "WAFUWAFUU BUSHIDO SCHRANZ",
-    "composers": [
-      "nova+z"
-    ]
+    "composers": ["nova+z"]
   },
   {
     "title": "ray of oblivion",
-    "composers": [
-      "Nirotiy"
-    ]
+    "composers": ["Nirotiy"]
   },
   {
     "title": "Mechanical Fate",
-    "composers": [
-      "Smile Demon",
-      "觀測员"
-    ]
+    "composers": ["Smile Demon", "觀測员"]
   },
   {
     "title": "Non-Melodic Ragez (2024 Re-Raged)",
-    "composers": [
-      "Normal1zer"
-    ]
+    "composers": ["Normal1zer"]
   },
   {
     "title": "-The Start of The End-",
-    "composers": [
-      "DJ-Orca"
-    ]
+    "composers": ["DJ-Orca"]
   },
   {
     "title": "United & Unbounded",
-    "composers": [
-      "Hazecat",
-      "BlueWind",
-      "Normal1zer",
-      "LUNARiUM"
-    ],
+    "composers": ["Hazecat", "BlueWind", "Normal1zer", "LUNARiUM"],
     "comments": "The Silent Xosmos Anthem 3"
   }
 ]

@@ -1,17 +1,11 @@
 [
   {
     "title": "Cresent",
-    "composers": [
-      "colate"
-    ],
+    "composers": ["colate"],
     "album": "Unitone PHASE:06",
     "albumOrder": "UTCD-022",
-    "albumArtists": [
-      "Unitone"
-    ],
-    "genres": [
-      "Trance"
-    ],
+    "albumArtists": ["Unitone"],
+    "genres": ["Trance"],
     "year": "2017",
     "extraData": {
       "links": {
@@ -21,69 +15,46 @@
   },
   {
     "title": "Rera",
-    "composers": [
-      "Kenichi Chiba"
-    ]
+    "composers": ["Kenichi Chiba"]
   },
   {
     "title": "Sign (in the flow)",
-    "composers": [
-      "Ryunosuke Kudo"
-    ]
+    "composers": ["Ryunosuke Kudo"]
   },
   {
     "title": "Emerald",
-    "composers": [
-      "satella"
-    ]
+    "composers": ["satella"]
   },
   {
     "title": "Pacific Sun",
-    "composers": [
-      "aran"
-    ]
+    "composers": ["aran"]
   },
   {
     "title": "Idola",
-    "composers": [
-      "Maozon",
-      "Scarfaith"
-    ]
+    "composers": ["Maozon", "Scarfaith"]
   },
   {
     "title": "Catalyst",
-    "composers": [
-      "Radianth"
-    ]
+    "composers": ["Radianth"]
   },
   {
     "title": "Nivea",
-    "composers": [
-      "Lawy"
-    ]
+    "composers": ["Lawy"]
   },
   {
     "title": "Existence",
-    "composers": [
-      "Nhato"
-    ]
+    "composers": ["Nhato"]
   },
   {
     "title": "Dare to Fall Deeper",
-    "composers": [
-      "Taishi"
-    ]
+    "composers": ["Taishi"]
   },
   {
     "title": "Hakumei",
-    "composers": [
-      "Kyohei Akagawa"
-    ]
+    "composers": ["Kyohei Akagawa"]
   },
   {
     "title": "My Love",
-    "composers": [
-      "MYTK"
-    ]
+    "composers": ["MYTK"]
   }
 ]

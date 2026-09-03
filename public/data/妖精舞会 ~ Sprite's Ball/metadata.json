@@ -1,16 +1,12 @@
 [
   {
     "title": "Rock Idol",
-    "artists": [
-      "DJ Tranceair"
-    ],
+    "artists": ["DJ Tranceair"],
     "album": "妖精舞会 ~ Sprite's Ball",
     "albumOrder": "ESM-TH-002-5",
     "discNumber": "1",
     "year": "2026",
-    "albumArtists": [
-      "蜂幽音声"
-    ],
+    "albumArtists": ["蜂幽音声"],
     "extraData": {
       "links": {
         "dizzylab": "ESM-TH-002-5"
@@ -21,41 +17,31 @@
   },
   {
     "title": "Frosty Dance",
-    "artists": [
-      "Northad"
-    ],
+    "artists": ["Northad"],
     "comments": "原曲: おてんば恋娘 (东方红魔乡 ～ the Embodiment of Scarlet Devil.)",
     "genres": ["Hands up"]
   },
   {
     "title": "B∩d C^Rn1VαL",
-    "artists": [
-      "Nick1121"
-    ],
+    "artists": ["Nick1121"],
     "comments": "原曲: Bad Apple!! (东方幻想乡 ～ Lotus Land Story.)",
     "genres": ["J-Rave"]
   },
   {
     "title": "Midnight Bounce Ritual",
-    "artists": [
-      "レリP"
-    ],
+    "artists": ["レリP"],
     "comments": "原曲: 真夜中のフェアリーダンス (妖精大战争 ～ 东方三月精)",
     "genres": ["Melbourne Bounce"]
   },
   {
     "title": "Flash's Stripe",
-    "artists": [
-      "Tiuro逍遥"
-    ],
+    "artists": ["Tiuro逍遥"],
     "comments": "原曲: 星条旗のピエロ (东方绀珠传 ～ Legacy of Lunatic Kingdom.)",
     "genres": ["Bigroom"]
   },
   {
     "title": "Bass Driven Up",
-    "artists": [
-      "AviF"
-    ],
+    "artists": ["AviF"],
     "comments": "原曲: デザイアドライブ (东方神灵庙 ～ Ten Desires.)",
     "genres": ["Bigroom"]
   }

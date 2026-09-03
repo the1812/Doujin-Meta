@@ -1,18 +1,11 @@
 [
   {
     "title": "Cinder Glade",
-    "composers": [
-      "DJ Momo",
-      "ちよもも"
-    ],
+    "composers": ["DJ Momo", "ちよもも"],
     "album": "Ephemanent",
     "albumOrder": "THGO-006",
-    "albumArtists": [
-      "Thoughost"
-    ],
-    "genres": [
-      "Hardcore"
-    ],
+    "albumArtists": ["Thoughost"],
+    "genres": ["Hardcore"],
     "year": "2024",
     "extraData": {
       "links": {
@@ -23,68 +16,46 @@
   },
   {
     "title": "Beryl",
-    "composers": [
-      "Kokomochi"
-    ]
+    "composers": ["Kokomochi"]
   },
   {
     "title": "Angel Generator",
-    "composers": [
-      "Ouuuuuu"
-    ]
+    "composers": ["Ouuuuuu"]
   },
   {
     "title": "Garnet",
-    "composers": [
-      "KaKi"
-    ]
+    "composers": ["KaKi"]
   },
   {
     "title": "Universe Outsiderz",
-    "composers": [
-      "Normal1zer"
-    ]
+    "composers": ["Normal1zer"]
   },
   {
     "title": "So What",
-    "composers": [
-      "Project-G"
-    ]
+    "composers": ["Project-G"]
   },
   {
     "title": "Event Horizon",
-    "composers": [
-      "Hyphen"
-    ]
+    "composers": ["Hyphen"]
   },
   {
     "title": "Nightmare Trigger",
-    "composers": [
-      "MiYAjY"
-    ]
+    "composers": ["MiYAjY"]
   },
   {
     "title": "Berzerk",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "Code Name: Macrocosmos",
-    "composers": [
-      "Irish Kappa"
-    ]
+    "composers": ["Irish Kappa"]
   },
   {
     "title": "沉渊低语 (Whispers of Looming Shadows)",
-    "composers": [
-      "Nirotiy"
-    ]
+    "composers": ["Nirotiy"]
   },
   {
     "title": "星冴ゆる霜穹",
-    "composers": [
-      "潮音きつね_H"
-    ]
+    "composers": ["潮音きつね_H"]
   }
 ]

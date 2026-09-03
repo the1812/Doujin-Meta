@@ -1,17 +1,11 @@
 [
   {
     "title": "Mirror Echo",
-    "composers": [
-      "ILusMin"
-    ],
+    "composers": ["ILusMin"],
     "album": "Echo In Mirror",
     "albumOrder": "EIM-011",
-    "albumArtists": [
-      "EIMSOUND"
-    ],
-    "genres": [
-      "Trance"
-    ],
+    "albumArtists": ["EIMSOUND"],
+    "genres": ["Trance"],
     "year": "2023",
     "extraData": {
       "links": {
@@ -22,184 +16,119 @@
   },
   {
     "title": "Immemoratus",
-    "composers": [
-      "硝酸生菜Synzak"
-    ]
+    "composers": ["硝酸生菜Synzak"]
   },
   {
     "title": "サファイア夢 (Dream of Sapphire)",
-    "composers": [
-      "ClanEver",
-      "Nascent Nova",
-      "麻雀与雪",
-      "雲夏"
-    ]
+    "composers": ["ClanEver", "Nascent Nova", "麻雀与雪", "雲夏"]
   },
   {
     "title": "Intersection",
-    "composers": [
-      "麻雀与雪"
-    ]
+    "composers": ["麻雀与雪"]
   },
   {
     "title": "Stratum",
-    "composers": [
-      "Valtrax"
-    ]
+    "composers": ["Valtrax"]
   },
   {
     "title": "充耳不闻 (Shutting My Ears)",
-    "composers": [
-      "Supa7onyz"
-    ]
+    "composers": ["Supa7onyz"]
   },
   {
     "title": "Astigmatism",
-    "composers": [
-      "Miokio米欧"
-    ]
+    "composers": ["Miokio米欧"]
   },
   {
     "title": "Blue Rock Sugar",
-    "composers": [
-      "ClanEver"
-    ]
+    "composers": ["ClanEver"]
   },
   {
     "title": "N1 in mirror",
-    "composers": [
-      "FloweRH"
-    ]
+    "composers": ["FloweRH"]
   },
   {
     "title": "Xylophagan Corrputions",
-    "composers": [
-      "Nirotiy"
-    ]
+    "composers": ["Nirotiy"]
   },
   {
     "title": "Evolution",
-    "composers": [
-      "Aflocat"
-    ]
+    "composers": ["Aflocat"]
   },
   {
     "title": "Rainbow in the Rainstorm",
-    "composers": [
-      "Rainbow Catcher"
-    ]
+    "composers": ["Rainbow Catcher"]
   },
   {
     "title": "Falling into the other side",
-    "composers": [
-      "Laxeno57"
-    ]
+    "composers": ["Laxeno57"]
   },
   {
     "title": "Mirror Wave",
-    "composers": [
-      "ILusMin"
-    ]
+    "composers": ["ILusMin"]
   },
   {
     "title": "Before the Rust",
-    "composers": [
-      "LYDMX"
-    ],
+    "composers": ["LYDMX"],
     "discNumber": "2"
   },
   {
     "title": "Cloudy Cafe",
-    "composers": [
-      "rmk"
-    ]
+    "composers": ["rmk"]
   },
   {
     "title": "Cake imp Toccatina",
-    "composers": [
-      "ILusMin"
-    ]
+    "composers": ["ILusMin"]
   },
   {
     "title": "Curry Caryfish",
-    "composers": [
-      "Yomikuu"
-    ]
+    "composers": ["Yomikuu"]
   },
   {
     "title": "Cozy",
-    "composers": [
-      "VeetaCrush"
-    ]
+    "composers": ["VeetaCrush"]
   },
   {
     "title": "Memories of the past",
-    "composers": [
-      "Arentis"
-    ]
+    "composers": ["Arentis"]
   },
   {
     "title": "Reforged",
-    "composers": [
-      "2bnsn"
-    ]
+    "composers": ["2bnsn"]
   },
   {
     "title": "Everythings",
-    "composers": [
-      "Arentis"
-    ]
+    "composers": ["Arentis"]
   },
   {
     "title": "Iridescent Raindrops",
-    "composers": [
-      "Dreamira"
-    ]
+    "composers": ["Dreamira"]
   },
   {
     "title": "Let's Play!",
-    "composers": [
-      "AiSS"
-    ]
+    "composers": ["AiSS"]
   },
   {
     "title": "In it",
-    "composers": [
-      "Laxeno57"
-    ]
+    "composers": ["Laxeno57"]
   },
   {
     "title": "Th3 Rave 2 Love",
-    "composers": [
-      "DJ Momo"
-    ]
+    "composers": ["DJ Momo"]
   },
   {
     "title": "Lights On",
-    "composers": [
-      "Dreamira"
-    ]
+    "composers": ["Dreamira"]
   },
   {
     "title": "冒险者的奇幻旅程 ~Adventurer's Fantastic Journey~",
-    "composers": [
-      "Shirasawa",
-      "麻雀与雪",
-      "ClanEver"
-    ]
+    "composers": ["Shirasawa", "麻雀与雪", "ClanEver"]
   },
   {
     "title": "冒险者的奇幻旅程 ~Adventurer's Fantastic Journey~ (Trance Mix)",
-    "composers": [
-      "Shirasawa",
-      "麻雀与雪",
-      "ClanEver"
-    ]
+    "composers": ["Shirasawa", "麻雀与雪", "ClanEver"]
   },
   {
     "title": "Tidal",
-    "composers": [
-      "JINGYAN"
-    ]
+    "composers": ["JINGYAN"]
   }
 ]

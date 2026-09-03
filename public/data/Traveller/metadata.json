@@ -1,17 +1,11 @@
 [
   {
     "title": "Live In The Moment",
-    "composers": [
-      "Dreamira"
-    ],
+    "composers": ["Dreamira"],
     "album": "Traveller",
     "albumOrder": "NCA-002",
-    "albumArtists": [
-      "Nameless Catalogue"
-    ],
-    "genres": [
-      "Electronic"
-    ],
+    "albumArtists": ["Nameless Catalogue"],
+    "genres": ["Electronic"],
     "year": "2024",
     "extraData": {
       "links": {
@@ -21,50 +15,34 @@
   },
   {
     "title": "Flakes",
-    "composers": [
-      "Ceru_"
-    ]
+    "composers": ["Ceru_"]
   },
   {
     "title": "Just Another Bystander",
-    "composers": [
-      "Settled Edge"
-    ]
+    "composers": ["Settled Edge"]
   },
   {
     "title": "EXTREME VIOLET",
-    "composers": [
-      "Neonscape"
-    ]
+    "composers": ["Neonscape"]
   },
   {
     "title": "The Terminal Of Journey",
-    "composers": [
-      "RaiNElya"
-    ]
+    "composers": ["RaiNElya"]
   },
   {
     "title": "Lunar Fantasia",
-    "composers": [
-      "Dreamira"
-    ]
+    "composers": ["Dreamira"]
   },
   {
     "title": "Light-ScatteriN",
-    "composers": [
-      "F3azor4_"
-    ]
+    "composers": ["F3azor4_"]
   },
   {
     "title": "NEO BURST!!!",
-    "composers": [
-      "Corvus.BK"
-    ]
+    "composers": ["Corvus.BK"]
   },
   {
     "title": "Thanks For Our Encounter",
-    "composers": [
-      "Moonset"
-    ]
+    "composers": ["Moonset"]
   }
 ]

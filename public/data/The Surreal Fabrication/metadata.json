@@ -1,17 +1,11 @@
 [
   {
     "title": "Codec: 256",
-    "composers": [
-      "Mameyudoufu"
-    ],
+    "composers": ["Mameyudoufu"],
     "album": "The Surreal Fabrication",
     "albumOrder": "MRNX1",
-    "albumArtists": [
-      "Marrow Nova"
-    ],
-    "genres": [
-      "Electronic"
-    ],
+    "albumArtists": ["Marrow Nova"],
+    "genres": ["Electronic"],
     "year": "2021",
     "extraData": {
       "links": {
@@ -22,44 +16,30 @@
   },
   {
     "title": "Chronokinesia",
-    "composers": [
-      "Project-G"
-    ]
+    "composers": ["Project-G"]
   },
   {
     "title": "Abiosis",
-    "composers": [
-      "Radianth"
-    ]
+    "composers": ["Radianth"]
   },
   {
     "title": "Ephemeral",
-    "composers": [
-      "satella"
-    ]
+    "composers": ["satella"]
   },
   {
     "title": "Jilliandose",
-    "composers": [
-      "Project-G"
-    ]
+    "composers": ["Project-G"]
   },
   {
     "title": "Dómsdagur",
-    "composers": [
-      "Xacla"
-    ]
+    "composers": ["Xacla"]
   },
   {
     "title": "Heliocenterism",
-    "composers": [
-      "MYTK"
-    ]
+    "composers": ["MYTK"]
   },
   {
     "title": "Zerfall",
-    "composers": [
-      "Taishi"
-    ]
+    "composers": ["Taishi"]
   }
 ]

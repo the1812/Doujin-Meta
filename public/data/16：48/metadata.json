@@ -1,18 +1,11 @@
 [
   {
     "title": "to Introduce…",
-    "composers": [
-      "Joulez"
-    ],
+    "composers": ["Joulez"],
     "album": "16:48",
     "albumOrder": "TGSL-001",
-    "albumArtists": [
-      "Thoughost"
-    ],
-    "genres": [
-      "Trance",
-      "Ambient"
-    ],
+    "albumArtists": ["Thoughost"],
+    "genres": ["Trance", "Ambient"],
     "year": "2023",
     "extraData": {
       "links": {
@@ -23,68 +16,46 @@
   },
   {
     "title": "i love u／hate myself",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "a.ll the things I love(d)",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "continuous deep imagination",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "sunset (another time)",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "mermaid of crystal cave",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "just like glass",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "unmarked trace",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "forget.bat",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "p229 (an interlude)",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "22-46 november 4th",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   },
   {
     "title": "Or？",
-    "composers": [
-      "Joulez"
-    ]
+    "composers": ["Joulez"]
   }
 ]

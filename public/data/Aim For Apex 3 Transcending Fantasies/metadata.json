@@ -1,21 +1,12 @@
 [
   {
     "title": "Mainland D",
-    "artists": [
-      "Rynia",
-      "Cabälaa"
-    ],
-    "composers": [
-      "Cabälaa"
-    ],
+    "artists": ["Rynia", "Cabälaa"],
+    "composers": ["Cabälaa"],
     "album": "Aim For Apex #3: Transcending Fantasies",
     "albumOrder": "SLXD-008",
-    "albumArtists": [
-      "Silent Xords"
-    ],
-    "genres": [
-      "HardStyle"
-    ],
+    "albumArtists": ["Silent Xords"],
+    "genres": ["HardStyle"],
     "year": "2023",
     "extraData": {
       "links": {
@@ -26,139 +17,91 @@
   },
   {
     "title": "Fantasize",
-    "composers": [
-      "Proharderz",
-      "Euphoricz"
-    ]
+    "composers": ["Proharderz", "Euphoricz"]
   },
   {
     "title": "Party It Up",
-    "composers": [
-      "AuroD"
-    ]
+    "composers": ["AuroD"]
   },
   {
     "title": "Eagle Eyes",
-    "composers": [
-      "The Operation"
-    ]
+    "composers": ["The Operation"]
   },
   {
     "title": "THE SOLARSYSTEM",
-    "composers": [
-      "X-Eliminator"
-    ]
+    "composers": ["X-Eliminator"]
   },
   {
     "title": "Gaia",
-    "composers": [
-      "Irish Kappa"
-    ]
+    "composers": ["Irish Kappa"]
   },
   {
     "title": "Ng-Faa-Caa",
-    "composers": [
-      "Axya"
-    ]
+    "composers": ["Axya"]
   },
   {
     "title": "Wither My Mind",
-    "composers": [
-      "AiSS"
-    ]
+    "composers": ["AiSS"]
   },
   {
     "title": "Flightless Bird",
-    "composers": [
-      "Zephaniah"
-    ]
+    "composers": ["Zephaniah"]
   },
   {
     "title": "Bliss World",
-    "composers": [
-      "NceS"
-    ]
+    "composers": ["NceS"]
   },
   {
     "title": "Avalon",
-    "composers": [
-      "Laxeno57",
-      "Valtrax"
-    ]
+    "composers": ["Laxeno57", "Valtrax"]
   },
   {
     "title": "Astronauts",
-    "composers": [
-      "anubasu-anubasu"
-    ]
+    "composers": ["anubasu-anubasu"]
   },
   {
     "title": "Double Bind",
     "discNumber": "2",
-    "composers": [
-      "Cabälaa",
-      "Vcoreibez"
-    ]
+    "composers": ["Cabälaa", "Vcoreibez"]
   },
   {
     "title": "Eternity",
-    "composers": [
-      "Smile $haka"
-    ]
+    "composers": ["Smile $haka"]
   },
   {
     "title": "WAИTED",
-    "composers": [
-      "Forged Reigns"
-    ]
+    "composers": ["Forged Reigns"]
   },
   {
     "title": "Dive Into That Night",
-    "composers": [
-      "Akamasumi."
-    ]
+    "composers": ["Akamasumi."]
   },
   {
     "title": "Gemini",
-    "composers": [
-      "Jiuwenzi"
-    ]
+    "composers": ["Jiuwenzi"]
   },
   {
     "title": "bcdfghijkmopqrstuvwxyz",
-    "composers": [
-      "Project Nirvana"
-    ]
+    "composers": ["Project Nirvana"]
   },
   {
     "title": "Rondo of the Chained",
-    "composers": [
-      "Normal1zer"
-    ]
+    "composers": ["Normal1zer"]
   },
   {
     "title": "Don't Blink",
-    "composers": [
-      "Valtrax"
-    ]
+    "composers": ["Valtrax"]
   },
   {
     "title": "Superstar",
-    "composers": [
-      "Dark Burnerz"
-    ]
+    "composers": ["Dark Burnerz"]
   },
   {
     "title": "Northern Saga",
-    "composers": [
-      "Nirotiy",
-      "AiSS"
-    ]
+    "composers": ["Nirotiy", "AiSS"]
   },
   {
     "title": "Utopia",
-    "composers": [
-      "Veezdom"
-    ]
+    "composers": ["Veezdom"]
   }
 ]

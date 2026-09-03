@@ -1,17 +1,11 @@
 [
   {
     "title": "Love Me",
-    "composers": [
-      "C-Show"
-    ],
+    "composers": ["C-Show"],
     "album": "Unitone PHASE:07",
     "albumOrder": "UTCD-029",
-    "albumArtists": [
-      "Unitone"
-    ],
-    "genres": [
-      "Trance"
-    ],
+    "albumArtists": ["Unitone"],
+    "genres": ["Trance"],
     "year": "2018",
     "extraData": {
       "links": {
@@ -21,63 +15,42 @@
   },
   {
     "title": "Plasticity",
-    "composers": [
-      "KaNa"
-    ]
+    "composers": ["KaNa"]
   },
   {
     "title": "Diversity",
-    "composers": [
-      "Kenichi Chiba"
-    ]
+    "composers": ["Kenichi Chiba"]
   },
   {
     "title": "Aromatherapy",
-    "composers": [
-      "Street"
-    ]
+    "composers": ["Street"]
   },
   {
     "title": "Inverter",
-    "composers": [
-      "satella"
-    ]
+    "composers": ["satella"]
   },
   {
     "title": "Meteorite",
-    "composers": [
-      "Polyphonix"
-    ]
+    "composers": ["Polyphonix"]
   },
   {
     "title": "Noctiluca",
-    "composers": [
-      "Dirty Androids"
-    ]
+    "composers": ["Dirty Androids"]
   },
   {
     "title": "Benetnasch",
-    "composers": [
-      "Lawy"
-    ]
+    "composers": ["Lawy"]
   },
   {
     "title": "Normalization",
-    "composers": [
-      "Nhato"
-    ]
+    "composers": ["Nhato"]
   },
   {
     "title": "Float Away",
-    "composers": [
-      "aran"
-    ]
+    "composers": ["aran"]
   },
   {
     "title": "Next Phase",
-    "composers": [
-      "aran",
-      "satella"
-    ]
+    "composers": ["aran", "satella"]
   }
 ]

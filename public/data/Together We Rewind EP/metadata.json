@@ -1,17 +1,11 @@
 [
   {
     "title": "So Back",
-    "composers": [
-      "Valtrax"
-    ],
+    "composers": ["Valtrax"],
     "album": "Together We Rewind EP",
     "albumOrder": "SXEP-005",
-    "albumArtists": [
-      "Silent Xords"
-    ],
-    "genres": [
-      "UK Hardcore"
-    ],
+    "albumArtists": ["Silent Xords"],
+    "genres": ["UK Hardcore"],
     "year": "2026",
     "extraData": {
       "links": {
@@ -22,42 +16,27 @@
   },
   {
     "title": "Lose You",
-    "composers": [
-      "DJ Momo"
-    ]
+    "composers": ["DJ Momo"]
   },
   {
     "title": "We're Meant To Be Rave",
-    "composers": [
-      "Axya"
-    ]
+    "composers": ["Axya"]
   },
   {
     "title": "Enter The Paradise",
-    "composers": [
-      "Hazecat"
-    ]
+    "composers": ["Hazecat"]
   },
   {
     "title": "LIGHTS OUT",
-    "composers": [
-      "Nirotiy"
-    ]
+    "composers": ["Nirotiy"]
   },
   {
     "title": "Frozen (Hazecat “Back To 05” Remix)",
-    "artists": [
-      "Hazecat",
-      "BlueWind"
-    ],
-    "composers": [
-      "BlueWind"
-    ]
+    "artists": ["Hazecat", "BlueWind"],
+    "composers": ["BlueWind"]
   },
   {
     "title": "Ravemotion",
-    "composers": [
-      "Normal1zer"
-    ]
+    "composers": ["Normal1zer"]
   }
 ]

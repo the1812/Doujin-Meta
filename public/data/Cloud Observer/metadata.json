@@ -1,18 +1,11 @@
 [
   {
     "title": "Cloud Observer (Original Mix)",
-    "composers": [
-      "aran"
-    ],
+    "composers": ["aran"],
     "album": "Cloud Observer",
     "albumOrder": "OSR-0020",
-    "albumArtists": [
-      "Omniset Records"
-    ],
-    "genres": [
-      "House",
-      "Trance"
-    ],
+    "albumArtists": ["Omniset Records"],
+    "genres": ["House", "Trance"],
     "year": "2022",
     "extraData": {
       "links": {
@@ -23,103 +16,52 @@
   },
   {
     "title": "Cloud Observer (Project-G Remix)",
-    "composers": [
-      "aran"
-    ],
-    "artists": [
-      "Project-G",
-      "aran"
-    ]
+    "composers": ["aran"],
+    "artists": ["Project-G", "aran"]
   },
   {
     "title": "Cloud Observer (Radianth Remix)",
-    "composers": [
-      "aran"
-    ],
-    "artists": [
-      "Radianth",
-      "aran"
-    ]
+    "composers": ["aran"],
+    "artists": ["Radianth", "aran"]
   },
   {
     "title": "Cloud Observer (Arentis Remix)",
-    "composers": [
-      "aran"
-    ],
-    "artists": [
-      "Arentis",
-      "aran"
-    ]
+    "composers": ["aran"],
+    "artists": ["Arentis", "aran"]
   },
   {
     "title": "Cloud Observer (Maozon Remix)",
-    "composers": [
-      "aran"
-    ],
-    "artists": [
-      "Maozon",
-      "aran"
-    ]
+    "composers": ["aran"],
+    "artists": ["Maozon", "aran"]
   },
   {
     "title": "Cloud Observer (Hachysu Remix)",
-    "composers": [
-      "aran"
-    ],
-    "artists": [
-      "Hachysu",
-      "aran"
-    ]
+    "composers": ["aran"],
+    "artists": ["Hachysu", "aran"]
   },
   {
     "title": "Cloud Observer (Ninelo Remix)",
-    "composers": [
-      "aran"
-    ],
-    "artists": [
-      "Minghua",
-      "Ninelo",
-      "aran"
-    ]
+    "composers": ["aran"],
+    "artists": ["Minghua", "Ninelo", "aran"]
   },
   {
     "title": "Cloud Observer (Nhato Remix)",
-    "composers": [
-      "aran"
-    ],
-    "artists": [
-      "Nhato",
-      "aran"
-    ]
+    "composers": ["aran"],
+    "artists": ["Nhato", "aran"]
   },
   {
     "title": "Cloud Observer (Tycoos Remix)",
-    "composers": [
-      "aran"
-    ],
-    "artists": [
-      "Tycoos",
-      "aran"
-    ]
+    "composers": ["aran"],
+    "artists": ["Tycoos", "aran"]
   },
   {
     "title": "Cloud Observer (satella Remix)",
-    "composers": [
-      "aran"
-    ],
-    "artists": [
-      "satella",
-      "aran"
-    ]
+    "composers": ["aran"],
+    "artists": ["satella", "aran"]
   },
   {
     "title": "Cloud Observer (Reguluz Remix)",
-    "composers": [
-      "aran"
-    ],
-    "artists": [
-      "Reguluz",
-      "aran"
-    ]
+    "composers": ["aran"],
+    "artists": ["Reguluz", "aran"]
   }
 ]

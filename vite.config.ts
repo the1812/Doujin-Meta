@@ -15,7 +15,7 @@ const dataRoot = resolve(projectRoot, 'public/data')
 export default defineConfig(({ command }) => ({
   fmt: {
     ...fmtConfig,
-    ignorePatterns: [...(fmtConfig.ignorePatterns ?? []), '.output/', 'public/data/'],
+    ignorePatterns: [...(fmtConfig.ignorePatterns ?? []), '.output/'],
   },
   lint: {
     extends: [lintConfig],

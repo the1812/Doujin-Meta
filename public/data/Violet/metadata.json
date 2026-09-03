@@ -1,18 +1,11 @@
 [
   {
     "title": "Con Panna",
-    "composers": [
-      "Kapok Owl",
-      "AiSS"
-    ],
+    "composers": ["Kapok Owl", "AiSS"],
     "album": "Violet",
     "albumOrder": "HUI-A04",
-    "albumArtists": [
-      "卉HUI-Works"
-    ],
-    "genres": [
-      "Electronic"
-    ],
+    "albumArtists": ["卉HUI-Works"],
+    "genres": ["Electronic"],
     "year": "2023",
     "extraData": {
       "links": {
@@ -23,78 +16,48 @@
   },
   {
     "title": "r0om 101",
-    "composers": [
-      "SQRY01"
-    ]
+    "composers": ["SQRY01"]
   },
   {
     "title": "決死のレイブ～RAVE W!TH ME",
-    "composers": [
-      "DJ NORMAL1ZER"
-    ]
+    "composers": ["DJ NORMAL1ZER"]
   },
   {
     "title": "On Again",
-    "composers": [
-      "Dizc1485"
-    ]
+    "composers": ["Dizc1485"]
   },
   {
     "title": "弦色幻想诗",
-    "artists": [
-      "Mai",
-      "格里特",
-      "AiSS"
-    ],
-    "composers": [
-      "格里特",
-      "AiSS"
-    ]
+    "artists": ["Mai", "格里特", "AiSS"],
+    "composers": ["格里特", "AiSS"]
   },
   {
     "title": "Celestial Voyager",
-    "composers": [
-      "SQRY01"
-    ]
+    "composers": ["SQRY01"]
   },
   {
     "title": "W0zzy, D1zzy",
-    "composers": [
-      "AiSS"
-    ]
+    "composers": ["AiSS"]
   },
   {
     "title": "寒莹",
-    "artists": [
-      "星尘Infinity",
-      "KAIRCI"
-    ],
-    "composers": [
-      "KAIRCI"
-    ]
+    "artists": ["星尘Infinity", "KAIRCI"],
+    "composers": ["KAIRCI"]
   },
   {
     "title": "Flavor",
-    "composers": [
-      "Laxeno57"
-    ]
+    "composers": ["Laxeno57"]
   },
   {
     "title": "Proxima",
-    "composers": [
-      "Metal Bison"
-    ]
+    "composers": ["Metal Bison"]
   },
   {
     "title": "Fluorescent Light",
-    "composers": [
-      "Wooden"
-    ]
+    "composers": ["Wooden"]
   },
   {
     "title": "Another Dream (Outro Edit)",
-    "composers": [
-      "SQRY01"
-    ]
+    "composers": ["SQRY01"]
   }
 ]
