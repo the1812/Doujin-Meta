@@ -12,7 +12,12 @@
     "genres": [
       "Trance"
     ],
-    "year": "2017"
+    "year": "2017",
+    "extraData": {
+      "links": {
+        "bandcamp": "https://unitonejp.bandcamp.com/album/unitone-phase-06"
+      }
+    }
   },
   {
     "title": "Rera",

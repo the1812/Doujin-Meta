@@ -13,7 +13,12 @@
     "genres": [
       "Trance"
     ],
-    "year": "2019"
+    "year": "2019",
+    "extraData": {
+      "links": {
+        "bandcamp": "https://unitonejp.bandcamp.com/album/synergy"
+      }
+    }
   },
   {
     "title": "Glowing",

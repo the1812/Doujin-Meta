@@ -40,8 +40,8 @@ Create a new `public/data/<album name>/` entry that matches this repository's ex
      - `year`
      - `extraData.links.dizzylab` or other supported link IDs
    - Later tracks should include only changed or track-specific fields.
-   - When a track has both `artists` and `composers`, `artists` must contain every name from `composers`. List performers or remixers first, followed by any composers not already present, without duplicates.
-   - For remixes, follow the existing pattern: set `artists` to remix artist plus original artist when useful, and set `composers` to the original composer when known.
+   - Interpret `artists` from the credited roles instead of mechanically copying `composers`. If `artists` would otherwise contain only vocalists or featured vocal performers, also include the composers so the musical creators are represented. If the source already credits an arranger or remixer in `artists`, the original composers do not also need to appear there.
+   - For remixes, put the remix artist or arranger in `artists` and keep the original composer in `composers` when known. Add the original artist only when the source credits them on the released track.
 
 5. Download the cover from the source page.
    - Use the source page's full-resolution cover URL when visible.
@@ -55,7 +55,7 @@ Create a new `public/data/<album name>/` entry that matches this repository's ex
      ```
    - Run `pnpm build` to validate the `album.json` ULID format and uniqueness across the catalog.
    - Confirm cover file exists and has nonzero size.
-   - For every track that has both `artists` and `composers`, confirm that `composers` is a subset of `artists`.
+   - For tracks with both `artists` and `composers`, verify the source roles: composers must also appear in `artists` when the remaining artists are only vocalists, but need not be duplicated when an arranger or remixer is already credited.
    - Run `pnpm run type-check` when practical. If sandboxed Corepack/pnpm access fails with `EPERM`, rerun with normal permissions.
    - Validate this skill with UTF-8 mode on Windows if any skill file contains Chinese or other non-ASCII text:
      ```powershell

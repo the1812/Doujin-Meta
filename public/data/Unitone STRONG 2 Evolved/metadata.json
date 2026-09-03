@@ -12,7 +12,12 @@
     "genres": [
       "Drum & Bass"
     ],
-    "year": "2018"
+    "year": "2018",
+    "extraData": {
+      "links": {
+        "bandcamp": "https://unitonejp.bandcamp.com/album/unitone-strong-2-evolved"
+      }
+    }
   },
   {
     "title": "Loudmonsta",

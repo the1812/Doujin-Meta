@@ -12,7 +12,12 @@
     "genres": [
       "French House"
     ],
-    "year": "2020"
+    "year": "2020",
+    "extraData": {
+      "links": {
+        "bandcamp": "https://wavforme.bandcamp.com/album/multiple-beat-banger-2"
+      }
+    }
   },
   {
     "title": "Binary Honey",

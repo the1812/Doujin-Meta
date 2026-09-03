@@ -12,7 +12,12 @@
     "genres": [
       "Hard Dance"
     ],
-    "year": "2023"
+    "year": "2023",
+    "extraData": {
+      "links": {
+        "bandcamp": "https://artofheart.bandcamp.com/album/heart-essence-3"
+      }
+    }
   },
   {
     "title": "Apocalypse Cathedral",

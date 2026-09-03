@@ -16,7 +16,12 @@
     "genres": [
       "Skullstep"
     ],
-    "year": "2018"
+    "year": "2018",
+    "extraData": {
+      "links": {
+        "bandcamp": "https://wavforme.bandcamp.com/album/waves-remixes"
+      }
+    }
   },
   {
     "title": "The List Of Cubes (Blacklolita Remix)",

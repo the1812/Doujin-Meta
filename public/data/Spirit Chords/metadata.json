@@ -12,7 +12,12 @@
     "genres": [
       "Trancestep"
     ],
-    "year": "2019"
+    "year": "2019",
+    "extraData": {
+      "links": {
+        "bandcamp": "https://wavforme.bandcamp.com/album/spirit-chords"
+      }
+    }
   },
   {
     "title": "Undone",

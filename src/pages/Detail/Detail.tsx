@@ -142,8 +142,8 @@ export const Detail = defineComponent({
                     </div>
                   )}
                   <div class="mt-8 flex flex-col gap-2">
-                    {links.value.bandcamp && <BandcampButton link={links.value.bandcamp} />}
                     {links.value.dizzylab && <DizzylabButton id={links.value.dizzylab} />}
+                    {links.value.bandcamp && <BandcampButton link={links.value.bandcamp} />}
                     {links.value.thbWiki && <ThbWikiButton id={links.value.thbWiki} />}
                     <div class="flex gap-2">
                       {albumDetail.links.source && (

@@ -11,7 +11,12 @@
     "genres": [
       "RawStyle"
     ],
-    "year": "2024"
+    "year": "2024",
+    "extraData": {
+      "links": {
+        "bandcamp": "https://unityofraw.bandcamp.com/album/unity-of-raw-vol-9-qrisis-mode"
+      }
+    }
   },
   {
     "title": "Over This Fear (Radio Edit)",

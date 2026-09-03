@@ -12,7 +12,12 @@
     "genres": [
       "Trance"
     ],
-    "year": "2019"
+    "year": "2019",
+    "extraData": {
+      "links": {
+        "bandcamp": "https://wavforme.bandcamp.com/album/waves-of-euphoria"
+      }
+    }
   },
   {
     "title": "Mosque",

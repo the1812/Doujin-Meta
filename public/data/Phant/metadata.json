@@ -12,7 +12,12 @@
     "genres": [
       "Trance"
     ],
-    "year": "2017"
+    "year": "2017",
+    "extraData": {
+      "links": {
+        "bandcamp": "https://compllege.bandcamp.com/album/phant"
+      }
+    }
   },
   {
     "title": "Empty Egg",
