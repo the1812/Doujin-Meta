@@ -1,17 +1,29 @@
-import { defineComponent, type PropType } from 'vue'
+import { computed, defineComponent, type PropType } from 'vue'
 import { RouterLink } from 'vue-router'
 
-import type { AlbumSummary } from '../../../shared/api'
+import type { AlbumSearchItem as AlbumSearchItemData } from '../../../shared/api'
 
 export const AlbumSearchItem = defineComponent({
   name: 'AlbumSearchItem',
   props: {
     item: {
-      type: Object as PropType<AlbumSummary>,
+      type: Object as PropType<AlbumSearchItemData>,
       required: true,
     },
   },
   setup(props) {
+    const titleSlices = computed(() => {
+      const slices: { text: string; highlighted: boolean }[] = []
+      let currentIndex = 0
+      for (const [start, end] of props.item.albumMatches) {
+        slices.push({ text: props.item.album.slice(currentIndex, start), highlighted: false })
+        slices.push({ text: props.item.album.slice(start, end), highlighted: true })
+        currentIndex = end
+      }
+      slices.push({ text: props.item.album.slice(currentIndex), highlighted: false })
+      return slices.filter(slice => slice.text)
+    })
+
     return () => (
       <div class="flex justify-center">
         <RouterLink
@@ -26,7 +38,9 @@ export const AlbumSearchItem = defineComponent({
               />
             )}
           </div>
-          <div class="flex-grow [&>b]:font-medium [&>b]:text-violet-500">{props.item.album}</div>
+          <div class="flex-grow [&>b]:font-medium [&>b]:text-violet-500">
+            {titleSlices.value.map(slice => (slice.highlighted ? <b>{slice.text}</b> : slice.text))}
+          </div>
         </RouterLink>
       </div>
     )

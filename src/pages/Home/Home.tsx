@@ -3,7 +3,7 @@ import InputText from 'primevue/inputtext'
 import { computed, defineComponent, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 
-import type { AlbumSummary } from '../../../shared/api'
+import type { AlbumSearchItem as AlbumSearchItemData } from '../../../shared/api'
 import { searchAlbums, useApi } from '../../api'
 import { ClsImage } from '../../components/ClsImage'
 import { LoadError } from '../../components/Error'
@@ -21,7 +21,7 @@ export const Home = defineComponent({
 
     const searched = ref(false)
     const keyword = ref('')
-    const searchResult = ref<AlbumSummary[]>([])
+    const searchResult = ref<AlbumSearchItemData[]>([])
 
     const searchApi = useApi(async () => {
       if (!keyword.value) {

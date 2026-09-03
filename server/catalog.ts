@@ -59,6 +59,34 @@ interface CatalogEntry {
 
 const normalizeSearchValue = (value: string) => value.normalize('NFKC').toLowerCase()
 
+const getOriginalRange = (value: string, start: number, end: number): [number, number] => {
+  const boundaries = [
+    0,
+    ...Array.from(
+      new Intl.Segmenter().segment(value),
+      ({ index, segment }) => index + segment.length,
+    ),
+  ]
+  const normalizedOffsets = boundaries.map(
+    index => normalizeSearchValue(value.slice(0, index)).length,
+  )
+  const originalStart = boundaries[normalizedOffsets.findLastIndex(offset => offset <= start)] ?? 0
+  const originalEndIndex = normalizedOffsets.findIndex(offset => offset >= end)
+  const originalEnd = boundaries[originalEndIndex] ?? value.length
+  return [originalStart, originalEnd]
+}
+
+const getMatches = (value: string, normalizedValue: string, keyword: string) => {
+  const matches: [number, number][] = []
+  let start = normalizedValue.indexOf(keyword)
+  while (start !== -1 && keyword.length > 0) {
+    const end = start + keyword.length
+    matches.push(getOriginalRange(value, start, end))
+    start = normalizedValue.indexOf(keyword, end)
+  }
+  return matches
+}
+
 const includes = (values: string[], keyword: string) =>
   values.some(value => value.includes(keyword))
 
@@ -195,9 +223,11 @@ export class AlbumCatalog {
       .sort((a, b) => a.rank - b.rank)
 
     return {
-      items: matches
-        .slice(filters.offset, filters.offset + filters.limit)
-        .map(({ entry }) => entry.summary),
+      items: matches.slice(filters.offset, filters.offset + filters.limit).map(({ entry }) => ({
+        ...entry.summary,
+        albumMatches:
+          keyword === undefined ? [] : getMatches(entry.summary.album, entry.search.album, keyword),
+      })),
       total: matches.length,
       limit: filters.limit,
       offset: filters.offset,

@@ -23,6 +23,10 @@ export interface AlbumSummary {
   links: AlbumLinks
 }
 
+export interface AlbumSearchItem extends AlbumSummary {
+  albumMatches: [start: number, end: number][]
+}
+
 export interface AlbumTrack {
   title: string
   artists: string[]
@@ -43,7 +47,7 @@ export interface AlbumDetail extends AlbumSummary {
 }
 
 export interface AlbumSearchResponse {
-  items: AlbumSummary[]
+  items: AlbumSearchItem[]
   total: number
   limit: number
   offset: number
