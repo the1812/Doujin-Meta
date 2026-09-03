@@ -12,6 +12,7 @@
   "author": "Grant Howard",
   "type": "module",
   "scripts": {
+    "dev": "vp dev",
     "build": "vp check && vp build",
     "start": "node .output/server/index.mjs",
     "album:id": "node scripts/generate-album-id.mjs"
