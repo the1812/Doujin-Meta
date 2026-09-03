@@ -29,7 +29,7 @@ export const MoreActionsButton = defineComponent({
       <>
         <Button
           class={[
-            'flex-grow !border-0 !bg-github-black',
+            '!border-0 !bg-github-black',
             'hover:!bg-github-black-light focus:!button-border-github-black',
           ]}
           label=""

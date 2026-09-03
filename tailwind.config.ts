@@ -11,6 +11,10 @@ export const config: Config = {
   theme: {
     extend: {
       colors: {
+        'bandcamp-blue': {
+          light: '#23b7dc',
+          DEFAULT: '#1da0c3',
+        },
         'thb-wiki-pink': {
           light: '#fd91ec',
           DEFAULT: '#fd77e8',

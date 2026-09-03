@@ -1,5 +1,6 @@
 export interface AlbumExtraData extends Record<string, unknown> {
   links?: {
+    bandcamp?: string
     dizzylab?: string
     thbWiki?: string
   }

@@ -6,11 +6,11 @@ import { useRoute } from 'vue-router'
 import type { AlbumDetail, AlbumTrack } from '../../../shared/api'
 import { getAlbumDetail, useApi } from '../../api'
 import { MetadataSeparator } from '../../common'
+import { BandcampButton } from '../../components/Buttons/BandcampButton'
 import { DizzylabButton } from '../../components/Buttons/DizzylabButton'
 import { GitHubButton } from '../../components/Buttons/GitHubButton'
 import { MoreActionsButton } from '../../components/Buttons/MoreActionsButton'
 import { ThbWikiButton } from '../../components/Buttons/ThbWikiButton'
-import { ClsImage } from '../../components/ClsImage'
 import { LoadError } from '../../components/Error'
 import { Icon } from '../../components/Icon'
 import { Loading } from '../../components/Loading'
@@ -113,15 +113,13 @@ export const Detail = defineComponent({
             <>
               <div class="flex flex-col gap-6 xl:sticky xl:top-[calc(80px+1.5rem)] xl:justify-center">
                 {albumDetail.links.cover && (
-                  <ClsImage aspectRatio="100%" class="w-[90vw] max-w-[400px]">
-                    <Image
-                      class="z-10 self-center overflow-hidden rounded-lg shadow-border-[2px]"
-                      imageClass="object-contain"
-                      preview
-                      src={albumDetail.links.cover}
-                      v-slots={{ previewicon: () => <Icon name="search-plus" /> }}
-                    />
-                  </ClsImage>
+                  <Image
+                    class="z-10 w-[90vw] max-w-[400px] self-center overflow-hidden rounded-lg shadow-border-[2px]"
+                    imageClass="block h-auto w-full object-contain"
+                    preview
+                    src={albumDetail.links.cover}
+                    v-slots={{ previewicon: () => <Icon name="search-plus" /> }}
+                  />
                 )}
                 <div class="flex max-w-[400px] flex-col items-center gap-2">
                   <div class="text-center text-xl font-semibold">{albumDetail.album}</div>
@@ -144,6 +142,7 @@ export const Detail = defineComponent({
                     </div>
                   )}
                   <div class="mt-8 flex flex-col gap-2">
+                    {links.value.bandcamp && <BandcampButton link={links.value.bandcamp} />}
                     {links.value.dizzylab && <DizzylabButton id={links.value.dizzylab} />}
                     {links.value.thbWiki && <ThbWikiButton id={links.value.thbWiki} />}
                     <div class="flex gap-2">

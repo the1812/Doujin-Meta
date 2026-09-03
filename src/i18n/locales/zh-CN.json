@@ -9,6 +9,7 @@
     "noResult": "无搜索结果"
   },
   "linkButtons": {
+    "bandcamp": "在 Bandcamp 上查看",
     "dizzylab": "在 dizzylab 上查看",
     "GitHub": "查看源代码",
     "THBWiki": "在 THBWiki 上查看",
