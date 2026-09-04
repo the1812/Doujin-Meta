@@ -227,6 +227,11 @@ export class AlbumCatalog {
         ...entry.summary,
         albumMatches:
           keyword === undefined ? [] : getMatches(entry.summary.album, entry.search.album, keyword),
+        albumArtistMatches: entry.summary.albumArtists.map((sourceAlbumArtist, index) =>
+          keyword === undefined
+            ? []
+            : getMatches(sourceAlbumArtist, entry.search.albumArtists[index] ?? '', keyword),
+        ),
       })),
       total: matches.length,
       limit: filters.limit,

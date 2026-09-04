@@ -25,6 +25,7 @@ export interface AlbumSummary {
 
 export interface AlbumSearchItem extends AlbumSummary {
   albumMatches: [start: number, end: number][]
+  albumArtistMatches: [start: number, end: number][][]
 }
 
 export interface AlbumTrack {
