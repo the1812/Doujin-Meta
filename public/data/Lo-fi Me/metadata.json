@@ -1,0 +1,55 @@
+[
+  {
+    "title": "the bright light hit me [and woke me up]",
+    "composers": ["CR_Twenty-six"],
+    "album": "Lo-fi Me",
+    "albumArtists": ["ChillMe"],
+    "genres": [
+      "Electronic",
+      "Future Bass",
+      "House",
+      "Chillout",
+      "Kawaii",
+      "Lo-Fi",
+      "Lo-Fi Beats",
+      "Lo-Fi Hip Hop",
+      "Pop"
+    ],
+    "year": "2025",
+    "extraData": {
+      "links": {
+        "dizzylab": "ANA004",
+        "bandcamp": "https://chillme.bandcamp.com/album/lo-fi-me"
+      }
+    }
+  },
+  {
+    "title": "起床了起床了...",
+    "composers": ["Settled Edge"]
+  },
+  {
+    "title": "windy winter days, in Dec.",
+    "composers": ["Koiflower"]
+  },
+  {
+    "title": "aoitori to kaze",
+    "composers": ["Colorpen", "Konvektion"]
+  },
+  {
+    "title": "No Sleep",
+    "composers": ["Ice_watermelon233"]
+  },
+  {
+    "title": "Living in the dreamcore.",
+    "composers": ["Shormemoriez"]
+  },
+  {
+    "title": "Wistfulness",
+    "composers": ["ZeroHour"]
+  },
+  {
+    "title": "白夜",
+    "artists": ["音琴兎愛", "杨天夏"],
+    "composers": ["杨天夏"]
+  }
+]

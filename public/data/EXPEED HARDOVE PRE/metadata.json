@@ -1,0 +1,28 @@
+[
+  {
+    "title": "EXPEEDED HARDOVE",
+    "composers": ["Hazecat"],
+    "album": "EXPEED HARDOVE PRE",
+    "albumOrder": "VPRE-001",
+    "albumArtists": ["Matthiola Records"],
+    "genres": ["Hardcore"],
+    "year": "2017",
+    "extraData": {
+      "links": {
+        "bandcamp": "https://matthiola.bandcamp.com/album/expeeded-hardove-pre-xfd"
+      }
+    }
+  },
+  {
+    "title": "This Night",
+    "composers": ["Hazecat", "Sukimiko"]
+  },
+  {
+    "title": "Knight of Tripletz",
+    "composers": ["Normal1zer"]
+  },
+  {
+    "title": "Snow Drive",
+    "composers": ["Kolaa"]
+  }
+]

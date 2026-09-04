@@ -1,0 +1,27 @@
+[
+  {
+    "title": "As the Hero Returns (Overture)",
+    "composers": ["Moonset"],
+    "album": "New Born 新生",
+    "albumArtists": ["Nameless Catalogue"],
+    "genres": ["Electronic"],
+    "year": "2022",
+    "extraData": {
+      "links": {
+        "dizzylab": "NACATAvol1"
+      }
+    }
+  },
+  {
+    "title": "Digital_Dawn",
+    "composers": ["Neonscape"]
+  },
+  {
+    "title": "Drifting Soul",
+    "composers": ["Dreamira"]
+  },
+  {
+    "title": "Thawed Awareness",
+    "composers": ["Settled Edge"]
+  }
+]

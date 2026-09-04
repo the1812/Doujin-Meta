@@ -1,0 +1,64 @@
+[
+  {
+    "title": "First Light",
+    "composers": ["Shunji Fujii"],
+    "album": "Chill for Aiming 2",
+    "albumOrder": "ANA012",
+    "albumArtists": ["ChillMe"],
+    "genres": ["Garage", "House", "Drum & Bass", "Vocaloid"],
+    "year": "2026",
+    "extraData": {
+      "links": {
+        "dizzylab": "ANA012"
+      }
+    }
+  },
+  {
+    "title": "haunted",
+    "composers": ["bk"]
+  },
+  {
+    "title": "NEXT2U",
+    "composers": ["Koiflower"]
+  },
+  {
+    "title": "Bloomin' Square",
+    "artists": ["初音ミク", "INuya"],
+    "composers": ["INuya"]
+  },
+  {
+    "title": "Autoaim",
+    "composers": ["Silvery SKY"]
+  },
+  {
+    "title": "Translucent",
+    "artists": ["可不", "Ton Magie"],
+    "composers": ["Ton Magie"]
+  },
+  {
+    "title": "Breeze",
+    "composers": ["Juggernaut."]
+  },
+  {
+    "title": "I MESS UP MY LIFE",
+    "composers": ["ASIION"]
+  },
+  {
+    "title": "tell me, tell me",
+    "composers": ["YUKIYANAGI"]
+  },
+  {
+    "title": "平行线",
+    "artists": ["海伊", "Ear_Pregnancy"],
+    "composers": ["Ear_Pregnancy"]
+  },
+  {
+    "title": "尘旅",
+    "artists": ["花隈千冬", "FN1U"],
+    "composers": ["FN1U"]
+  },
+  {
+    "title": "Love Letter (Tribute to Kim 'Fleta' Byung-sun)",
+    "composers": ["杨天夏"]
+  }
+]

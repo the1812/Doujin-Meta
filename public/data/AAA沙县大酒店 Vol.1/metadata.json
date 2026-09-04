@@ -1,0 +1,88 @@
+[
+  {
+    "title": "fortywinks.",
+    "composers": ["crash909☆"],
+    "comments": "AAA搅拌均匀的薄荷冰淇淋",
+    "genres": ["Jazz", "Neuro"],
+    "album": "AAA沙县大酒店 Vol.1",
+    "albumOrder": "SHAXIAN-01",
+    "albumArtists": ["AAA沙县大酒店"],
+    "year": "2026",
+    "extraData": {
+      "links": {
+        "dizzylab": "SHAXIAN-01"
+      }
+    }
+  },
+  {
+    "title": "myriad",
+    "artists": ["那由歌", "如月青藍"],
+    "composers": ["如月青藍"],
+    "comments": "AAA海盐星空千层蛋糕",
+    "genres": ["Uplifting Trance"]
+  },
+  {
+    "title": "出出神神，我们的音乐",
+    "composers": ["MKKF"],
+    "comments": "AAA蜜汁叉烧慕斯",
+    "genres": ["Uplifting Trance"]
+  },
+  {
+    "title": "Surrender",
+    "composers": ["W1ldflow3r", "AK-ID"],
+    "comments": "AAA变形金刚大战辣椒炒肉",
+    "genres": ["Melodic Dubstep"]
+  },
+  {
+    "title": "Cometary Collision",
+    "composers": ["Kamino Yoruneko"],
+    "comments": "AAAjava炒面全国可送",
+    "genres": ["Hypertrance"]
+  },
+  {
+    "title": "tears in rain",
+    "composers": ["Voxelkana"],
+    "comments": "AAA半糖速溶冰拿铁",
+    "genres": ["Hardwave"]
+  },
+  {
+    "title": "Regular Expression",
+    "composers": ["Chemiscream"],
+    "comments": "AAA氢化植物油炸冰激凌",
+    "genres": ["Future Bass", "Jazz", "Hypercore"]
+  },
+  {
+    "title": "Beloved",
+    "composers": ["Afrixon"],
+    "comments": "AAA老苏州果粒橙拌饭",
+    "genres": ["Chiptune"]
+  },
+  {
+    "title": "奇迹凝华企划",
+    "artists": ["星尘Infinity", "xit宇", "myU"],
+    "composers": ["myU"],
+    "lyricists": ["杏子haki"],
+    "comments": "AAA正宗老资历炒米粉",
+    "genres": ["J-Rock"]
+  },
+  {
+    "title": "阈限城市、折返夏日",
+    "artists": ["永夜Minus", "星尘Infinity", "诗岸", "xit宇", "Yuty"],
+    "composers": ["Yuty"],
+    "lyricists": ["和岸"],
+    "comments": "AAA纯正小登奶盖拌饭",
+    "genres": ["Vocarock"]
+  },
+  {
+    "title": "☆.·*ŧħɇ s̷øn̷ǥ øf ŧħɇ łøs̷ŧ s̷ŧa̷ɍs̷ ݁ . ⊹ + ݁.",
+    "composers": ["Airally"],
+    "comments": "AAA棒打爱心马卡龙",
+    "genres": ["Hyperflip"]
+  },
+  {
+    "title": "sorry for messing up your kitchen qwq",
+    "composers": ["非茗"],
+    "comments": "AAA炭烤茶香肉松饼",
+    "genres": ["House", "Swing", "Big Band"]
+  }
+]

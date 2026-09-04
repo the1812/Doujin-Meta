@@ -1,0 +1,109 @@
+[
+  {
+    "title": "星滅",
+    "composers": ["UnD3ath"],
+    "album": "Tarnished Stardust",
+    "albumOrder": "NTP-005",
+    "albumArtists": ["NullTech_PARAMECIUM"],
+    "genres": ["HiTECH", "Bass", "Color"],
+    "year": "2025",
+    "extraData": {
+      "links": {
+        "dizzylab": "NTP-005",
+        "bandcamp": "https://ntp-endblue.bandcamp.com/album/tarnished-stardust"
+      }
+    }
+  },
+  {
+    "title": "Aether's Child",
+    "composers": ["Relemo"]
+  },
+  {
+    "title": "靈",
+    "composers": ["Axusr"]
+  },
+  {
+    "title": "复鳴",
+    "composers": ["Gaia"]
+  },
+  {
+    "title": "VSK3777：混沌星漩",
+    "composers": ["Nerovix"]
+  },
+  {
+    "title": "Zip Zap Zipper",
+    "composers": ["IAMMRGODIE"]
+  },
+  {
+    "title": "Moment",
+    "composers": ["Taraxaci"]
+  },
+  {
+    "title": "Seraph",
+    "composers": ["Aut0"]
+  },
+  {
+    "title": "Wildcard",
+    "composers": ["IAMMRGODIE"]
+  },
+  {
+    "title": "Hyperflux",
+    "composers": ["Juwubi", "Violet Delta"]
+  },
+  {
+    "title": "Galactic Recall",
+    "composers": ["PMogu"]
+  },
+  {
+    "title": "Eternal Abyss",
+    "composers": ["Shiorei"]
+  },
+  {
+    "title": "A Pilgrim Spurned By The World In Collapse",
+    "composers": ["IneSim"]
+  },
+  {
+    "title": "幻覚",
+    "composers": ["BeWiLdEred"]
+  },
+  {
+    "title": "心溯",
+    "composers": ["Napple", "Shaw_Tyan"]
+  },
+  {
+    "title": "CLOSER TO ME",
+    "composers": ["RHYX"]
+  },
+  {
+    "title": "Circuit Havoc",
+    "composers": ["PAQII"]
+  },
+  {
+    "title": "Aureole",
+    "composers": ["Leo"]
+  },
+  {
+    "title": "Cold Space",
+    "composers": ["Miudox"]
+  },
+  {
+    "title": "INVALID FILE",
+    "composers": ["rvne"]
+  },
+  {
+    "title": "Reverberation",
+    "composers": ["MKKF"]
+  },
+  {
+    "title": "Rekindled",
+    "composers": ["Reyar"]
+  },
+  {
+    "title": "Messiah",
+    "composers": ["Xyanide"]
+  },
+  {
+    "title": "穀神星",
+    "composers": ["UnD3ath"]
+  }
+]

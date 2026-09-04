@@ -1,0 +1,92 @@
+[
+  {
+    "title": "Rosy World (Intro)",
+    "composers": ["Viciana"],
+    "album": "Rosy World",
+    "albumArtists": ["ChillMe"],
+    "genres": [
+      "Electronic",
+      "Future Bass",
+      "House",
+      "Chillout",
+      "Future Garage",
+      "Kawaii",
+      "Pop",
+      "Vocaloid"
+    ],
+    "year": "2025",
+    "extraData": {
+      "links": {
+        "dizzylab": "ANA007",
+        "bandcamp": "https://chillme.bandcamp.com/album/rosy-world"
+      }
+    }
+  },
+  {
+    "title": "Body & Soul",
+    "composers": ["Shunji Fujii"]
+  },
+  {
+    "title": "ICON",
+    "composers": ["Koiflower"]
+  },
+  {
+    "title": "sugar-free soda",
+    "composers": ["EgurT"]
+  },
+  {
+    "title": "feelin'",
+    "composers": ["moyu"]
+  },
+  {
+    "title": "トコトコ",
+    "artists": ["初音ミク", "INuya"],
+    "composers": ["INuya"]
+  },
+  {
+    "title": "Untethered",
+    "composers": ["Silvery SKY"]
+  },
+  {
+    "title": "Pixelated Sunrise",
+    "composers": ["R4A1", "JimVirslox"]
+  },
+  {
+    "title": "Pa!ette",
+    "composers": ["JIRAMDANOL"]
+  },
+  {
+    "title": "Candy Dream",
+    "composers": ["Vfdby"]
+  },
+  {
+    "title": "Where the Sky Blushes",
+    "composers": ["Anicille", "小培lovely"]
+  },
+  {
+    "title": "Falling for a Bright Star",
+    "composers": ["Violet Delta"]
+  },
+  {
+    "title": "氤氲",
+    "artists": ["海伊", "TN163"],
+    "composers": ["TN163"]
+  },
+  {
+    "title": "Rainfall",
+    "composers": ["Ice_watermelon233", "Koiflower"]
+  },
+  {
+    "title": "Shield",
+    "composers": ["JINGYAN"]
+  },
+  {
+    "title": "烟火",
+    "artists": ["星尘Infinity", "黑泽纯人Guitar", "杨天夏", "ユキノ深月"],
+    "composers": ["黑泽纯人Guitar", "杨天夏", "ユキノ深月"]
+  },
+  {
+    "title": "childhood",
+    "composers": ["targ"]
+  }
+]

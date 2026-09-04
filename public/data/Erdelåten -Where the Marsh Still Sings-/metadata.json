@@ -1,0 +1,70 @@
+[
+  {
+    "title": "Once Upon the Marshes",
+    "artists": ["Miwele", "Rigël Theatre"],
+    "composers": ["Rigël Theatre"],
+    "album": "Erdelåten -Where the Marsh Still Sings-",
+    "albumOrder": "RTCD-013",
+    "albumArtists": ["Rigël Theatre"],
+    "genres": ["Celtic"],
+    "year": "2026",
+    "extraData": {
+      "links": {
+        "bandcamp": "https://rigeltheatre.bandcamp.com/album/erdel-ten-where-the-marsh-still-sings"
+      }
+    }
+  },
+  {
+    "title": "Lafayette",
+    "composers": ["Rigël Theatre"]
+  },
+  {
+    "title": "Erdelåten",
+    "artists": ["EUREKA", "Rigël Theatre"],
+    "composers": ["Rigël Theatre"]
+  },
+  {
+    "title": "Regnigt Väder -Rain of Erdelåten-",
+    "artists": ["Tamako Kinoshita", "Rigël Theatre"],
+    "composers": ["Rigël Theatre"]
+  },
+  {
+    "title": "Marshlight Stroll -妖精と歩く雨上がり-",
+    "artists": ["July", "Rigël Theatre"],
+    "composers": ["Rigël Theatre"]
+  },
+  {
+    "title": "Bayou Crickets Dance",
+    "composers": ["Rigël Theatre"]
+  },
+  {
+    "title": "The Winston Reel",
+    "composers": ["Rigël Theatre"]
+  },
+  {
+    "title": "Erd. Second Line Séance",
+    "composers": ["Rigël Theatre"]
+  },
+  {
+    "title": "Will-o’-Swing",
+    "composers": ["Arimura Kyogo"]
+  },
+  {
+    "title": "O Morrowless",
+    "artists": ["July", "Rigël Theatre"],
+    "composers": ["Rigël Theatre"]
+  },
+  {
+    "title": "Mirelight",
+    "composers": ["Arimura Kyogo"]
+  },
+  {
+    "title": "Baron La Croix",
+    "artists": ["Miwele", "Rigël Theatre"],
+    "composers": ["Rigël Theatre"]
+  },
+  {
+    "title": "Marshlight Stroll -A Duet of Mist and Rain-",
+    "composers": ["Rigël Theatre"]
+  }
+]
