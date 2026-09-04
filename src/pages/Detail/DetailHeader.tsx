@@ -14,8 +14,8 @@ export const DetailHeader = defineComponent({
   },
   setup(props) {
     return () => (
-      <div class="flex bg-gray-100 text-sm">
-        <div class="flex w-[100px] shrink-0 items-center justify-end border-r border-solid border-gray-200 px-2 py-1 font-semibold">
+      <div class="flex bg-gray-50 text-sm">
+        <div class="flex w-[100px] shrink-0 items-center justify-end border-r border-solid border-gray-100 px-2 py-1 font-semibold">
           {props.label}
         </div>
         <div class="flex flex-grow items-center px-2 py-1 font-semibold">{props.value}</div>

@@ -28,7 +28,7 @@ export const AlbumSearchItem = defineComponent({
       <div class="flex justify-center">
         <RouterLink
           to={{ name: 'album', params: { id: props.item.id } }}
-          class="flex max-w-[830px] flex-grow cursor-pointer items-center gap-3 rounded-md p-2 hover:bg-gray-100"
+          class="flex max-w-[830px] flex-grow cursor-pointer items-center gap-3 rounded-md p-2 hover:bg-gray-50"
         >
           <div class="flex h-10 w-10 items-center justify-center">
             {props.item.links.cover && (

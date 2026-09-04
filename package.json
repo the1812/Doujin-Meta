@@ -18,12 +18,12 @@
     "album:id": "node scripts/generate-album-id.mjs"
   },
   "dependencies": {
-    "@primeuix/themes": "1.0.0",
+    "@primeuix/themes": "2.0.3",
     "axios": "1.8.2",
     "dompurify": "3.2.4",
     "nitro": "3.0.260610-beta",
     "primeicons": "7.0.0",
-    "primevue": "4.3.1",
+    "primevue": "4.5.5",
     "valibot": "1.4.2",
     "vue": "3.5.13",
     "vue-i18n": "11.4.10",

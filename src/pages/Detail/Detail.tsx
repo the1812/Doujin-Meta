@@ -114,7 +114,7 @@ export const Detail = defineComponent({
               <div class="flex flex-col gap-6 xl:sticky xl:top-[calc(80px+1.5rem)] xl:justify-center">
                 {albumDetail.links.cover && (
                   <Image
-                    class="z-10 w-[90vw] max-w-[400px] self-center overflow-hidden rounded-lg shadow-border-[2px]"
+                    class="z-10 w-[90vw] max-w-[400px] self-center overflow-hidden rounded-lg shadow-border-[1px]"
                     imageClass="block h-auto w-full object-contain"
                     preview
                     src={albumDetail.links.cover}
@@ -166,8 +166,8 @@ export const Detail = defineComponent({
                         key={`${track.discNumber}/${track.trackNumber}`}
                         class={[
                           'w-[90vw] md:max-w-[600px]',
-                          'flex flex-col overflow-hidden rounded-md border border-solid border-gray-200',
-                          '[&>:not(:last-child)]:border-b [&>:not(:last-child)]:border-solid [&>:not(:last-child)]:border-gray-200',
+                          'flex flex-col overflow-hidden rounded-md border border-solid border-gray-100',
+                          '[&>:not(:last-child)]:border-b [&>:not(:last-child)]:border-solid [&>:not(:last-child)]:border-gray-100',
                         ]}
                       >
                         <DetailHeader label={`#${track.trackNumber}`} value={track.title} />

@@ -9,7 +9,6 @@ import 'primeicons/primeicons.css'
 import { App } from './App'
 import { i18n } from './i18n'
 import { router } from './routes'
-import { initAppIcon } from './theme'
 
 const ProjectTheme = definePreset(Material, {
   semantic: {
@@ -26,6 +25,28 @@ const ProjectTheme = definePreset(Material, {
       900: '{violet.900}',
       950: '{violet.950}',
     },
+    colorScheme: {
+      light: {
+        formField: {
+          borderColor: '{surface.200}',
+          hoverBorderColor: '{surface.300}',
+        },
+        content: {
+          borderColor: '{surface.100}',
+        },
+        overlay: {
+          select: {
+            borderColor: '{surface.100}',
+          },
+          popover: {
+            borderColor: '{surface.100}',
+          },
+          modal: {
+            borderColor: '{surface.100}',
+          },
+        },
+      },
+    },
   },
 })
 
@@ -39,4 +60,3 @@ createApp(App)
     },
   })
   .mount('#app')
-initAppIcon()
