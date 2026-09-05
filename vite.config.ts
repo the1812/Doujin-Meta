@@ -35,6 +35,11 @@ export default defineConfig(({ command }) => ({
       },
     ],
   },
+  server: {
+    watch: {
+      ignored: ['**/.output', '**/.output/**'],
+    },
+  },
   plugins: lazyPlugins(() => [
     albumData(dataRoot),
     vueJsx(),
