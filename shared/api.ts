@@ -26,6 +26,11 @@ export interface AlbumSummary {
 export interface AlbumSearchItem extends AlbumSummary {
   albumMatches: [start: number, end: number][]
   albumArtistMatches: [start: number, end: number][][]
+  matchedField?: {
+    field: 'artist' | 'lyricist' | 'comment'
+    value: string
+    matches: [start: number, end: number][]
+  }
 }
 
 export interface AlbumTrack {

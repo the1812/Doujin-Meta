@@ -6,7 +6,12 @@
   "search": {
     "placeholder": "搜索专辑信息",
     "buttonTitle": "搜索",
-    "noResult": "无搜索结果"
+    "noResult": "无搜索结果",
+    "matchField": {
+      "artist": "艺术家",
+      "lyricist": "作词",
+      "comment": "注释"
+    }
   },
   "linkButtons": {
     "bandcamp": "在 Bandcamp 上查看",

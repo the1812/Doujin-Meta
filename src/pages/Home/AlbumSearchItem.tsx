@@ -1,8 +1,10 @@
+import { Chip } from 'primevue'
 import { computed, defineComponent, type PropType } from 'vue'
 import { RouterLink } from 'vue-router'
 
 import type { AlbumSearchItem as AlbumSearchItemData } from '../../../shared/api'
 import { MetadataSeparator } from '../../common'
+import { useI18n } from '../../i18n'
 
 const getHighlightedSlices = (value: string, matches: [number, number][]) => {
   const slices: { text: string; highlighted: boolean }[] = []
@@ -19,6 +21,15 @@ const getHighlightedSlices = (value: string, matches: [number, number][]) => {
 const renderSlices = (slices: ReturnType<typeof getHighlightedSlices>) =>
   slices.map(slice => (slice.highlighted ? <b>{slice.text}</b> : slice.text))
 
+const renderFlexibleSlices = (slices: ReturnType<typeof getHighlightedSlices>) =>
+  slices.map(slice =>
+    slice.highlighted ? (
+      <b class="shrink-0">{slice.text}</b>
+    ) : (
+      <span class="min-w-0 overflow-hidden text-ellipsis whitespace-nowrap">{slice.text}</span>
+    ),
+  )
+
 export const AlbumSearchItem = defineComponent({
   name: 'AlbumSearchItem',
   props: {
@@ -28,6 +39,7 @@ export const AlbumSearchItem = defineComponent({
     },
   },
   setup(props) {
+    const { t } = useI18n()
     const titleSlices = computed(() =>
       getHighlightedSlices(props.item.album, props.item.albumMatches),
     )
@@ -36,6 +48,12 @@ export const AlbumSearchItem = defineComponent({
         getHighlightedSlices(albumArtist, props.item.albumArtistMatches[index] ?? []),
       ),
     )
+    const matchedFieldSlices = computed(() => {
+      const matchedField = props.item.matchedField
+      return matchedField === undefined
+        ? []
+        : getHighlightedSlices(matchedField.value, matchedField.matches)
+    })
 
     return () => (
       <div class="flex justify-center">
@@ -64,6 +82,16 @@ export const AlbumSearchItem = defineComponent({
               </div>
             )}
           </div>
+          {props.item.matchedField && (
+            <Chip class="ml-auto max-w-[50%] shrink-0 !gap-0 !bg-gray-100 !py-2 !text-sm [&_b]:font-semibold [&_b]:text-violet-500">
+              <span class="flex min-w-0 items-baseline overflow-hidden whitespace-nowrap">
+                <span class="shrink-0">
+                  {t(`search.matchField.${props.item.matchedField.field}`)}:{' '}
+                </span>
+                {renderFlexibleSlices(matchedFieldSlices.value)}
+              </span>
+            </Chip>
+          )}
         </RouterLink>
       </div>
     )

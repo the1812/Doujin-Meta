@@ -1,6 +1,7 @@
 import type {
   AlbumDetail,
   AlbumExtraData,
+  AlbumSearchItem,
   AlbumSearchResponse,
   AlbumSummary,
   AlbumTrack,
@@ -54,6 +55,8 @@ interface CatalogEntry {
     album: string
     albumArtists: string[]
     artists: string[]
+    lyricists: string[]
+    comments: string[]
   }
 }
 
@@ -106,40 +109,57 @@ const getKeywordRank = (search: CatalogEntry['search'], keyword: string) => {
   if (includes(search.artists, keyword)) {
     return 4
   }
+  if (includes(search.lyricists, keyword)) {
+    return 5
+  }
+  if (includes(search.comments, keyword)) {
+    return 6
+  }
+  return undefined
+}
+
+const getMatchedField = (entry: CatalogEntry, keyword: string): AlbumSearchItem['matchedField'] => {
+  const fields = [
+    { field: 'artist' as const, values: entry.detail.tracks.flatMap(track => track.artists) },
+    { field: 'lyricist' as const, values: entry.detail.tracks.flatMap(track => track.lyricists) },
+    {
+      field: 'comment' as const,
+      values: entry.detail.tracks.flatMap(track => track.comments ?? []),
+    },
+  ]
+
+  for (const { field, values } of fields) {
+    const value = [...new Set(values)].find(sourceValue =>
+      normalizeSearchValue(sourceValue).includes(keyword),
+    )
+    if (value !== undefined) {
+      return {
+        field,
+        value,
+        matches: getMatches(value, normalizeSearchValue(value), keyword),
+      }
+    }
+  }
   return undefined
 }
 
 const encodePathSegment = (value: string) => encodeURI(value).replaceAll('#', '%23')
 
-const normalizeTracks = (rows: MetadataRow[], albumGenres: string[]): AlbumTrack[] => {
-  let currentDisc = 1
-  let currentTrack = 1
-
-  return rows.map(row => {
-    const explicitDisc = row.discNumber === undefined ? Number.NaN : Number.parseInt(row.discNumber)
-    if (!Number.isNaN(explicitDisc) && explicitDisc !== currentDisc) {
-      currentDisc = explicitDisc
-      currentTrack = 1
-    }
-
-    const track = {
-      title: row.title,
-      artists: row.artists ?? row.composers ?? [],
-      composers: row.composers ?? [],
-      lyricists: row.lyricists ?? [],
-      genres: row.genres ?? albumGenres,
-      discNumber: row.discNumber ?? currentDisc.toString(),
-      trackNumber: row.trackNumber ?? currentTrack.toString(),
-      comments: row.comments ?? null,
-      lyric: row.lyric ?? null,
-      lyricLanguage: row.lyricLanguage ?? null,
-      bpm: row.bpm ?? null,
-      key: row.key ?? null,
-    }
-    currentTrack += 1
-    return track
-  })
-}
+const createTracks = (rows: MetadataRow[], albumGenres: string[]): AlbumTrack[] =>
+  rows.map(row => ({
+    title: row.title,
+    artists: row.artists ?? [],
+    composers: row.composers ?? [],
+    lyricists: row.lyricists ?? [],
+    genres: row.genres ?? albumGenres,
+    discNumber: row.discNumber ?? '',
+    trackNumber: row.trackNumber ?? '',
+    comments: row.comments ?? null,
+    lyric: row.lyric ?? null,
+    lyricLanguage: row.lyricLanguage ?? null,
+    bpm: row.bpm ?? null,
+    key: row.key ?? null,
+  }))
 
 const createAlbum = (source: AlbumSource, options: CatalogOptions): CatalogEntry => {
   const { id, folderName, coverFilename, rows } = source
@@ -150,7 +170,7 @@ const createAlbum = (source: AlbumSource, options: CatalogOptions): CatalogEntry
 
   const encodedFolder = encodePathSegment(folderName)
   const albumGenres = firstRow.genres ?? []
-  const tracks = normalizeTracks(rows, albumGenres)
+  const tracks = createTracks(rows, albumGenres)
   const summary: AlbumSummary = {
     id,
     album: firstRow.album ?? folderName,
@@ -176,6 +196,10 @@ const createAlbum = (source: AlbumSource, options: CatalogOptions): CatalogEntry
       album: normalizeSearchValue(detail.album),
       albumArtists: detail.albumArtists.map(normalizeSearchValue),
       artists: [...new Set(tracks.flatMap(track => track.artists))].map(normalizeSearchValue),
+      lyricists: [...new Set(tracks.flatMap(track => track.lyricists))].map(normalizeSearchValue),
+      comments: [...new Set(tracks.flatMap(track => track.comments ?? []))].map(
+        normalizeSearchValue,
+      ),
     },
   }
 }
@@ -232,6 +256,11 @@ export class AlbumCatalog {
             ? []
             : getMatches(sourceAlbumArtist, entry.search.albumArtists[index] ?? '', keyword),
         ),
+        ...(keyword === undefined ||
+        entry.search.album.includes(keyword) ||
+        includes(entry.search.albumArtists, keyword)
+          ? {}
+          : { matchedField: getMatchedField(entry, keyword) }),
       })),
       total: matches.length,
       limit: filters.limit,

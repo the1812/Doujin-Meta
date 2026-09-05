@@ -60,8 +60,8 @@
   },
   {
     "title": "摩登时代的孤独",
-    "artists": ["早木旋子", "Darkness Ten"],
-    "composers": ["Darkness Ten"],
+    "artists": ["早木旋子", "Darkness_Ten"],
+    "composers": ["Darkness_Ten"],
     "lyricists": ["冥凰"],
     "comments": "Rin"
   },

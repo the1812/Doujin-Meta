@@ -6,7 +6,12 @@
   "search": {
     "placeholder": "Search album info",
     "buttonTitle": "Search",
-    "noResult": "No result"
+    "noResult": "No result",
+    "matchField": {
+      "artist": "Artist",
+      "lyricist": "Lyricist",
+      "comment": "Comment"
+    }
   },
   "linkButtons": {
     "bandcamp": "View on Bandcamp",
