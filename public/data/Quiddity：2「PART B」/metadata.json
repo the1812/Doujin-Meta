@@ -5,19 +5,7 @@
     "album": "Quiddity:2「PART B」",
     "albumOrder": "OBS-CD06B",
     "albumArtists": ["obscuRE TRAX"],
-    "genres": [
-      "Hardcore",
-      "HardStyle",
-      "RawStyle",
-      "Extra Raw",
-      "Frenchcore",
-      "Gabba",
-      "Full Flavor",
-      "Speedcore",
-      "Mainstream Hardcore",
-      "Waltz",
-      "Classical"
-    ],
+    "genres": ["Speedcore"],
     "year": "2026",
     "extraData": {
       "links": {
@@ -27,47 +15,58 @@
   },
   {
     "title": "Nocturnity",
-    "composers": ["祈枫_イタ ラネ"]
+    "composers": ["祈枫_イタ ラネ"],
+    "genres": ["Psy-Trance"]
   },
   {
     "title": "Cosmicity",
-    "composers": ["333xd", "DLsr_DD1"]
+    "composers": ["333xd", "DLsr_DD1"],
+    "genres": ["Full Flavor"]
   },
   {
     "title": "Similarity",
-    "composers": ["DLsr_DD1"]
+    "composers": ["DLsr_DD1"],
+    "genres": ["HardStyle"]
   },
   {
     "title": "Immortality",
-    "composers": ["Xpinger"]
+    "composers": ["Xpinger"],
+    "genres": ["Hardcore"]
   },
   {
     "title": "Annihilacity",
-    "composers": ["R41NSH0WER"]
+    "composers": ["R41NSH0WER"],
+    "genres": ["RawStyle"]
   },
   {
     "title": "Acidity",
-    "composers": ["R41NSH0WER"]
+    "composers": ["R41NSH0WER"],
+    "genres": ["HardStyle"]
   },
   {
     "title": "Depravity",
-    "composers": ["DLsr_DD1", "Jeanne d'Arc"]
+    "composers": ["DLsr_DD1", "Jeanne d'Arc"],
+    "genres": ["Hardcore"]
   },
   {
     "title": "Cosmicity (\"Tanmicity & Sinmicity\" gAbbA ver.)",
-    "composers": ["DLsr_DD1"]
+    "composers": ["DLsr_DD1"],
+    "genres": ["Hardcore"]
   },
   {
     "title": "Insanity",
-    "composers": ["DLsr_DD1", "Jeanne d'Arc", "Like The Wind"]
+    "composers": ["DLsr_DD1", "Jeanne d'Arc", "Like The Wind"],
+    "genres": ["Hardcore"]
   },
   {
     "title": "Mutability (Like The Wind & Jeanne d'Arc's \"Muta noctem, rego lumen\" obscuREmix)",
     "artists": ["Like The Wind", "Jeanne d'Arc", "DLsr_DD1"],
-    "composers": ["DLsr_DD1"]
+    "composers": ["DLsr_DD1"],
+    "genres": ["Hardcore"]
   },
   {
     "title": "Narrativity",
-    "composers": ["Ray Snow Ja"]
+    "composers": ["Ray Snow Ja"],
+    "genres": ["Waltz"]
   }
 ]

@@ -41,6 +41,7 @@ Create a new `public/data/<album name>/` entry that matches this repository's ex
      - `extraData.links.dizzylab` or other supported link IDs
    - Later tracks should include only changed or track-specific fields.
    - Interpret `artists` from the credited roles instead of mechanically copying `composers`. If `artists` would otherwise contain only vocalists or featured vocal performers, also include the composers so the musical creators are represented. If the source already credits an arranger or remixer in `artists`, the original composers do not also need to appear there.
+   - Remove featured-artist credits such as `(feat. Name)` from `title` and place those featured artists first in `artists`, followed by the other credited artists or composers required by the role rule above. Preserve the remaining track title, including unrelated version or remix labels.
    - For remixes, put the remix artist or arranger in `artists` and keep the original composer in `composers` when known. Add the original artist only when the source credits them on the released track.
 
 5. Download the cover from the source page.

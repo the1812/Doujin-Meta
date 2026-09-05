@@ -3,17 +3,9 @@
     "title": "Rosy World (Intro)",
     "composers": ["Viciana"],
     "album": "Rosy World",
+    "albumOrder": "ANA007",
     "albumArtists": ["ChillMe"],
-    "genres": [
-      "Electronic",
-      "Future Bass",
-      "House",
-      "Chillout",
-      "Future Garage",
-      "Kawaii",
-      "Pop",
-      "Vocaloid"
-    ],
+    "genres": ["Electronic"],
     "year": "2025",
     "extraData": {
       "links": {

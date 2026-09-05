@@ -5,17 +5,7 @@
     "album": "Quiddity:2「PART A」",
     "albumOrder": "OBS-CD06A",
     "albumArtists": ["obscuRE TRAX"],
-    "genres": [
-      "Trance",
-      "House",
-      "Dubstep",
-      "Trancestep",
-      "UK Hardcore",
-      "J-Core",
-      "Color Bass",
-      "Hi-Tech",
-      "Artcore"
-    ],
+    "genres": ["Hardcore"],
     "year": "2026",
     "extraData": {
       "links": {
@@ -25,42 +15,52 @@
   },
   {
     "title": "Luminosity",
-    "composers": ["kaokao"]
+    "composers": ["kaokao"],
+    "genres": ["Trancestep"]
   },
   {
     "title": "Luxidity",
-    "composers": ["Like The Wind"]
+    "composers": ["Like The Wind"],
+    "genres": ["Hardcore"]
   },
   {
     "title": "Needity",
-    "composers": ["lrriser"]
+    "composers": ["lrriser"],
+    "genres": ["Hardcore"]
   },
   {
     "title": "Verticity",
-    "composers": ["A_5621"]
+    "composers": ["A_5621"],
+    "genres": ["Hardcore"]
   },
   {
     "title": "SensiBility",
-    "composers": ["Irotas"]
+    "composers": ["Irotas"],
+    "genres": ["Happy Hardcore"]
   },
   {
     "title": "Gravity",
-    "composers": ["LelouchSound"]
+    "composers": ["LelouchSound"],
+    "genres": ["Trance"]
   },
   {
     "title": "Crushity",
-    "composers": ["ZA."]
+    "composers": ["ZA."],
+    "genres": ["Speedcore"]
   },
   {
     "title": "Divinity",
-    "composers": ["333xd"]
+    "composers": ["333xd"],
+    "genres": ["Dubstep"]
   },
   {
     "title": "Torpidity",
-    "composers": ["DLsr_DD1"]
+    "composers": ["DLsr_DD1"],
+    "genres": ["Dubstep"]
   },
   {
     "title": "Aquavity",
-    "composers": ["L_light", "Asterbit"]
+    "composers": ["L_light", "Asterbit"],
+    "genres": ["Drum & Bass"]
   }
 ]

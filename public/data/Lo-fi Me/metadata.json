@@ -3,18 +3,9 @@
     "title": "the bright light hit me [and woke me up]",
     "composers": ["CR_Twenty-six"],
     "album": "Lo-fi Me",
+    "albumOrder": "ANA004",
     "albumArtists": ["ChillMe"],
-    "genres": [
-      "Electronic",
-      "Future Bass",
-      "House",
-      "Chillout",
-      "Kawaii",
-      "Lo-Fi",
-      "Lo-Fi Beats",
-      "Lo-Fi Hip Hop",
-      "Pop"
-    ],
+    "genres": ["Lo-Fi"],
     "year": "2025",
     "extraData": {
       "links": {
