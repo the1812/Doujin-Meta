@@ -53,8 +53,8 @@ importers:
         version: 4.5.0(vue@3.5.13(typescript@5.8.2))
     devDependencies:
       '@the1812/oxc-config':
-        specifier: 1.0.0
-        version: 1.0.0(oxfmt@0.64.0(vite-plus@0.3.0(@types/node@22.13.9)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@22.13.9)(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0))(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0)))(oxlint-tsgolint@7.0.2001)(oxlint@1.79.0(oxlint-tsgolint@7.0.2001)(vite-plus@0.3.0(@types/node@22.13.9)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@22.13.9)(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0))(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0)))
+        specifier: 1.0.1
+        version: 1.0.1(oxfmt@0.64.0(vite-plus@0.3.0(@types/node@22.13.9)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@22.13.9)(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0))(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0)))(oxlint-tsgolint@7.0.2001)(oxlint@1.79.0(oxlint-tsgolint@7.0.2001)(vite-plus@0.3.0(@types/node@22.13.9)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@22.13.9)(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0))(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0)))
       '@types/node':
         specifier: 22.13.9
         version: 22.13.9
@@ -999,8 +999,8 @@ packages:
     peerDependencies:
       '@testing-library/dom': '>=7.21.4'
 
-  '@the1812/oxc-config@1.0.0':
-    resolution: {integrity: sha512-UfmbiSGHXxzB3WaK7sbtu+a2VLNGc4RtqMyTf7hkX3fmfnsxvsDuZdvhsYlENbA/PSrB6zwuU8E70fBUpywQDg==}
+  '@the1812/oxc-config@1.0.1':
+    resolution: {integrity: sha512-o4a/B7TmvDijeEGSXpyvP3+wHb9lf82/n3qZ7Vfod3jW1jzP44ypvda4L4ovWEA/ynX/NArenMPNUFvk2DJMAQ==}
     engines: {node: '>=22.18.0'}
     peerDependencies:
       oxfmt: '>=0.46.0 <1.0.0'
@@ -3412,7 +3412,7 @@ snapshots:
     dependencies:
       '@testing-library/dom': 10.4.1
 
-  '@the1812/oxc-config@1.0.0(oxfmt@0.64.0(vite-plus@0.3.0(@types/node@22.13.9)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@22.13.9)(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0))(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0)))(oxlint-tsgolint@7.0.2001)(oxlint@1.79.0(oxlint-tsgolint@7.0.2001)(vite-plus@0.3.0(@types/node@22.13.9)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@22.13.9)(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0))(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0)))':
+  '@the1812/oxc-config@1.0.1(oxfmt@0.64.0(vite-plus@0.3.0(@types/node@22.13.9)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@22.13.9)(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0))(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0)))(oxlint-tsgolint@7.0.2001)(oxlint@1.79.0(oxlint-tsgolint@7.0.2001)(vite-plus@0.3.0(@types/node@22.13.9)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@22.13.9)(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0))(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0)))':
     dependencies:
       oxfmt: 0.64.0(vite-plus@0.3.0(@types/node@22.13.9)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@22.13.9)(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0))(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0))
       oxlint: 1.79.0(oxlint-tsgolint@7.0.2001)(vite-plus@0.3.0(@types/node@22.13.9)(@voidzero-dev/vite-plus-core@0.3.0(@types/node@22.13.9)(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0))(esbuild@0.28.2)(tsx@4.23.13)(typescript@5.8.2)(yaml@2.7.0))

@@ -53,6 +53,7 @@ interface CatalogEntry {
   detail: AlbumDetail
   search: {
     album: string
+    looseAlbum: string
     albumArtists: string[]
     artists: string[]
     lyricists: string[]
@@ -62,7 +63,15 @@ interface CatalogEntry {
 
 const normalizeSearchValue = (value: string) => value.normalize('NFKC').toLowerCase()
 
-const getOriginalRange = (value: string, start: number, end: number): [number, number] => {
+const normalizeLooseSearchValue = (value: string) =>
+  normalizeSearchValue(value).replace(/[\p{P}\s<>|]/gu, '')
+
+const getOriginalRange = (
+  value: string,
+  start: number,
+  end: number,
+  normalize: (value: string) => string,
+): [number, number] => {
   const boundaries = [
     0,
     ...Array.from(
@@ -70,21 +79,24 @@ const getOriginalRange = (value: string, start: number, end: number): [number, n
       ({ index, segment }) => index + segment.length,
     ),
   ]
-  const normalizedOffsets = boundaries.map(
-    index => normalizeSearchValue(value.slice(0, index)).length,
-  )
+  const normalizedOffsets = boundaries.map(index => normalize(value.slice(0, index)).length)
   const originalStart = boundaries[normalizedOffsets.findLastIndex(offset => offset <= start)] ?? 0
   const originalEndIndex = normalizedOffsets.findIndex(offset => offset >= end)
   const originalEnd = boundaries[originalEndIndex] ?? value.length
   return [originalStart, originalEnd]
 }
 
-const getMatches = (value: string, normalizedValue: string, keyword: string) => {
+const getMatches = (
+  value: string,
+  normalizedValue: string,
+  keyword: string,
+  normalize = normalizeSearchValue,
+) => {
   const matches: [number, number][] = []
   let start = normalizedValue.indexOf(keyword)
   while (start !== -1 && keyword.length > 0) {
     const end = start + keyword.length
-    matches.push(getOriginalRange(value, start, end))
+    matches.push(getOriginalRange(value, start, end, normalize))
     start = normalizedValue.indexOf(keyword, end)
   }
   return matches
@@ -93,7 +105,7 @@ const getMatches = (value: string, normalizedValue: string, keyword: string) => 
 const includes = (values: string[], keyword: string) =>
   values.some(value => value.includes(keyword))
 
-const getKeywordRank = (search: CatalogEntry['search'], keyword: string) => {
+const getKeywordRank = (search: CatalogEntry['search'], keyword: string, looseKeyword: string) => {
   if (search.album === keyword) {
     return 0
   }
@@ -103,17 +115,20 @@ const getKeywordRank = (search: CatalogEntry['search'], keyword: string) => {
   if (search.album.includes(keyword)) {
     return 2
   }
-  if (includes(search.albumArtists, keyword)) {
+  if (looseKeyword && search.looseAlbum.includes(looseKeyword)) {
     return 3
   }
-  if (includes(search.artists, keyword)) {
+  if (includes(search.albumArtists, keyword)) {
     return 4
   }
-  if (includes(search.lyricists, keyword)) {
+  if (includes(search.artists, keyword)) {
     return 5
   }
-  if (includes(search.comments, keyword)) {
+  if (includes(search.lyricists, keyword)) {
     return 6
+  }
+  if (includes(search.comments, keyword)) {
+    return 7
   }
   return undefined
 }
@@ -194,6 +209,7 @@ const createAlbum = (source: AlbumSource, options: CatalogOptions): CatalogEntry
     detail,
     search: {
       album: normalizeSearchValue(detail.album),
+      looseAlbum: normalizeLooseSearchValue(detail.album),
       albumArtists: detail.albumArtists.map(normalizeSearchValue),
       artists: [...new Set(tracks.flatMap(track => track.artists))].map(normalizeSearchValue),
       lyricists: [...new Set(tracks.flatMap(track => track.lyricists))].map(normalizeSearchValue),
@@ -227,6 +243,8 @@ export class AlbumCatalog {
     const keyword =
       filters.keyword === undefined ? undefined : normalizeSearchValue(filters.keyword)
     const album = filters.album === undefined ? undefined : normalizeSearchValue(filters.album)
+    const looseKeyword = normalizeLooseSearchValue(keyword ?? '')
+    const looseAlbum = normalizeLooseSearchValue(album ?? '')
     const albumArtist =
       filters.albumArtist === undefined ? undefined : normalizeSearchValue(filters.albumArtist)
     const artist = filters.artist === undefined ? undefined : normalizeSearchValue(filters.artist)
@@ -234,34 +252,51 @@ export class AlbumCatalog {
     const matches = this.#entries
       .flatMap(entry => {
         if (
-          (album !== undefined && !entry.search.album.includes(album)) ||
+          (album !== undefined &&
+            !entry.search.album.includes(album) &&
+            !(looseAlbum && entry.search.looseAlbum.includes(looseAlbum))) ||
           (albumArtist !== undefined && !includes(entry.search.albumArtists, albumArtist)) ||
           (artist !== undefined && !includes(entry.search.artists, artist))
         ) {
           return []
         }
 
-        const rank = keyword === undefined ? 0 : getKeywordRank(entry.search, keyword)
+        const rank = keyword === undefined ? 0 : getKeywordRank(entry.search, keyword, looseKeyword)
         return rank === undefined ? [] : [{ entry, rank }]
       })
       .sort((a, b) => a.rank - b.rank)
 
     return {
-      items: matches.slice(filters.offset, filters.offset + filters.limit).map(({ entry }) => ({
-        ...entry.summary,
-        albumMatches:
-          keyword === undefined ? [] : getMatches(entry.summary.album, entry.search.album, keyword),
-        albumArtistMatches: entry.summary.albumArtists.map((sourceAlbumArtist, index) =>
-          keyword === undefined
-            ? []
-            : getMatches(sourceAlbumArtist, entry.search.albumArtists[index] ?? '', keyword),
-        ),
-        ...(keyword === undefined ||
-        entry.search.album.includes(keyword) ||
-        includes(entry.search.albumArtists, keyword)
-          ? {}
-          : { matchedField: getMatchedField(entry, keyword) }),
-      })),
+      items: matches.slice(filters.offset, filters.offset + filters.limit).map(({ entry }) => {
+        let albumMatches: AlbumSearchItem['albumMatches'] = []
+        if (keyword !== undefined) {
+          if (entry.search.album.includes(keyword)) {
+            albumMatches = getMatches(entry.summary.album, entry.search.album, keyword)
+          } else {
+            albumMatches = getMatches(
+              entry.summary.album,
+              entry.search.looseAlbum,
+              looseKeyword,
+              normalizeLooseSearchValue,
+            )
+          }
+        }
+        return {
+          ...entry.summary,
+          albumMatches,
+          albumArtistMatches: entry.summary.albumArtists.map((sourceAlbumArtist, index) =>
+            keyword === undefined
+              ? []
+              : getMatches(sourceAlbumArtist, entry.search.albumArtists[index] ?? '', keyword),
+          ),
+          ...(keyword === undefined ||
+          entry.search.album.includes(keyword) ||
+          (looseKeyword && entry.search.looseAlbum.includes(looseKeyword)) ||
+          includes(entry.search.albumArtists, keyword)
+            ? {}
+            : { matchedField: getMatchedField(entry, keyword) }),
+        }
+      }),
       total: matches.length,
       limit: filters.limit,
       offset: filters.offset,
