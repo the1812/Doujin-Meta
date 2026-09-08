@@ -13,6 +13,9 @@ const projectRoot = dirname(fileURLToPath(import.meta.url))
 const dataRoot = resolve(projectRoot, 'public/data')
 
 export default defineConfig(({ command }) => ({
+  staged: {
+    '*': 'vp check --fix',
+  },
   fmt: {
     ...fmtConfig,
     ignorePatterns: [...(fmtConfig.ignorePatterns ?? []), '.output/'],
