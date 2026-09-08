@@ -3,6 +3,11 @@
     "description": "加载失败",
     "retry": "重试"
   },
+  "home": {
+    "recent": "最近添加",
+    "random": "随机",
+    "shuffle": "换一批"
+  },
   "search": {
     "placeholder": "搜索专辑信息",
     "buttonTitle": "搜索",

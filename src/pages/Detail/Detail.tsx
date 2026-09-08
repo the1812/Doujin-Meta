@@ -32,6 +32,7 @@ export const Detail = defineComponent({
 
     const albumDetail: AlbumDetail = reactive({
       id: '',
+      addedAt: '',
       album: '',
       albumOrder: '',
       albumArtists: [],

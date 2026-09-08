@@ -5,6 +5,7 @@ import type {
   AlbumSearchResponse,
   AlbumSummary,
   AlbumTrack,
+  HomeAlbums,
 } from '../shared/api.js'
 
 interface MetadataRow {
@@ -34,6 +35,7 @@ interface CatalogOptions {
 
 export interface AlbumSource {
   id: string
+  addedAt: string
   folderName: string
   coverFilename?: string
   rows: MetadataRow[]
@@ -188,6 +190,7 @@ const createAlbum = (source: AlbumSource, options: CatalogOptions): CatalogEntry
   const tracks = createTracks(rows, albumGenres)
   const summary: AlbumSummary = {
     id,
+    addedAt: source.addedAt,
     album: firstRow.album ?? folderName,
     albumOrder: firstRow.albumOrder ?? null,
     albumArtists: firstRow.albumArtists ?? [],
@@ -305,5 +308,23 @@ export class AlbumCatalog {
 
   get(id: string) {
     return this.#entriesById.get(id)?.detail
+  }
+
+  home(): HomeAlbums {
+    const count = 8
+    const albums = this.#entries
+      .map(entry => entry.summary)
+      .sort((a, b) => Date.parse(b.addedAt) - Date.parse(a.addedAt) || a.id.localeCompare(b.id))
+    const recent = albums.slice(0, count)
+    const candidates = albums.slice(count)
+    const random: AlbumSummary[] = []
+    while (random.length < count && candidates.length > 0) {
+      const index = Math.floor(Math.random() * candidates.length)
+      random.push(...candidates.splice(index, 1))
+    }
+    return {
+      recent,
+      random,
+    }
   }
 }

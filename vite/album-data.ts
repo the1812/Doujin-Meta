@@ -9,6 +9,7 @@ const albumDataId = '#album-data'
 const resolvedAlbumDataId = '\0doujin-meta:album-data'
 const albumManifestSchema = v.strictObject({
   id: v.pipe(v.string(), v.regex(/^[0-7][0-9a-hjkmnp-tv-z]{25}$/u)),
+  addedAt: v.pipe(v.string(), v.isoTimestamp()),
 })
 
 const isInDirectory = (directory: string, file: string) => {
@@ -37,6 +38,7 @@ const buildAlbumDataModule = async (dataRoot: string, watchFile: (file: string) 
         )
         return {
           id: manifest.id,
+          addedAt: manifest.addedAt,
           folderName: entry.name,
           coverFilename,
           rows: await localJson.normalizeWithoutCover(

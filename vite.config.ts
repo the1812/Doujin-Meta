@@ -63,6 +63,11 @@ export default defineConfig(({ command }) => ({
             'cache-control': 'public, max-age=3600',
           },
         },
+        '/api/home': {
+          headers: {
+            'cache-control': 'no-store',
+          },
+        },
       },
       runtimeConfig: {
         sourceRepositoryUrl: 'https://github.com/the1812/Doujin-Meta',

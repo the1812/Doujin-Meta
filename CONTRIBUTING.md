@@ -16,7 +16,7 @@
 
 专辑文件夹中需要包含三个文件:
 
-- `album.json`: 专辑在 Doujin Meta 中的唯一标识. 使用 `pnpm album:id` 生成一次小写 ULID.
+- `album.json`: 包含专辑唯一标识 `id` 和录入时间 `addedAt`. 使用 `pnpm album:id` 生成一次小写 ULID; `addedAt` 使用首次录入时的 UTC ISO 8601 时间 (如 `2026-09-08T12:00:00Z`), 后续修改或重命名时保持不变. 已有专辑的录入时间由 `metadata.json` 的首次 Git 提交时间回填, 跟踪目录重命名.
 - `metadata.json`: 专辑元数据, 内容格式和 [Touhou-Tagger 的 local-json 一致](https://github.com/the1812/Touhou-Tagger/#local-json), 可以使用省略语法.
 - `metadata.json` 中可以添加额外的元数据 `extraData`, 仅用于 Doujin Meta 网站的展示, 不会写入到歌曲元数据中. (例子可参考 [东方之星](https://github.com/the1812/Doujin-Meta/blob/main/public/data/%E4%B8%9C%E6%96%B9%E4%B9%8B%E6%98%9F/metadata.json))
   - `links`: 可供获取专辑的渠道

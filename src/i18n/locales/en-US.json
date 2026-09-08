@@ -3,6 +3,11 @@
     "description": "Failed to load",
     "retry": "Retry"
   },
+  "home": {
+    "recent": "Recently added",
+    "random": "Random",
+    "shuffle": "Shuffle"
+  },
   "search": {
     "placeholder": "Search album info",
     "buttonTitle": "Search",

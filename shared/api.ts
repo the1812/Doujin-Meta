@@ -14,6 +14,7 @@ export interface AlbumLinks {
 
 export interface AlbumSummary {
   id: string
+  addedAt: string
   album: string
   albumOrder: string | null
   albumArtists: string[]
@@ -57,4 +58,9 @@ export interface AlbumSearchResponse {
   total: number
   limit: number
   offset: number
+}
+
+export interface HomeAlbums {
+  recent: AlbumSummary[]
+  random: AlbumSummary[]
 }

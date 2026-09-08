@@ -1,7 +1,7 @@
 import Axios from 'axios'
 import { computed, reactive, ref } from 'vue'
 
-import type { AlbumDetail, AlbumSearchResponse } from '../../shared/api'
+import type { AlbumDetail, AlbumSearchResponse, HomeAlbums } from '../../shared/api'
 
 export const api = Axios.create({
   responseType: 'json',
@@ -18,6 +18,11 @@ export const searchAlbums = async (keyword: string) => {
 }
 export const getAlbumDetail = async (id: string) => {
   const response = await api.get<AlbumDetail>(`/api/albums/${encodeURIComponent(id)}`)
+  return response.data
+}
+
+export const getHomeAlbums = async () => {
+  const response = await api.get<HomeAlbums>('/api/home')
   return response.data
 }
 
