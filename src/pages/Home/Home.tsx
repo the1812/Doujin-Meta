@@ -71,7 +71,7 @@ export const Home = defineComponent({
     const sendSearchRequest = () => void searchApi.sendRequest()
 
     return () => (
-      <div class="flex h-screen flex-col overflow-auto">
+      <div class="flex h-dvh flex-col overflow-auto">
         {!searched.value && (
           <div class="my-auto flex transform px-4">
             <SearchBar

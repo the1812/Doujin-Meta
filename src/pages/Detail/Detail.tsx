@@ -105,7 +105,7 @@ export const Detail = defineComponent({
     const sendDetailRequest = () => void detailApi.sendRequest()
 
     return () => (
-      <div class="flex h-screen flex-col overflow-auto">
+      <div class="flex h-dvh flex-col overflow-auto">
         <PageHeader v-model={keyword.value} onHomeNavigate={homeNavigate} onSearch={search} />
 
         <div class="flex flex-grow flex-col items-center gap-6 p-6 xl:flex-row xl:items-start xl:justify-center">
