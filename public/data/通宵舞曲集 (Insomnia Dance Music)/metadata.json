@@ -5,7 +5,7 @@
     "album": "通宵舞曲集 (Insomnia Dance Music)",
     "albumOrder": "AFOI-001",
     "albumArtists": ["A Flash of Insight"],
-    "genres": ["Electronic", "Dance"],
+    "genres": ["Funk"],
     "year": "2026",
     "extraData": {
       "links": {
@@ -15,30 +15,37 @@
   },
   {
     "title": "漫无目的 (The Wanderer)",
-    "composers": ["Supa7onyz"]
+    "composers": ["Supa7onyz"],
+    "genres": ["UK Garage"]
   },
   {
     "title": "两步到位 (2 Steps On The Floor)",
-    "composers": ["Supa7onyz"]
+    "composers": ["Supa7onyz"],
+    "genres": ["Dubstep"]
   },
   {
     "title": "反反复复 (Repeating The Routines)",
-    "composers": ["Supa7onyz"]
+    "composers": ["Supa7onyz"],
+    "genres": ["Tech House"]
   },
   {
     "title": "涣散 (Dispersion)",
-    "composers": ["Supa7onyz"]
+    "composers": ["Supa7onyz"],
+    "genres": ["Psy-Trance"]
   },
   {
     "title": "想太多 (Overthinking)",
-    "composers": ["Supa7onyz"]
+    "composers": ["Supa7onyz"],
+    "genres": ["Jungle", "Footwork"]
   },
   {
     "title": "狂奔 (Away From The Night)",
-    "composers": ["Supa7onyz"]
+    "composers": ["Supa7onyz"],
+    "genres": ["Drum & Bass"]
   },
   {
     "title": "夜晚将尽 (Until Sunrise)",
-    "composers": ["Supa7onyz"]
+    "composers": ["Supa7onyz"],
+    "genres": ["Melodic House"]
   }
 ]
