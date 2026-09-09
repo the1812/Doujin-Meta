@@ -11,6 +11,13 @@ import { i18n } from './i18n'
 import { router } from './routes'
 
 const ProjectTheme = definePreset(Material, {
+  components: {
+    image: {
+      toolbar: {
+        background: 'rgba(0, 0, 0, 0.75)',
+      },
+    },
+  },
   semantic: {
     primary: {
       50: '{violet.50}',
