@@ -135,7 +135,7 @@ export const Detail = defineComponent({
                       <span class="text-sm">{albumDetail.albumOrder}</span>
                     </PrimaryChip>
                   )}
-                  {albumGenres.value !== undefined && (
+                  {albumGenres.value && (
                     <div class="flex flex-wrap items-center justify-center gap-2">
                       <Chip class="!py-2">
                         <span class="text-sm">{albumGenres.value}</span>
