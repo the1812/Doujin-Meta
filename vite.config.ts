@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -11,6 +12,9 @@ import { albumData } from './vite/album-data.js'
 
 const projectRoot = dirname(fileURLToPath(import.meta.url))
 const dataRoot = resolve(projectRoot, 'public/data')
+const gitCommitHash =
+  process.env.VERCEL_GIT_COMMIT_SHA ??
+  execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim()
 
 export default defineConfig(({ command }) => ({
   staged: {
@@ -57,7 +61,7 @@ export default defineConfig(({ command }) => ({
         '/api/**': {
           cors: true,
           headers: {
-            'access-control-allow-methods': 'GET, HEAD, OPTIONS',
+            'access-control-allow-methods': 'GET, HEAD, OPTIONS, POST',
             'cache-control': command === 'serve' ? 'no-store' : 'public, max-age=60',
           },
         },
@@ -73,6 +77,7 @@ export default defineConfig(({ command }) => ({
         },
       },
       runtimeConfig: {
+        doujinMetaCommit: gitCommitHash,
         sourceRepositoryUrl: 'https://github.com/the1812/Doujin-Meta',
         sourceRepositoryBranch: 'main',
       },
