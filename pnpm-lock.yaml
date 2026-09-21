@@ -74,8 +74,8 @@ importers:
         specifier: '3'
         version: 3.4.17(ts-node@10.9.1(@types/node@22.13.9)(typescript@5.8.2))
       touhou-tagger:
-        specifier: 3.0.1
-        version: 3.0.1
+        specifier: 3.0.2
+        version: 3.0.2
       typescript:
         specifier: 5.8.2
         version: 5.8.2
@@ -2468,8 +2468,8 @@ packages:
     resolution: {integrity: sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ==}
     engines: {node: '>=6'}
 
-  touhou-tagger@3.0.1:
-    resolution: {integrity: sha512-MZK9ePDlVZOFeNYtxArtjUEp/dEV5ZSBUs9UjOnSEHtaYZ3QAN6nsl6AsE8pU/mcYYZvvrmS6b3ndqOeTHX4mA==}
+  touhou-tagger@3.0.2:
+    resolution: {integrity: sha512-Y4Qx9kEezm0btPWgejtbs8x6HybMKQWIKNWwp2oH9vySbYRCwNl4nJdJPWSFiQjgyPCLeEj9aB0BqmQktPKUdA==}
     engines: {node: '>= 22'}
     hasBin: true
 
@@ -4862,7 +4862,7 @@ snapshots:
 
   totalist@3.0.1: {}
 
-  touhou-tagger@3.0.1:
+  touhou-tagger@3.0.2:
     dependencies:
       '@squoosh/lib': 0.5.3
       axios: 1.7.9
