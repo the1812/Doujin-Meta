@@ -1,17 +1,14 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 
-import { Detail } from './pages/Detail/Detail'
-import { Home } from './pages/Home/Home'
-
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: Home,
+    component: () => import('./pages/Home/Home').then(({ Home }) => Home),
   },
   {
     path: '/albums/:id',
     name: 'album',
-    component: Detail,
+    component: () => import('./pages/Detail/Detail').then(({ Detail }) => Detail),
   },
 ]
 
