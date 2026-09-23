@@ -1,0 +1,60 @@
+[
+  {
+    "title": "Fly Beyond",
+    "composers": ["板烧鹅尼子"],
+    "artists": ["夢ノ結唱 ROSE", "Rmjesty", "板烧鹅尼子"],
+    "lyricists": ["sisouja"],
+    "album": "ILLUSION FRAGMENTS",
+    "albumOrder": "IF01",
+    "albumArtists": ["板烧鹅尼子"],
+    "genres": ["Digital J-Pop"],
+    "year": "2025",
+    "extraData": {
+      "links": {
+        "dizzylab": "IF01"
+      }
+    }
+  },
+  {
+    "title": "Dawnlight",
+    "composers": ["板烧鹅尼子"],
+    "artists": ["夢ノ結唱 POPY", "Rmjesty", "板烧鹅尼子"],
+    "lyricists": ["sisouja"]
+  },
+  {
+    "title": "双翼ノ流星",
+    "composers": ["Fantasiay"],
+    "artists": ["夢ノ結唱 ROSE", "Rmjesty", "Fantasiay", "板烧鹅尼子"],
+    "lyricists": ["sisouja"]
+  },
+  {
+    "title": "Thank You!!",
+    "composers": ["南小梟"],
+    "artists": ["夢ノ結唱 POPY", "南小梟", "板烧鹅尼子"],
+    "lyricists": ["sisouja"]
+  },
+  {
+    "title": "散り桜",
+    "composers": ["板烧鹅尼子"],
+    "artists": ["夢ノ結唱 POPY", "夢ノ結唱 ROSE", "板烧鹅尼子", "奇卡奇卡卡奇卡"],
+    "lyricists": ["sisouja"]
+  },
+  {
+    "title": "Crystal Oath",
+    "composers": ["板烧鹅尼子"],
+    "artists": ["夢ノ結唱 ROSE", "板烧鹅尼子"],
+    "lyricists": ["sisouja"]
+  },
+  {
+    "title": "夢の先へ（夢ノ結唱 POPY VER.）",
+    "composers": ["板烧鹅尼子"],
+    "artists": ["夢ノ結唱 POPY", "板烧鹅尼子", "南小梟"],
+    "lyricists": ["sisouja"]
+  },
+  {
+    "title": "君に恋した日から",
+    "composers": ["Rayven", "板烧鹅尼子"],
+    "artists": ["夢ノ結唱 ROSE", "Rmjesty", "Rayven", "板烧鹅尼子"],
+    "lyricists": ["sisouja"]
+  }
+]

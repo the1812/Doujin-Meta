@@ -1,0 +1,60 @@
+[
+  {
+    "title": "Fly Beyond",
+    "composers": ["板烧鹅尼子"],
+    "artists": ["缨缨Ei", "Rmjesty", "板烧鹅尼子"],
+    "lyricists": ["sisouja"],
+    "album": "ILLUSION FRAGMENTS: RESONANCE",
+    "albumOrder": "IF01SP",
+    "albumArtists": ["板烧鹅尼子", "bunny rhyTHm"],
+    "genres": ["Digital J-Pop"],
+    "year": "2025",
+    "extraData": {
+      "links": {
+        "dizzylab": "IF01SP"
+      }
+    }
+  },
+  {
+    "title": "Dawnlight",
+    "composers": ["板烧鹅尼子"],
+    "artists": ["缨缨Ei", "Rmjesty", "板烧鹅尼子"],
+    "lyricists": ["sisouja"]
+  },
+  {
+    "title": "双翼ノ流星",
+    "composers": ["Fantasiay"],
+    "artists": ["缨缨Ei", "Rmjesty", "Fantasiay"],
+    "lyricists": ["sisouja"]
+  },
+  {
+    "title": "Thank You!!",
+    "composers": ["南小梟"],
+    "artists": ["缨缨Ei", "南小梟"],
+    "lyricists": ["sisouja"]
+  },
+  {
+    "title": "散り桜",
+    "composers": ["板烧鹅尼子"],
+    "artists": ["缨缨Ei", "板烧鹅尼子"],
+    "lyricists": ["sisouja"]
+  },
+  {
+    "title": "Crystal Oath",
+    "composers": ["板烧鹅尼子"],
+    "artists": ["缨缨Ei", "板烧鹅尼子"],
+    "lyricists": ["sisouja"]
+  },
+  {
+    "title": "夢の先へ",
+    "composers": ["板烧鹅尼子"],
+    "artists": ["缨缨Ei", "板烧鹅尼子"],
+    "lyricists": ["sisouja"]
+  },
+  {
+    "title": "君に恋した日から",
+    "composers": ["板烧鹅尼子"],
+    "artists": ["缨缨Ei", "Rmjesty", "板烧鹅尼子"],
+    "lyricists": ["sisouja"]
+  }
+]
