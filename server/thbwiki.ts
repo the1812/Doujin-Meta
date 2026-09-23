@@ -1,5 +1,6 @@
 import { useRuntimeConfig } from 'nitro/runtime-config'
 import {
+  localJson,
   ThbWiki,
   type Metadata,
   type MetadataConfig,
@@ -47,3 +48,10 @@ export const getThbWikiMetadataFromHtml = async (
 }
 
 export const withoutCover = ({ coverImage: _coverImage, ...metadata }: Metadata) => metadata
+
+export const formatThbWikiMetadata = async (metadata: Metadata[], simplify: boolean) => {
+  if (simplify) {
+    await localJson.simplify(metadata)
+  }
+  return metadata.map(withoutCover)
+}
